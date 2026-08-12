@@ -12,3 +12,4 @@ Cloudflare Workers Builds:
 - Deploy command: `npx wrangler deploy`
 
 This version is a static Astro site and is intended as the next website shell for J 的世界 Research.
+V1.1 deployment configuration
