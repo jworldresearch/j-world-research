@@ -1,11 +1,331 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
+
 <BaseLayout title="Industry Maps｜J 的世界 Research">
-<section class="page-hero"><div class="page-hero-inner"><div class="kicker">INDUSTRY MAPS</div><h1>產業地圖</h1><p>用技術節點理解供應鏈，而不是只看公司名稱。</p></div></section>
-<section class="section"><div class="grid">
-<article class="card"><span class="tag">AI ECOSYSTEM</span><h3>AI 全產業鏈</h3><p>AI Chip → Advanced Packaging → Optical → Server → Power → Cooling</p></article>
-<article class="card"><span class="tag">GLASS CORE</span><h3>Glass Core</h3><p>Glass → TGV → Core Substrate → Advanced Packaging → AI Accelerator</p></article>
-<article class="card"><span class="tag">CPO</span><h3>CPO</h3><p>Switch → Optical Engine → Fiber → Packaging → Thermal → Power</p></article>
-</div></section>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="kicker">INDUSTRY MAPS · V1.1-02</div>
+    <h1>產業地圖</h1>
+    <p>
+      從技術節點出發，重新理解 AI 時代的產業鏈。
+      不只看公司，而是看技術如何一路落地。
+    </p>
+  </div>
+</section>
+
+<section class="section">
+
+  <div class="section-head">
+    <div>
+      <div class="kicker">RESEARCH NAVIGATION</div>
+      <h2>三張核心產業地圖</h2>
+    </div>
+    <p>Technology → Supply Chain → Evidence</p>
+  </div>
+
+  <div class="grid">
+
+    <article class="map-card">
+      <span class="tag">01 · AI ECOSYSTEM</span>
+      <h3>AI 全產業鏈</h3>
+
+      <p class="map-lead">
+        從 AI Compute 出發，沿著先進封裝、高速互連，
+        一路延伸至 AI Server、電力與散熱。
+      </p>
+
+      <div class="map-flow">
+        <span>AI Chip</span>
+        <b>→</b>
+        <span>HBM</span>
+        <b>→</b>
+        <span>Advanced Packaging</span>
+        <b>→</b>
+        <span>Optical</span>
+        <b>→</b>
+        <span>AI Server</span>
+        <b>→</b>
+        <span>Power</span>
+        <b>→</b>
+        <span>Cooling</span>
+      </div>
+
+      <div class="map-note">
+        <strong>Research Focus</strong>
+        <p>
+          AI GPU / ASIC、HBM、CoWoS、CPO、高速 PCB、
+          電力與散熱，如何共同形成下一代 AI Infrastructure。
+        </p>
+      </div>
+    </article>
+
+    <article class="map-card">
+      <span class="tag">02 · GLASS CORE</span>
+      <h3>Glass Core Ecosystem</h3>
+
+      <p class="map-lead">
+        從玻璃材料、TGV，到 Glass Core Substrate，
+        最終連結先進封裝與 AI Accelerator。
+      </p>
+
+      <div class="map-flow">
+        <span>Glass</span>
+        <b>→</b>
+        <span>TGV</span>
+        <b>→</b>
+        <span>Metallization</span>
+        <b>→</b>
+        <span>Glass Core</span>
+        <b>→</b>
+        <span>Advanced Packaging</span>
+        <b>→</b>
+        <span>AI Accelerator</span>
+      </div>
+
+      <div class="map-note">
+        <strong>Research Focus</strong>
+        <p>
+          Glass Material、TGV、金屬化、Core Substrate、
+          RDL 與先進封裝之間的技術關係，以及全球供應鏈布局。
+        </p>
+      </div>
+    </article>
+
+    <article class="map-card">
+      <span class="tag">03 · CPO ECOSYSTEM</span>
+      <h3>CPO Ecosystem</h3>
+
+      <p class="map-lead">
+        AI 資料中心高速互連，正在從純電互連逐步走向
+        Optical + Packaging 的新架構。
+      </p>
+
+      <div class="map-flow">
+        <span>AI Compute</span>
+        <b>→</b>
+        <span>Switch</span>
+        <b>→</b>
+        <span>Optical Engine</span>
+        <b>→</b>
+        <span>CPO</span>
+        <b>→</b>
+        <span>Fiber</span>
+        <b>→</b>
+        <span>Data Center</span>
+      </div>
+
+      <div class="map-note">
+        <strong>Research Focus</strong>
+        <p>
+          Switch、Optical Engine、光纖、封裝、散熱與電力，
+          如何共同決定 CPO 商業化速度。
+        </p>
+      </div>
+    </article>
+
+  </div>
+
+</section>
+
+
+<section class="feature">
+
+  <div class="section">
+
+    <div class="section-head">
+      <div>
+        <div class="kicker">HOW TO READ THE MAPS</div>
+        <h2>不要只看公司，要看技術位置</h2>
+      </div>
+
+      <p>Facts First · Evidence-Based Research</p>
+    </div>
+
+    <div class="grid">
+
+      <article class="card">
+        <span class="tag">01 · TECHNOLOGY</span>
+        <h3>技術節點</h3>
+        <p>
+          先確認一項技術在整個產業鏈中的位置，
+          再判斷它解決的是什麼問題。
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="tag">02 · SUPPLY CHAIN</span>
+        <h3>供應鏈位置</h3>
+        <p>
+          從上游材料、設備，到中游製程與零組件，
+          最後連結終端應用。
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="tag">03 · EVIDENCE</span>
+        <h3>證據強度</h3>
+        <p>
+          已量產、驗證中、開發中與產業推論，
+          必須清楚區分，避免把推論當成事實。
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="section">
+
+  <div class="section-head">
+    <div>
+      <div class="kicker">EVIDENCE FRAMEWORK</div>
+      <h2>研究狀態分層</h2>
+    </div>
+
+    <p>Evidence Level</p>
+  </div>
+
+  <div class="grid">
+
+    <article class="card">
+      <span class="tag">PRODUCTION</span>
+      <h3>已量產</h3>
+      <p>
+        已有公開資訊支持產品或技術進入量產階段。
+      </p>
+    </article>
+
+    <article class="card">
+      <span class="tag">QUALIFICATION</span>
+      <h3>驗證／導入</h3>
+      <p>
+        已進入客戶驗證、導入或供應鏈認證階段。
+      </p>
+    </article>
+
+    <article class="card">
+      <span class="tag">DEVELOPMENT</span>
+      <h3>開發中</h3>
+      <p>
+        技術或產品仍處於開發、測試或樣品階段。
+      </p>
+    </article>
+
+  </div>
+
+  <div class="card inference-card">
+    <span class="tag">J INSIGHT · INFERENCE</span>
+    <h3>產業推論</h3>
+    <p>
+      尚未有公司正式公告，但依據技術路徑、
+      供應鏈關係與公開資訊，可以建立合理的研究假設。
+    </p>
+    <p class="inference-warning">
+      ※ Inference 不等同於已確認事實，正式研究中將與公開資訊分開標示。
+    </p>
+  </div>
+
+</section>
+
+
+<section class="cta">
+
+  <div class="cta-inner">
+
+    <div>
+      <div class="kicker">NEXT MAP</div>
+      <h2>從產業地圖，走向公司研究。</h2>
+      <p>
+        下一階段將逐步加入全球主要企業、台股供應鏈、
+        技術驗證與量產進度。
+      </p>
+    </div>
+
+    <a class="button" href="/research">
+      Explore Research →
+    </a>
+
+  </div>
+
+</section>
+
+
+<style>
+  .map-card {
+    min-height: 100%;
+  }
+
+  .map-lead {
+    color: #b8c4d1;
+    margin-top: 14px;
+  }
+
+  .map-flow {
+    margin-top: 22px;
+    padding: 18px;
+    border: 1px solid #2b394a;
+    border-radius: 12px;
+    background: #0b1119;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #d9e2ec;
+  }
+
+  .map-flow span {
+    padding: 5px 8px;
+    border: 1px solid #354457;
+    border-radius: 6px;
+    background: #121c28;
+  }
+
+  .map-flow b {
+    color: #7188a0;
+    font-weight: 600;
+  }
+
+  .map-note {
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid #2b394a;
+  }
+
+  .map-note strong {
+    font-size: 12px;
+    letter-spacing: .12em;
+    color: #8fa6bf;
+  }
+
+  .map-note p {
+    margin-bottom: 0;
+  }
+
+  .inference-card {
+    margin-top: 18px;
+    border-color: #40536a;
+  }
+
+  .inference-warning {
+    color: #7f8d9d !important;
+    font-size: 12px;
+  }
+
+  @media(max-width:800px) {
+    .map-flow {
+      line-height: 1.8;
+    }
+
+    .map-flow b {
+      display: none;
+    }
+  }
+</style>
+
 </BaseLayout>
