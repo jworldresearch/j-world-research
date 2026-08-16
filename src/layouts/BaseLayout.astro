@@ -3,38 +3,517 @@ import "../styles/global.css";
 
 const { title = "J 的世界 Research" } = Astro.props;
 ---
+
 <!doctype html>
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="J 的世界 Research｜Facts First · Evidence-Based Research" />
+  <meta
+    name="description"
+    content="J 的世界 Research｜Facts First · Evidence-Based Research"
+  />
   <title>{title}</title>
+
   <style is:global>
-    :root{font-family:Arial,"Noto Sans TC","Microsoft JhengHei",sans-serif;color:#eef2f7;background:#0b1017;line-height:1.7}
-    *{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#0b1017 0%,#101823 55%,#0b1017 100%)}
-    a{color:inherit;text-decoration:none}.nav{position:sticky;top:0;z-index:10;background:rgba(11,16,23,.92);border-bottom:1px solid #263242;backdrop-filter:blur(12px)}
-    .nav-inner{max-width:1180px;margin:auto;padding:17px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .brand{font-weight:800;letter-spacing:.04em}.brand small{display:block;color:#8e9aaa;font-size:11px;font-weight:500;letter-spacing:.12em}
-    .nav-links{display:flex;gap:20px;color:#b9c3cf;font-size:14px}.nav-links a:hover{color:#fff}
-    .hero{border-bottom:1px solid #263242;background:radial-gradient(circle at 80% 20%,#263b53 0,transparent 35%)}
-    .hero-inner{max-width:1180px;margin:auto;padding:90px 24px 84px;display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center}
-    .kicker,.tag{font-size:12px;letter-spacing:.14em;color:#8fa6bf;font-weight:800}.hero h1{font-size:clamp(44px,7vw,78px);line-height:1.08;margin:14px 0 22px;letter-spacing:-.04em}.hero h1 span{color:#b8c8d9}
-    .hero p,.card p,.hero-card p{color:#aeb9c6}.hero-card,.card,.map-card{border:1px solid #2b394a;background:rgba(18,27,38,.82);border-radius:18px;padding:28px}
-    .hero-card h2{font-size:32px;margin:12px 0}.button{display:inline-block;background:#e9eef4;color:#0b1017;padding:10px 16px;border-radius:9px;font-weight:800;font-size:14px}
-    .section{max-width:1180px;margin:auto;padding:72px 24px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:30px}.section h2{font-size:34px;margin:6px 0}.section-head p{color:#8491a1}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card h3,.map-card h3{margin:10px 0 5px;font-size:20px}.feature{background:#0e151e;border-top:1px solid #263242;border-bottom:1px solid #263242}.number{font-size:13px;color:#7f9bb7;font-weight:800;letter-spacing:.12em}
-    .cta{border-top:1px solid #263242}.cta-inner{max-width:1180px;margin:auto;padding:70px 24px;display:flex;justify-content:space-between;align-items:center;gap:30px}.cta h2{font-size:38px;margin:8px 0}.page-hero{border-bottom:1px solid #263242}.page-hero-inner{max-width:1180px;margin:auto;padding:72px 24px}.page-hero h1{font-size:56px;margin:8px 0}.page-hero p{color:#aeb9c6}
-    footer{border-top:1px solid #263242;color:#7f8b99;font-size:12px}.footer-inner{max-width:1180px;margin:auto;padding:28px 24px;display:flex;justify-content:space-between}
-    @media(max-width:800px){.hero-inner{grid-template-columns:1fr;padding-top:60px}.grid{grid-template-columns:1fr}.nav-links{display:none}.section-head,.cta-inner{display:block}.cta .button{margin-top:20px}.page-hero h1{font-size:42px}}
+    :root {
+      font-family: Arial, "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      color: #eef2f7;
+      background: #0b1017;
+      line-height: 1.7;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(
+        180deg,
+        #0b1017 0%,
+        #101823 55%,
+        #0b1017 100%
+      );
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* =========================
+       NAVIGATION
+       ========================= */
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 16, 23, 0.94);
+      border-bottom: 1px solid #263242;
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-inner {
+      max-width: 1180px;
+      margin: auto;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      flex-shrink: 0;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+
+    .brand small {
+      display: block;
+      color: #8e9aaa;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 18px;
+      color: #b9c3cf;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .nav-links a {
+      padding: 6px 0;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #fff;
+    }
+
+    /* =========================
+       HERO
+       ========================= */
+
+    .hero {
+      border-bottom: 1px solid #263242;
+      background:
+        radial-gradient(
+          circle at 80% 20%,
+          #263b53 0,
+          transparent 35%
+        );
+    }
+
+    .hero-inner {
+      max-width: 1180px;
+      margin: auto;
+      padding: 90px 24px 84px;
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .kicker,
+    .tag {
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: #8fa6bf;
+      font-weight: 800;
+    }
+
+    .hero h1 {
+      font-size: clamp(44px, 7vw, 78px);
+      line-height: 1.08;
+      margin: 14px 0 22px;
+      letter-spacing: -0.04em;
+    }
+
+    .hero h1 span {
+      color: #b8c8d9;
+    }
+
+    .hero p,
+    .card p,
+    .hero-card p {
+      color: #aeb9c6;
+    }
+
+    .hero-card,
+    .card,
+    .map-card {
+      border: 1px solid #2b394a;
+      background: rgba(18, 27, 38, 0.82);
+      border-radius: 18px;
+      padding: 28px;
+    }
+
+    .hero-card h2 {
+      font-size: 32px;
+      margin: 12px 0;
+    }
+
+    .button {
+      display: inline-block;
+      background: #e9eef4;
+      color: #0b1017;
+      padding: 10px 16px;
+      border-radius: 9px;
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    /* =========================
+       SECTIONS
+       ========================= */
+
+    .section {
+      max-width: 1180px;
+      margin: auto;
+      padding: 72px 24px;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 25px;
+      margin-bottom: 30px;
+    }
+
+    .section h2 {
+      font-size: 34px;
+      margin: 6px 0;
+    }
+
+    .section-head p {
+      color: #8491a1;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card h3,
+    .map-card h3 {
+      margin: 10px 0 5px;
+      font-size: 20px;
+    }
+
+    .feature {
+      background: #0e151e;
+      border-top: 1px solid #263242;
+      border-bottom: 1px solid #263242;
+    }
+
+    .number {
+      font-size: 13px;
+      color: #7f9bb7;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+    }
+
+    /* =========================
+       CTA
+       ========================= */
+
+    .cta {
+      border-top: 1px solid #263242;
+    }
+
+    .cta-inner {
+      max-width: 1180px;
+      margin: auto;
+      padding: 70px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .cta h2 {
+      font-size: 38px;
+      margin: 8px 0;
+    }
+
+    /* =========================
+       PAGE HERO
+       ========================= */
+
+    .page-hero {
+      border-bottom: 1px solid #263242;
+    }
+
+    .page-hero-inner {
+      max-width: 1180px;
+      margin: auto;
+      padding: 72px 24px;
+    }
+
+    .page-hero h1 {
+      font-size: 56px;
+      margin: 8px 0;
+    }
+
+    .page-hero p {
+      color: #aeb9c6;
+    }
+
+    /* =========================
+       ARTICLE
+       ========================= */
+
+    .article {
+      max-width: 900px;
+      margin: auto;
+      padding: 72px 24px;
+    }
+
+    .article h2 {
+      margin-top: 42px;
+      font-size: 28px;
+    }
+
+    .article p {
+      color: #aeb9c6;
+    }
+
+    .article .lead {
+      color: #eef2f7;
+      font-size: 20px;
+      line-height: 1.9;
+    }
+
+    /* =========================
+       POSTER
+       ========================= */
+
+    .poster-placeholder {
+      aspect-ratio: 16 / 9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #2b394a;
+      border-radius: 16px;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(32, 46, 62, 0.95),
+          rgba(12, 18, 26, 0.95)
+        );
+      color: #8fa6bf;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+    }
+
+    /* =========================
+       FOOTER
+       ========================= */
+
+    footer {
+      border-top: 1px solid #263242;
+      color: #7f8b99;
+      font-size: 12px;
+    }
+
+    .footer-inner {
+      max-width: 1180px;
+      margin: auto;
+      padding: 28px 24px;
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    /* =========================
+       TABLET
+       ========================= */
+
+    @media (max-width: 1000px) {
+      .nav-inner {
+        gap: 16px;
+      }
+
+      .nav-links {
+        gap: 14px;
+        font-size: 13px;
+      }
+    }
+
+    /* =========================
+       MOBILE
+       ========================= */
+
+    @media (max-width: 800px) {
+      .nav-inner {
+        display: block;
+        padding: 12px 16px 10px;
+      }
+
+      .brand {
+        display: block;
+        margin-bottom: 9px;
+      }
+
+      .nav-links {
+        display: flex;
+        justify-content: flex-start;
+        gap: 18px;
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        padding-bottom: 4px;
+
+        /* 隱藏手機瀏覽器的 scrollbar */
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
+
+      .nav-links::-webkit-scrollbar {
+        display: none;
+      }
+
+      .nav-links a {
+        flex: 0 0 auto;
+        font-size: 13px;
+        padding: 3px 0;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        padding-top: 60px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head,
+      .cta-inner {
+        display: block;
+      }
+
+      .cta .button {
+        margin-top: 20px;
+      }
+
+      .page-hero h1 {
+        font-size: 42px;
+      }
+
+      .page-hero-inner {
+        padding: 56px 20px;
+      }
+
+      .section {
+        padding: 56px 20px;
+      }
+
+      .article {
+        padding: 56px 20px;
+      }
+
+      .footer-inner {
+        display: block;
+        padding: 24px 20px;
+      }
+
+      .footer-inner span {
+        display: block;
+        margin-bottom: 8px;
+      }
+    }
+
+    /* =========================
+       SMALL MOBILE
+       ========================= */
+
+    @media (max-width: 420px) {
+      .brand {
+        font-size: 15px;
+      }
+
+      .brand small {
+        font-size: 9px;
+        letter-spacing: 0.08em;
+      }
+
+      .nav-links {
+        gap: 16px;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .page-hero h1 {
+        font-size: 36px;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <nav class="nav"><div class="nav-inner">
-    <a class="brand" href="/">J 的世界 Research<small>FACTS FIRST · EVIDENCE-BASED RESEARCH</small></a>
-    <div class="nav-links"><a href="/research">Research</a><a href="/maps">Industry Maps</a><a href="/downloads">Downloads</a></div>
-  </div></nav>
+
+  <!-- =========================
+       MAIN NAVIGATION
+       ========================= -->
+
+  <nav class="nav">
+    <div class="nav-inner">
+
+      <a class="brand" href="/">
+        J 的世界 Research
+        <small>FACTS FIRST · EVIDENCE-BASED RESEARCH</small>
+      </a>
+
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/research">Research</a>
+        <a href="/maps">Industry Maps</a>
+        <a href="/downloads">Downloads</a>
+        <a href="/posters">Posters</a>
+        <a href="/about">About</a>
+      </div>
+
+    </div>
+  </nav>
+
   <slot />
-  <footer><div class="footer-inner"><span>© 2026 J 的世界 Research</span><span>資訊分享與研究學習用途，不作為投資進出場依據。</span></div></footer>
+
+  <!-- =========================
+       FOOTER
+       ========================= -->
+
+  <footer>
+    <div class="footer-inner">
+      <span>© 2026 J 的世界 Research</span>
+      <span>
+        資訊分享與研究學習用途，不作為投資進出場依據。
+      </span>
+    </div>
+  </footer>
+
 </body>
 </html>
