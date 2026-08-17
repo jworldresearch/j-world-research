@@ -2,206 +2,159 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="Research Library｜J 的世界 Research">
+<BaseLayout title="Downloads｜J 的世界 Research">
 
 <section class="page-hero">
+
   <div class="page-hero-inner">
-    <div class="kicker">RESEARCH LIBRARY · V1.1</div>
+
+    <div class="kicker">DOWNLOADS · RESEARCH LIBRARY</div>
+
     <h1>研究資料庫</h1>
+
     <p>
-      集中收錄 J 的世界 Research 的研究報告、產業地圖、
-      Research Posters 與研究方法論。
+      集中整理 Research、研究海報與 PDF。
+      未來將逐步建立《J 的世界 Research》的完整研究資料庫。
     </p>
+
   </div>
+
 </section>
 
-<!-- 01 · RESEARCH REPORTS -->
+
 <section class="section">
+
   <div class="section-head">
+
     <div>
-      <div class="kicker">01 · RESEARCH REPORTS</div>
-      <h2>研究報告</h2>
+      <div class="kicker">RESEARCH EDITION</div>
+      <h2>Research Vol.01</h2>
     </div>
-    <p>Facts First · Evidence-Based Research</p>
+
+    <p>AI Platform Evolution · P1–P8</p>
+
   </div>
 
-  <div class="grid">
 
-    <article class="card">
-      <span class="tag">VOL.01 · AVAILABLE</span>
+  <div class="library-card">
+
+    <div>
+
+      <span class="tag">VOL.01 · RESEARCH</span>
+
       <h3>AI Platform Evolution</h3>
+
       <p>
-        從台積電技術論壇的關鍵訊號出發，
-        拆解下一代 AI Platform 的技術演進、
-        先進封裝、光通訊、材料與電力。
+        從台積電 2026 China Technology Symposium 出發，
+        拆解 AI Platform 從先進製程、先進封裝、
+        光互連、材料到 AI Infrastructure 的演進。
       </p>
-      <a class="button" href="/research">閱讀 Research →</a>
-    </article>
 
-    <article class="card">
-      <span class="tag">VOL.02 · FUTURE</span>
-      <h3>Next Research Edition</h3>
-      <p>
-        下一期研究將持續追蹤 AI、半導體、
-        先進封裝與關鍵材料的產業變化。
-      </p>
-      <span class="status">COMING SOON</span>
-    </article>
+      <div class="edition-meta">
 
-    <article class="card">
-      <span class="tag">SPECIAL EDITION</span>
-      <h3>Special Research</h3>
-      <p>
-        針對重大產業事件與技術突破，
-        不定期推出專題研究。
-      </p>
-      <span class="status">COMING SOON</span>
-    </article>
+        <span>P1–P8</span>
+        <span>Facts First</span>
+        <span>Evidence-Based Research</span>
 
-  </div>
-</section>
-
-
-<!-- 02 · INDUSTRY MAPS -->
-<section class="feature">
-  <div class="section">
-
-    <div class="section-head">
-      <div>
-        <div class="kicker">02 · INDUSTRY MAPS</div>
-        <h2>產業地圖</h2>
       </div>
-      <a class="button" href="/maps">查看全部地圖 →</a>
-    </div>
-
-    <div class="grid">
-
-      <article class="map-card">
-        <span class="tag">AI ECOSYSTEM</span>
-        <h3>AI 全產業鏈</h3>
-        <p>
-          AI Chip → Advanced Packaging →
-          Optical → Server → Power → Cooling
-        </p>
-        <a href="/maps" class="text-link">查看地圖 →</a>
-      </article>
-
-      <article class="map-card">
-        <span class="tag">GLASS CORE</span>
-        <h3>Glass Core Ecosystem</h3>
-        <p>
-          Glass → TGV → Core Substrate →
-          Advanced Packaging → AI Accelerator
-        </p>
-        <a href="/maps" class="text-link">查看地圖 →</a>
-      </article>
-
-      <article class="map-card">
-        <span class="tag">CPO</span>
-        <h3>CPO Ecosystem</h3>
-        <p>
-          Switch → Optical Engine → Fiber →
-          Packaging → Thermal → Power
-        </p>
-        <a href="/maps" class="text-link">查看地圖 →</a>
-      </article>
 
     </div>
 
-  </div>
-</section>
 
+    <div class="edition-actions">
 
-<!-- 03 · RESEARCH POSTERS -->
-<section class="section">
+      <a class="button" href="/research">
+        Read Research →
+      </a>
 
-  <div class="section-head">
-    <div>
-      <div class="kicker">03 · RESEARCH POSTERS</div>
-      <h2>研究海報</h2>
+      <a class="button-secondary" href="/maps">
+        Industry Maps
+      </a>
+
+      <a class="button-secondary" href="/posters">
+        Posters
+      </a>
+
     </div>
-    <p>Visual Research · Supply Chain Maps</p>
-  </div>
-
-  <div class="grid">
-
-    <article class="card">
-      <span class="tag">AI PLATFORM</span>
-      <h3>AI Platform Evolution</h3>
-      <p>
-        將 AI Chip、Advanced Packaging、
-        Optical、Server、Power 與 Cooling
-        串成完整產業鏈。
-      </p>
-      <span class="status">COMING SOON</span>
-    </article>
-
-    <article class="card">
-      <span class="tag">GLASS CORE</span>
-      <h3>Glass Core</h3>
-      <p>
-        從玻璃材料、TGV、Core Substrate
-        到先進封裝的技術路徑。
-      </p>
-      <span class="status">COMING SOON</span>
-    </article>
-
-    <article class="card">
-      <span class="tag">CPO</span>
-      <h3>CPO Ecosystem</h3>
-      <p>
-        從交換器、光引擎、光纖到封裝、
-        散熱與電力的完整架構。
-      </p>
-      <span class="status">COMING SOON</span>
-    </article>
 
   </div>
 
 </section>
 
 
-<!-- 04 · METHODOLOGY -->
 <section class="feature">
 
   <div class="section">
 
     <div class="section-head">
+
       <div>
-        <div class="kicker">04 · METHODOLOGY</div>
-        <h2>研究方法論</h2>
+        <div class="kicker">RESEARCH MATERIALS</div>
+        <h2>研究資料</h2>
       </div>
-      <p>Research Principles</p>
+
+      <p>Research Library</p>
+
     </div>
+
 
     <div class="grid">
 
-      <article class="map-card">
-        <span class="tag">FACTS FIRST</span>
-        <h3>公開資訊優先</h3>
+
+      <article class="card">
+
+        <span class="tag">RESEARCH</span>
+
+        <h3>AI Platform Evolution</h3>
+
         <p>
-          以公司公告、技術文件、法說會、
-          公開研究資料與產業資訊作為研究基礎。
+          完整研究內容 P1–P8。
+          從事件、證據、技術路徑一路延伸至
+          Glass Core、AI Infrastructure 與 Future Watch。
         </p>
+
+        <a class="button-secondary" href="/research">
+          Open Research →
+        </a>
+
       </article>
 
-      <article class="map-card">
-        <span class="tag">EVIDENCE</span>
-        <h3>證據導向</h3>
+
+      <article class="card">
+
+        <span class="tag">POSTERS</span>
+
+        <h3>Industry Posters</h3>
+
         <p>
-          透過技術、製程、材料、設備與供應鏈
-          關係進行交叉驗證。
+          將 AI、Glass Core 與 CPO 等研究內容
+          濃縮成一頁式視覺化研究。
         </p>
+
+        <a class="button-secondary" href="/posters">
+          Open Posters →
+        </a>
+
       </article>
 
-      <article class="map-card">
-        <span class="tag">INFERENCE</span>
-        <h3>推論明確標示</h3>
+
+      <article class="card">
+
+        <span class="tag">INDUSTRY MAPS</span>
+
+        <h3>Technology Maps</h3>
+
         <p>
-          尚未公告但具有研究價值的市場推論，
-          不與已確認事實混為一談。
+          以技術節點、供應鏈位置與 Evidence Level
+          建立 AI 產業鏈研究框架。
         </p>
+
+        <a class="button-secondary" href="/maps">
+          Open Maps →
+        </a>
+
       </article>
+
 
     </div>
 
@@ -210,54 +163,156 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 </section>
 
 
-<!-- 05 · J INSIGHT -->
 <section class="section">
 
   <div class="section-head">
+
     <div>
-      <div class="kicker">05 · J INSIGHT</div>
-      <h2>產業推論</h2>
+      <div class="kicker">COMING NEXT</div>
+      <h2>Research Editions</h2>
     </div>
-    <p>Future Watch</p>
+
   </div>
 
-  <div class="card">
-    <span class="tag">J INSIGHT</span>
-    <h3>從證據，到下一個可能發生的事情</h3>
+
+  <article class="card coming-card">
+
+    <span class="tag">PDF LIBRARY</span>
+
+    <h3>印刷級與數位版研究資料</h3>
+
     <p>
-      J Insight 用來收錄尚未被公開資訊完全確認，
-      但具有技術邏輯、產業關係或供應鏈訊號支持的
-      潛在發展方向。
+      後續將逐步加入研究 PDF、印刷級版本、
+      數位閱讀版與相關研究附件。
     </p>
-    <p>
-      所有此類內容均會與已確認資訊清楚區分，
-      並持續追蹤後續驗證進度。
+
+    <p class="muted">
+      ※ 目前此區為 Research Library 架構，
+      實際檔案將於完成製作後陸續上線。
     </p>
-  </div>
+
+  </article>
 
 </section>
 
 
-<!-- 06 · DISCLAIMER -->
 <section class="cta">
 
   <div class="cta-inner">
 
     <div>
-      <div class="kicker">RESEARCH DISCLAIMER</div>
-      <h2>研究，是持續驗證的過程。</h2>
+
+      <div class="kicker">BACK TO RESEARCH</div>
+
+      <h2>從資料庫回到研究本身。</h2>
+
       <p>
-        本網站內容僅供資訊分享、研究與學習用途，
-        不構成投資建議，亦不作為任何投資進出場依據。
+        閱讀完整 Research Vol.01，
+        或從 Industry Maps / Posters 進一步探索。
       </p>
+
     </div>
 
     <a class="button" href="/research">
-      開始閱讀 → 
+      Read Research →
     </a>
 
   </div>
 
 </section>
+
+
+<style>
+
+  .library-card {
+    border: 1px solid #344457;
+    background:
+      linear-gradient(
+        135deg,
+        rgba(28, 42, 58, 0.95),
+        rgba(14, 21, 30, 0.96)
+      );
+    border-radius: 20px;
+    padding: 34px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .library-card h3 {
+    font-size: 30px;
+    margin: 10px 0;
+  }
+
+  .library-card p {
+    color: #aeb9c6;
+    max-width: 720px;
+  }
+
+  .edition-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+  }
+
+  .edition-meta span {
+    border: 1px solid #354457;
+    border-radius: 7px;
+    padding: 5px 9px;
+    color: #b9c6d4;
+    font-size: 12px;
+  }
+
+  .edition-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 160px;
+  }
+
+  .edition-actions .button-secondary {
+    text-align: center;
+  }
+
+  .card .button-secondary {
+    display: inline-block;
+    margin-top: 16px;
+  }
+
+  .coming-card {
+    max-width: 820px;
+  }
+
+  .muted {
+    color: #7f8d9d !important;
+    font-size: 12px;
+  }
+
+  @media(max-width:800px) {
+
+    .library-card {
+      grid-template-columns: 1fr;
+      padding: 26px;
+      gap: 24px;
+    }
+
+    .library-card h3 {
+      font-size: 26px;
+    }
+
+    .edition-actions {
+      min-width: 0;
+    }
+
+    .edition-actions .button,
+    .edition-actions .button-secondary {
+      text-align: center;
+    }
+
+  }
+
+</style>
 
 </BaseLayout>
