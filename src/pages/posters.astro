@@ -8,13 +8,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
   <div class="page-hero-inner">
 
-    <div class="kicker">POSTER GALLERY · VISUAL RESEARCH</div>
+    <div class="kicker">POSTER GALLERY · V1.1-08</div>
 
     <h1>研究海報</h1>
 
     <p>
-      將複雜研究濃縮成一張圖。
-      從 Research、Industry Maps 到一頁式視覺化研究。
+      將複雜的技術路徑、產業鏈與研究推論，
+      濃縮成一張可以快速閱讀的研究海報。
     </p>
 
   </div>
@@ -31,7 +31,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <h2>AI Platform Evolution</h2>
     </div>
 
-    <p>Visual Research</p>
+    <p>Poster Collection</p>
 
   </div>
 
@@ -39,44 +39,89 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   <div class="poster-grid">
 
 
-    <!-- AI PLATFORM -->
+    <!-- POSTER 01 -->
 
-    <article class="poster-item">
+    <article class="poster-card">
 
-      <div class="poster-placeholder">
+      <a
+        class="poster-preview poster-ai"
+        href="/research"
+        aria-label="開啟 AI Platform Evolution Research"
+      >
 
-        <span class="poster-kicker">
-          RESEARCH VOL.01
-        </span>
+        <div class="poster-top">
 
-        <strong>AI PLATFORM</strong>
+          <span>J 的世界</span>
 
-        <span class="poster-subtitle">
-          AI Platform Evolution
-        </span>
+          <span>RESEARCH VOL.01</span>
 
-      </div>
+        </div>
+
+
+        <div class="poster-content">
+
+          <div class="poster-kicker">
+            AI PLATFORM EVOLUTION
+          </div>
+
+          <h3>
+            下一代 AI 平台，
+            <br />
+            不只是晶片。
+          </h3>
+
+          <div class="poster-line"></div>
+
+          <div class="poster-flow">
+
+            <span>AI Compute</span>
+            <b>→</b>
+            <span>Advanced Process</span>
+            <b>→</b>
+            <span>Packaging</span>
+
+            <b>→</b>
+
+            <span>Optical</span>
+            <b>→</b>
+            <span>Power / Thermal</span>
+
+          </div>
+
+        </div>
+
+
+        <div class="poster-bottom">
+
+          <span>FACTS FIRST</span>
+          <span>EVIDENCE-BASED RESEARCH</span>
+
+        </div>
+
+      </a>
+
 
       <div class="poster-info">
 
-        <span class="tag">01 · AI PLATFORM</span>
+        <div>
 
-        <h3>AI Platform Evolution</h3>
+          <span class="tag">POSTER 01 · RESEARCH</span>
 
-        <p>
-          從先進製程、先進封裝，
-          延伸至光互連、材料、電力與散熱，
-          建立下一代 AI Platform 的完整技術路徑。
-        </p>
+          <h3>AI Platform Evolution</h3>
+
+          <p>
+            從台積電 2026 Technology Symposium 出發，
+            建立 AI Compute、先進製程、先進封裝、
+            光互連與 AI Infrastructure 的完整技術路徑。
+          </p>
+
+        </div>
+
 
         <div class="poster-actions">
 
-          <a class="button-secondary" href="/research">
-            Read Full Research →
-          </a>
-
-          <a class="button-secondary" href="/maps">
-            Industry Maps →
+          <a class="button" href="/research">
+            Read Research →
           </a>
 
         </div>
@@ -86,44 +131,91 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </article>
 
 
-    <!-- GLASS CORE -->
 
-    <article class="poster-item">
+    <!-- POSTER 02 -->
 
-      <div class="poster-placeholder">
+    <article class="poster-card">
 
-        <span class="poster-kicker">
-          ADVANCED PACKAGING
-        </span>
+      <a
+        class="poster-preview poster-glass"
+        href="/maps"
+        aria-label="開啟 Glass Core Ecosystem Industry Map"
+      >
 
-        <strong>GLASS CORE</strong>
+        <div class="poster-top">
 
-        <span class="poster-subtitle">
-          Glass Core Ecosystem
-        </span>
+          <span>J 的世界</span>
 
-      </div>
+          <span>INDUSTRY MAP</span>
+
+        </div>
+
+
+        <div class="poster-content">
+
+          <div class="poster-kicker">
+            GLASS CORE ECOSYSTEM
+          </div>
+
+          <h3>
+            Glass Core
+            <br />
+            為什麼值得研究？
+          </h3>
+
+          <div class="poster-line"></div>
+
+          <div class="poster-flow vertical-flow">
+
+            <span>Glass Material</span>
+            <b>↓</b>
+
+            <span>TGV</span>
+            <b>↓</b>
+
+            <span>Metallization</span>
+            <b>↓</b>
+
+            <span>Glass Core</span>
+            <b>↓</b>
+
+            <span>Advanced Packaging</span>
+
+          </div>
+
+        </div>
+
+
+        <div class="poster-bottom">
+
+          <span>TECHNOLOGY MAP</span>
+          <span>EVIDENCE LEVEL</span>
+
+        </div>
+
+      </a>
+
 
       <div class="poster-info">
 
-        <span class="tag">02 · GLASS CORE</span>
+        <div>
 
-        <h3>Glass Core Ecosystem</h3>
+          <span class="tag">POSTER 02 · GLASS CORE</span>
 
-        <p>
-          從 Glass、TGV、Metallization、
-          Core Substrate 到 Advanced Packaging，
-          追蹤 Glass Core 的技術與供應鏈位置。
-        </p>
+          <h3>Glass Core Ecosystem</h3>
+
+          <p>
+            從玻璃材料、TGV、金屬化到 Glass Core，
+            重新理解玻璃基板與先進封裝之間的技術關係。
+          </p>
+
+        </div>
+
 
         <div class="poster-actions">
 
-          <a class="button-secondary" href="/research">
-            Read Research →
-          </a>
-
           <a class="button-secondary" href="/maps">
-            Explore Map →
+            Open Industry Map →
           </a>
 
         </div>
@@ -133,44 +225,90 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </article>
 
 
-    <!-- CPO -->
 
-    <article class="poster-item">
+    <!-- POSTER 03 -->
 
-      <div class="poster-placeholder">
+    <article class="poster-card">
 
-        <span class="poster-kicker">
-          OPTICAL INTERCONNECT
-        </span>
+      <a
+        class="poster-preview poster-cpo"
+        href="/maps"
+        aria-label="開啟 CPO Ecosystem Industry Map"
+      >
 
-        <strong>CPO</strong>
+        <div class="poster-top">
 
-        <span class="poster-subtitle">
-          CPO Ecosystem
-        </span>
+          <span>J 的世界</span>
 
-      </div>
+          <span>INDUSTRY MAP</span>
+
+        </div>
+
+
+        <div class="poster-content">
+
+          <div class="poster-kicker">
+            CPO ECOSYSTEM
+          </div>
+
+          <h3>
+            AI 資料中心的
+            <br />
+            下一代互連。
+          </h3>
+
+          <div class="poster-line"></div>
+
+          <div class="poster-flow">
+
+            <span>AI Compute</span>
+            <b>→</b>
+            <span>Switch</span>
+            <b>→</b>
+            <span>Optical Engine</span>
+
+            <b>→</b>
+
+            <span>CPO</span>
+            <b>→</b>
+            <span>Fiber</span>
+
+          </div>
+
+        </div>
+
+
+        <div class="poster-bottom">
+
+          <span>OPTICAL INTERCONNECT</span>
+          <span>AI INFRASTRUCTURE</span>
+
+        </div>
+
+      </a>
+
 
       <div class="poster-info">
 
-        <span class="tag">03 · CPO</span>
+        <div>
 
-        <h3>CPO Commercialization</h3>
+          <span class="tag">POSTER 03 · CPO</span>
 
-        <p>
-          從 AI Compute、Switch、
-          Optical Engine 到 Fiber 與 Data Center，
-          觀察 CPO 從技術走向商業化的關鍵節點。
-        </p>
+          <h3>CPO Ecosystem</h3>
+
+          <p>
+            從 AI Compute、Switch、Optical Engine、
+            CPO 到 Fiber，拆解 AI Data Center
+            高速互連的產業鏈。
+          </p>
+
+        </div>
+
 
         <div class="poster-actions">
 
-          <a class="button-secondary" href="/research">
-            Read Research →
-          </a>
-
           <a class="button-secondary" href="/maps">
-            Explore Map →
+            Open Industry Map →
           </a>
 
         </div>
@@ -183,6 +321,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   </div>
 
 </section>
+
 
 
 <section class="feature">
@@ -192,65 +331,164 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <div class="section-head">
 
       <div>
-        <div class="kicker">HOW TO USE</div>
-        <h2>海報不是研究的終點</h2>
+
+        <div class="kicker">FIRST PRINTING</div>
+
+        <h2>Research Vol.01 · First Printing</h2>
+
       </div>
 
-      <p>Visual → Research → Evidence</p>
+      <p>PDF Edition · P1–P8</p>
 
     </div>
 
 
-    <div class="grid">
+    <article class="printing-card">
+
+      <div class="printing-cover">
+
+        <div class="printing-mark">
+          J
+        </div>
+
+        <div class="printing-title">
+          <span>J 的世界</span>
+
+          <strong>
+            RESEARCH
+          </strong>
+
+          <small>
+            VOL.01 · FIRST PRINTING
+          </small>
+        </div>
+
+      </div>
 
 
-      <article class="card">
+      <div class="printing-content">
 
-        <span class="tag">01 · VISUAL</span>
+        <span class="tag">
+          RESEARCH EDITION
+        </span>
 
-        <h3>先看全貌</h3>
-
-        <p>
-          用一張海報快速掌握技術路徑、
-          產業鏈與主要研究問題。
-        </p>
-
-      </article>
-
-
-      <article class="card">
-
-        <span class="tag">02 · RESEARCH</span>
-
-        <h3>再讀完整研究</h3>
-
-        <p>
-          回到 Research 閱讀完整的 P1–P8
-          研究內容與方法論。
-        </p>
-
-      </article>
-
-
-      <article class="card">
-
-        <span class="tag">03 · EVIDENCE</span>
-
-        <h3>最後檢視證據</h3>
+        <h3>
+          AI Platform Evolution
+        </h3>
 
         <p>
-          透過 Industry Maps 與 Evidence Framework，
-          區分量產、驗證、開發與 Inference。
+          完整 Research Vol.01，
+          收錄 P1–P8 研究內容，
+          從 TSMC Technology Symposium、
+          AI Platform Evolution、
+          Glass Core 到 Future Watch。
         </p>
 
-      </article>
 
+        <div class="printing-meta">
+
+          <span>P1–P8</span>
+          <span>First Printing</span>
+          <span>Facts First</span>
+          <span>Evidence-Based</span>
+
+        </div>
+
+
+        <div class="printing-actions">
+
+          <a
+            class="button"
+            href="/downloads/J的世界_Research_Vol01_First_Printing.pdf"
+            target="_blank"
+            rel="noopener"
+          >
+            Open First Printing PDF →
+          </a>
+
+          <a
+            class="button-secondary"
+            href="/downloads"
+          >
+            Research Library
+          </a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+
+<section class="section">
+
+  <div class="section-head">
+
+    <div>
+
+      <div class="kicker">POSTER PRINCIPLE</div>
+
+      <h2>一張海報，只回答一個問題。</h2>
 
     </div>
 
   </div>
 
+
+  <div class="grid">
+
+    <article class="card">
+
+      <span class="tag">01 · STRUCTURE</span>
+
+      <h3>技術路徑</h3>
+
+      <p>
+        先理解技術從哪裡開始，
+        經過哪些關鍵節點，
+        最後落到哪一個產業應用。
+      </p>
+
+    </article>
+
+
+    <article class="card">
+
+      <span class="tag">02 · EVIDENCE</span>
+
+      <h3>證據強度</h3>
+
+      <p>
+        已量產、驗證中、開發中與
+        Inference 清楚區分。
+      </p>
+
+    </article>
+
+
+    <article class="card">
+
+      <span class="tag">03 · RESEARCH</span>
+
+      <h3>從圖回到研究</h3>
+
+      <p>
+        海報不是研究的終點，
+        而是快速進入完整 Research
+        與 Industry Maps 的入口。
+      </p>
+
+    </article>
+
+  </div>
+
 </section>
+
 
 
 <section class="cta">
@@ -259,36 +497,39 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
     <div>
 
-      <div class="kicker">RESEARCH LIBRARY</div>
+      <div class="kicker">
+        RESEARCH LIBRARY
+      </div>
 
-      <h2>想深入研究？</h2>
+      <h2>
+        從一張海報，
+        進入完整研究。
+      </h2>
 
       <p>
-        從視覺化海報回到完整 Research，
-        或直接查看研究資料庫。
+        Research、Industry Maps、
+        Posters 與 First Printing
+        將逐步形成完整的研究資料庫。
       </p>
 
     </div>
 
 
-    <div class="cta-actions">
-
-      <a class="button" href="/research">
-        Read Research →
-      </a>
-
-      <a class="button-secondary" href="/downloads">
-        Downloads
-      </a>
-
-    </div>
+    <a class="button" href="/downloads">
+      Open Research Library →
+    </a>
 
   </div>
 
 </section>
 
 
+
 <style>
+
+  /* =========================
+     POSTER GRID
+  ========================= */
 
   .poster-grid {
     display: grid;
@@ -296,86 +537,360 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     gap: 22px;
   }
 
-  .poster-item {
+
+  .poster-card {
     border: 1px solid #2b394a;
-    border-radius: 18px;
+    border-radius: 20px;
     overflow: hidden;
-    background: rgba(18, 27, 38, 0.82);
+    background: #101923;
   }
 
-  .poster-placeholder {
-    aspect-ratio: 3 / 4;
-    padding: 26px;
-    background:
-      radial-gradient(
-        circle at 75% 20%,
-        #2b425b 0,
-        transparent 36%
-      ),
-      linear-gradient(
-        145deg,
-        #101a25,
-        #0a1017
-      );
-    border-bottom: 1px solid #2b394a;
 
+  /* =========================
+     POSTER PREVIEW
+  ========================= */
+
+  .poster-preview {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    min-height: 570px;
+    padding: 22px;
+    position: relative;
+    overflow: hidden;
+    color: #eef2f7;
   }
 
-  .poster-placeholder strong {
-    font-size: clamp(28px, 3vw, 42px);
-    line-height: 1;
-    letter-spacing: -0.03em;
+
+  .poster-preview::before {
+    content: "";
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    right: -100px;
+    top: 120px;
+    background: rgba(255,255,255,.035);
   }
+
+
+  .poster-preview::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    right: 34px;
+    top: 0;
+    background: rgba(255,255,255,.08);
+  }
+
+
+  .poster-ai {
+    background:
+      radial-gradient(
+        circle at 80% 22%,
+        rgba(92,132,171,.28),
+        transparent 34%
+      ),
+      linear-gradient(
+        155deg,
+        #172536 0%,
+        #0d151f 52%,
+        #080d14 100%
+      );
+  }
+
+
+  .poster-glass {
+    background:
+      radial-gradient(
+        circle at 18% 30%,
+        rgba(120,180,210,.22),
+        transparent 30%
+      ),
+      linear-gradient(
+        155deg,
+        #182b34 0%,
+        #0d1820 52%,
+        #080e14 100%
+      );
+  }
+
+
+  .poster-cpo {
+    background:
+      radial-gradient(
+        circle at 75% 24%,
+        rgba(137,112,185,.23),
+        transparent 32%
+      ),
+      linear-gradient(
+        155deg,
+        #211d31 0%,
+        #11151f 52%,
+        #080d14 100%
+      );
+  }
+
+
+  .poster-top,
+  .poster-bottom {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 9px;
+    letter-spacing: .14em;
+    color: #91a4b7;
+    font-weight: 800;
+  }
+
+
+  .poster-content {
+    position: relative;
+    z-index: 2;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 46px 12px;
+  }
+
 
   .poster-kicker {
-    color: #8fa6bf;
-    font-size: 10px;
+    font-size: 11px;
+    letter-spacing: .16em;
     font-weight: 800;
-    letter-spacing: .14em;
+    color: #9bb2c9;
+    margin-bottom: 18px;
   }
 
-  .poster-subtitle {
-    color: #9eacbb;
-    font-size: 13px;
+
+  .poster-content h3 {
+    font-size: clamp(28px, 3vw, 38px);
+    line-height: 1.18;
+    letter-spacing: -.035em;
+    margin: 0;
+    max-width: 330px;
   }
+
+
+  .poster-line {
+    width: 64px;
+    height: 2px;
+    background: #839bb2;
+    margin: 28px 0;
+  }
+
+
+  .poster-flow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 7px;
+    max-width: 340px;
+  }
+
+
+  .poster-flow span {
+    border: 1px solid rgba(151,172,193,.3);
+    background: rgba(10,17,25,.52);
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-size: 9px;
+    color: #c8d4df;
+  }
+
+
+  .poster-flow b {
+    color: #70869d;
+    font-size: 11px;
+  }
+
+
+  .vertical-flow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+
+  .vertical-flow b {
+    margin-left: 16px;
+  }
+
+
+  .poster-bottom {
+    margin-top: auto;
+  }
+
+
+  /* =========================
+     POSTER INFO
+  ========================= */
 
   .poster-info {
     padding: 24px;
+    border-top: 1px solid #2b394a;
   }
+
 
   .poster-info h3 {
-    font-size: 21px;
-    margin: 9px 0 7px;
+    margin: 10px 0 6px;
+    font-size: 22px;
   }
+
 
   .poster-info p {
-    color: #aeb9c6;
+    color: #9eabb9;
     font-size: 14px;
+    margin-bottom: 0;
   }
+
 
   .poster-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 9px;
-    margin-top: 18px;
+    margin-top: 20px;
   }
 
-  .cta-actions {
+
+  /* =========================
+     FIRST PRINTING
+  ========================= */
+
+  .printing-card {
+    border: 1px solid #344457;
+    border-radius: 20px;
+    overflow: hidden;
+    background:
+      linear-gradient(
+        135deg,
+        rgba(28,42,58,.95),
+        rgba(12,18,26,.98)
+      );
+    display: grid;
+    grid-template-columns: 360px 1fr;
+  }
+
+
+  .printing-cover {
+    min-height: 430px;
+    padding: 34px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background:
+      radial-gradient(
+        circle at 70% 25%,
+        rgba(121,154,185,.24),
+        transparent 34%
+      ),
+      linear-gradient(
+        145deg,
+        #1a2a3b,
+        #0b1119
+      );
+  }
+
+
+  .printing-mark {
+    width: 58px;
+    height: 58px;
+    border: 1px solid #738aa1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 800;
+    color: #d9e2ec;
+  }
+
+
+  .printing-title span {
+    display: block;
+    font-size: 12px;
+    letter-spacing: .14em;
+    color: #9eb0c1;
+    margin-bottom: 10px;
+  }
+
+
+  .printing-title strong {
+    display: block;
+    font-size: 38px;
+    letter-spacing: -.04em;
+  }
+
+
+  .printing-title small {
+    display: block;
+    margin-top: 10px;
+    color: #8093a6;
+    letter-spacing: .12em;
+    font-size: 10px;
+  }
+
+
+  .printing-content {
+    padding: 42px;
+    align-self: center;
+  }
+
+
+  .printing-content h3 {
+    font-size: 34px;
+    margin: 12px 0;
+  }
+
+
+  .printing-content p {
+    max-width: 680px;
+    color: #aeb9c6;
+  }
+
+
+  .printing-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 24px 0;
+  }
+
+
+  .printing-meta span {
+    border: 1px solid #354457;
+    border-radius: 7px;
+    padding: 6px 9px;
+    font-size: 11px;
+    color: #b9c6d4;
+  }
+
+
+  .printing-actions {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
   }
 
-  @media(max-width:900px) {
+
+  /* =========================
+     RESPONSIVE
+  ========================= */
+
+  @media(max-width:1000px) {
 
     .poster-grid {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .printing-card {
+      grid-template-columns: 1fr;
+    }
+
+    .printing-cover {
+      min-height: 360px;
     }
 
   }
+
 
   @media(max-width:800px) {
 
@@ -383,25 +898,30 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       grid-template-columns: 1fr;
     }
 
-    .poster-placeholder {
-      aspect-ratio: 16 / 10;
+
+    .poster-preview {
+      min-height: 520px;
     }
 
-    .poster-placeholder strong {
-      font-size: 34px;
+
+    .printing-content {
+      padding: 28px;
     }
 
-    .poster-actions {
-      display: grid;
-      grid-template-columns: 1fr;
+
+    .printing-content h3 {
+      font-size: 28px;
     }
 
-    .poster-actions .button-secondary {
+
+    .printing-actions {
+      flex-direction: column;
+    }
+
+
+    .printing-actions .button,
+    .printing-actions .button-secondary {
       text-align: center;
-    }
-
-    .cta-actions {
-      margin-top: 20px;
     }
 
   }
