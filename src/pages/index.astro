@@ -1,43 +1,770 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
+
 <BaseLayout title="J 的世界 Research｜Facts First · Evidence-Based Research">
-<section class="hero"><div class="hero-inner">
-  <div><div class="kicker">J 的世界 Research · 2026</div>
-    <h1>把複雜產業，<br/><span>拆成看得懂的證據。</span></h1>
-    <p>從產業事件出發，拆解技術、供應鏈與關鍵訊號；以公開資訊為基礎，將研究轉換成可以閱讀、追蹤與驗證的產業地圖。</p>
-    <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap"><a class="button" href="/research">進入 Research →</a><a class="button" style="background:transparent;color:#eef2f7;border:1px solid #647184" href="/maps">查看產業地圖</a></div>
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero">
+
+  <div class="hero-inner">
+
+    <div>
+
+      <div class="kicker">J 的世界 Research · 2026</div>
+
+      <h1>
+        把複雜產業，<br />
+        <span>拆成看得懂的證據。</span>
+      </h1>
+
+      <p>
+        從產業事件出發，拆解技術、供應鏈與關鍵訊號；
+        以公開資訊為基礎，將研究轉換成可以閱讀、
+        追蹤與驗證的產業地圖。
+      </p>
+
+      <div class="hero-actions">
+
+        <a class="button" href="/research">
+          進入 Research →
+        </a>
+
+        <a class="button-outline" href="/maps">
+          查看產業地圖
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <a class="hero-card featured-card" href="/research">
+
+      <div class="kicker">
+        Featured Research · Vol.01
+      </div>
+
+      <h2>
+        AI Platform Evolution
+      </h2>
+
+      <p>
+        從台積電技術論壇的關鍵訊號出發，
+        追蹤下一代 AI 平台如何由晶片、
+        封裝、光通訊、材料與電力共同演進。
+      </p>
+
+      <span class="button">
+        閱讀創刊號 →
+      </span>
+
+    </a>
+
   </div>
-  <a class="hero-card" href="/research"><div class="kicker">Featured Research · Vol.01</div><h2>AI Platform Evolution</h2><p>從台積電技術論壇的關鍵訊號出發，追蹤下一代 AI 平台如何由晶片、封裝、光通訊、材料與電力共同演進。</p><span class="button">閱讀創刊號 →</span></a>
-</div></section>
 
-<section class="section"><div class="section-head"><div><div class="kicker">Research Framework</div><h2>從事件，到產業鏈</h2></div><p>Story → Evidence → Technology → Investment Matrix → Future Watch</p></div>
-<div class="grid">
-<article class="card"><span class="tag">01 · STORY</span><h3>先問：發生了什麼？</h3><p>以重要產業事件建立研究起點，不急著跳到個股。</p></article>
-<article class="card"><span class="tag">02 · EVIDENCE</span><h3>再找：哪些訊號可以驗證？</h3><p>將公開資訊、技術文件與公司揭露拆開整理。</p></article>
-<article class="card"><span class="tag">03 · TECHNOLOGY</span><h3>最後拆：技術如何落地？</h3><p>從製程、材料、設備到供應鏈，建立技術路徑。</p></article>
-</div></section>
+</section>
 
-<section class="feature"><div class="section"><div class="section-head"><div><div class="kicker">Vol.01 · Featured Research</div><h2>AI Platform Evolution</h2></div><p>創刊號主軸</p></div>
-<div class="grid">
-<div class="map-card"><div class="number">P1 — P2</div><h3>從一場論壇開始</h3><p>建立事件背景，理解 AI 平台為何正在發生結構性變化。</p></div>
-<div class="map-card"><div class="number">P3 — P5</div><h3>四個訊號 × 技術演進</h3><p>先進封裝、光通訊、Glass Core 與材料設備形成新的關聯。</p></div>
-<div class="map-card"><div class="number">P6 — P8</div><h3>產業對應 × Future Watch</h3><p>將技術節點轉換成供應鏈觀察框架，並保留研究方法與來源。</p></div>
-</div></div></section>
 
-<section class="section"><div class="section-head"><div><div class="kicker">Industry Maps</div><h2>三張核心產業地圖</h2></div><a href="/maps" class="button">全部地圖 →</a></div>
-<div class="grid">
-<div class="card"><span class="tag">AI ECOSYSTEM</span><h3>AI 全產業鏈</h3><p>AI Chip → Advanced Packaging → Optical → Server → Power → Cooling</p></div>
-<div class="card"><span class="tag">GLASS CORE</span><h3>Glass Core Ecosystem</h3><p>Glass → TGV → Core Substrate → Advanced Packaging → AI Accelerator</p></div>
-<div class="card"><span class="tag">CPO</span><h3>CPO Ecosystem</h3><p>Switch → Optical Engine → Fiber → Packaging → Thermal → Power</p></div>
-</div></section>
+<!-- =========================================================
+     RESEARCH FRAMEWORK
+========================================================= -->
 
-<section class="section"><div class="section-head"><div><div class="kicker">Editorial Principles</div><h2>研究，不把推論寫成事實。</h2></div></div>
-<div class="grid">
-<article class="card"><span class="tag">FACTS FIRST</span><h3>公開資訊優先</h3><p>已公告、已驗證與市場推論清楚分層。</p></article>
-<article class="card"><span class="tag">EVIDENCE</span><h3>證據導向</h3><p>用技術與供應鏈關係交叉驗證產業訊號。</p></article>
-<article class="card"><span class="tag">J INSIGHT</span><h3>Inference 明確標示</h3><p>對尚未公告但值得追蹤的機會，明確標示為產業推論。</p></article>
-</div></section>
+<section class="section">
 
-<section class="cta"><div class="cta-inner"><div><div class="kicker">NEXT</div><h2>這只是第一版。</h2><p>下一階段，將把真正的研究文章、海報與 PDF 資料庫逐步接進網站。</p></div><a class="button" href="/downloads">查看資料庫 →</a></div></section>
+  <div class="section-head">
+
+    <div>
+      <div class="kicker">RESEARCH FRAMEWORK</div>
+      <h2>從事件，到產業鏈</h2>
+    </div>
+
+    <p>
+      Story → Evidence → Technology → Investment Matrix → Future Watch
+    </p>
+
+  </div>
+
+
+  <div class="grid">
+
+    <article class="card">
+
+      <span class="tag">01 · STORY</span>
+
+      <h3>
+        先問：發生了什麼？
+      </h3>
+
+      <p>
+        以重要產業事件建立研究起點，
+        不急著跳到個股。
+      </p>
+
+    </article>
+
+
+    <article class="card">
+
+      <span class="tag">02 · EVIDENCE</span>
+
+      <h3>
+        再找：哪些訊號可以驗證？
+      </h3>
+
+      <p>
+        將公開資訊、技術文件與公司揭露
+        拆開整理。
+      </p>
+
+    </article>
+
+
+    <article class="card">
+
+      <span class="tag">03 · TECHNOLOGY</span>
+
+      <h3>
+        最後拆：技術如何落地？
+      </h3>
+
+      <p>
+        從製程、材料、設備到供應鏈，
+        建立技術路徑。
+      </p>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     VOL.01
+========================================================= -->
+
+<section class="feature">
+
+  <div class="section">
+
+    <div class="section-head">
+
+      <div>
+        <div class="kicker">
+          VOL.01 · FEATURED RESEARCH
+        </div>
+
+        <h2>
+          AI Platform Evolution
+        </h2>
+      </div>
+
+      <p>
+        創刊號主軸
+      </p>
+
+    </div>
+
+
+    <div class="grid">
+
+      <a class="map-card link-card" href="/research">
+
+        <div class="number">
+          P1 — P2
+        </div>
+
+        <h3>
+          從一場論壇開始
+        </h3>
+
+        <p>
+          建立事件背景，理解 AI 平台
+          為何正在發生結構性變化。
+        </p>
+
+        <span class="card-link">
+          Read Research →
+        </span>
+
+      </a>
+
+
+      <a class="map-card link-card" href="/maps">
+
+        <div class="number">
+          P3 — P5
+        </div>
+
+        <h3>
+          四個訊號 × 技術演進
+        </h3>
+
+        <p>
+          先進封裝、光通訊、Glass Core
+          與材料設備形成新的關聯。
+        </p>
+
+        <span class="card-link">
+          Explore Maps →
+        </span>
+
+      </a>
+
+
+      <a class="map-card link-card" href="/posters">
+
+        <div class="number">
+          P6 — P8
+        </div>
+
+        <h3>
+          研究視覺化 × Future Watch
+        </h3>
+
+        <p>
+          將研究內容轉換成海報與視覺化資料，
+          並保留研究方法與證據架構。
+        </p>
+
+        <span class="card-link">
+          View Posters →
+        </span>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     INDUSTRY MAPS
+========================================================= -->
+
+<section class="section">
+
+  <div class="section-head">
+
+    <div>
+
+      <div class="kicker">
+        INDUSTRY MAPS
+      </div>
+
+      <h2>
+        三張核心產業地圖
+      </h2>
+
+    </div>
+
+    <a href="/maps" class="button">
+      全部地圖 →
+    </a>
+
+  </div>
+
+
+  <div class="grid">
+
+    <a class="card link-card" href="/maps">
+
+      <span class="tag">
+        AI ECOSYSTEM
+      </span>
+
+      <h3>
+        AI 全產業鏈
+      </h3>
+
+      <p>
+        AI Chip → HBM → Advanced Packaging
+        → Optical → AI Server → Power → Cooling
+      </p>
+
+      <span class="card-link">
+        Explore AI Ecosystem →
+      </span>
+
+    </a>
+
+
+    <a class="card link-card" href="/maps">
+
+      <span class="tag">
+        GLASS CORE
+      </span>
+
+      <h3>
+        Glass Core Ecosystem
+      </h3>
+
+      <p>
+        Glass → TGV → Metallization
+        → Glass Core → Advanced Packaging
+        → AI Accelerator
+      </p>
+
+      <span class="card-link">
+        Explore Glass Core →
+      </span>
+
+    </a>
+
+
+    <a class="card link-card" href="/maps">
+
+      <span class="tag">
+        CPO
+      </span>
+
+      <h3>
+        CPO Ecosystem
+      </h3>
+
+      <p>
+        Switch → Optical Engine → CPO
+        → Fiber → Data Center
+      </p>
+
+      <span class="card-link">
+        Explore CPO →
+      </span>
+
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     RESEARCH LIBRARY
+========================================================= -->
+
+<section class="feature">
+
+  <div class="section">
+
+    <div class="section-head">
+
+      <div>
+
+        <div class="kicker">
+          RESEARCH LIBRARY
+        </div>
+
+        <h2>
+          從研究，到真正可以帶走的資料
+        </h2>
+
+      </div>
+
+      <p>
+        Research · Posters · PDF
+      </p>
+
+    </div>
+
+
+    <div class="library-grid">
+
+
+      <a class="library-card-small" href="/research">
+
+        <span class="tag">
+          RESEARCH
+        </span>
+
+        <h3>
+          AI Platform Evolution
+        </h3>
+
+        <p>
+          完整 Research Vol.01，
+          從 P1–P8 建立完整研究脈絡。
+        </p>
+
+        <span class="card-link">
+          Read Research →
+        </span>
+
+      </a>
+
+
+      <a class="library-card-small" href="/posters">
+
+        <span class="tag">
+          POSTERS
+        </span>
+
+        <h3>
+          Research Posters
+        </h3>
+
+        <p>
+          將複雜研究濃縮成一張圖，
+          方便快速閱讀與分享。
+        </p>
+
+        <span class="card-link">
+          Open Gallery →
+        </span>
+
+      </a>
+
+
+      <a class="library-card-small" href="/downloads">
+
+        <span class="tag">
+          FIRST PRINTING
+        </span>
+
+        <h3>
+          Vol.01 First Printing
+        </h3>
+
+        <p>
+          《J 的世界 Research Vol.01》
+          印刷級 PDF 正式版本。
+        </p>
+
+        <span class="card-link">
+          Open Downloads →
+        </span>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     EDITORIAL PRINCIPLES
+========================================================= -->
+
+<section class="section">
+
+  <div class="section-head">
+
+    <div>
+
+      <div class="kicker">
+        EDITORIAL PRINCIPLES
+      </div>
+
+      <h2>
+        研究，不把推論寫成事實。
+      </h2>
+
+    </div>
+
+    <a href="/about" class="button-outline">
+      Research Philosophy →
+    </a>
+
+  </div>
+
+
+  <div class="grid">
+
+
+    <article class="card">
+
+      <span class="tag">
+        FACTS FIRST
+      </span>
+
+      <h3>
+        公開資訊優先
+      </h3>
+
+      <p>
+        已公告、已驗證與市場推論清楚分層，
+        不將尚未確認的訊息包裝成事實。
+      </p>
+
+    </article>
+
+
+    <article class="card">
+
+      <span class="tag">
+        EVIDENCE
+      </span>
+
+      <h3>
+        證據導向
+      </h3>
+
+      <p>
+        用技術路徑、供應鏈關係、
+        驗證與量產進度交叉檢視產業訊號。
+      </p>
+
+    </article>
+
+
+    <article class="card">
+
+      <span class="tag">
+        J INSIGHT
+      </span>
+
+      <h3>
+        Inference 明確標示
+      </h3>
+
+      <p>
+        對尚未公告但值得追蹤的機會，
+        明確標示為「產業推論（Inference）」。
+      </p>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     ABOUT / PHILOSOPHY
+========================================================= -->
+
+<section class="section about-strip">
+
+  <div class="about-grid">
+
+    <div>
+
+      <div class="kicker">
+        ABOUT · J 的世界 RESEARCH
+      </div>
+
+      <h2>
+        Facts First.<br />
+        Evidence-Based Research.
+      </h2>
+
+    </div>
+
+
+    <div>
+
+      <p>
+        《J 的世界 Research》不以預測股價為研究起點，
+        而是從產業事件、技術路徑與供應鏈證據出發，
+        建立可以持續追蹤的研究框架。
+      </p>
+
+      <a class="button-outline" href="/about">
+        了解研究方法 →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     FINAL CTA
+========================================================= -->
+
+<section class="cta">
+
+  <div class="cta-inner">
+
+    <div>
+
+      <div class="kicker">
+        RESEARCH VOL.01
+      </div>
+
+      <h2>
+        從一場論壇，開始理解下一代 AI 平台。
+      </h2>
+
+      <p>
+        閱讀完整 Research、探索 Industry Maps，
+        或直接開啟 First Printing PDF。
+      </p>
+
+    </div>
+
+
+    <div class="cta-actions">
+
+      <a class="button" href="/research">
+        Read Research →
+      </a>
+
+      <a class="button-secondary" href="/downloads">
+        First Printing PDF
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     PAGE STYLES
+========================================================= -->
+
+<style>
+
+  .hero-actions {
+    margin-top: 28px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .button-outline {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 9px;
+    border: 1px solid #647184;
+    color: #eef2f7;
+    font-weight: 800;
+    font-size: 14px;
+    transition: .2s ease;
+  }
+
+  .button-outline:hover {
+    border-color: #aeb9c6;
+    background: rgba(255,255,255,.04);
+  }
+
+  .featured-card {
+    transition: transform .2s ease, border-color .2s ease;
+  }
+
+  .featured-card:hover,
+  .link-card:hover,
+  .library-card-small:hover {
+    transform: translateY(-3px);
+    border-color: #53677e;
+  }
+
+  .link-card,
+  .library-card-small {
+    display: block;
+    transition: transform .2s ease, border-color .2s ease;
+  }
+
+  .card-link {
+    display: inline-block;
+    margin-top: 16px;
+    color: #c5d2df;
+    font-size: 13px;
+    font-weight: 800;
+  }
+
+  .library-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .library-card-small {
+    border: 1px solid #2b394a;
+    background: rgba(18,27,38,.82);
+    border-radius: 18px;
+    padding: 28px;
+  }
+
+  .library-card-small h3 {
+    margin: 10px 0 6px;
+    font-size: 21px;
+  }
+
+  .library-card-small p {
+    color: #aeb9c6;
+  }
+
+  .about-strip {
+    border-top: 1px solid #263242;
+    border-bottom: 1px solid #263242;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .about-grid h2 {
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.12;
+    margin: 12px 0 0;
+  }
+
+  .about-grid p {
+    color: #aeb9c6;
+    max-width: 620px;
+    margin-top: 0;
+  }
+
+  .cta-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .cta-actions .button-secondary {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 9px;
+    border: 1px solid #3c4b5d;
+    color: #dce5ee;
+    font-weight: 800;
+    font-size: 14px;
+  }
+
+  @media(max-width:800px) {
+
+    .hero-actions {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .hero-actions .button,
+    .hero-actions .button-outline {
+      text-align: center;
+    }
+
+    .library-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .cta-actions {
+      justify-content: flex-start;
+      margin-top: 20px;
+    }
+
+  }
+
+</style>
+
 </BaseLayout>
