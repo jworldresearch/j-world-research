@@ -13,8 +13,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <h1>研究資料庫</h1>
 
     <p>
-      集中整理《J 的世界 Research》的研究文章、
-      印刷級 PDF、研究海報與相關研究資料。
+      從 Research、Industry Maps、Posters 到 First Printing，
+      將《J 的世界 Research》的研究內容集中保存，
+      建立可以閱讀、下載與持續追蹤的研究資料庫。
     </p>
 
   </div>
@@ -23,7 +24,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 
 <!-- =========================================================
-     FEATURED PUBLICATION
+     FEATURED EDITION
 ========================================================= -->
 
 <section class="section">
@@ -31,77 +32,165 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   <div class="section-head">
 
     <div>
-      <div class="kicker">FEATURED PUBLICATION</div>
+      <div class="kicker">FEATURED EDITION</div>
       <h2>Research Vol.01</h2>
     </div>
 
-    <p>First Printing · 2026</p>
+    <p>AI Platform Evolution · P1–P8</p>
 
   </div>
 
 
-  <article class="publication-card">
+  <div class="library-card">
 
-    <div class="publication-cover">
+    <div class="library-main">
 
-      <div class="cover-kicker">
-        J 的世界 Research
-      </div>
+      <span class="tag">VOL.01 · FIRST PRINTING</span>
 
-      <div class="cover-title">
-        AI Platform
-        <br />
-        Evolution
-      </div>
+      <h3>AI Platform Evolution</h3>
 
-      <div class="cover-subtitle">
-        Research Vol.01
-      </div>
+      <p>
+        從台積電 2026 China Technology Symposium 出發，
+        拆解 AI Platform 從先進製程、先進封裝、
+        光互連、Glass Core、材料設備，
+        一路延伸至 AI Infrastructure 的完整技術路徑。
+      </p>
 
-      <div class="cover-line"></div>
 
-      <div class="cover-footer">
-        FACTS FIRST · EVIDENCE-BASED RESEARCH
+      <div class="edition-meta">
+
+        <span>P1–P8</span>
+        <span>Facts First</span>
+        <span>Evidence-Based Research</span>
+        <span>First Printing</span>
+
       </div>
 
     </div>
 
 
-    <div class="publication-info">
+    <div class="edition-actions">
 
-      <span class="tag">FIRST PRINTING · VOL.01</span>
+      <a
+        class="button"
+        href="/research"
+      >
+        閱讀 Research →
+      </a>
 
-      <h3>AI Platform Evolution</h3>
+      <a
+        class="button-secondary"
+        href="/maps"
+      >
+        Industry Maps
+      </a>
 
-      <p class="publication-lead">
-        從台積電 2026 China Technology Symposium
-        出發，追蹤 AI Platform 從先進製程、
-        先進封裝、光互連、材料到
-        AI Infrastructure 的演進。
-      </p>
+      <a
+        class="button-secondary"
+        href="/posters"
+      >
+        Posters Gallery
+      </a>
+
+      <a
+        class="button-secondary"
+        href="/downloads/J的世界_Research_Vol01_First_Printing.pdf"
+        target="_blank"
+        rel="noopener"
+      >
+        開啟 First Printing PDF ↗
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
 
 
-      <div class="publication-meta">
+<!-- =========================================================
+     FIRST PRINTING
+========================================================= -->
 
-        <div>
-          <span>PAGES</span>
-          <strong>P1–P8</strong>
+<section class="feature">
+
+  <div class="section">
+
+    <div class="section-head">
+
+      <div>
+        <div class="kicker">FIRST PRINTING</div>
+        <h2>Research Vol.01 · 印刷級版本</h2>
+      </div>
+
+      <p>Digital Archive</p>
+
+    </div>
+
+
+    <div class="printing-card">
+
+      <div class="printing-cover">
+
+        <div class="cover-label">
+          J 的世界 Research
         </div>
 
-        <div>
-          <span>EDITION</span>
-          <strong>First Printing</strong>
+        <div class="cover-vol">
+          VOL.01
         </div>
 
-        <div>
-          <span>FORMAT</span>
-          <strong>PDF</strong>
+        <div class="cover-title">
+          AI Platform
+          <br />
+          Evolution
+        </div>
+
+        <div class="cover-subtitle">
+          Facts First · Evidence-Based Research
+        </div>
+
+        <div class="cover-date">
+          2026
         </div>
 
       </div>
 
 
-      <div class="publication-actions">
+      <div class="printing-content">
+
+        <span class="tag">FIRST PRINTING · PDF</span>
+
+        <h3>《J 的世界 Research Vol.01》</h3>
+
+        <p>
+          第一版完整研究出版品。
+          收錄 P1–P8 研究架構，
+          從事件、Evidence、Technology，
+          到 Glass Core、Investment Matrix
+          與 Future Watch。
+        </p>
+
+
+        <div class="printing-points">
+
+          <div>
+            <strong>P1–P2</strong>
+            <span>Story · Evidence</span>
+          </div>
+
+          <div>
+            <strong>P3–P5</strong>
+            <span>AI Platform · Technology</span>
+          </div>
+
+          <div>
+            <strong>P6–P8</strong>
+            <span>Investment Matrix · Methodology</span>
+          </div>
+
+        </div>
+
 
         <a
           class="button"
@@ -109,103 +198,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           target="_blank"
           rel="noopener"
         >
-          Open First Printing PDF →
-        </a>
-
-        <a
-          class="button-secondary"
-          href="/research"
-        >
-          Read Research
+          開啟 First Printing →
         </a>
 
       </div>
-
-    </div>
-
-  </article>
-
-</section>
-
-
-<!-- =========================================================
-     RESEARCH CONNECTION
-========================================================= -->
-
-<section class="feature">
-
-  <div class="section">
-
-    <div class="section-head">
-
-      <div>
-        <div class="kicker">PUBLICATION STRUCTURE</div>
-        <h2>一份研究，四種閱讀方式</h2>
-      </div>
-
-      <p>Research → Maps → Posters → PDF</p>
-
-    </div>
-
-
-    <div class="grid">
-
-
-      <article class="card library-node">
-
-        <span class="tag">01 · RESEARCH</span>
-
-        <h3>完整研究</h3>
-
-        <p>
-          閱讀 Research Vol.01 的完整研究內容，
-          從事件背景、證據、技術路徑一路看到
-          Future Watch。
-        </p>
-
-        <a class="button-secondary" href="/research">
-          Open Research →
-        </a>
-
-      </article>
-
-
-      <article class="card library-node">
-
-        <span class="tag">02 · INDUSTRY MAPS</span>
-
-        <h3>產業地圖</h3>
-
-        <p>
-          將研究中的技術節點轉換成
-          AI Ecosystem、Glass Core 與 CPO
-          等產業鏈地圖。
-        </p>
-
-        <a class="button-secondary" href="/maps">
-          Open Industry Maps →
-        </a>
-
-      </article>
-
-
-      <article class="card library-node">
-
-        <span class="tag">03 · POSTERS</span>
-
-        <h3>研究海報</h3>
-
-        <p>
-          將複雜研究濃縮成一頁式視覺化內容，
-          適合快速閱讀與簡報使用。
-        </p>
-
-        <a class="button-secondary" href="/posters">
-          Open Posters →
-        </a>
-
-      </article>
-
 
     </div>
 
@@ -215,7 +211,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 
 <!-- =========================================================
-     PDF ARCHIVE
+     RESEARCH NAVIGATION
 ========================================================= -->
 
 <section class="section">
@@ -223,63 +219,90 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   <div class="section-head">
 
     <div>
-      <div class="kicker">PDF ARCHIVE</div>
-      <h2>正式出版版本</h2>
+      <div class="kicker">RESEARCH NAVIGATION</div>
+      <h2>從 PDF 回到研究</h2>
     </div>
 
-    <p>Publication Archive</p>
+    <p>Research → Maps → Posters</p>
 
   </div>
 
 
-  <article class="archive-card">
+  <div class="grid">
 
-    <div class="archive-main">
 
-      <span class="tag">RESEARCH VOL.01</span>
+    <article class="card">
 
-      <h3>AI Platform Evolution</h3>
+      <span class="tag">01 · RESEARCH</span>
+
+      <h3>完整研究文章</h3>
 
       <p>
-        First Printing｜P1–P8
+        閱讀 Research Vol.01 完整內容，
+        了解 AI Platform Evolution
+        的研究邏輯與技術路徑。
       </p>
 
-    </div>
+      <a
+        class="button-secondary"
+        href="/research"
+      >
+        Open Research →
+      </a>
+
+    </article>
 
 
-    <div class="archive-status">
+    <article class="card">
 
-      <span class="status-dot"></span>
+      <span class="tag">02 · INDUSTRY MAPS</span>
 
-      <div>
-        <strong>AVAILABLE</strong>
-        <small>正式出版版本</small>
-      </div>
+      <h3>產業地圖</h3>
 
-    </div>
+      <p>
+        將研究中的技術節點重新整理成
+        AI Ecosystem、Glass Core
+        與 CPO 三張核心產業地圖。
+      </p>
 
+      <a
+        class="button-secondary"
+        href="/maps"
+      >
+        Open Industry Maps →
+      </a>
 
-    <a
-      class="button"
-      href="/downloads/J的世界_Research_Vol01_First_Printing.pdf"
-      target="_blank"
-      rel="noopener"
-    >
-      Open PDF →
-    </a>
-
-  </article>
+    </article>
 
 
-  <p class="archive-note">
-    ※ 本 PDF 為《J 的世界 Research Vol.01》First Printing 正式版本。
-  </p>
+    <article class="card">
+
+      <span class="tag">03 · POSTERS</span>
+
+      <h3>研究海報</h3>
+
+      <p>
+        將複雜研究濃縮成一頁式視覺內容，
+        適合快速理解研究主題與產業關係。
+      </p>
+
+      <a
+        class="button-secondary"
+        href="/posters"
+      >
+        Open Posters →
+      </a>
+
+    </article>
+
+
+  </div>
 
 </section>
 
 
 <!-- =========================================================
-     RESEARCH PHILOSOPHY
+     EDITION STRUCTURE
 ========================================================= -->
 
 <section class="feature">
@@ -289,8 +312,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <div class="section-head">
 
       <div>
-        <div class="kicker">RESEARCH PHILOSOPHY</div>
-        <h2>出版的不只是結論，而是研究過程。</h2>
+        <div class="kicker">EDITION STRUCTURE</div>
+        <h2>Research Vol.01 的四種閱讀方式</h2>
       </div>
 
     </div>
@@ -299,44 +322,94 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <div class="grid">
 
 
-      <article class="card">
+      <article class="card edition-card">
 
-        <span class="tag">FACTS FIRST</span>
+        <div class="edition-number">
+          01
+        </div>
 
-        <h3>先建立事實</h3>
+        <span class="tag">READ</span>
+
+        <h3>Research</h3>
 
         <p>
-          公開資訊、公司揭露與官方技術資料
-          優先於市場傳聞。
+          以文章形式完整閱讀研究內容，
+          理解事件、證據與技術推論。
         </p>
+
+        <a href="/research">
+          進入 Research →
+        </a>
 
       </article>
 
 
-      <article class="card">
+      <article class="card edition-card">
 
-        <span class="tag">EVIDENCE</span>
+        <div class="edition-number">
+          02
+        </div>
 
-        <h3>再確認證據</h3>
+        <span class="tag">MAP</span>
+
+        <h3>Industry Maps</h3>
 
         <p>
-          從技術路徑、供應鏈位置、
-          驗證進度到量產狀態交叉檢視。
+          用產業鏈視角快速理解
+          技術節點與供應鏈位置。
         </p>
+
+        <a href="/maps">
+          進入 Industry Maps →
+        </a>
 
       </article>
 
 
-      <article class="card">
+      <article class="card edition-card">
 
-        <span class="tag">J INSIGHT</span>
+        <div class="edition-number">
+          03
+        </div>
 
-        <h3>最後才是推論</h3>
+        <span class="tag">VISUAL</span>
+
+        <h3>Posters</h3>
 
         <p>
-          對尚未正式公告但值得追蹤的訊號，
-          明確標示為 Inference。
+          用視覺化方式快速掌握
+          一個研究主題的核心訊號。
         </p>
+
+        <a href="/posters">
+          進入 Posters →
+        </a>
+
+      </article>
+
+
+      <article class="card edition-card">
+
+        <div class="edition-number">
+          04
+        </div>
+
+        <span class="tag">PRINT</span>
+
+        <h3>First Printing</h3>
+
+        <p>
+          將完整研究保存成正式
+          印刷級 PDF 出版版本。
+        </p>
+
+        <a
+          href="/downloads/J的世界_Research_Vol01_First_Printing.pdf"
+          target="_blank"
+          rel="noopener"
+        >
+          開啟 PDF →
+        </a>
 
       </article>
 
@@ -349,7 +422,79 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 
 <!-- =========================================================
-     FINAL NAVIGATION
+     RESEARCH STATUS
+========================================================= -->
+
+<section class="section">
+
+  <div class="section-head">
+
+    <div>
+      <div class="kicker">RESEARCH STATUS</div>
+      <h2>Evidence Framework</h2>
+    </div>
+
+    <p>Facts First</p>
+
+  </div>
+
+
+  <div class="status-card">
+
+    <div class="status-item">
+
+      <span class="status-index">01</span>
+
+      <div>
+        <strong>FACT</strong>
+        <h3>公開資訊</h3>
+        <p>
+          公司公告、官方技術資料、
+          公開文件與可驗證資訊。
+        </p>
+      </div>
+
+    </div>
+
+
+    <div class="status-item">
+
+      <span class="status-index">02</span>
+
+      <div>
+        <strong>EVIDENCE</strong>
+        <h3>驗證與導入</h3>
+        <p>
+          技術驗證、客戶導入、
+          製程整合與量產進度。
+        </p>
+      </div>
+
+    </div>
+
+
+    <div class="status-item">
+
+      <span class="status-index">03</span>
+
+      <div>
+        <strong>INFERENCE</strong>
+        <h3>產業推論</h3>
+        <p>
+          尚未正式公告，但值得持續追蹤的
+          技術與供應鏈研究假設。
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     CTA
 ========================================================= -->
 
 <section class="cta">
@@ -358,35 +503,29 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
     <div>
 
-      <div class="kicker">RESEARCH VOL.01</div>
+      <div class="kicker">J 的世界 RESEARCH</div>
 
-      <h2>從網頁研究，到正式出版。</h2>
+      <h2>
+        從一份 PDF，
+        建立一套可以持續更新的研究系統。
+      </h2>
 
       <p>
-        Research 提供完整內容，
-        Maps 建立產業結構，
-        Posters 濃縮核心訊號，
-        First Printing 則保存完整研究成果。
+        Research 是內容，
+        Industry Maps 是結構，
+        Posters 是視覺，
+        First Printing 則是完整保存。
       </p>
 
     </div>
 
 
-    <div class="cta-actions">
-
-      <a class="button" href="/research">
-        Read Research →
-      </a>
-
-      <a class="button-secondary" href="/maps">
-        Industry Maps
-      </a>
-
-      <a class="button-secondary" href="/posters">
-        Posters
-      </a>
-
-    </div>
+    <a
+      class="button"
+      href="/research"
+    >
+      回到 Research →
+    </a>
 
   </div>
 
@@ -395,431 +534,282 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 <style>
 
-  /* =====================================================
-     PUBLICATION CARD
-  ===================================================== */
-
-  .publication-card {
-
+  .library-card {
     border: 1px solid #344457;
-
     background:
       linear-gradient(
         135deg,
         rgba(28, 42, 58, 0.96),
         rgba(14, 21, 30, 0.98)
       );
-
-    border-radius: 22px;
-
-    padding: 38px;
-
+    border-radius: 20px;
+    padding: 36px;
     display: grid;
-
-    grid-template-columns: 280px 1fr;
-
-    gap: 46px;
-
+    grid-template-columns: 1fr auto;
+    gap: 42px;
     align-items: center;
   }
 
+  .library-card h3 {
+    font-size: 30px;
+    margin: 10px 0;
+  }
 
-  /* =====================================================
-     PDF COVER
-  ===================================================== */
+  .library-card p {
+    color: #aeb9c6;
+    max-width: 760px;
+  }
 
-  .publication-cover {
 
-    aspect-ratio: 0.707;
+  .edition-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+  }
 
-    border: 1px solid #4a5b70;
+  .edition-meta span {
+    border: 1px solid #354457;
+    border-radius: 7px;
+    padding: 5px 9px;
+    color: #b9c6d4;
+    font-size: 12px;
+  }
 
-    border-radius: 8px;
 
+  .edition-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 190px;
+  }
+
+  .edition-actions .button-secondary {
+    text-align: center;
+  }
+
+
+  /* FIRST PRINTING */
+
+  .printing-card {
+    display: grid;
+    grid-template-columns: 330px 1fr;
+    gap: 46px;
+    align-items: stretch;
+  }
+
+  .printing-cover {
+    min-height: 430px;
+    border: 1px solid #354457;
+    border-radius: 18px;
+    padding: 30px;
     background:
+      radial-gradient(
+        circle at 80% 15%,
+        #263b53 0,
+        transparent 42%
+      ),
       linear-gradient(
         160deg,
-        #172331 0%,
-        #0d141d 58%,
-        #0a1017 100%
+        #101a26,
+        #0b1017
       );
-
-    padding: 28px;
-
     display: flex;
-
     flex-direction: column;
-
-    justify-content: space-between;
-
-    box-shadow:
-      0 20px 45px rgba(0,0,0,.35);
   }
 
-
-  .cover-kicker {
-
-    font-size: 10px;
-
-    letter-spacing: .14em;
-
-    color: #91a7bc;
-
+  .cover-label {
+    color: #91a7bd;
+    font-size: 11px;
+    letter-spacing: .16em;
     font-weight: 800;
   }
 
+  .cover-vol {
+    margin-top: 60px;
+    font-size: 14px;
+    color: #7188a0;
+    letter-spacing: .2em;
+    font-weight: 800;
+  }
 
   .cover-title {
-
-    font-size: 34px;
-
+    margin-top: 18px;
+    font-size: 38px;
     line-height: 1.08;
-
     font-weight: 800;
-
     letter-spacing: -.04em;
-
-    color: #eef2f7;
   }
-
 
   .cover-subtitle {
+    margin-top: auto;
+    color: #8e9aaa;
+    font-size: 12px;
+    line-height: 1.6;
+  }
 
-    color: #9eafc1;
-
-    font-size: 14px;
+  .cover-date {
+    margin-top: 18px;
+    font-size: 12px;
+    color: #6f8092;
   }
 
 
-  .cover-line {
-
-    height: 1px;
-
-    background: #415368;
-
-    margin: 18px 0;
+  .printing-content {
+    padding: 18px 0;
   }
 
-
-  .cover-footer {
-
-    font-size: 8px;
-
-    letter-spacing: .12em;
-
-    color: #718499;
-  }
-
-
-  /* =====================================================
-     PUBLICATION INFO
-  ===================================================== */
-
-  .publication-info h3 {
-
-    font-size: 36px;
-
+  .printing-content h3 {
+    font-size: 30px;
     margin: 12px 0;
   }
 
-
-  .publication-lead {
-
-    color: #aeb9c6;
-
+  .printing-content p {
     max-width: 720px;
-
-    font-size: 16px;
+    color: #aeb9c6;
   }
 
 
-  .publication-meta {
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 10px;
-
-    margin-top: 26px;
+  .printing-points {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 28px 0;
   }
 
-
-  .publication-meta div {
-
-    border: 1px solid #354457;
-
-    border-radius: 9px;
-
-    padding: 10px 14px;
-
-    min-width: 110px;
-
-    background: rgba(10,16,23,.42);
+  .printing-points div {
+    border: 1px solid #2b394a;
+    border-radius: 12px;
+    padding: 15px;
+    background: #0d141d;
   }
 
-
-  .publication-meta span {
-
+  .printing-points strong {
     display: block;
+    color: #dce5ee;
+    font-size: 14px;
+  }
 
-    color: #71859a;
+  .printing-points span {
+    display: block;
+    margin-top: 5px;
+    color: #7f8d9d;
+    font-size: 12px;
+  }
 
-    font-size: 9px;
 
-    letter-spacing: .12em;
+  /* EDITION */
 
+  .edition-card {
+    position: relative;
+    min-height: 260px;
+  }
+
+  .edition-number {
+    font-size: 36px;
+    font-weight: 800;
+    color: #344457;
+    line-height: 1;
+    margin-bottom: 22px;
+  }
+
+  .edition-card a {
+    display: inline-block;
+    margin-top: 12px;
+    color: #d7e2ed;
+    font-size: 13px;
     font-weight: 800;
   }
 
 
-  .publication-meta strong {
+  /* STATUS */
 
-    display: block;
-
-    color: #dce5ee;
-
-    font-size: 13px;
-
-    margin-top: 3px;
+  .status-card {
+    border: 1px solid #2b394a;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #0e151e;
   }
 
-
-  .publication-actions {
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 10px;
-
-    margin-top: 28px;
-  }
-
-
-  .publication-actions .button-secondary {
-
-    display: inline-flex;
-
-    align-items: center;
-  }
-
-
-  /* =====================================================
-     LIBRARY
-  ===================================================== */
-
-  .library-node {
-
-    min-height: 100%;
-  }
-
-
-  .library-node .button-secondary {
-
-    display: inline-block;
-
-    margin-top: 14px;
-  }
-
-
-  /* =====================================================
-     ARCHIVE
-  ===================================================== */
-
-  .archive-card {
-
-    border: 1px solid #344457;
-
-    border-radius: 16px;
-
-    background: #101923;
-
-    padding: 24px 26px;
-
+  .status-item {
     display: grid;
-
-    grid-template-columns: 1fr auto auto;
-
-    gap: 24px;
-
-    align-items: center;
+    grid-template-columns: 70px 1fr;
+    gap: 22px;
+    padding: 25px 28px;
+    border-bottom: 1px solid #263242;
   }
 
+  .status-item:last-child {
+    border-bottom: 0;
+  }
 
-  .archive-main h3 {
-
-    margin: 8px 0 4px;
-
+  .status-index {
     font-size: 22px;
+    font-weight: 800;
+    color: #526981;
   }
 
+  .status-item strong {
+    font-size: 11px;
+    letter-spacing: .14em;
+    color: #8fa6bf;
+  }
 
-  .archive-main p {
+  .status-item h3 {
+    margin: 5px 0;
+    font-size: 20px;
+  }
 
+  .status-item p {
     margin: 0;
-
-    color: #8493a4;
-
-    font-size: 13px;
+    color: #8795a5;
   }
 
-
-  .archive-status {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 9px;
-  }
-
-
-  .status-dot {
-
-    width: 8px;
-
-    height: 8px;
-
-    border-radius: 50%;
-
-    background: #7f9bb7;
-
-    box-shadow: 0 0 10px rgba(127,155,183,.55);
-  }
-
-
-  .archive-status strong {
-
-    display: block;
-
-    font-size: 11px;
-
-    letter-spacing: .1em;
-  }
-
-
-  .archive-status small {
-
-    display: block;
-
-    color: #718294;
-
-    font-size: 10px;
-  }
-
-
-  .archive-note {
-
-    margin-top: 12px;
-
-    color: #68788a;
-
-    font-size: 11px;
-  }
-
-
-  /* =====================================================
-     CTA
-  ===================================================== */
-
-  .cta-actions {
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 10px;
-
-    align-items: center;
-  }
-
-
-  .cta-actions .button-secondary {
-
-    display: inline-block;
-  }
-
-
-  /* =====================================================
-     MOBILE
-  ===================================================== */
 
   @media(max-width:800px) {
 
-    .publication-card {
-
+    .library-card {
       grid-template-columns: 1fr;
-
       padding: 26px;
-
-      gap: 30px;
+      gap: 25px;
     }
 
-
-    .publication-cover {
-
-      width: min(100%, 280px);
-
-      margin: auto;
+    .library-card h3 {
+      font-size: 26px;
     }
 
-
-    .publication-info h3 {
-
-      font-size: 28px;
+    .edition-actions {
+      min-width: 0;
     }
 
-
-    .publication-actions {
-
-      flex-direction: column;
-    }
-
-
-    .publication-actions .button,
-    .publication-actions .button-secondary {
-
-      width: 100%;
-
+    .edition-actions .button,
+    .edition-actions .button-secondary {
       text-align: center;
-
-      justify-content: center;
     }
 
 
-    .archive-card {
-
+    .printing-card {
       grid-template-columns: 1fr;
+      gap: 28px;
+    }
 
-      gap: 18px;
+    .printing-cover {
+      min-height: 380px;
+    }
+
+    .printing-points {
+      grid-template-columns: 1fr;
+    }
+
+    .printing-content h3 {
+      font-size: 25px;
     }
 
 
-    .archive-card .button {
-
-      text-align: center;
-
-      width: 100%;
-    }
-
-
-    .cta-actions {
-
-      margin-top: 22px;
-
-      flex-direction: column;
-
-      align-items: stretch;
-    }
-
-
-    .cta-actions .button,
-    .cta-actions .button-secondary {
-
-      width: 100%;
-
-      text-align: center;
+    .status-item {
+      grid-template-columns: 45px 1fr;
+      padding: 22px;
+      gap: 12px;
     }
 
   }
