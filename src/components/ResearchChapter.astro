@@ -1,1 +1,110 @@
+---
+const {
+  page,
+  section,
+  title,
+  intro,
+  children
+} = Astro.props;
+---
 
+<article class="research-chapter">
+
+  <div class="chapter-header">
+
+    <div class="kicker">
+      RESEARCH VOL.01 · {page}
+    </div>
+
+    <div class="chapter-section">
+      {section}
+    </div>
+
+    <h1>{title}</h1>
+
+    <p class="chapter-intro">
+      {intro}
+    </p>
+
+  </div>
+
+
+  <div class="chapter-body">
+    <slot />
+  </div>
+
+</article>
+
+
+<style>
+
+.research-chapter {
+  max-width:900px;
+  margin:auto;
+}
+
+.chapter-header {
+  padding-bottom:48px;
+  border-bottom:1px solid #2b394a;
+}
+
+.chapter-section {
+  margin-top:12px;
+  color:#8295a9;
+  font-size:13px;
+  letter-spacing:.08em;
+}
+
+.chapter-header h1 {
+  font-size:clamp(38px,6vw,64px);
+  line-height:1.12;
+  margin:14px 0 20px;
+}
+
+.chapter-intro {
+  color:#aeb9c6;
+  font-size:18px;
+  max-width:760px;
+}
+
+.chapter-body {
+  padding-top:48px;
+}
+
+.chapter-body h2 {
+  font-size:30px;
+  margin:48px 0 16px;
+}
+
+.chapter-body h3 {
+  font-size:21px;
+  margin:32px 0 10px;
+}
+
+.chapter-body p {
+  color:#b5c0cc;
+  line-height:1.9;
+}
+
+.chapter-body .evidence {
+  border-left:3px solid #7188a0;
+  padding:18px 22px;
+  margin:28px 0;
+  background:#111a24;
+  border-radius:0 10px 10px 0;
+}
+
+.chapter-body .inference {
+  border:1px solid #40536a;
+  padding:22px;
+  margin:28px 0;
+  border-radius:12px;
+  background:#121b26;
+}
+
+.chapter-body .tag {
+  display:inline-block;
+  margin-bottom:10px;
+}
+
+</style>
