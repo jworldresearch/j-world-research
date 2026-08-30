@@ -1,0 +1,153 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="P5｜Glass Core｜AI Platform Evolution｜J 的世界 Research">
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="kicker">RESEARCH · VOL.01 · P5</div>
+    <h1>Glass Core：結果，而不是起點</h1>
+    <p>
+      Glass Core 不應被單獨理解成一項材料題材，
+      而應放回 AI 封裝與高速互連的系統演進中觀察。
+    </p>
+  </div>
+</section>
+
+<section class="section">
+
+  <div class="glass-flow">
+
+    <div>
+      <span>01</span>
+      <strong>Glass</strong>
+    </div>
+
+    <b>→</b>
+
+    <div>
+      <span>02</span>
+      <strong>TGV</strong>
+    </div>
+
+    <b>→</b>
+
+    <div>
+      <span>03</span>
+      <strong>Metallization</strong>
+    </div>
+
+    <b>→</b>
+
+    <div>
+      <span>04</span>
+      <strong>Glass Core</strong>
+    </div>
+
+    <b>→</b>
+
+    <div>
+      <span>05</span>
+      <strong>Advanced Packaging</strong>
+    </div>
+
+    <b>→</b>
+
+    <div>
+      <span>06</span>
+      <strong>AI Accelerator</strong>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="feature">
+  <div class="section">
+
+    <div class="grid">
+
+      <article class="card">
+        <span class="tag">MATERIAL</span>
+        <h3>Glass</h3>
+        <p>
+          基礎材料需要符合尺寸、
+          熱穩定與製程整合要求。
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="tag">INTERCONNECT</span>
+        <h3>TGV</h3>
+        <p>
+          Through-Glass Via 是玻璃基板
+          形成垂直互連的重要技術。
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="tag">PROCESS</span>
+        <h3>Metallization</h3>
+        <p>
+          金屬化與導通結構是
+          Glass Core 能否實際導入的重要環節。
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="tag">PACKAGING</span>
+        <h3>Advanced Packaging</h3>
+        <p>
+          最終仍必須與實際封裝架構、
+          RDL 與 AI Accelerator 整合。
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+
+  <article class="insight-card">
+
+    <span class="tag">RESEARCH WATCH</span>
+
+    <h2>真正值得追蹤的不是「Glass」兩個字</h2>
+
+    <p>
+      而是技術是否完成：
+      <strong>驗證 → 製程整合 → 良率 → 客戶導入 → 量產</strong>
+    </p>
+
+    <p>
+      這也是 Glass Core 後續研究的主要觀察框架。
+    </p>
+
+  </article>
+
+</section>
+
+<nav class="research-nav">
+  <a href="/research/vol01/p4">← P4 · Technology</a>
+  <a href="../">Vol.01 目錄</a>
+  <a href="/research/vol01/p6">P6 · Investment Matrix →</a>
+</nav>
+
+</BaseLayout>
+
+<style>
+.glass-flow{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px;border:1px solid #344457;background:#101822;border-radius:18px;padding:28px}
+.glass-flow div{display:flex;flex-direction:column;gap:4px;padding:12px 14px;border:1px solid #354457;border-radius:9px;background:#151f2b}
+.glass-flow span{font-size:11px;color:#7f9bb7}
+.glass-flow strong{font-size:13px}
+.glass-flow b{color:#7188a0}
+.insight-card{border:1px solid #40536a;background:rgba(18,27,38,.82);border-radius:18px;padding:34px}
+.insight-card h2{font-size:31px;margin:12px 0 20px}
+.insight-card p{color:#aeb9c6;max-width:850px}
+.research-nav{max-width:1180px;margin:auto;padding:0 24px 70px;display:flex;justify-content:space-between;gap:20px}
+.research-nav a{color:#b8c8d9;font-weight:700}
+@media(max-width:800px){.glass-flow{display:grid;grid-template-columns:1fr}.glass-flow b{display:none}.insight-card{padding:25px}.research-nav{flex-wrap:wrap}}
+</style>
