@@ -262,3 +262,52 @@ footer {
     font-size: 42px;
   }
 }
+.reading {
+  max-width: 900px;
+}
+
+.reading h2 {
+  font-size: 30px;
+  margin: 12px 0 18px;
+}
+
+.reading p {
+  color: #aeb9c6;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.page-nav {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 36px 24px 70px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  color: #b9c6d4;
+  font-size: 14px;
+}
+
+.page-nav a:hover {
+  color: #fff;
+}
+
+.number {
+  display: block;
+  font-size: 28px;
+  color: #7f9bb7;
+  font-weight: 800;
+  letter-spacing: .08em;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 800px) {
+  .page-nav {
+    padding-bottom: 50px;
+    flex-wrap: wrap;
+  }
+
+  .reading h2 {
+    font-size: 25px;
+  }
+}
