@@ -1,46 +1,34 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import ResearchChapter from "../../components/ResearchChapter.astro";
+import ResearchReader from "../../components/ResearchReader.astro";
 ---
 
-<BaseLayout title="P4｜Technology">
+<ResearchReader pageId="p4">
 
-<section class="section">
-
-<ResearchChapter
-  page="P4"
-  section="TECHNOLOGY"
-  title="從晶片走向系統"
-  intro="研究 AI Platform，必須把不同技術節點放進同一條路徑。"
->
-
-<h2>六大技術節點</h2>
+<h2>從晶片走向系統</h2>
 
 <p>
-AI Compute → Advanced Process → Advanced Packaging
-→ Optical Interconnect → Thermal / Power → System
+AI Platform 可以拆成六個連續節點：
 </p>
-
-<h2>研究方法</h2>
 
 <p>
-本研究不預設某項技術一定會成功，
-而是觀察它何時由技術可能性進入驗證、
-導入與量產。
+<strong>AI Compute</strong>
+→
+<strong>Advanced Process</strong>
+→
+<strong>Advanced Packaging</strong>
+→
+<strong>Optical Interconnect</strong>
+→
+<strong>Thermal / Power</strong>
+→
+<strong>System</strong>
 </p>
 
-<div class="evidence">
-
-<span class="tag">EVIDENCE FRAMEWORK</span>
+<h3>Research Principle</h3>
 
 <p>
-技術成熟度必須透過驗證、導入、量產與客戶擴散逐步確認。
+研究重點不是預測單一技術何時取代另一項技術，
+而是觀察技術何時由可能性進入驗證、導入與量產。
 </p>
 
-</div>
-
-</ResearchChapter>
-
-</section>
-
-</BaseLayout>
+</ResearchReader>
