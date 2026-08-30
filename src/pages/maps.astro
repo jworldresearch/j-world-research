@@ -5,9 +5,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 <BaseLayout title="Industry Maps｜J 的世界 Research">
 
 <section class="page-hero">
+
   <div class="page-hero-inner">
 
-    <div class="kicker">INDUSTRY MAPS · V1.1-10-C</div>
+    <div class="kicker">INDUSTRY MAPS · V1.2</div>
 
     <h1>產業地圖</h1>
 
@@ -17,12 +18,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </p>
 
   </div>
+
 </section>
 
-
-<!-- =========================================================
-     MAP NAVIGATION
-========================================================= -->
 
 <section class="section">
 
@@ -30,509 +28,386 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
     <div>
       <div class="kicker">RESEARCH NAVIGATION</div>
-      <h2>從 Research 進入產業地圖</h2>
+      <h2>三張核心產業地圖</h2>
     </div>
 
-    <p>Research → Maps → Evidence</p>
+    <p>Technology → Supply Chain → Evidence</p>
 
   </div>
 
 
   <div class="grid">
 
-    <article class="card navigation-card">
 
-      <span class="tag">RESEARCH</span>
+    <!-- AI ECOSYSTEM -->
 
-      <h3>AI Platform Evolution</h3>
+    <article class="map-card">
 
-      <p>
-        從台積電技術論壇出發，
-        追蹤 AI Platform 從先進製程、
-        先進封裝、光互連到基礎設施的演進。
+      <span class="tag">01 · AI ECOSYSTEM</span>
+
+      <h3>AI 全產業鏈</h3>
+
+      <p class="map-lead">
+        從 AI Compute 出發，沿著先進封裝、高速互連，
+        一路延伸至 AI Server、電力與散熱。
       </p>
 
-      <a class="button-secondary" href="/research">
-        Read Research →
-      </a>
+
+      <div class="map-flow">
+
+        <span>AI Chip</span>
+        <b>→</b>
+        <span>HBM</span>
+        <b>→</b>
+        <span>Advanced Packaging</span>
+        <b>→</b>
+        <span>Optical</span>
+        <b>→</b>
+        <span>AI Server</span>
+        <b>→</b>
+        <span>Power</span>
+        <b>→</b>
+        <span>Cooling</span>
+
+      </div>
+
+
+      <div class="map-note">
+
+        <strong>RESEARCH CONNECTION</strong>
+
+        <div class="link-list">
+
+          <a href="/research/p1">
+            P1 · 從一場技術論壇開始 →
+          </a>
+
+          <a href="/research/p3">
+            P3 · 四個訊號 × AI Platform →
+          </a>
+
+          <a href="/research/p4">
+            P4 · 從晶片走向系統 →
+          </a>
+
+          <a href="/research/p6">
+            P6 · Investment Matrix →
+          </a>
+
+          <a href="/research/p7">
+            P7 · Future Watch →
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="map-actions">
+
+        <a
+          class="button-secondary"
+          href="/research/p3"
+        >
+          Read Research →
+        </a>
+
+        <a
+          class="button-secondary"
+          href="/posters"
+        >
+          View Posters →
+        </a>
+
+      </div>
 
     </article>
 
 
-    <article class="card navigation-card">
+    <!-- GLASS CORE -->
+
+    <article class="map-card">
+
+      <span class="tag">02 · GLASS CORE</span>
+
+      <h3>Glass Core Ecosystem</h3>
+
+      <p class="map-lead">
+        從玻璃材料、TGV，到 Glass Core Substrate，
+        最終連結先進封裝與 AI Accelerator。
+      </p>
+
+
+      <div class="map-flow">
+
+        <span>Glass</span>
+        <b>→</b>
+        <span>TGV</span>
+        <b>→</b>
+        <span>Metallization</span>
+        <b>→</b>
+        <span>Glass Core</span>
+        <b>→</b>
+        <span>Advanced Packaging</span>
+        <b>→</b>
+        <span>AI Accelerator</span>
+
+      </div>
+
+
+      <div class="map-note">
+
+        <strong>RESEARCH CONNECTION</strong>
+
+        <div class="link-list">
+
+          <a href="/research/p5">
+            P5 · Glass Core →
+          </a>
+
+          <a href="/research/p4">
+            P4 · Technology Path →
+          </a>
+
+          <a href="/research/p6">
+            P6 · Investment Matrix →
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="map-actions">
+
+        <a
+          class="button-secondary"
+          href="/research/p5"
+        >
+          Read P5 Research →
+        </a>
+
+        <a
+          class="button-secondary"
+          href="/posters"
+        >
+          View Posters →
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- CPO -->
+
+    <article class="map-card">
+
+      <span class="tag">03 · CPO ECOSYSTEM</span>
+
+      <h3>CPO Ecosystem</h3>
+
+      <p class="map-lead">
+        AI 資料中心高速互連，正在從純電互連逐步走向
+        Optical + Packaging 的新架構。
+      </p>
+
+
+      <div class="map-flow">
+
+        <span>AI Compute</span>
+        <b>→</b>
+        <span>Switch</span>
+        <b>→</b>
+        <span>Optical Engine</span>
+        <b>→</b>
+        <span>CPO</span>
+        <b>→</b>
+        <span>Fiber</span>
+        <b>→</b>
+        <span>Data Center</span>
+
+      </div>
+
+
+      <div class="map-note">
+
+        <strong>RESEARCH CONNECTION</strong>
+
+        <div class="link-list">
+
+          <a href="/research/p3">
+            P3 · Optical Interconnect →
+          </a>
+
+          <a href="/research/p4">
+            P4 · Technology Path →
+          </a>
+
+          <a href="/research/p6">
+            P6 · Investment Matrix →
+          </a>
+
+          <a href="/research/p7">
+            P7 · Future Watch →
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="map-actions">
+
+        <a
+          class="button-secondary"
+          href="/research/p3"
+        >
+          Read Research →
+        </a>
+
+        <a
+          class="button-secondary"
+          href="/posters"
+        >
+          View Posters →
+        </a>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<section class="feature">
+
+  <div class="section">
+
+    <div class="section-head">
+
+      <div>
+        <div class="kicker">HOW TO READ THE MAPS</div>
+        <h2>不要只看公司，要看技術位置</h2>
+      </div>
+
+      <p>Facts First · Evidence-Based Research</p>
+
+    </div>
+
+
+    <div class="grid">
+
+      <article class="card">
+
+        <span class="tag">01 · TECHNOLOGY</span>
+
+        <h3>技術節點</h3>
+
+        <p>
+          先確認一項技術在整個產業鏈中的位置，
+          再判斷它解決的是什麼問題。
+        </p>
+
+      </article>
+
+
+      <article class="card">
+
+        <span class="tag">02 · SUPPLY CHAIN</span>
+
+        <h3>供應鏈位置</h3>
+
+        <p>
+          從上游材料、設備，到中游製程與零組件，
+          最後連結終端應用。
+        </p>
+
+      </article>
+
+
+      <article class="card">
+
+        <span class="tag">03 · EVIDENCE</span>
+
+        <h3>證據強度</h3>
+
+        <p>
+          已量產、驗證中、開發中與產業推論，
+          必須清楚區分。
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="section">
+
+  <div class="section-head">
+
+    <div>
+      <div class="kicker">RESEARCH ECOSYSTEM</div>
+      <h2>從地圖回到完整研究</h2>
+    </div>
+
+  </div>
+
+
+  <div class="ecosystem-links">
+
+    <a href="/research" class="ecosystem-link">
+
+      <span class="tag">RESEARCH VOL.01</span>
+
+      <h3>AI Platform Evolution →</h3>
+
+      <p>
+        閱讀完整 P1–P8 Research。
+      </p>
+
+    </a>
+
+
+    <a href="/posters" class="ecosystem-link">
 
       <span class="tag">POSTERS</span>
 
-      <h3>Research Posters</h3>
+      <h3>Research Posters →</h3>
 
       <p>
-        將複雜的技術與產業鏈濃縮成
-        一頁式視覺化研究，快速掌握核心訊號。
+        以一頁式視覺化方式閱讀研究。
       </p>
 
-      <a class="button-secondary" href="/posters">
-        Open Posters →
-      </a>
-
-    </article>
+    </a>
 
 
-    <article class="card navigation-card">
+    <a
+      href="/downloads/J的世界_Research_Vol01_First_Printing.pdf"
+      target="_blank"
+      class="ecosystem-link"
+    >
 
-      <span class="tag">DOWNLOADS</span>
+      <span class="tag">FIRST PRINTING</span>
 
-      <h3>Research Library</h3>
+      <h3>開啟印刷級 PDF →</h3>
 
       <p>
-        前往研究資料庫，
-        閱讀 Research Vol.01 與印刷級 PDF。
+        閱讀 Research Vol.01 完整出版版本。
       </p>
 
-      <a class="button-secondary" href="/downloads">
-        Open Downloads →
-      </a>
-
-    </article>
+    </a>
 
   </div>
 
 </section>
 
-
-<!-- =========================================================
-     CORE INDUSTRY MAPS
-========================================================= -->
-
-<section class="feature">
-
-  <div class="section">
-
-    <div class="section-head">
-
-      <div>
-        <div class="kicker">CORE INDUSTRY MAPS</div>
-        <h2>三張核心產業地圖</h2>
-      </div>
-
-      <p>Technology → Supply Chain → Evidence</p>
-
-    </div>
-
-
-    <div class="grid">
-
-
-      <!-- AI ECOSYSTEM -->
-
-      <article class="map-card">
-
-        <span class="tag">01 · AI ECOSYSTEM</span>
-
-        <h3>AI 全產業鏈</h3>
-
-        <p class="map-lead">
-          從 AI Compute 出發，沿著先進封裝、
-          高速互連一路延伸至 AI Server、
-          電力與散熱。
-        </p>
-
-
-        <div class="map-flow">
-
-          <span>AI Chip</span>
-          <b>→</b>
-
-          <span>HBM</span>
-          <b>→</b>
-
-          <span>Advanced Packaging</span>
-          <b>→</b>
-
-          <span>Optical</span>
-          <b>→</b>
-
-          <span>AI Server</span>
-          <b>→</b>
-
-          <span>Power</span>
-          <b>→</b>
-
-          <span>Cooling</span>
-
-        </div>
-
-
-        <div class="map-note">
-
-          <strong>RESEARCH FOCUS</strong>
-
-          <p>
-            AI GPU / ASIC、HBM、CoWoS、CPO、
-            高速 PCB、電力與散熱，
-            如何共同形成下一代 AI Infrastructure。
-          </p>
-
-        </div>
-
-
-        <a class="map-link" href="/research">
-          回到 Research Vol.01 →
-        </a>
-
-      </article>
-
-
-      <!-- GLASS CORE -->
-
-      <article class="map-card">
-
-        <span class="tag">02 · GLASS CORE</span>
-
-        <h3>Glass Core Ecosystem</h3>
-
-        <p class="map-lead">
-          從玻璃材料、TGV，到 Glass Core Substrate，
-          最終連結先進封裝與 AI Accelerator。
-        </p>
-
-
-        <div class="map-flow">
-
-          <span>Glass</span>
-          <b>→</b>
-
-          <span>TGV</span>
-          <b>→</b>
-
-          <span>Metallization</span>
-          <b>→</b>
-
-          <span>Glass Core</span>
-          <b>→</b>
-
-          <span>Advanced Packaging</span>
-          <b>→</b>
-
-          <span>AI Accelerator</span>
-
-        </div>
-
-
-        <div class="map-note">
-
-          <strong>RESEARCH FOCUS</strong>
-
-          <p>
-            Glass Material、TGV、金屬化、
-            Core Substrate、RDL 與先進封裝之間的技術關係，
-            以及全球供應鏈布局。
-          </p>
-
-        </div>
-
-
-        <a class="map-link" href="/posters">
-          查看相關研究海報 →
-        </a>
-
-      </article>
-
-
-      <!-- CPO -->
-
-      <article class="map-card">
-
-        <span class="tag">03 · CPO ECOSYSTEM</span>
-
-        <h3>CPO Ecosystem</h3>
-
-        <p class="map-lead">
-          AI 資料中心高速互連，
-          正從純電互連逐步走向
-          Optical + Packaging 的新架構。
-        </p>
-
-
-        <div class="map-flow">
-
-          <span>AI Compute</span>
-          <b>→</b>
-
-          <span>Switch</span>
-          <b>→</b>
-
-          <span>Optical Engine</span>
-          <b>→</b>
-
-          <span>CPO</span>
-          <b>→</b>
-
-          <span>Fiber</span>
-          <b>→</b>
-
-          <span>Data Center</span>
-
-        </div>
-
-
-        <div class="map-note">
-
-          <strong>RESEARCH FOCUS</strong>
-
-          <p>
-            Switch、Optical Engine、光纖、
-            封裝、散熱與電力，
-            如何共同決定 CPO 商業化速度。
-          </p>
-
-        </div>
-
-
-        <a class="map-link" href="/posters">
-          查看 CPO Research Poster →
-        </a>
-
-      </article>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     HOW TO READ
-========================================================= -->
-
-<section class="section">
-
-  <div class="section-head">
-
-    <div>
-      <div class="kicker">HOW TO READ THE MAPS</div>
-      <h2>不要只看公司，要看技術位置</h2>
-    </div>
-
-    <p>Facts First · Evidence-Based Research</p>
-
-  </div>
-
-
-  <div class="grid">
-
-    <article class="card">
-
-      <span class="tag">01 · TECHNOLOGY</span>
-
-      <h3>技術節點</h3>
-
-      <p>
-        先確認一項技術在整個產業鏈中的位置，
-        再判斷它解決的是什麼問題。
-      </p>
-
-    </article>
-
-
-    <article class="card">
-
-      <span class="tag">02 · SUPPLY CHAIN</span>
-
-      <h3>供應鏈位置</h3>
-
-      <p>
-        從上游材料、設備，
-        到中游製程與零組件，
-        最後連結終端應用。
-      </p>
-
-    </article>
-
-
-    <article class="card">
-
-      <span class="tag">03 · EVIDENCE</span>
-
-      <h3>證據強度</h3>
-
-      <p>
-        已量產、驗證中、開發中與產業推論，
-        必須清楚區分，
-        避免把推論當成事實。
-      </p>
-
-    </article>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     EVIDENCE FRAMEWORK
-========================================================= -->
-
-<section class="feature">
-
-  <div class="section">
-
-    <div class="section-head">
-
-      <div>
-        <div class="kicker">EVIDENCE FRAMEWORK</div>
-        <h2>研究狀態分層</h2>
-      </div>
-
-      <p>Evidence Level</p>
-
-    </div>
-
-
-    <div class="grid">
-
-      <article class="card evidence-card">
-
-        <span class="tag">PRODUCTION</span>
-
-        <h3>已量產</h3>
-
-        <p>
-          已有公開資訊支持產品或技術
-          進入量產階段。
-        </p>
-
-      </article>
-
-
-      <article class="card evidence-card">
-
-        <span class="tag">QUALIFICATION</span>
-
-        <h3>驗證／導入</h3>
-
-        <p>
-          已進入客戶驗證、導入
-          或供應鏈認證階段。
-        </p>
-
-      </article>
-
-
-      <article class="card evidence-card">
-
-        <span class="tag">DEVELOPMENT</span>
-
-        <h3>開發中</h3>
-
-        <p>
-          技術或產品仍處於開發、
-          測試或樣品階段。
-        </p>
-
-      </article>
-
-    </div>
-
-
-    <div class="card inference-card">
-
-      <span class="tag">J INSIGHT · INFERENCE</span>
-
-      <h3>產業推論</h3>
-
-      <p>
-        尚未有公司正式公告，
-        但依據技術路徑、供應鏈關係
-        與公開資訊，可以建立合理的研究假設。
-      </p>
-
-      <p class="inference-warning">
-        ※ Inference 不等同於已確認事實，
-        正式研究中將與公開資訊分開標示。
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     RESEARCH CONNECTION
-========================================================= -->
-
-<section class="section">
-
-  <div class="section-head">
-
-    <div>
-      <div class="kicker">FROM MAP TO RESEARCH</div>
-      <h2>產業地圖不是終點</h2>
-    </div>
-
-  </div>
-
-
-  <article class="card research-connection">
-
-    <div class="connection-flow">
-
-      <div>
-        <span class="connection-number">01</span>
-        <strong>Industry Event</strong>
-        <small>產業事件</small>
-      </div>
-
-      <b>→</b>
-
-      <div>
-        <span class="connection-number">02</span>
-        <strong>Research</strong>
-        <small>研究拆解</small>
-      </div>
-
-      <b>→</b>
-
-      <div>
-        <span class="connection-number">03</span>
-        <strong>Industry Maps</strong>
-        <small>產業位置</small>
-      </div>
-
-      <b>→</b>
-
-      <div>
-        <span class="connection-number">04</span>
-        <strong>Evidence</strong>
-        <small>驗證進度</small>
-      </div>
-
-      <b>→</b>
-
-      <div>
-        <span class="connection-number">05</span>
-        <strong>Poster / PDF</strong>
-        <small>研究輸出</small>
-      </div>
-
-    </div>
-
-
-    <p class="connection-text">
-      每一張產業地圖，都應該能回到研究來源；
-      每一項研究，也應該能找到對應的技術節點與供應鏈位置。
-    </p>
-
-  </article>
-
-</section>
-
-
-<!-- =========================================================
-     FINAL NAVIGATION
-========================================================= -->
 
 <section class="cta">
 
@@ -540,34 +415,22 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
     <div>
 
-      <div class="kicker">NEXT STEP</div>
+      <div class="kicker">NEXT</div>
 
-      <h2>從產業地圖，走向真正的研究。</h2>
+      <h2>從產業地圖，走向研究。</h2>
 
       <p>
-        閱讀 Research Vol.01、
-        查看研究海報，
-        或進入 Research Library 取得印刷級 PDF。
+        每一張地圖，都應該能回到具體的研究證據。
       </p>
 
     </div>
 
-
-    <div class="cta-actions">
-
-      <a class="button" href="/research">
-        Read Research →
-      </a>
-
-      <a class="button-secondary" href="/posters">
-        View Posters
-      </a>
-
-      <a class="button-secondary" href="/downloads">
-        Downloads
-      </a>
-
-    </div>
+    <a
+      class="button"
+      href="/research"
+    >
+      Explore Research →
+    </a>
 
   </div>
 
@@ -575,16 +438,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 
 <style>
-
-  .navigation-card {
-    min-height: 100%;
-  }
-
-  .navigation-card .button-secondary {
-    display: inline-block;
-    margin-top: 14px;
-  }
-
 
   .map-card {
     min-height: 100%;
@@ -595,14 +448,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     margin-top: 14px;
   }
 
-
   .map-flow {
     margin-top: 22px;
     padding: 18px;
-
     border: 1px solid #2b394a;
     border-radius: 12px;
-
     background: #0b1119;
 
     display: flex;
@@ -615,175 +465,93 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     color: #d9e2ec;
   }
 
-
   .map-flow span {
     padding: 5px 8px;
-
     border: 1px solid #354457;
     border-radius: 6px;
-
     background: #121c28;
   }
-
 
   .map-flow b {
     color: #7188a0;
     font-weight: 600;
   }
 
-
   .map-note {
     margin-top: 22px;
     padding-top: 18px;
-
     border-top: 1px solid #2b394a;
   }
 
-
   .map-note strong {
-    font-size: 12px;
+    font-size: 11px;
     letter-spacing: .12em;
     color: #8fa6bf;
   }
 
-
-  .map-note p {
-    margin-bottom: 0;
+  .link-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 14px;
   }
 
-
-  .map-link {
-    display: inline-block;
-
-    margin-top: 20px;
-
-    color: #d9e5f1;
-
+  .link-list a {
+    color: #b9c6d4;
     font-size: 13px;
-    font-weight: 700;
-
-    border-bottom: 1px solid #52667c;
-
-    padding-bottom: 3px;
   }
 
-
-  .map-link:hover {
-    color: #ffffff;
-    border-color: #ffffff;
+  .link-list a:hover {
+    color: #fff;
   }
 
-
-  .evidence-card {
-    min-height: 180px;
-  }
-
-
-  .inference-card {
-    margin-top: 18px;
-    border-color: #40536a;
-  }
-
-
-  .inference-warning {
-    color: #7f8d9d !important;
-    font-size: 12px;
-  }
-
-
-  .research-connection {
-    padding: 34px;
-  }
-
-
-  .connection-flow {
+  .map-actions {
     display: flex;
-
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 14px;
-
-    overflow-x: auto;
-  }
-
-
-  .connection-flow > div {
-    min-width: 130px;
-
-    padding: 18px;
-
-    border: 1px solid #354457;
-    border-radius: 12px;
-
-    background: #101923;
-
-    text-align: center;
-  }
-
-
-  .connection-flow b {
-    color: #65788d;
-    font-size: 18px;
-  }
-
-
-  .connection-number {
-    display: block;
-
-    color: #7f9bb7;
-
-    font-size: 11px;
-    font-weight: 800;
-
-    letter-spacing: .12em;
-
-    margin-bottom: 6px;
-  }
-
-
-  .connection-flow strong {
-    display: block;
-
-    font-size: 14px;
-  }
-
-
-  .connection-flow small {
-    display: block;
-
-    color: #7f8d9d;
-
-    margin-top: 3px;
-
-    font-size: 11px;
-  }
-
-
-  .connection-text {
-    margin: 28px 0 0;
-
-    color: #aeb9c6;
-
-    text-align: center;
-  }
-
-
-  .cta-actions {
-    display: flex;
-
     flex-wrap: wrap;
-
-    gap: 10px;
-
-    align-items: center;
+    gap: 8px;
+    margin-top: 22px;
   }
 
-
-  .cta-actions .button-secondary {
+  .button-secondary {
     display: inline-block;
+    border: 1px solid #354457;
+    border-radius: 9px;
+    padding: 9px 13px;
+    font-size: 13px;
+    font-weight: 800;
   }
 
+  .button-secondary:hover {
+    border-color: #647184;
+  }
+
+  .ecosystem-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .ecosystem-link {
+    border: 1px solid #2b394a;
+    background: rgba(18,27,38,.82);
+    border-radius: 16px;
+    padding: 24px;
+    transition: .2s ease;
+  }
+
+  .ecosystem-link:hover {
+    border-color: #647184;
+    transform: translateY(-2px);
+  }
+
+  .ecosystem-link h3 {
+    margin: 12px 0 8px;
+    font-size: 20px;
+  }
+
+  .ecosystem-link p {
+    color: #9eabb9;
+  }
 
   @media(max-width:800px) {
 
@@ -791,46 +559,20 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       line-height: 1.8;
     }
 
-
     .map-flow b {
       display: none;
     }
 
-
-    .connection-flow {
-      justify-content: flex-start;
-
-      padding-bottom: 8px;
+    .ecosystem-links {
+      grid-template-columns: 1fr;
     }
 
-
-    .connection-flow b {
-      display: none;
-    }
-
-
-    .connection-flow > div {
-      min-width: 145px;
-    }
-
-
-    .connection-text {
-      text-align: left;
-    }
-
-
-    .cta-actions {
-      margin-top: 22px;
-
+    .map-actions {
       flex-direction: column;
-      align-items: stretch;
     }
 
-
-    .cta-actions .button,
-    .cta-actions .button-secondary {
+    .map-actions a {
       text-align: center;
-      width: 100%;
     }
 
   }
