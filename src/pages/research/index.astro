@@ -1,26 +1,22 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { researchVol01 } from "../../data/research-vol01";
 ---
 
 <BaseLayout title="Research Library｜J 的世界 Research">
 
 <section class="page-hero">
-
   <div class="page-hero-inner">
 
-    <div class="kicker">
-      RESEARCH LIBRARY · VOL.01
-    </div>
+    <div class="kicker">RESEARCH · LIBRARY</div>
 
-    <h1>{researchVol01.title}</h1>
+    <h1>Research Library</h1>
 
     <p>
-      {researchVol01.subtitle}
+      以研究事件為起點，建立技術、供應鏈與證據之間的長期研究資料庫。
+      從單一 Research Edition，逐步延伸至產業地圖、研究海報與 First Printing。
     </p>
 
   </div>
-
 </section>
 
 
@@ -29,50 +25,66 @@ import { researchVol01 } from "../../data/research-vol01";
   <div class="section-head">
 
     <div>
-      <div class="kicker">RESEARCH EDITION</div>
-      <h2>AI Platform Evolution</h2>
+      <div class="kicker">CURRENT EDITION</div>
+      <h2>Research Vol.01</h2>
     </div>
 
-    <p>P1–P8</p>
+    <p>AI Platform Evolution</p>
 
   </div>
 
 
-  <div class="research-intro">
+  <article class="edition-card">
 
-    <p>
-      從台積電 2026 China Technology Symposium 出發，
-      追蹤 AI Platform 如何由先進製程、先進封裝、
-      光互連、材料與 AI Infrastructure 共同演進。
-    </p>
+    <div class="edition-main">
 
-    <div class="intro-actions">
+      <span class="tag">VOL.01 · FIRST EDITION</span>
 
-      <a
-        class="button"
-        href={researchVol01.pdf}
-        target="_blank"
-      >
-        First Printing PDF →
+      <h3>AI Platform Evolution</h3>
+
+      <p class="lead">
+        從台積電 2026 China Technology Symposium 出發，
+        拆解 AI Platform 從先進製程、先進封裝、
+        光互連、材料、設備到 AI Infrastructure 的演進。
+      </p>
+
+      <div class="edition-meta">
+
+        <span>P1–P8</span>
+        <span>Facts First</span>
+        <span>Evidence-Based Research</span>
+        <span>2026</span>
+
+      </div>
+
+    </div>
+
+
+    <div class="edition-actions">
+
+      <a class="button" href="/research/vol01">
+        Explore Vol.01 →
       </a>
 
-      <a
-        class="button-secondary"
-        href="/maps"
-      >
+      <a class="button-secondary" href="/maps">
         Industry Maps
       </a>
 
+      <a class="button-secondary" href="/posters">
+        Posters
+      </a>
+
       <a
         class="button-secondary"
-        href="/posters"
+        href="/downloads/J的世界_Research_Vol01_First_Printing.pdf"
+        target="_blank"
       >
-        Posters
+        First Printing PDF
       </a>
 
     </div>
 
-  </div>
+  </article>
 
 </section>
 
@@ -84,51 +96,160 @@ import { researchVol01 } from "../../data/research-vol01";
     <div class="section-head">
 
       <div>
-        <div class="kicker">P1–P8</div>
-        <h2>Research Chapters</h2>
+        <div class="kicker">VOL.01 · CONTENT MAP</div>
+        <h2>研究架構</h2>
       </div>
 
-      <p>
-        Read independently
-      </p>
+      <p>Story → Evidence → Technology → Future Watch</p>
 
     </div>
 
 
-    <div class="chapter-grid">
+    <div class="grid">
 
-      {
-        researchVol01.pages.map((page) => (
+      <article class="card">
 
-          <a
-            class="chapter-card"
-            href={`/research/${page.id}`}
-          >
+        <span class="tag">P1 · STORY</span>
 
-            <div class="number">
-              {page.label}
-            </div>
+        <h3>從一場技術論壇開始</h3>
 
-            <div class="tag">
-              {page.type}
-            </div>
+        <p>
+          建立研究事件背景，
+          理解為什麼這場技術論壇值得成為 AI Platform
+          研究的起點。
+        </p>
 
-            <h3>
-              {page.title}
-            </h3>
+        <span class="page-status">
+          Reading page coming next
+        </span>
 
-            <p>
-              {page.summary}
-            </p>
+      </article>
 
-            <span class="read-link">
-              Read Chapter →
-            </span>
 
-          </a>
+      <article class="card">
 
-        ))
-      }
+        <span class="tag">P2 · EVIDENCE</span>
+
+        <h3>先把事實與推論分開</h3>
+
+        <p>
+          將公開資訊、官方資料與產業推論分層，
+          建立後續研究的 Evidence Framework。
+        </p>
+
+        <span class="page-status">
+          Reading page coming next
+        </span>
+
+      </article>
+
+
+      <article class="card">
+
+        <span class="tag">P3 · AI PLATFORM</span>
+
+        <h3>四個訊號</h3>
+
+        <p>
+          Compute Scaling、Advanced Packaging、
+          Optical Interconnect 與 Materials & Infrastructure。
+        </p>
+
+        <span class="page-status">
+          Reading page coming next
+        </span>
+
+      </article>
+
+
+      <article class="card">
+
+        <span class="tag">P4 · TECHNOLOGY</span>
+
+        <h3>從晶片走向系統</h3>
+
+        <p>
+          建立 AI Compute → Process → Packaging →
+          Optical → Thermal / Power → System 的技術路徑。
+        </p>
+
+        <span class="page-status">
+          Reading page coming next
+        </span>
+
+      </article>
+
+
+      <article class="card">
+
+        <span class="tag">P5 · GLASS CORE</span>
+
+        <h3>Glass Core：結果，而不是起點</h3>
+
+        <p>
+          從 Glass、TGV、Core Substrate 到 Advanced Packaging，
+          觀察 Glass Core 在 AI 平台中的位置。
+        </p>
+
+        <span class="page-status">
+          Reading page coming next
+        </span>
+
+      </article>
+
+
+      <article class="card">
+
+        <span class="tag">P6 · INVESTMENT MATRIX</span>
+
+        <h3>技術節點 × 產業觀察</h3>
+
+        <p>
+          將技術路徑轉換成 Process、Packaging、
+          Optical、Materials、Infrastructure 與 System。
+        </p>
+
+        <span class="page-status">
+          Reading page coming next
+        </span>
+
+      </article>
+
+
+      <article class="card">
+
+        <span class="tag">P7 · FUTURE WATCH</span>
+
+        <h3>下一個真正值得驗證的訊號</h3>
+
+        <p>
+          從驗證、導入、量產到擴散，
+          建立長期追蹤 AI 技術落地的觀察框架。
+        </p>
+
+        <span class="page-status">
+          Reading page coming next
+        </span>
+
+      </article>
+
+
+      <article class="card">
+
+        <span class="tag">P8 · METHODOLOGY</span>
+
+        <h3>Reference & Methodology</h3>
+
+        <p>
+          Facts First、Evidence-Based Research、
+          J Insight 與研究資料來源。
+        </p>
+
+        <span class="page-status">
+          Reading page coming next
+        </span>
+
+      </article>
 
     </div>
 
@@ -143,7 +264,7 @@ import { researchVol01 } from "../../data/research-vol01";
 
     <div>
       <div class="kicker">RESEARCH ECOSYSTEM</div>
-      <h2>繼續探索</h2>
+      <h2>同一份研究，四種閱讀方式</h2>
     </div>
 
   </div>
@@ -151,32 +272,105 @@ import { researchVol01 } from "../../data/research-vol01";
 
   <div class="grid">
 
-    <a class="card ecosystem-card" href="/maps">
-      <span class="tag">INDUSTRY MAPS</span>
-      <h3>產業地圖 →</h3>
-      <p>
-        從技術節點與供應鏈位置繼續探索。
-      </p>
-    </a>
+    <article class="card ecosystem-card">
 
-    <a class="card ecosystem-card" href="/posters">
-      <span class="tag">POSTERS</span>
-      <h3>研究海報 →</h3>
-      <p>
-        將研究內容濃縮成一頁式視覺化研究。
-      </p>
-    </a>
+      <span class="tag">01 · RESEARCH</span>
 
-    <a
-      class="card ecosystem-card"
-      href={researchVol01.pdf}
-      target="_blank"
-    >
-      <span class="tag">FIRST PRINTING</span>
-      <h3>印刷級 PDF →</h3>
+      <h3>完整研究</h3>
+
       <p>
-        開啟 Research Vol.01 First Printing。
+        以 P1–P8 的連續閱讀方式，
+        理解完整研究邏輯與技術路徑。
       </p>
+
+      <a class="button-secondary" href="/research/vol01">
+        Open Research →
+      </a>
+
+    </article>
+
+
+    <article class="card ecosystem-card">
+
+      <span class="tag">02 · INDUSTRY MAPS</span>
+
+      <h3>產業地圖</h3>
+
+      <p>
+        將研究中的技術節點轉換成
+        AI、Glass Core 與 CPO 產業鏈。
+      </p>
+
+      <a class="button-secondary" href="/maps">
+        Explore Maps →
+      </a>
+
+    </article>
+
+
+    <article class="card ecosystem-card">
+
+      <span class="tag">03 · POSTERS</span>
+
+      <h3>研究海報</h3>
+
+      <p>
+        將複雜研究濃縮成一頁式視覺化內容，
+        適合快速閱讀與分享。
+      </p>
+
+      <a class="button-secondary" href="/posters">
+        Explore Posters →
+      </a>
+
+    </article>
+
+
+    <article class="card ecosystem-card">
+
+      <span class="tag">04 · FIRST PRINTING</span>
+
+      <h3>印刷級 PDF</h3>
+
+      <p>
+        Research Vol.01 First Printing，
+        作為完整研究的正式出版版本。
+      </p>
+
+      <a
+        class="button-secondary"
+        href="/downloads/J的世界_Research_Vol01_First_Printing.pdf"
+        target="_blank"
+      >
+        Open PDF →
+      </a>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<section class="cta">
+
+  <div class="cta-inner">
+
+    <div>
+
+      <div class="kicker">NEXT · V1.2-04B</div>
+
+      <h2>從研究目錄，進入每一頁。</h2>
+
+      <p>
+        下一階段將把 P1–P8 建立成八個獨立閱讀頁，
+        讓 Research Vol.01 真正成為可長期閱讀與引用的研究內容。
+      </p>
+
+    </div>
+
+    <a class="button" href="/research/vol01">
+      Open Vol.01 →
     </a>
 
   </div>
@@ -186,113 +380,96 @@ import { researchVol01 } from "../../data/research-vol01";
 
 <style>
 
-  .research-intro {
+  .edition-card {
     border: 1px solid #344457;
     background:
       linear-gradient(
         135deg,
-        rgba(28,42,58,.95),
-        rgba(14,21,30,.96)
+        rgba(28, 42, 58, .96),
+        rgba(14, 21, 30, .98)
       );
-    border-radius: 20px;
-    padding: 34px;
+    border-radius: 22px;
+    padding: 38px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 44px;
+    align-items: center;
   }
 
-  .research-intro p {
-    max-width: 850px;
-    color: #aeb9c6;
+  .edition-main h3 {
+    font-size: 34px;
+    margin: 12px 0;
+  }
+
+  .lead {
+    color: #b7c3d0;
+    max-width: 760px;
     font-size: 16px;
   }
 
-  .intro-actions {
+  .edition-meta {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 24px;
+    gap: 8px;
+    margin-top: 22px;
   }
 
-  .button-secondary {
-    display: inline-block;
+  .edition-meta span {
     border: 1px solid #354457;
-    border-radius: 9px;
-    padding: 10px 16px;
-    font-size: 14px;
-    font-weight: 800;
+    border-radius: 7px;
+    padding: 5px 9px;
+    color: #b9c6d4;
+    font-size: 12px;
   }
 
-  .chapter-grid {
-    display: grid;
-    grid-template-columns:
-      repeat(2, minmax(0,1fr));
-    gap: 18px;
+  .edition-actions {
+    min-width: 190px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 
-  .chapter-card {
-    border: 1px solid #2b394a;
-    background: rgba(18,27,38,.82);
-    border-radius: 18px;
-    padding: 26px;
-    transition: .2s ease;
+  .edition-actions .button,
+  .edition-actions .button-secondary {
+    text-align: center;
+    width: 100%;
   }
 
-  .chapter-card:hover {
-    border-color: #647184;
-    transform: translateY(-2px);
-  }
-
-  .chapter-card .number {
-    font-size: 13px;
-    color: #7f9bb7;
-    font-weight: 800;
-    letter-spacing: .12em;
-  }
-
-  .chapter-card .tag {
+  .page-status {
     display: inline-block;
-    margin-top: 12px;
-  }
-
-  .chapter-card h3 {
-    margin: 12px 0 8px;
-    font-size: 22px;
-  }
-
-  .chapter-card p {
-    color: #9eabb9;
-  }
-
-  .read-link {
-    display: inline-block;
-    margin-top: 12px;
-    font-size: 13px;
-    font-weight: 800;
+    margin-top: 16px;
+    color: #718093;
+    font-size: 11px;
+    letter-spacing: .06em;
   }
 
   .ecosystem-card {
-    display: block;
-    transition: .2s ease;
+    min-height: 100%;
   }
 
-  .ecosystem-card:hover {
-    border-color: #647184;
-    transform: translateY(-2px);
+  .ecosystem-card .button-secondary {
+    display: inline-block;
+    margin-top: 14px;
   }
 
   @media(max-width:800px) {
 
-    .chapter-grid {
+    .edition-card {
       grid-template-columns: 1fr;
-    }
-
-    .research-intro {
       padding: 26px;
+      gap: 26px;
     }
 
-    .intro-actions {
-      flex-direction: column;
+    .edition-main h3 {
+      font-size: 28px;
     }
 
-    .intro-actions a {
+    .edition-actions {
+      min-width: 0;
+    }
+
+    .edition-actions .button,
+    .edition-actions .button-secondary {
       text-align: center;
     }
 
