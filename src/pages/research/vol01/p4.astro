@@ -2,160 +2,71 @@
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="P4｜Technology｜AI Platform Evolution｜J 的世界 Research">
+<BaseLayout title="P4｜Technology">
 
 <section class="page-hero">
   <div class="page-hero-inner">
-    <div class="kicker">RESEARCH · VOL.01 · P4</div>
+    <div class="kicker">VOL.01 · P4 · TECHNOLOGY</div>
     <h1>從晶片走向系統</h1>
-    <p>
-      AI Platform 不再只是一顆 GPU，
-      而是一條從 Compute 到 Infrastructure 的完整技術鏈。
-    </p>
   </div>
 </section>
 
 <section class="section">
 
-  <div class="section-head">
-    <div>
-      <div class="kicker">TECHNOLOGY PATH</div>
-      <h2>六個連續節點</h2>
+  <article class="card reading">
+
+    <span class="tag">TECHNOLOGY PATH</span>
+
+    <h2>六個連續節點</h2>
+
+    <div class="tech-flow">
+      <span>AI Compute</span>
+      <b>→</b>
+      <span>Advanced Process</span>
+      <b>→</b>
+      <span>Advanced Packaging</span>
+      <b>→</b>
+      <span>Optical Interconnect</span>
+      <b>→</b>
+      <span>Thermal / Power</span>
+      <b>→</b>
+      <span>System</span>
     </div>
-  </div>
-
-  <div class="technology-flow">
-
-    <div>
-      <span>01</span>
-      <strong>AI Compute</strong>
-    </div>
-
-    <b>→</b>
-
-    <div>
-      <span>02</span>
-      <strong>Advanced Process</strong>
-    </div>
-
-    <b>→</b>
-
-    <div>
-      <span>03</span>
-      <strong>Advanced Packaging</strong>
-    </div>
-
-    <b>→</b>
-
-    <div>
-      <span>04</span>
-      <strong>Optical Interconnect</strong>
-    </div>
-
-    <b>→</b>
-
-    <div>
-      <span>05</span>
-      <strong>Thermal / Power</strong>
-    </div>
-
-    <b>→</b>
-
-    <div>
-      <span>06</span>
-      <strong>System</strong>
-    </div>
-
-  </div>
-
-</section>
-
-<section class="feature">
-  <div class="section">
-
-    <div class="grid">
-
-      <article class="card">
-        <span class="tag">PROCESS</span>
-        <h3>Advanced Process</h3>
-        <p>
-          關注製程節點、電晶體架構、
-          PPA 與能源效率。
-        </p>
-      </article>
-
-      <article class="card">
-        <span class="tag">PACKAGING</span>
-        <h3>Advanced Packaging</h3>
-        <p>
-          關注 CoWoS、SoIC、Chiplet、
-          HBM 與異質整合。
-        </p>
-      </article>
-
-      <article class="card">
-        <span class="tag">OPTICAL</span>
-        <h3>Optical Interconnect</h3>
-        <p>
-          關注 CPO、光引擎、光纖
-          與高速互連。
-        </p>
-      </article>
-
-      <article class="card">
-        <span class="tag">INFRASTRUCTURE</span>
-        <h3>Thermal / Power</h3>
-        <p>
-          關注 AI Server、
-          資料中心散熱與電力。
-        </p>
-      </article>
-
-    </div>
-
-  </div>
-</section>
-
-<section class="section">
-
-  <article class="research-card">
-
-    <div class="kicker">RESEARCH PRINCIPLE</div>
-
-    <h2>不要只問「什麼技術會成功」</h2>
 
     <p>
-      更重要的是觀察一項技術何時從
-      技術可能性進入驗證、導入與量產。
-    </p>
-
-    <p>
-      因此後續研究將持續追蹤：
-      <strong>Validation → Qualification → Adoption → Production</strong>
+      研究重點不是預測某項技術何時取代另一項技術，
+      而是觀察技術何時由可能性進入驗證、導入與量產。
     </p>
 
   </article>
 
 </section>
 
-<nav class="research-nav">
-  <a href="/research/vol01/p3">← P3 · AI Platform</a>
-  <a href="../">Vol.01 目錄</a>
-  <a href="/research/vol01/p5">P5 · Glass Core →</a>
-</nav>
-
-</BaseLayout>
+<section class="page-nav">
+  <a href="/research/vol01/p3">← P3</a>
+  <a href="/research/vol01">Vol.01 Index</a>
+  <a href="/research/vol01/p5">P5 →</a>
+</section>
 
 <style>
-.technology-flow{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:12px;border:1px solid #344457;background:#101822;border-radius:18px;padding:28px}
-.technology-flow div{display:flex;flex-direction:column;gap:4px;padding:12px 14px;border:1px solid #354457;border-radius:9px;background:#151f2b}
-.technology-flow span{font-size:11px;color:#7f9bb7}
-.technology-flow strong{font-size:13px}
-.technology-flow b{color:#7188a0}
-.research-card{border:1px solid #344457;background:rgba(18,27,38,.82);border-radius:18px;padding:34px}
-.research-card h2{font-size:31px;margin:12px 0 20px}
-.research-card p{color:#aeb9c6;max-width:850px}
-.research-nav{max-width:1180px;margin:auto;padding:0 24px 70px;display:flex;justify-content:space-between;gap:20px}
-.research-nav a{color:#b8c8d9;font-weight:700}
-@media(max-width:800px){.technology-flow{display:grid;grid-template-columns:1fr}.technology-flow b{display:none}.research-card{padding:25px}.research-nav{flex-wrap:wrap}}
+  .tech-flow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    margin: 28px 0;
+  }
+
+  .tech-flow span {
+    padding: 9px 12px;
+    border: 1px solid #354457;
+    border-radius: 8px;
+    background: #0b1119;
+  }
+
+  .tech-flow b {
+    color: #7188a0;
+  }
 </style>
+
+</BaseLayout>
