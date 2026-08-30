@@ -1,0 +1,179 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="P8｜Reference & Methodology｜AI Platform Evolution｜J 的世界 Research">
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="kicker">RESEARCH · VOL.01 · P8</div>
+    <h1>Reference & Methodology</h1>
+    <p>
+      研究方法、證據分層與後續追蹤原則。
+    </p>
+  </div>
+</section>
+
+<section class="section">
+
+  <div class="grid">
+
+    <article class="card">
+      <span class="tag">01 · FACTS FIRST</span>
+      <h2>公開資訊優先</h2>
+      <p>
+        公司揭露、官方技術資料、
+        公開產業資訊優先於市場傳聞。
+      </p>
+    </article>
+
+    <article class="card">
+      <span class="tag">02 · EVIDENCE</span>
+      <h2>交叉驗證</h2>
+      <p>
+        技術路徑、供應鏈、
+        驗證與量產進度交叉檢視。
+      </p>
+    </article>
+
+    <article class="card">
+      <span class="tag">03 · J INSIGHT</span>
+      <h2>Inference</h2>
+      <p>
+        尚未正式公告但值得追蹤的內容，
+        明確標示為產業推論。
+      </p>
+    </article>
+
+  </div>
+
+</section>
+
+<section class="feature">
+  <div class="section">
+
+    <div class="section-head">
+      <div>
+        <div class="kicker">SOURCE FRAMEWORK</div>
+        <h2>研究資料來源</h2>
+      </div>
+    </div>
+
+    <article class="research-card">
+
+      <ul>
+        <li>公司官方公告與法說會資料</li>
+        <li>官方技術論壇與技術文件</li>
+        <li>公開產業研究與市場資料</li>
+        <li>供應鏈公開資訊</li>
+        <li>技術驗證與量產進度</li>
+      </ul>
+
+    </article>
+
+  </div>
+</section>
+
+<section class="section">
+
+  <article class="warning-card">
+
+    <span class="tag">DISCLAIMER</span>
+
+    <h2>免責聲明</h2>
+
+    <p>
+      本網站及《J 的世界 Research》相關資料，
+      僅供資訊分享、研究與學習用途，
+      不構成任何投資、財務或交易建議。
+    </p>
+
+    <p>
+      任何技術、公司、產業或市場推論，
+      均應由讀者自行進一步查證與判斷。
+    </p>
+
+  </article>
+
+</section>
+
+<section class="feature">
+
+  <div class="section">
+
+    <div class="section-head">
+      <div>
+        <div class="kicker">VOL.01 · COMPLETE</div>
+        <h2>Research Vol.01 完成</h2>
+      </div>
+    </div>
+
+    <div class="completion-grid">
+
+      <a href="/research/vol01/p1">
+        <span>P1</span>
+        Story
+      </a>
+
+      <a href="/research/vol01/p2">
+        <span>P2</span>
+        Evidence
+      </a>
+
+      <a href="/research/vol01/p3">
+        <span>P3</span>
+        AI Platform
+      </a>
+
+      <a href="/research/vol01/p4">
+        <span>P4</span>
+        Technology
+      </a>
+
+      <a href="/research/vol01/p5">
+        <span>P5</span>
+        Glass Core
+      </a>
+
+      <a href="/research/vol01/p6">
+        <span>P6</span>
+        Investment Matrix
+      </a>
+
+      <a href="/research/vol01/p7">
+        <span>P7</span>
+        Future Watch
+      </a>
+
+      <a href="/research/vol01/p8">
+        <span>P8</span>
+        Methodology
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<nav class="research-nav">
+  <a href="/research/vol01/p7">← P7 · Future Watch</a>
+  <a href="../">Vol.01 目錄</a>
+  <a href="/downloads">Downloads →</a>
+</nav>
+
+</BaseLayout>
+
+<style>
+.research-card,.warning-card{border:1px solid #344457;background:rgba(18,27,38,.82);border-radius:18px;padding:34px}
+.research-card li{margin:10px 0;color:#aeb9c6}
+.warning-card{border-color:#40536a}
+.warning-card h2{font-size:31px;margin:12px 0 20px}
+.warning-card p{color:#aeb9c6;max-width:850px}
+.completion-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.completion-grid a{border:1px solid #354457;border-radius:10px;background:#121c28;padding:16px;color:#d9e2ec;font-weight:700;display:flex;flex-direction:column;gap:5px}
+.completion-grid span{font-size:11px;color:#7f9bb7}
+.research-nav{max-width:1180px;margin:auto;padding:0 24px 70px;display:flex;justify-content:space-between;gap:20px}
+.research-nav a{color:#b8c8d9;font-weight:700}
+@media(max-width:800px){.research-card,.warning-card{padding:25px}.completion-grid{grid-template-columns:repeat(2,1fr)}.research-nav{flex-wrap:wrap}}
+</style>
