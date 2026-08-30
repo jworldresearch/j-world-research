@@ -1,0 +1,299 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { researchVol01 } from "../data/research-vol01";
+
+const { pageId } = Astro.props;
+
+const index = researchVol01.pages.findIndex(
+  (page) => page.id === pageId
+);
+
+const page = researchVol01.pages[index];
+
+if (!page) {
+  throw new Error(`Research page not found: ${pageId}`);
+}
+
+const previousPage =
+  index > 0 ? researchVol01.pages[index - 1] : null;
+
+const nextPage =
+  index < researchVol01.pages.length - 1
+    ? researchVol01.pages[index + 1]
+    : null;
+---
+
+<BaseLayout title={`${page.title}｜J 的世界 Research`}>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+
+    <div class="kicker">
+      {page.kicker}
+    </div>
+
+    <h1>{page.title}</h1>
+
+    <p>{page.summary}</p>
+
+  </div>
+</section>
+
+
+<section class="section">
+
+  <article class="research-content">
+
+    <div class="research-label">
+      {page.label} · {page.type}
+    </div>
+
+    <slot />
+
+  </article>
+
+</section>
+
+
+<section class="feature">
+
+  <div class="section">
+
+    <div class="section-head">
+
+      <div>
+        <div class="kicker">
+          RESEARCH CONNECTION
+        </div>
+
+        <h2>從這一頁繼續探索</h2>
+      </div>
+
+    </div>
+
+
+    <div class="connection-grid">
+
+      <a class="connection-card" href="/maps">
+
+        <span class="tag">INDUSTRY MAPS</span>
+
+        <h3>查看產業地圖 →</h3>
+
+        <p>
+          從技術節點、供應鏈位置與 Evidence Level
+          延伸閱讀相關產業地圖。
+        </p>
+
+      </a>
+
+
+      <a class="connection-card" href="/posters">
+
+        <span class="tag">POSTERS</span>
+
+        <h3>查看研究海報 →</h3>
+
+        <p>
+          將本期研究濃縮成一頁式視覺化內容。
+        </p>
+
+      </a>
+
+
+      <a class="connection-card" href={researchVol01.pdf} target="_blank">
+
+        <span class="tag">FIRST PRINTING</span>
+
+        <h3>開啟印刷級 PDF →</h3>
+
+        <p>
+          閱讀 Research Vol.01 First Printing 完整版本。
+        </p>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="section">
+
+  <div class="research-navigation">
+
+    <div>
+
+      {
+        previousPage ? (
+          <a class="nav-research" href={`/research/${previousPage.id}`}>
+            <span>← PREVIOUS</span>
+            <strong>{previousPage.title}</strong>
+          </a>
+        ) : (
+          <div></div>
+        )
+      }
+
+    </div>
+
+
+    <a class="library-link" href="/research">
+      Research Library
+    </a>
+
+
+    <div class="next">
+
+      {
+        nextPage ? (
+          <a class="nav-research next-link" href={`/research/${nextPage.id}`}>
+            <span>NEXT →</span>
+            <strong>{nextPage.title}</strong>
+          </a>
+        ) : (
+          <div></div>
+        )
+      }
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<style>
+
+  .research-content {
+    max-width: 900px;
+    margin: auto;
+    border: 1px solid #2b394a;
+    background: rgba(18,27,38,.82);
+    border-radius: 20px;
+    padding: 42px;
+  }
+
+  .research-label {
+    color: #8fa6bf;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .12em;
+    margin-bottom: 28px;
+  }
+
+  .research-content :global(h2) {
+    font-size: 30px;
+    margin-top: 36px;
+  }
+
+  .research-content :global(h3) {
+    font-size: 22px;
+    margin-top: 30px;
+  }
+
+  .research-content :global(p) {
+    color: #aeb9c6;
+    line-height: 1.9;
+  }
+
+  .research-content :global(strong) {
+    color: #eef2f7;
+  }
+
+  .connection-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .connection-card {
+    display: block;
+    border: 1px solid #2b394a;
+    background: rgba(18,27,38,.82);
+    border-radius: 16px;
+    padding: 24px;
+    transition: .2s ease;
+  }
+
+  .connection-card:hover {
+    border-color: #647184;
+    transform: translateY(-2px);
+  }
+
+  .connection-card h3 {
+    margin: 12px 0 8px;
+    font-size: 19px;
+  }
+
+  .connection-card p {
+    color: #9eabb9;
+    font-size: 14px;
+  }
+
+  .research-navigation {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .nav-research {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .nav-research span {
+    color: #7f9bb7;
+    font-size: 11px;
+    letter-spacing: .12em;
+    font-weight: 800;
+  }
+
+  .nav-research strong {
+    font-size: 15px;
+  }
+
+  .next-link {
+    text-align: right;
+  }
+
+  .library-link {
+    border: 1px solid #354457;
+    border-radius: 9px;
+    padding: 10px 16px;
+    font-weight: 800;
+    font-size: 13px;
+    text-align: center;
+  }
+
+  @media(max-width:800px) {
+
+    .research-content {
+      padding: 26px;
+    }
+
+    .connection-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .research-navigation {
+      grid-template-columns: 1fr;
+    }
+
+    .next-link {
+      text-align: left;
+    }
+
+    .library-link {
+      order: -1;
+    }
+
+  }
+
+</style>
+
+</BaseLayout>
