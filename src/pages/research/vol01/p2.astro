@@ -2,138 +2,53 @@
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="P2｜Evidence｜AI Platform Evolution｜J 的世界 Research">
+<BaseLayout title="P2｜Evidence">
 
 <section class="page-hero">
   <div class="page-hero-inner">
-    <div class="kicker">RESEARCH · VOL.01 · P2</div>
+    <div class="kicker">VOL.01 · P2 · EVIDENCE</div>
     <h1>先把事實與推論分開</h1>
-    <p>
-      Facts First。
-      在進入產業推論之前，先確認哪些訊號有公開資訊支持。
-    </p>
+    <p>Facts First · Evidence-Based Research</p>
   </div>
 </section>
 
 <section class="section">
-
-  <div class="section-head">
-    <div>
-      <div class="kicker">EVIDENCE FRAMEWORK</div>
-      <h2>三種證據層級</h2>
-    </div>
-  </div>
-
   <div class="grid">
 
-    <article class="card">
+    <article class="card reading">
       <span class="tag">FACT</span>
-      <h3>公開資訊</h3>
+      <h2>先進製程</h2>
       <p>
-        公司公告、法說會、官方技術文件、
-        公開產品資訊與產業事件。
+        台積電持續推進 3nm、2nm、A16、A14
+        等先進製程技術。
       </p>
     </article>
 
-    <article class="card">
-      <span class="tag">VERIFIED</span>
-      <h3>驗證／導入</h3>
+    <article class="card reading">
+      <span class="tag">FACT</span>
+      <h2>3DFabric</h2>
       <p>
-        技術已進入客戶驗證、產品導入
-        或供應鏈認證階段。
+        SoIC、InFO、CoWoS 與 SoW
+        構成先進封裝與異質整合的重要技術路徑。
       </p>
     </article>
 
-    <article class="card">
+    <article class="card reading">
       <span class="tag">INFERENCE</span>
-      <h3>產業推論</h3>
+      <h2>系統瓶頸</h2>
       <p>
-        尚未正式公告，但可依技術路徑
-        與供應鏈關係建立研究假設。
+        當製程與封裝同步升級，
+        互連、材料、散熱與電力的重要性同步提升。
       </p>
     </article>
 
   </div>
-
 </section>
 
-<section class="feature">
-  <div class="section">
-
-    <div class="section-head">
-      <div>
-        <div class="kicker">FACT</div>
-        <h2>可以確認的技術方向</h2>
-      </div>
-    </div>
-
-    <div class="grid">
-
-      <article class="map-card">
-        <h3>先進製程</h3>
-        <p>
-          AI/HPC 持續推動先進邏輯製程演進，
-          製程節點與能源效率仍是重要方向。
-        </p>
-      </article>
-
-      <article class="map-card">
-        <h3>先進封裝</h3>
-        <p>
-          3DFabric 技術涵蓋 SoIC、InFO、
-          CoWoS 與其他異質整合路徑。
-        </p>
-      </article>
-
-      <article class="map-card">
-        <h3>系統整合</h3>
-        <p>
-          AI 系統的效能與功耗，
-          越來越取決於晶片以外的系統因素。
-        </p>
-      </article>
-
-    </div>
-
-  </div>
+<section class="page-nav">
+  <a href="/research/vol01/p1">← P1</a>
+  <a href="/research/vol01">Vol.01 Index</a>
+  <a href="/research/vol01/p3">P3 →</a>
 </section>
-
-<section class="section">
-
-  <article class="insight-card">
-
-    <span class="tag">INFERENCE</span>
-
-    <h2>研究推論：瓶頸正在系統化</h2>
-
-    <p>
-      當運算、記憶體與封裝密度持續提高，
-      高速互連、材料、散熱與電力的重要性
-      將需要被放進同一個研究框架。
-    </p>
-
-    <p class="warning">
-      ※ Inference 不等同於已確認事實。
-    </p>
-
-  </article>
-
-</section>
-
-<nav class="research-nav">
-  <a href="/research/vol01/p1">← P1 · Story</a>
-  <a href="../">Vol.01 目錄</a>
-  <a href="/research/vol01/p3">P3 · AI Platform →</a>
-</nav>
 
 </BaseLayout>
-
-<style>
-.insight-card{border:1px solid #40536a;background:rgba(18,27,38,.82);border-radius:18px;padding:34px}
-.insight-card h2{font-size:32px;margin:12px 0 20px}
-.insight-card p{color:#aeb9c6;max-width:850px}
-.warning{font-size:12px!important;color:#7f8d9d!important}
-.research-nav{max-width:1180px;margin:auto;padding:0 24px 70px;display:flex;justify-content:space-between;gap:20px}
-.research-nav a{color:#b8c8d9;font-weight:700}
-@media(max-width:800px){.insight-card{padding:25px}.insight-card h2{font-size:27px}.research-nav{flex-wrap:wrap}}
-</style>
