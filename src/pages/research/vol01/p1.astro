@@ -2,135 +2,36 @@
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="P1｜Story｜AI Platform Evolution｜J 的世界 Research">
+<BaseLayout title="P1｜從一場技術論壇開始">
 
 <section class="page-hero">
   <div class="page-hero-inner">
-    <div class="kicker">RESEARCH · VOL.01 · P1</div>
+    <div class="kicker">VOL.01 · P1 · STORY</div>
     <h1>從一場技術論壇開始</h1>
-    <p>
-      AI Platform Evolution 的研究起點：
-      從台積電 2026 China Technology Symposium，
-      觀察 AI 產業鏈正在發生的結構性變化。
-    </p>
+    <p>2026.06.25 · TSMC China Technology Symposium</p>
   </div>
 </section>
 
 <section class="section">
-
-  <div class="research-meta">
-    <span>VOL.01</span>
-    <span>AI PLATFORM EVOLUTION</span>
-    <span>STORY</span>
-  </div>
-
-  <article class="research-card">
-
-    <div class="kicker">01 · RESEARCH START</div>
-
-    <h2>為什麼從一場技術論壇開始？</h2>
-
-    <p>
-      AI 的演進，已經不只是單純追求更小的製程節點。
-      當 AI 加速器的運算密度持續提升，
-      晶片、記憶體、先進封裝、高速互連、
-      散熱與電力開始形成高度耦合的系統。
-    </p>
-
-    <p>
-      因此，本期研究不從「哪家公司最值得投資」開始，
-      而是先從一個產業事件開始，
-      重新建立 AI Platform 的技術路徑。
-    </p>
-
-  </article>
-
-</section>
-
-<section class="feature">
-  <div class="section">
-
-    <div class="section-head">
-      <div>
-        <div class="kicker">EVENT</div>
-        <h2>TSMC Technology Symposium</h2>
-      </div>
-      <span class="date">2026.06.25</span>
-    </div>
-
-    <div class="grid">
-
-      <article class="card">
-        <span class="tag">01</span>
-        <h3>Advanced Process</h3>
-        <p>
-          先進邏輯製程持續推進，
-          運算密度與能源效率仍是 AI/HPC 的核心需求。
-        </p>
-      </article>
-
-      <article class="card">
-        <span class="tag">02</span>
-        <h3>3DFabric</h3>
-        <p>
-          SoIC、InFO、CoWoS、SoW 等技術，
-          讓晶片、記憶體與系統整合進一步提高密度。
-        </p>
-      </article>
-
-      <article class="card">
-        <span class="tag">03</span>
-        <h3>System Integration</h3>
-        <p>
-          技術焦點開始從單一 transistor，
-          延伸至整個系統整合與基礎設施。
-        </p>
-      </article>
-
-    </div>
-
-  </div>
-</section>
-
-<section class="section">
-
-  <article class="insight-card">
-
-    <span class="tag">J INSIGHT</span>
-
+  <article class="card reading">
+    <span class="tag">EVENT</span>
     <h2>研究起點</h2>
-
     <p>
-      當先進製程、先進封裝與高速互連同時演進，
-      AI 的真正瓶頸便可能逐步從「單一晶片」
-      移向「整個平台」。
+      台積電於 2026 年 6 月 25 日舉辦 China Technology Symposium。
+      官方議程涵蓋 HPC、先進邏輯製程、3DFabric、
+      先進封裝、製造與 Open Innovation Platform。
     </p>
-
-    <p class="warning">
-      ※ 本段屬研究框架與產業推論，不代表特定公司已確認採用。
+    <p>
+      本研究以這場技術論壇作為起點，
+      觀察 AI 平台從單一晶片效能提升，
+      逐步走向製程、封裝、互連與基礎設施協同演進。
     </p>
-
   </article>
-
 </section>
 
-<nav class="research-nav">
-  <a href="../">← Vol.01 目錄</a>
-  <a href="/research/vol01/p2">P2 · Evidence →</a>
-</nav>
+<section class="page-nav">
+  <a href="/research/vol01">← Vol.01 Index</a>
+  <a href="/research/vol01/p2">P2 →</a>
+</section>
 
 </BaseLayout>
-
-<style>
-.research-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
-.research-meta span{border:1px solid #354457;border-radius:7px;padding:5px 9px;font-size:12px;color:#aebdcb}
-.research-card,.insight-card{border:1px solid #344457;background:rgba(18,27,38,.82);border-radius:18px;padding:34px}
-.research-card h2,.insight-card h2{font-size:32px;margin:12px 0 20px}
-.research-card p,.insight-card p{color:#aeb9c6;max-width:850px}
-.date{color:#7f8d9d;font-size:13px}
-.insight-card{border-color:#40536a}
-.warning{font-size:12px!important;color:#7f8d9d!important}
-.research-nav{max-width:1180px;margin:auto;padding:0 24px 70px;display:flex;justify-content:space-between}
-.research-nav a{color:#b8c8d9;font-weight:700}
-@media(max-width:800px){.research-card,.insight-card{padding:25px}.research-card h2,.insight-card h2{font-size:27px}.research-nav{gap:15px;flex-wrap:wrap}}
-</style>
