@@ -2,16 +2,12 @@
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="P7｜Future Watch｜AI Platform Evolution｜J 的世界 Research">
+<BaseLayout title="P7｜Future Watch">
 
 <section class="page-hero">
   <div class="page-hero-inner">
-    <div class="kicker">RESEARCH · VOL.01 · P7</div>
+    <div class="kicker">VOL.01 · P7 · FUTURE WATCH</div>
     <h1>下一個真正值得驗證的訊號</h1>
-    <p>
-      研究不是猜測未來，而是持續追蹤
-      技術是否跨越下一個證據門檻。
-    </p>
   </div>
 </section>
 
@@ -19,131 +15,38 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 
   <div class="grid">
 
-    <article class="map-card">
+    <article class="card">
       <span class="tag">WATCH 01</span>
-      <h2>驗證</h2>
-      <p>
-        技術是否由研發進入客戶驗證？
-      </p>
+      <h3>驗證</h3>
+      <p>技術是否由研發進入客戶驗證？</p>
     </article>
 
-    <article class="map-card">
+    <article class="card">
       <span class="tag">WATCH 02</span>
-      <h2>導入</h2>
-      <p>
-        是否進入實際製程或產品設計？
-      </p>
+      <h3>導入</h3>
+      <p>是否進入實際製程或產品設計？</p>
     </article>
 
-    <article class="map-card">
+    <article class="card">
       <span class="tag">WATCH 03</span>
-      <h2>量產</h2>
-      <p>
-        是否形成可觀察的產能與營收？
-      </p>
+      <h3>量產</h3>
+      <p>是否形成可觀察的產能與營收？</p>
     </article>
 
-    <article class="map-card">
+    <article class="card">
       <span class="tag">WATCH 04</span>
-      <h2>擴散</h2>
-      <p>
-        是否由單一客戶擴展至更多 AI 平台？
-      </p>
+      <h3>擴散</h3>
+      <p>是否由單一客戶擴展至更多 AI 平台？</p>
     </article>
 
   </div>
 
 </section>
 
-<section class="feature">
-  <div class="section">
-
-    <div class="section-head">
-      <div>
-        <div class="kicker">WATCH FRAMEWORK</div>
-        <h2>四道門檻</h2>
-      </div>
-    </div>
-
-    <div class="watch-flow">
-
-      <div>
-        <strong>R&D</strong>
-        <span>技術開發</span>
-      </div>
-
-      <b>→</b>
-
-      <div>
-        <strong>Validation</strong>
-        <span>客戶驗證</span>
-      </div>
-
-      <b>→</b>
-
-      <div>
-        <strong>Qualification</strong>
-        <span>供應鏈認證</span>
-      </div>
-
-      <b>→</b>
-
-      <div>
-        <strong>Production</strong>
-        <span>量產</span>
-      </div>
-
-      <b>→</b>
-
-      <div>
-        <strong>Scale</strong>
-        <span>規模化</span>
-      </div>
-
-    </div>
-
-  </div>
+<section class="page-nav">
+  <a href="/research/vol01/p6">← P6</a>
+  <a href="/research/vol01">Vol.01 Index</a>
+  <a href="/research/vol01/p8">P8 →</a>
 </section>
-
-<section class="section">
-
-  <article class="insight-card">
-
-    <span class="tag">J INSIGHT</span>
-
-    <h2>真正有價值的訊號，通常不是第一個新聞。</h2>
-
-    <p>
-      而是當一項技術從「有人談」，
-      逐步走到「有人驗證、有人導入、有人量產」。
-    </p>
-
-    <p class="warning">
-      ※ Future Watch 為研究追蹤框架，不代表特定技術或公司必然成功。
-    </p>
-
-  </article>
-
-</section>
-
-<nav class="research-nav">
-  <a href="/research/vol01/p6">← P6 · Investment Matrix</a>
-  <a href="../">Vol.01 目錄</a>
-  <a href="/research/vol01/p8">P8 · Methodology →</a>
-</nav>
 
 </BaseLayout>
-
-<style>
-.watch-flow{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:12px;border:1px solid #344457;background:#101822;border-radius:18px;padding:30px}
-.watch-flow div{display:flex;flex-direction:column;gap:5px;padding:15px;border:1px solid #354457;border-radius:9px;background:#151f2b}
-.watch-flow span{font-size:12px;color:#7f8d9d}
-.watch-flow b{color:#7188a0}
-.insight-card{border:1px solid #40536a;background:rgba(18,27,38,.82);border-radius:18px;padding:34px}
-.insight-card h2{font-size:31px;margin:12px 0 20px}
-.insight-card p{color:#aeb9c6;max-width:850px}
-.warning{font-size:12px!important;color:#7f8d9d!important}
-.research-nav{max-width:1180px;margin:auto;padding:0 24px 70px;display:flex;justify-content:space-between;gap:20px}
-.research-nav a{color:#b8c8d9;font-weight:700}
-@media(max-width:800px){.watch-flow{display:grid;grid-template-columns:1fr}.watch-flow b{display:none}.insight-card{padding:25px}.research-nav{flex-wrap:wrap}}
-</style>
