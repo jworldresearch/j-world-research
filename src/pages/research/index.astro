@@ -1,22 +1,26 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { researchVol01 } from "../../data/research-vol01";
 ---
 
 <BaseLayout title="Research Library｜J 的世界 Research">
 
 <section class="page-hero">
+
   <div class="page-hero-inner">
 
-    <div class="kicker">RESEARCH LIBRARY · V1.2</div>
+    <div class="kicker">
+      RESEARCH LIBRARY · VOL.01
+    </div>
 
-    <h1>Research Library</h1>
+    <h1>{researchVol01.title}</h1>
 
     <p>
-      以研究事件為起點，拆解技術、供應鏈與產業訊號，
-      建立可以閱讀、追蹤與驗證的研究資料庫。
+      {researchVol01.subtitle}
     </p>
 
   </div>
+
 </section>
 
 
@@ -25,7 +29,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
   <div class="section-head">
 
     <div>
-      <div class="kicker">RESEARCH VOL.01</div>
+      <div class="kicker">RESEARCH EDITION</div>
       <h2>AI Platform Evolution</h2>
     </div>
 
@@ -34,35 +38,41 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
   </div>
 
 
-  <article class="library-intro">
-
-    <span class="tag">VOL.01 · FIRST EDITION</span>
-
-    <h3>從一場技術論壇，看下一代 AI Platform。</h3>
+  <div class="research-intro">
 
     <p>
       從台積電 2026 China Technology Symposium 出發，
-      追蹤 AI 平台如何由先進製程、先進封裝、
-      光互連、材料、散熱與電力共同演進。
+      追蹤 AI Platform 如何由先進製程、先進封裝、
+      光互連、材料與 AI Infrastructure 共同演進。
     </p>
 
-    <div class="library-actions">
+    <div class="intro-actions">
 
-      <a class="button" href="/research/p1">
-        Start Reading →
+      <a
+        class="button"
+        href={researchVol01.pdf}
+        target="_blank"
+      >
+        First Printing PDF →
       </a>
 
-      <a class="button-secondary" href="/downloads">
-        Research PDF
-      </a>
-
-      <a class="button-secondary" href="/maps">
+      <a
+        class="button-secondary"
+        href="/maps"
+      >
         Industry Maps
+      </a>
+
+      <a
+        class="button-secondary"
+        href="/posters"
+      >
+        Posters
       </a>
 
     </div>
 
-  </article>
+  </div>
 
 </section>
 
@@ -74,153 +84,51 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     <div class="section-head">
 
       <div>
-        <div class="kicker">VOL.01 · P1–P8</div>
+        <div class="kicker">P1–P8</div>
         <h2>Research Chapters</h2>
       </div>
 
-      <p>8 Chapters</p>
+      <p>
+        Read independently
+      </p>
 
     </div>
 
 
     <div class="chapter-grid">
 
+      {
+        researchVol01.pages.map((page) => (
 
-      <a class="chapter-card" href="/research/p1">
+          <a
+            class="chapter-card"
+            href={`/research/${page.id}`}
+          >
 
-        <div class="chapter-number">P1</div>
+            <div class="number">
+              {page.label}
+            </div>
 
-        <div>
-          <span class="tag">STORY</span>
-          <h3>從一場技術論壇開始</h3>
-          <p>
-            建立研究事件背景，理解為什麼這場論壇值得研究。
-          </p>
-        </div>
+            <div class="tag">
+              {page.type}
+            </div>
 
-        <span class="chapter-arrow">→</span>
+            <h3>
+              {page.title}
+            </h3>
 
-      </a>
+            <p>
+              {page.summary}
+            </p>
 
+            <span class="read-link">
+              Read Chapter →
+            </span>
 
-      <a class="chapter-card" href="/research/p2">
+          </a>
 
-        <div class="chapter-number">P2</div>
-
-        <div>
-          <span class="tag">EVIDENCE</span>
-          <h3>先把事實與推論分開</h3>
-          <p>
-            建立 Facts First 與 Evidence Framework。
-          </p>
-        </div>
-
-        <span class="chapter-arrow">→</span>
-
-      </a>
-
-
-      <a class="chapter-card" href="/research/p3">
-
-        <div class="chapter-number">P3</div>
-
-        <div>
-          <span class="tag">AI PLATFORM</span>
-          <h3>四個訊號如何共同打造下一代 AI 平台？</h3>
-          <p>
-            Compute、Packaging、Optical 與 Infrastructure。
-          </p>
-        </div>
-
-        <span class="chapter-arrow">→</span>
-
-      </a>
-
-
-      <a class="chapter-card" href="/research/p4">
-
-        <div class="chapter-number">P4</div>
-
-        <div>
-          <span class="tag">TECHNOLOGY</span>
-          <h3>從晶片走向系統</h3>
-          <p>
-            建立 AI Platform 六大技術節點。
-          </p>
-        </div>
-
-        <span class="chapter-arrow">→</span>
-
-      </a>
-
-
-      <a class="chapter-card" href="/research/p5">
-
-        <div class="chapter-number">P5</div>
-
-        <div>
-          <span class="tag">GLASS CORE</span>
-          <h3>Glass Core：結果，而不是起點</h3>
-          <p>
-            Glass、TGV、Core Substrate 與先進封裝。
-          </p>
-        </div>
-
-        <span class="chapter-arrow">→</span>
-
-      </a>
-
-
-      <a class="chapter-card" href="/research/p6">
-
-        <div class="chapter-number">P6</div>
-
-        <div>
-          <span class="tag">INVESTMENT MATRIX</span>
-          <h3>技術節點如何轉換成產業觀察？</h3>
-          <p>
-            從技術節點建立供應鏈研究框架。
-          </p>
-        </div>
-
-        <span class="chapter-arrow">→</span>
-
-      </a>
-
-
-      <a class="chapter-card" href="/research/p7">
-
-        <div class="chapter-number">P7</div>
-
-        <div>
-          <span class="tag">FUTURE WATCH</span>
-          <h3>下一個真正值得驗證的訊號</h3>
-          <p>
-            驗證、導入、量產與擴散。
-          </p>
-        </div>
-
-        <span class="chapter-arrow">→</span>
-
-      </a>
-
-
-      <a class="chapter-card" href="/research/p8">
-
-        <div class="chapter-number">P8</div>
-
-        <div>
-          <span class="tag">METHODOLOGY</span>
-          <h3>Reference & Methodology</h3>
-          <p>
-            Facts First、Evidence-Based Research 與 J Insight。
-          </p>
-        </div>
-
-        <span class="chapter-arrow">→</span>
-
-      </a>
-
+        ))
+      }
 
     </div>
 
@@ -234,8 +142,8 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
   <div class="section-head">
 
     <div>
-      <div class="kicker">RESEARCH NAVIGATION</div>
-      <h2>從研究延伸出去</h2>
+      <div class="kicker">RESEARCH ECOSYSTEM</div>
+      <h2>繼續探索</h2>
     </div>
 
   </div>
@@ -243,55 +151,33 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
   <div class="grid">
 
-    <article class="card">
-
+    <a class="card ecosystem-card" href="/maps">
       <span class="tag">INDUSTRY MAPS</span>
-
-      <h3>產業地圖</h3>
-
+      <h3>產業地圖 →</h3>
       <p>
-        將 Research 中的技術節點放回完整產業鏈。
+        從技術節點與供應鏈位置繼續探索。
       </p>
+    </a>
 
-      <a class="button-secondary" href="/maps">
-        Explore Maps →
-      </a>
-
-    </article>
-
-
-    <article class="card">
-
+    <a class="card ecosystem-card" href="/posters">
       <span class="tag">POSTERS</span>
-
-      <h3>研究海報</h3>
-
+      <h3>研究海報 →</h3>
       <p>
-        將複雜研究濃縮成一頁式視覺化內容。
+        將研究內容濃縮成一頁式視覺化研究。
       </p>
+    </a>
 
-      <a class="button-secondary" href="/posters">
-        Explore Posters →
-      </a>
-
-    </article>
-
-
-    <article class="card">
-
-      <span class="tag">DOWNLOADS</span>
-
-      <h3>Research PDF</h3>
-
+    <a
+      class="card ecosystem-card"
+      href={researchVol01.pdf}
+      target="_blank"
+    >
+      <span class="tag">FIRST PRINTING</span>
+      <h3>印刷級 PDF →</h3>
       <p>
-        閱讀 Research Vol.01 First Printing。
+        開啟 Research Vol.01 First Printing。
       </p>
-
-      <a class="button-secondary" href="/downloads">
-        Open Library →
-      </a>
-
-    </article>
+    </a>
 
   </div>
 
@@ -300,101 +186,117 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
 <style>
 
-.library-intro {
-  border:1px solid #344457;
-  background:
-    linear-gradient(
-      135deg,
-      rgba(28,42,58,.95),
-      rgba(14,21,30,.96)
-    );
-  border-radius:20px;
-  padding:36px;
-}
+  .research-intro {
+    border: 1px solid #344457;
+    background:
+      linear-gradient(
+        135deg,
+        rgba(28,42,58,.95),
+        rgba(14,21,30,.96)
+      );
+    border-radius: 20px;
+    padding: 34px;
+  }
 
-.library-intro h3 {
-  font-size:30px;
-  margin:12px 0;
-}
+  .research-intro p {
+    max-width: 850px;
+    color: #aeb9c6;
+    font-size: 16px;
+  }
 
-.library-intro p {
-  color:#aeb9c6;
-  max-width:850px;
-}
+  .intro-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+  }
 
-.library-actions {
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  margin-top:24px;
-}
-
-.chapter-grid {
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:14px;
-}
-
-.chapter-card {
-  position:relative;
-  display:grid;
-  grid-template-columns:62px 1fr 24px;
-  gap:18px;
-  align-items:start;
-  padding:24px;
-  border:1px solid #2b394a;
-  border-radius:16px;
-  background:#121b26;
-  transition:.2s ease;
-}
-
-.chapter-card:hover {
-  border-color:#60758d;
-  transform:translateY(-2px);
-}
-
-.chapter-number {
-  font-size:26px;
-  font-weight:800;
-  color:#7890a9;
-}
-
-.chapter-card h3 {
-  margin:8px 0 5px;
-  font-size:19px;
-}
-
-.chapter-card p {
-  color:#929eac;
-  margin:0;
-  font-size:14px;
-}
-
-.chapter-arrow {
-  color:#8fa6bf;
-  font-size:20px;
-}
-
-.card .button-secondary {
-  display:inline-block;
-  margin-top:14px;
-}
-
-@media(max-width:800px) {
+  .button-secondary {
+    display: inline-block;
+    border: 1px solid #354457;
+    border-radius: 9px;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 800;
+  }
 
   .chapter-grid {
-    grid-template-columns:1fr;
+    display: grid;
+    grid-template-columns:
+      repeat(2, minmax(0,1fr));
+    gap: 18px;
   }
 
-  .library-intro {
-    padding:26px;
+  .chapter-card {
+    border: 1px solid #2b394a;
+    background: rgba(18,27,38,.82);
+    border-radius: 18px;
+    padding: 26px;
+    transition: .2s ease;
   }
 
-  .library-intro h3 {
-    font-size:25px;
+  .chapter-card:hover {
+    border-color: #647184;
+    transform: translateY(-2px);
   }
 
-}
+  .chapter-card .number {
+    font-size: 13px;
+    color: #7f9bb7;
+    font-weight: 800;
+    letter-spacing: .12em;
+  }
+
+  .chapter-card .tag {
+    display: inline-block;
+    margin-top: 12px;
+  }
+
+  .chapter-card h3 {
+    margin: 12px 0 8px;
+    font-size: 22px;
+  }
+
+  .chapter-card p {
+    color: #9eabb9;
+  }
+
+  .read-link {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 13px;
+    font-weight: 800;
+  }
+
+  .ecosystem-card {
+    display: block;
+    transition: .2s ease;
+  }
+
+  .ecosystem-card:hover {
+    border-color: #647184;
+    transform: translateY(-2px);
+  }
+
+  @media(max-width:800px) {
+
+    .chapter-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .research-intro {
+      padding: 26px;
+    }
+
+    .intro-actions {
+      flex-direction: column;
+    }
+
+    .intro-actions a {
+      text-align: center;
+    }
+
+  }
 
 </style>
 
