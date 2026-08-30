@@ -1,57 +1,35 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import ResearchChapter from "../../components/ResearchChapter.astro";
+import ResearchReader from "../../components/ResearchReader.astro";
 ---
 
-<BaseLayout title="P8｜Reference & Methodology">
+<ResearchReader pageId="p8">
 
-<section class="section">
+<h2>研究方法</h2>
 
-<ResearchChapter
-  page="P8"
-  section="REFERENCE & METHODOLOGY"
-  title="研究方法"
-  intro="Facts First · Evidence-Based Research"
->
-
-<h2>Facts First</h2>
+<h3>Facts First</h3>
 
 <p>
 公開資訊、公司揭露與官方技術資料優先。
 </p>
 
-<h2>Evidence-Based Research</h2>
+<h3>Evidence-Based Research</h3>
 
 <p>
 技術路徑、供應鏈、驗證與量產進度交叉檢視。
 </p>
 
-<h2>J Insight</h2>
+<h3>J Insight</h3>
 
 <p>
-尚未被公司正式公告，但值得追蹤的內容，
+尚未被公司正式公告、但值得追蹤的內容，
 明確標示為「產業推論（Inference）」。
 </p>
 
-<div class="inference">
-
-<span class="tag">DISCLAIMER</span>
+<h3>免責聲明</h3>
 
 <p>
 本網站資料僅供資訊分享及學習，
 不作為投資進出場之依據。
 </p>
 
-</div>
-
-<h2>主要研究事件</h2>
-
-<p>
-TSMC 2026 China Technology Symposium
-</p>
-
-</ResearchChapter>
-
-</section>
-
-</BaseLayout>
+</ResearchReader>
