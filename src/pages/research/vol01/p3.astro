@@ -2,114 +2,49 @@
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="P3｜AI Platform Evolution｜J 的世界 Research">
+<BaseLayout title="P3｜AI Platform Evolution">
 
 <section class="page-hero">
   <div class="page-hero-inner">
-    <div class="kicker">RESEARCH · VOL.01 · P3</div>
+    <div class="kicker">VOL.01 · P3 · AI PLATFORM EVOLUTION</div>
     <h1>四個訊號如何共同打造下一代 AI 平台？</h1>
-    <p>
-      AI Platform Evolution 的核心：
-      四條技術路徑正在逐步收斂。
-    </p>
   </div>
 </section>
 
 <section class="section">
-
   <div class="grid">
 
-    <article class="map-card">
-      <div class="number">01</div>
+    <article class="card reading">
+      <span class="number">01</span>
       <h2>Compute Scaling</h2>
-      <p>
-        先進製程持續提升運算密度，
-        同時要求更高能源效率。
-      </p>
+      <p>先進製程提高運算密度與能源效率。</p>
     </article>
 
-    <article class="map-card">
-      <div class="number">02</div>
+    <article class="card reading">
+      <span class="number">02</span>
       <h2>Advanced Packaging</h2>
-      <p>
-        CoWoS、SoIC、SoW 等架構，
-        將晶片、記憶體與系統推向更高密度。
-      </p>
+      <p>CoWoS、SoIC、SoW 推動高密度異質整合。</p>
     </article>
 
-    <article class="map-card">
-      <div class="number">03</div>
+    <article class="card reading">
+      <span class="number">03</span>
       <h2>Optical Interconnect</h2>
-      <p>
-        當高速電互連受到頻寬、距離與功耗限制，
-        光互連的重要性逐步提高。
-      </p>
+      <p>高速互連逐步成為 AI 系統的重要瓶頸。</p>
     </article>
 
-    <article class="map-card">
-      <div class="number">04</div>
+    <article class="card reading">
+      <span class="number">04</span>
       <h2>Materials & Infrastructure</h2>
-      <p>
-        製程、封裝與互連升級，
-        同時推動材料、設備、散熱與電力需求。
-      </p>
-    </article>
-
-  </div>
-
-</section>
-
-<section class="feature">
-  <div class="section">
-
-    <div class="section-head">
-      <div>
-        <div class="kicker">SYSTEM VIEW</div>
-        <h2>四條路徑正在收斂</h2>
-      </div>
-    </div>
-
-    <article class="research-card">
-
-      <div class="flow">
-        <span>Compute</span>
-        <b>→</b>
-        <span>Packaging</span>
-        <b>→</b>
-        <span>Optical</span>
-        <b>→</b>
-        <span>Materials</span>
-        <b>→</b>
-        <span>Infrastructure</span>
-      </div>
-
-      <p>
-        這不是單一路線的技術替代，
-        而是不同技術節點互相牽動，
-        最終形成新的 AI Platform。
-      </p>
-
+      <p>材料、設備、散熱與電力成為系統升級的重要支撐。</p>
     </article>
 
   </div>
 </section>
 
-<nav class="research-nav">
-  <a href="/research/vol01/p2">← P2 · Evidence</a>
-  <a href="../">Vol.01 目錄</a>
-  <a href="/research/vol01/p4">P4 · Technology →</a>
-</nav>
+<section class="page-nav">
+  <a href="/research/vol01/p2">← P2</a>
+  <a href="/research/vol01">Vol.01 Index</a>
+  <a href="/research/vol01/p4">P4 →</a>
+</section>
 
 </BaseLayout>
-
-<style>
-.map-card h2{font-size:25px;margin:10px 0}
-.research-card{border:1px solid #344457;background:rgba(18,27,38,.82);border-radius:18px;padding:34px}
-.research-card p{color:#aeb9c6;max-width:850px;margin-top:28px}
-.flow{display:flex;flex-wrap:wrap;align-items:center;gap:9px}
-.flow span{padding:8px 12px;border:1px solid #354457;border-radius:7px;background:#101924}
-.flow b{color:#7188a0}
-.research-nav{max-width:1180px;margin:auto;padding:0 24px 70px;display:flex;justify-content:space-between;gap:20px}
-.research-nav a{color:#b8c8d9;font-weight:700}
-@media(max-width:800px){.research-card{padding:25px}.flow b{display:none}.research-nav{flex-wrap:wrap}}
-</style>
