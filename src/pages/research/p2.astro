@@ -1,57 +1,38 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import ResearchChapter from "../../components/ResearchChapter.astro";
+import ResearchReader from "../../components/ResearchReader.astro";
 ---
 
-<BaseLayout title="P2｜Evidence">
+<ResearchReader pageId="p2">
 
-<section class="section">
-
-<ResearchChapter
-  page="P2"
-  section="EVIDENCE"
-  title="先把事實與推論分開"
-  intro="Facts First，是研究的第一道防線。"
->
-
-<h2>FACT</h2>
+<h2>先把「事實」與「推論」分開</h2>
 
 <p>
-公開資訊、公司公告與官方技術資料，
-優先於市場傳聞與推測。
+《J 的世界 Research》首先區分公開資訊與產業推論。
 </p>
 
-<div class="evidence">
-
-<span class="tag">FACT</span>
+<h3>FACT</h3>
 
 <p>
-已公開揭露的技術、產品、製程與供應鏈資訊，
-才能作為研究事實。
+已由官方、公司公開資訊或其他可靠資料支持的內容，
+列為 Fact。
 </p>
 
-</div>
-
-<h2>INFERENCE</h2>
+<h3>EVIDENCE</h3>
 
 <p>
-當公開資訊不足以確認某項供應鏈關係時，
-可以建立研究假設，但必須明確標示。
+技術文件、產品資訊、供應鏈關係與客戶驗證進度，
+透過交叉檢視建立證據鏈。
 </p>
 
-<div class="inference">
-
-<span class="tag">J INSIGHT · INFERENCE</span>
+<h3>INFERENCE</h3>
 
 <p>
-產業推論不等同於已確認事實。
-後續必須等待驗證、導入或公司揭露。
+尚未正式公告，但依據技術路徑與公開資訊建立的研究假設，
+明確標示為 Inference。
 </p>
 
-</div>
+<p>
+推論不是事實，也不應被視為已確認的商業結果。
+</p>
 
-</ResearchChapter>
-
-</section>
-
-</BaseLayout>
+</ResearchReader>
