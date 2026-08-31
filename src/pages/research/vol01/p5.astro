@@ -2,72 +2,144 @@
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="P5｜Glass Core">
+<BaseLayout title="Vol.01 P5｜Glass Core｜J 的世界 Research">
 
 <section class="page-hero">
   <div class="page-hero-inner">
-    <div class="kicker">VOL.01 · P5 · GLASS CORE</div>
+    <div class="kicker">RESEARCH · VOL.01 · P5</div>
     <h1>Glass Core：結果，而不是起點</h1>
+    <p>Glass → TGV → Core Substrate → Advanced Packaging</p>
   </div>
 </section>
 
 <section class="section">
-
-  <article class="card reading">
-
-    <span class="tag">GLASS CORE</span>
-
-    <p>
-      Glass Core 不應被單獨理解成一項材料題材。
-      更值得觀察的是它在 AI 封裝尺寸、密度與訊號完整性
-      持續提升下所扮演的角色。
-    </p>
-
-    <div class="tech-flow">
-      <span>Glass</span>
-      <b>→</b>
-      <span>TGV</span>
-      <b>→</b>
-      <span>Core Substrate</span>
-      <b>→</b>
-      <span>Advanced Packaging</span>
-      <b>→</b>
-      <span>AI Accelerator</span>
+  <div class="section-head">
+    <div>
+      <div class="kicker">GLASS CORE</div>
+      <h2>為什麼 Glass Core 值得研究？</h2>
     </div>
+  </div>
 
+  <article class="card">
     <p>
-      後續研究將持續追蹤技術驗證、製程整合、
-      良率、量產時間與客戶導入。
+      Glass Core 不應只被理解為單一材料題材。
+      它更值得放在 AI 封裝尺寸、密度與訊號完整性
+      持續提升的背景下觀察。
     </p>
 
+    <p>
+      當封裝朝更大尺寸、更高 I/O 密度與更高頻高速訊號發展，
+      Core Substrate 本身也可能成為值得研究的技術節點。
+    </p>
   </article>
-
 </section>
 
-<section class="page-nav">
-  <a href="/research/vol01/p4">← P4</a>
-  <a href="/research/vol01">Vol.01 Index</a>
-  <a href="/research/vol01/p6">P6 →</a>
+<section class="feature">
+  <div class="section">
+    <div class="section-head">
+      <div>
+        <div class="kicker">TECHNOLOGY PATH</div>
+        <h2>Glass Core 技術路徑</h2>
+      </div>
+    </div>
+
+    <article class="map-card">
+      <div class="map-flow">
+        <span>Glass</span>
+        <b>→</b>
+        <span>TGV</span>
+        <b>→</b>
+        <span>Metallization</span>
+        <b>→</b>
+        <span>Glass Core</span>
+        <b>→</b>
+        <span>Advanced Packaging</span>
+        <b>→</b>
+        <span>AI Accelerator</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="grid">
+
+    <article class="card">
+      <span class="tag">01 · MATERIAL</span>
+      <h3>Glass</h3>
+      <p>玻璃材料的厚度、平坦度、熱特性與加工能力。</p>
+    </article>
+
+    <article class="card">
+      <span class="tag">02 · VIA</span>
+      <h3>TGV</h3>
+      <p>Through-Glass Via 是 Glass Core 技術路徑的重要環節。</p>
+    </article>
+
+    <article class="card">
+      <span class="tag">03 · PROCESS</span>
+      <h3>Metallization</h3>
+      <p>孔洞與表面金屬化直接影響電氣與可靠度。</p>
+    </article>
+
+    <article class="card">
+      <span class="tag">04 · INTEGRATION</span>
+      <h3>Core Substrate</h3>
+      <p>真正關鍵在於能否與後續封裝製程整合。</p>
+    </article>
+
+  </div>
+</section>
+
+<section class="section">
+  <article class="card">
+    <span class="tag">WATCH</span>
+    <h3>Glass Core 的四個驗證點</h3>
+    <p>
+      技術驗證 → 製程整合 → 良率 → 客戶導入與量產。
+    </p>
+    <p>
+      只有當這些節點逐步被公開資訊支持，
+      技術題材才真正轉化為產業價值。
+    </p>
+  </article>
+</section>
+
+<section class="cta">
+  <div class="cta-inner">
+    <div>
+      <div class="kicker">NEXT · P6</div>
+      <h2>技術節點如何轉換成產業觀察？</h2>
+      <p>建立 Investment Matrix。</p>
+    </div>
+    <a class="button" href="/research/vol01/p6">閱讀 P6 →</a>
+  </div>
 </section>
 
 <style>
-  .tech-flow {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    align-items: center;
-    margin: 28px 0;
+  .map-flow {
+    padding:18px;
+    border:1px solid #2b394a;
+    border-radius:12px;
+    background:#0b1119;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:8px;
   }
 
-  .tech-flow span {
-    padding: 9px 12px;
-    border: 1px solid #354457;
-    border-radius: 8px;
-    background: #0b1119;
+  .map-flow span {
+    padding:5px 8px;
+    border:1px solid #354457;
+    border-radius:6px;
+    background:#121c28;
+    font-size:13px;
   }
 
-  .tech-flow b {
-    color: #7188a0;
+  .map-flow b { color:#7188a0; }
+
+  @media(max-width:800px) {
+    .map-flow b { display:none; }
   }
 </style>
 
