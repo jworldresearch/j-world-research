@@ -2,53 +2,115 @@
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="P2｜Evidence">
+<BaseLayout title="Vol.01 P2｜Evidence｜J 的世界 Research">
 
 <section class="page-hero">
   <div class="page-hero-inner">
-    <div class="kicker">VOL.01 · P2 · EVIDENCE</div>
-    <h1>先把事實與推論分開</h1>
+    <div class="kicker">RESEARCH · VOL.01 · P2</div>
+    <h1>先把「事實」與「推論」分開</h1>
     <p>Facts First · Evidence-Based Research</p>
   </div>
 </section>
 
 <section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">EVIDENCE FRAMEWORK</div>
+      <h2>三種不同強度的研究資訊</h2>
+    </div>
+  </div>
+
   <div class="grid">
-
-    <article class="card reading">
+    <article class="card">
       <span class="tag">FACT</span>
-      <h2>先進製程</h2>
+      <h3>公開事實</h3>
       <p>
-        台積電持續推進 3nm、2nm、A16、A14
-        等先進製程技術。
+        來自公司公告、官方技術文件、公開簡報、
+        法說會與其他可驗證來源。
       </p>
     </article>
 
-    <article class="card reading">
-      <span class="tag">FACT</span>
-      <h2>3DFabric</h2>
+    <article class="card">
+      <span class="tag">QUALIFICATION</span>
+      <h3>驗證與導入</h3>
       <p>
-        SoIC、InFO、CoWoS 與 SoW
-        構成先進封裝與異質整合的重要技術路徑。
+        技術已進入客戶驗證、供應鏈認證、
+        製程導入或產品開發階段。
       </p>
     </article>
 
-    <article class="card reading">
+    <article class="card">
       <span class="tag">INFERENCE</span>
-      <h2>系統瓶頸</h2>
+      <h3>產業推論</h3>
       <p>
-        當製程與封裝同步升級，
-        互連、材料、散熱與電力的重要性同步提升。
+        尚未正式公告，但可依技術路徑與供應鏈關係
+        建立合理研究假設。
       </p>
     </article>
-
   </div>
 </section>
 
-<section class="page-nav">
-  <a href="/research/vol01/p1">← P1</a>
-  <a href="/research/vol01">Vol.01 Index</a>
-  <a href="/research/vol01/p3">P3 →</a>
+<section class="feature">
+  <div class="section">
+    <div class="section-head">
+      <div>
+        <div class="kicker">FACT</div>
+        <h2>先進製程持續演進</h2>
+      </div>
+    </div>
+
+    <article class="map-card">
+      <p>
+        AI/HPC 對運算效能與能源效率的需求，
+        推動先進邏輯製程持續向更小節點與更高效能發展。
+      </p>
+      <p>
+        本研究關注的不只是節點名稱，
+        而是製程演進對設備、材料與封裝所產生的連鎖需求。
+      </p>
+    </article>
+  </div>
 </section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <div class="kicker">INFERENCE</div>
+      <h2>AI 平台的瓶頸正在系統化</h2>
+    </div>
+  </div>
+
+  <article class="card inference-card">
+    <p>
+      當 Compute Scaling 與 Advanced Packaging 同時推進，
+      系統瓶頸自然會向互連、材料、散熱與電力延伸。
+    </p>
+
+    <p>
+      這是一項研究假設，而不是單一公司的公開承諾。
+      後續必須透過驗證、導入與量產資訊持續確認。
+    </p>
+
+    <p class="inference-warning">
+      ※ Inference 不等同於已確認事實。
+    </p>
+  </article>
+</section>
+
+<section class="cta">
+  <div class="cta-inner">
+    <div>
+      <div class="kicker">NEXT · P3</div>
+      <h2>四個訊號開始交會。</h2>
+      <p>從 Compute Scaling 走向下一代 AI Platform。</p>
+    </div>
+    <a class="button" href="/research/vol01/p3">閱讀 P3 →</a>
+  </div>
+</section>
+
+<style>
+  .inference-card { border-color:#40536a; }
+  .inference-warning { color:#7f8d9d !important;font-size:12px; }
+</style>
 
 </BaseLayout>
