@@ -2,70 +2,141 @@
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="P4｜Technology">
+<BaseLayout title="Vol.01 P4｜Technology｜J 的世界 Research">
 
 <section class="page-hero">
   <div class="page-hero-inner">
-    <div class="kicker">VOL.01 · P4 · TECHNOLOGY</div>
+    <div class="kicker">RESEARCH · VOL.01 · P4</div>
     <h1>從晶片走向系統</h1>
+    <p>AI Platform 的六個連續技術節點。</p>
   </div>
 </section>
 
 <section class="section">
-
-  <article class="card reading">
-
-    <span class="tag">TECHNOLOGY PATH</span>
-
-    <h2>六個連續節點</h2>
-
-    <div class="tech-flow">
-      <span>AI Compute</span>
-      <b>→</b>
-      <span>Advanced Process</span>
-      <b>→</b>
-      <span>Advanced Packaging</span>
-      <b>→</b>
-      <span>Optical Interconnect</span>
-      <b>→</b>
-      <span>Thermal / Power</span>
-      <b>→</b>
-      <span>System</span>
+  <div class="section-head">
+    <div>
+      <div class="kicker">TECHNOLOGY PATH</div>
+      <h2>六個節點</h2>
     </div>
+  </div>
 
-    <p>
-      研究重點不是預測某項技術何時取代另一項技術，
-      而是觀察技術何時由可能性進入驗證、導入與量產。
-    </p>
+  <div class="grid">
 
-  </article>
+    <article class="card">
+      <span class="tag">01</span>
+      <h3>AI Compute</h3>
+      <p>GPU、ASIC 與 AI 加速器提供核心運算能力。</p>
+    </article>
 
+    <article class="card">
+      <span class="tag">02</span>
+      <h3>Advanced Process</h3>
+      <p>先進邏輯製程持續提升效能、密度與能源效率。</p>
+    </article>
+
+    <article class="card">
+      <span class="tag">03</span>
+      <h3>Advanced Packaging</h3>
+      <p>透過 2.5D、3D 與異質整合提高系統整合能力。</p>
+    </article>
+
+    <article class="card">
+      <span class="tag">04</span>
+      <h3>Optical Interconnect</h3>
+      <p>高速光互連支撐日益龐大的資料傳輸需求。</p>
+    </article>
+
+    <article class="card">
+      <span class="tag">05</span>
+      <h3>Thermal / Power</h3>
+      <p>高功耗 AI 系統對散熱與電力提出更高要求。</p>
+    </article>
+
+    <article class="card">
+      <span class="tag">06</span>
+      <h3>System</h3>
+      <p>最終回到整個 AI 系統的效能、功耗與成本。</p>
+    </article>
+
+  </div>
 </section>
 
-<section class="page-nav">
-  <a href="/research/vol01/p3">← P3</a>
-  <a href="/research/vol01">Vol.01 Index</a>
-  <a href="/research/vol01/p5">P5 →</a>
+<section class="feature">
+  <div class="section">
+    <article class="map-card">
+      <div class="map-flow">
+        <span>AI Compute</span>
+        <b>→</b>
+        <span>Advanced Process</span>
+        <b>→</b>
+        <span>Advanced Packaging</span>
+        <b>→</b>
+        <span>Optical Interconnect</span>
+        <b>→</b>
+        <span>Thermal / Power</span>
+        <b>→</b>
+        <span>System</span>
+      </div>
+
+      <p>
+        研究重點不是預測哪一項技術一定會取代另一項技術，
+        而是追蹤每一個節點何時由技術可能性，
+        進入驗證、導入與量產。
+      </p>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <article class="card">
+    <span class="tag">RESEARCH METHOD</span>
+    <h3>技術成熟度，比題材熱度更重要。</h3>
+    <p>
+      後續公司研究將以 Production、
+      Qualification、Development 與 Inference
+      分層追蹤。
+    </p>
+  </article>
+</section>
+
+<section class="cta">
+  <div class="cta-inner">
+    <div>
+      <div class="kicker">NEXT · P5</div>
+      <h2>Glass Core：結果，而不是起點。</h2>
+      <p>把玻璃基板放回 AI 封裝的完整技術路徑。</p>
+    </div>
+    <a class="button" href="/research/vol01/p5">閱讀 P5 →</a>
+  </div>
 </section>
 
 <style>
-  .tech-flow {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    align-items: center;
-    margin: 28px 0;
+  .map-flow {
+    padding:18px;
+    border:1px solid #2b394a;
+    border-radius:12px;
+    background:#0b1119;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:8px;
+    color:#d9e2ec;
   }
 
-  .tech-flow span {
-    padding: 9px 12px;
-    border: 1px solid #354457;
-    border-radius: 8px;
-    background: #0b1119;
+  .map-flow span {
+    padding:5px 8px;
+    border:1px solid #354457;
+    border-radius:6px;
+    background:#121c28;
+    font-size:13px;
   }
 
-  .tech-flow b {
-    color: #7188a0;
+  .map-flow b {
+    color:#7188a0;
+  }
+
+  @media(max-width:800px) {
+    .map-flow b { display:none; }
   }
 </style>
 
