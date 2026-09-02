@@ -1,36 +1,316 @@
 ---
+import BaseLayout from "../../layouts/BaseLayout.astro";
 import ResearchReader from "../../components/ResearchReader.astro";
 ---
 
-<ResearchReader pageId="p3">
+<BaseLayout title="P3｜AI Platform Evolution｜J 的世界 Research">
 
-<h2>四個訊號如何共同打造下一代 AI 平台？</h2>
+<ResearchReader
+  page={3}
+  section="AI PLATFORM EVOLUTION"
+  title="四個訊號如何共同打造下一代 AI 平台？"
+  prev="/research/p2"
+  next="/research/p4"
+  nextLabel="P4 · Technology"
+>
 
-<h3>01 · Compute Scaling</h3>
+  <p>
+    P1 建立研究起點，P2 建立 Evidence Framework。
+    接下來真正重要的問題是：
+    <strong>這些技術訊號是否正在形成同一個系統性的 AI Platform Evolution？</strong>
+  </p>
 
-<p>
-先進製程持續推進，AI/HPC 對運算密度與能源效率的需求同步提高。
-</p>
+  <p>
+    本頁將 AI Platform 拆成四個彼此關聯的核心訊號，
+    分別是 Compute Scaling、Advanced Packaging、
+    Optical Interconnect，以及 Materials & Infrastructure。
+  </p>
 
-<h3>02 · Advanced Packaging</h3>
+  <div class="reader-highlight">
 
-<p>
-CoWoS、SoIC、SoW 等 3DFabric 技術，
-讓晶片、記憶體與系統整合進一步提高密度。
-</p>
+    <strong>核心觀察</strong>
 
-<h3>03 · Optical Interconnect</h3>
+    <p>
+      AI 的演進已逐漸從「單一晶片性能競賽」，
+      擴展成「整個運算平台的系統工程」。
+    </p>
 
-<p>
-當高速電互連面臨頻寬、距離與功耗限制，
-光互連成為下一階段 AI 系統的重要研究方向。
-</p>
+  </div>
 
-<h3>04 · Materials & Infrastructure</h3>
 
-<p>
-製程、封裝與互連升級，
-同時帶動材料、設備、散熱與電力需求。
-</p>
+  <h2>01｜Compute Scaling</h2>
+
+  <p>
+    AI / HPC 對運算能力的需求持續提高，
+    使先進邏輯製程仍然是 AI Platform 的基礎。
+  </p>
+
+  <div class="reader-grid">
+
+    <article class="reader-card">
+
+      <span class="tag">PROCESS</span>
+
+      <h3>Advanced Logic</h3>
+
+      <p>
+        更先進的製程節點，
+        主要解決運算密度、效能與能源效率問題。
+      </p>
+
+    </article>
+
+    <article class="reader-card">
+
+      <span class="tag">SYSTEM</span>
+
+      <h3>Energy Efficiency</h3>
+
+      <p>
+        當 AI 運算規模持續放大，
+        每單位運算所需的能源效率變得更加重要。
+      </p>
+
+    </article>
+
+  </div>
+
+
+  <h2>02｜Advanced Packaging</h2>
+
+  <p>
+    當單一晶片的 scaling 開始受到限制，
+    系統性能的提升不再只依靠 transistor scaling。
+  </p>
+
+  <p>
+    CoWoS、SoIC、SoW 等先進封裝技術，
+    讓邏輯晶片、HBM 與其他元件可以進一步整合，
+    將封裝本身變成 AI 系統性能的重要節點。
+  </p>
+
+  <div class="reader-highlight">
+
+    <strong>Packaging is becoming part of compute.</strong>
+
+    <p>
+      封裝不再只是晶片製造完成後的最後一道程序，
+      而逐漸成為決定頻寬、延遲、功耗與系統整合能力的核心環節。
+    </p>
+
+  </div>
+
+
+  <h2>03｜Optical Interconnect</h2>
+
+  <p>
+    AI Cluster 規模越來越大，
+    GPU / ASIC、Switch 與記憶體之間需要處理大量資料傳輸。
+  </p>
+
+  <p>
+    因此，高速互連的頻寬、傳輸距離與功耗，
+    開始成為整體系統設計的重要考量。
+  </p>
+
+  <div class="reader-grid">
+
+    <article class="reader-card">
+
+      <span class="tag">ELECTRICAL</span>
+
+      <h3>Electrical Interconnect</h3>
+
+      <p>
+        適合短距離與既有架構，
+        但高速化後功耗與訊號完整性成為重要課題。
+      </p>
+
+    </article>
+
+    <article class="reader-card">
+
+      <span class="tag">OPTICAL</span>
+
+      <h3>Optical Interconnect</h3>
+
+      <p>
+        光互連提供另一種高速資料傳輸路徑，
+        CPO 與 Optical Engine 因此成為重要研究方向。
+      </p>
+
+    </article>
+
+  </div>
+
+
+  <h2>04｜Materials & Infrastructure</h2>
+
+  <p>
+    製程、封裝與互連的升級，
+    最終都會反映到材料、設備、散熱與電力需求。
+  </p>
+
+  <div class="reader-grid">
+
+    <article class="reader-card">
+
+      <span class="tag">MATERIALS</span>
+
+      <h3>Materials</h3>
+
+      <p>
+        高階封裝、基板、金屬材料、
+        介電材料與其他特殊材料的重要性提升。
+      </p>
+
+    </article>
+
+    <article class="reader-card">
+
+      <span class="tag">EQUIPMENT</span>
+
+      <h3>Equipment</h3>
+
+      <p>
+        製程微縮與封裝複雜度提高，
+        對製程設備與量測能力提出更高要求。
+      </p>
+
+    </article>
+
+    <article class="reader-card">
+
+      <span class="tag">THERMAL</span>
+
+      <h3>Thermal</h3>
+
+      <p>
+        AI 加速器功耗提高，
+        散熱逐漸從系統配套轉為性能限制因素。
+      </p>
+
+    </article>
+
+    <article class="reader-card">
+
+      <span class="tag">POWER</span>
+
+      <h3>Power</h3>
+
+      <p>
+        AI Data Center 的運算密度提高，
+        同時帶動電力供應與能源管理需求。
+      </p>
+
+    </article>
+
+  </div>
+
+
+  <h2>四個訊號不是四條獨立的產業線</h2>
+
+  <p>
+    真正值得研究的地方，
+    在於這四個訊號會互相影響。
+  </p>
+
+  <div class="reader-highlight">
+
+    <strong>Compute → Packaging → Optical → Infrastructure</strong>
+
+    <p>
+      運算密度提高，
+      推動封裝整合；
+      封裝與系統規模提高，
+      推動高速互連；
+      而更高的運算與傳輸密度，
+      又進一步增加散熱與電力需求。
+    </p>
+
+  </div>
+
+
+  <h2>從 Chip 到 Platform</h2>
+
+  <p>
+    因此，本研究不將 AI 產業拆成彼此孤立的股票清單，
+    而是建立一條連續的技術路徑：
+  </p>
+
+  <div class="reader-highlight">
+
+    <strong>
+      AI Compute
+      →
+      Advanced Process
+      →
+      Advanced Packaging
+      →
+      Optical Interconnect
+      →
+      Thermal / Power
+      →
+      AI System
+    </strong>
+
+  </div>
+
+
+  <h2>Research Implication</h2>
+
+  <p>
+    這代表未來觀察 AI 產業時，
+    不能只問「哪一家公司做 AI」，
+    而應該進一步問：
+  </p>
+
+  <div class="reader-grid">
+
+    <article class="reader-card">
+      <span class="tag">QUESTION 01</span>
+      <h3>技術位置</h3>
+      <p>
+        這家公司位於 AI Platform 的哪一個節點？
+      </p>
+    </article>
+
+    <article class="reader-card">
+      <span class="tag">QUESTION 02</span>
+      <h3>技術必要性</h3>
+      <p>
+        它解決的是性能、功耗、頻寬、
+        散熱還是製程問題？
+      </p>
+    </article>
+
+    <article class="reader-card">
+      <span class="tag">QUESTION 03</span>
+      <h3>Evidence</h3>
+      <p>
+        技術目前處於開發、驗證、導入還是量產？
+      </p>
+    </article>
+
+    <article class="reader-card">
+      <span class="tag">QUESTION 04</span>
+      <h3>Scalability</h3>
+      <p>
+        是否可能從單一應用擴散到更多 AI Platform？
+      </p>
+    </article>
+
+  </div>
+
+
+  <h2>下一頁</h2>
+
+  <p>
+    P4 將把這四個訊號進一步放進完整技術路徑，
+    從 AI Compute 一路追蹤到 System，
+    觀察每一個節點如何逐步形成新的產業需求。
+  </p>
 
 </ResearchReader>
+
+</BaseLayout>
