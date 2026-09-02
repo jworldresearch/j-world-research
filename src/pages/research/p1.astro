@@ -1,34 +1,160 @@
 ---
+import BaseLayout from "../../layouts/BaseLayout.astro";
 import ResearchReader from "../../components/ResearchReader.astro";
 ---
 
-<ResearchReader pageId="p1">
+<BaseLayout title="P1｜從一場論壇開始｜J 的世界 Research">
 
-<h2>從一場技術論壇開始</h2>
+<ResearchReader
+  page={1}
+  section="STORY"
+  title="從一場論壇開始"
+  next="/research/p2"
+  nextLabel="P2 · Evidence"
+>
 
-<p>
-本期 Research Vol.01 從台積電 2026 China Technology Symposium
-開始。
-</p>
+  <p>
+    AI 產業的下一階段變化，往往不是由單一產品宣布開始，
+    而是由多個技術節點同時出現訊號。
+  </p>
 
-<p>
-研究的起點不是預測哪一家公司的股價，
-而是理解一場重要技術事件透露出的產業方向。
-</p>
+  <p>
+    因此，Research Vol.01 選擇從一場技術論壇開始，
+    重新觀察 AI Platform 的演進方向。
+  </p>
 
-<h3>Research Starting Point</h3>
+  <div class="reader-highlight">
+    <strong>Research Starting Point</strong>
+    <p>
+      2026 年 6 月 25 日，
+      台積電於上海舉辦 China Technology Symposium。
+      本研究以公開資訊為基礎，
+      從這場技術事件建立後續研究架構。
+    </p>
+  </div>
 
-<p>
-從 HPC、先進邏輯製程、3DFabric、先進封裝、
-製造與 Open Innovation Platform 出發，
-建立 AI Platform 的研究框架。
-</p>
+  <h2>為什麼從論壇開始？</h2>
 
-<h3>為什麼值得研究？</h3>
+  <p>
+    因為先進製程、先進封裝與 AI 系統之間，
+    已經不再是彼此獨立的技術路線。
+  </p>
 
-<p>
-因為 AI 的演進已經不再只由單一晶片決定，
-而是逐步延伸到封裝、互連、材料、散熱與電力。
-</p>
+  <p>
+    當 AI 加速器持續提高運算密度，
+    製程微縮、封裝整合、記憶體頻寬、
+    高速互連與能源效率開始互相牽動。
+  </p>
+
+  <div class="reader-grid">
+
+    <article class="reader-card">
+      <span class="tag">01 · PROCESS</span>
+      <h3>Advanced Process</h3>
+      <p>
+        更高的運算密度與能源效率，
+        推動先進邏輯製程持續演進。
+      </p>
+    </article>
+
+    <article class="reader-card">
+      <span class="tag">02 · PACKAGING</span>
+      <h3>Advanced Packaging</h3>
+      <p>
+        多晶粒、HBM 與異質整合，
+        使封裝成為 AI 系統的重要性能節點。
+      </p>
+    </article>
+
+    <article class="reader-card">
+      <span class="tag">03 · INTERCONNECT</span>
+      <h3>Optical Interconnect</h3>
+      <p>
+        AI Cluster 規模擴大後，
+        高速互連與功耗成為重要研究方向。
+      </p>
+    </article>
+
+    <article class="reader-card">
+      <span class="tag">04 · INFRASTRUCTURE</span>
+      <h3>Power & Cooling</h3>
+      <p>
+        AI 運算需求提升，
+        同時增加資料中心的電力與散熱需求。
+      </p>
+    </article>
+
+  </div>
+
+  <h2>Research Question</h2>
+
+  <div class="reader-highlight">
+
+    <strong>
+      AI 的下一個瓶頸，已經不只是晶片。
+    </strong>
+
+    <p>
+      本期研究真正要追蹤的，
+      是 AI Platform 如何從單一晶片，
+      擴展成由製程、封裝、互連、材料、
+      電力與散熱共同構成的完整系統。
+    </p>
+
+  </div>
+
+  <h2>研究範圍</h2>
+
+  <p>
+    後續 P2～P8 將依序拆解：
+  </p>
+
+  <div class="reader-grid">
+
+    <article class="reader-card">
+      <span class="tag">P2</span>
+      <h3>Evidence</h3>
+      <p>區分公開事實與產業推論。</p>
+    </article>
+
+    <article class="reader-card">
+      <span class="tag">P3</span>
+      <h3>AI Platform Evolution</h3>
+      <p>四個核心訊號如何共同形成下一代 AI Platform。</p>
+    </article>
+
+    <article class="reader-card">
+      <span class="tag">P4</span>
+      <h3>Technology</h3>
+      <p>從晶片一路走向系統。</p>
+    </article>
+
+    <article class="reader-card">
+      <span class="tag">P5</span>
+      <h3>Glass Core</h3>
+      <p>觀察玻璃基板在 AI 封裝中的位置。</p>
+    </article>
+
+    <article class="reader-card">
+      <span class="tag">P6</span>
+      <h3>Investment Matrix</h3>
+      <p>將技術節點轉換成產業觀察。</p>
+    </article>
+
+    <article class="reader-card">
+      <span class="tag">P7</span>
+      <h3>Future Watch</h3>
+      <p>追蹤驗證、導入、量產與擴散。</p>
+    </article>
+
+  </div>
+
+  <p>
+    最後於 P8 回到研究方法與資料來源，
+    建立 Facts First · Evidence-Based Research
+    的完整研究閉環。
+  </p>
 
 </ResearchReader>
+
+</BaseLayout>
