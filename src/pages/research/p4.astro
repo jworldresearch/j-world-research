@@ -1,34 +1,510 @@
 ---
-import ResearchReader from "../../components/ResearchReader.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
 
-<ResearchReader pageId="p4">
+<BaseLayout title="P4｜Technology｜J 的世界 Research">
 
-<h2>從晶片走向系統</h2>
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="kicker">RESEARCH · VOL.01 · P4</div>
+    <h1>從晶片走向系統</h1>
+    <p>
+      AI Platform 的演進，不再只是單一晶片效能提升，
+      而是製程、封裝、互連、材料、散熱與電力共同推進。
+    </p>
+  </div>
+</section>
 
-<p>
-AI Platform 可以拆成六個連續節點：
-</p>
+<section class="section">
 
-<p>
-<strong>AI Compute</strong>
-→
-<strong>Advanced Process</strong>
-→
-<strong>Advanced Packaging</strong>
-→
-<strong>Optical Interconnect</strong>
-→
-<strong>Thermal / Power</strong>
-→
-<strong>System</strong>
-</p>
+  <div class="section-head">
+    <div>
+      <div class="kicker">TECHNOLOGY PATH</div>
+      <h2>六個連續技術節點</h2>
+    </div>
+    <p>Compute → System</p>
+  </div>
 
-<h3>Research Principle</h3>
+  <article class="card">
 
-<p>
-研究重點不是預測單一技術何時取代另一項技術，
-而是觀察技術何時由可能性進入驗證、導入與量產。
-</p>
+    <div class="technology-flow">
+      <div class="node">
+        <span>01</span>
+        <strong>AI Compute</strong>
+        <small>GPU / ASIC</small>
+      </div>
 
-</ResearchReader>
+      <b>→</b>
+
+      <div class="node">
+        <span>02</span>
+        <strong>Advanced Process</strong>
+        <small>3nm / 2nm / A16 / A14</small>
+      </div>
+
+      <b>→</b>
+
+      <div class="node">
+        <span>03</span>
+        <strong>Advanced Packaging</strong>
+        <small>CoWoS / SoIC / SoW</small>
+      </div>
+
+      <b>→</b>
+
+      <div class="node">
+        <span>04</span>
+        <strong>Optical Interconnect</strong>
+        <small>CPO / Optical Engine</small>
+      </div>
+
+      <b>→</b>
+
+      <div class="node">
+        <span>05</span>
+        <strong>Thermal / Power</strong>
+        <small>Cooling / Power</small>
+      </div>
+
+      <b>→</b>
+
+      <div class="node">
+        <span>06</span>
+        <strong>System</strong>
+        <small>AI Infrastructure</small>
+      </div>
+    </div>
+
+  </article>
+
+</section>
+
+
+<section class="feature">
+
+  <div class="section">
+
+    <div class="section-head">
+      <div>
+        <div class="kicker">01 · COMPUTE</div>
+        <h2>運算密度提升，瓶頸開始外溢</h2>
+      </div>
+    </div>
+
+    <div class="grid">
+
+      <article class="map-card">
+        <span class="tag">AI COMPUTE</span>
+        <h3>更多運算</h3>
+        <p>
+          AI 模型持續提高運算需求，
+          GPU、ASIC 與其他 AI Accelerator
+          必須持續提高單位面積運算能力。
+        </p>
+      </article>
+
+      <article class="map-card">
+        <span class="tag">EFFICIENCY</span>
+        <h3>更低功耗</h3>
+        <p>
+          單純提高效能並不足夠。
+          每瓦運算效能、記憶體頻寬與資料搬移效率
+          成為系統設計的重要條件。
+        </p>
+      </article>
+
+      <article class="map-card">
+        <span class="tag">SYSTEM EFFECT</span>
+        <h3>瓶頸向外移動</h3>
+        <p>
+          當晶片本身持續縮小，
+          系統瓶頸將逐步延伸至封裝、互連、
+          散熱與電力。
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="section">
+
+  <div class="section-head">
+    <div>
+      <div class="kicker">02 · ADVANCED PROCESS</div>
+      <h2>製程微縮仍是基礎，但已不是全部</h2>
+    </div>
+  </div>
+
+  <article class="card">
+
+    <p>
+      AI Compute 的基礎仍建立在先進邏輯製程。
+      更先進的節點可帶來更高的電晶體密度、
+      效能與能源效率。
+    </p>
+
+    <div class="evidence-grid">
+
+      <div>
+        <span class="tag">OBSERVE</span>
+        <h3>製程節點</h3>
+        <p>3nm → 2nm → A16 → A14</p>
+      </div>
+
+      <div>
+        <span class="tag">OBSERVE</span>
+        <h3>關鍵製程</h3>
+        <p>曝光、沉積、蝕刻、CMP、清洗與量測。</p>
+      </div>
+
+      <div>
+        <span class="tag">OBSERVE</span>
+        <h3>材料</h3>
+        <p>先進製程對高階材料與化學品需求同步提升。</p>
+      </div>
+
+    </div>
+
+  </article>
+
+</section>
+
+
+<section class="feature">
+
+  <div class="section">
+
+    <div class="section-head">
+      <div>
+        <div class="kicker">03 · ADVANCED PACKAGING</div>
+        <h2>封裝正在成為 AI 系統的核心戰場</h2>
+      </div>
+    </div>
+
+    <div class="grid">
+
+      <article class="map-card">
+        <span class="tag">COWOS</span>
+        <h3>高密度整合</h3>
+        <p>
+          GPU / ASIC 與 HBM 的高密度整合，
+          使先進封裝直接影響 AI Accelerator 的整體效能。
+        </p>
+      </article>
+
+      <article class="map-card">
+        <span class="tag">SOIC</span>
+        <h3>3D Integration</h3>
+        <p>
+          透過晶片堆疊與異質整合，
+          將不同功能元件進一步整合至更小的空間。
+        </p>
+      </article>
+
+      <article class="map-card">
+        <span class="tag">SYSTEM</span>
+        <h3>封裝 × 系統</h3>
+        <p>
+          封裝不再只是晶片完成後的最後一道工序，
+          而逐漸成為系統架構的一部分。
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="section">
+
+  <div class="section-head">
+    <div>
+      <div class="kicker">04 · OPTICAL INTERCONNECT</div>
+      <h2>下一個限制：資料搬移</h2>
+    </div>
+  </div>
+
+  <article class="card">
+
+    <p>
+      當 AI 系統中的晶片數量與資料交換量持續增加，
+      高速互連的頻寬、距離與功耗開始成為重要問題。
+    </p>
+
+    <div class="signal-flow">
+
+      <div>
+        <strong>Electrical</strong>
+        <span>高速電互連</span>
+      </div>
+
+      <div class="arrow">→</div>
+
+      <div>
+        <strong>Optical Engine</strong>
+        <span>光電轉換</span>
+      </div>
+
+      <div class="arrow">→</div>
+
+      <div>
+        <strong>CPO</strong>
+        <span>共同封裝</span>
+      </div>
+
+      <div class="arrow">→</div>
+
+      <div>
+        <strong>Fiber</strong>
+        <span>長距離高速傳輸</span>
+      </div>
+
+    </div>
+
+  </article>
+
+</section>
+
+
+<section class="feature">
+
+  <div class="section">
+
+    <div class="section-head">
+      <div>
+        <div class="kicker">05 · MATERIALS / INFRASTRUCTURE</div>
+        <h2>技術升級最後會回到材料與基礎設施</h2>
+      </div>
+    </div>
+
+    <div class="grid">
+
+      <article class="card">
+        <span class="tag">MATERIALS</span>
+        <h3>材料</h3>
+        <p>
+          先進製程、先進封裝與高速互連，
+          都需要新的材料組合與製程能力。
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="tag">THERMAL</span>
+        <h3>散熱</h3>
+        <p>
+          AI Accelerator 功耗提高，
+          液冷、高效散熱材料與熱管理的重要性同步增加。
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="tag">POWER</span>
+        <h3>電力</h3>
+        <p>
+          AI Data Center 的功耗成長，
+          使供電架構、能源效率與電力基礎設施成為關鍵。
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="section">
+
+  <div class="section-head">
+    <div>
+      <div class="kicker">RESEARCH LOGIC</div>
+      <h2>真正要追蹤的不是「概念」，而是落地</h2>
+    </div>
+  </div>
+
+  <div class="grid">
+
+    <article class="card">
+      <span class="tag">01 · DEVELOPMENT</span>
+      <h3>技術可能性</h3>
+      <p>
+        技術是否具備理論與工程上的可行性？
+      </p>
+    </article>
+
+    <article class="card">
+      <span class="tag">02 · QUALIFICATION</span>
+      <h3>客戶驗證</h3>
+      <p>
+        是否進入客戶測試、驗證或供應鏈認證？
+      </p>
+    </article>
+
+    <article class="card">
+      <span class="tag">03 · PRODUCTION</span>
+      <h3>量產</h3>
+      <p>
+        是否形成實際產品、產能與可觀察營收？
+      </p>
+    </article>
+
+  </div>
+
+</section>
+
+
+<section class="cta">
+
+  <div class="cta-inner">
+
+    <div>
+      <div class="kicker">NEXT · P5</div>
+      <h2>從系統需求，進一步看 Glass Core。</h2>
+      <p>
+        下一頁將把 Glass Core 放回 AI 封裝與高速互連的完整技術路徑中。
+      </p>
+    </div>
+
+    <a class="button" href="/research/p5">
+      Next · P5 →
+    </a>
+
+  </div>
+
+</section>
+
+
+<style>
+
+  .technology-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .technology-flow b {
+    color: #7188a0;
+    font-size: 20px;
+  }
+
+  .node {
+    min-width: 135px;
+    padding: 16px;
+    border: 1px solid #354457;
+    border-radius: 12px;
+    background: #0d151f;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .node span {
+    color: #7188a0;
+    font-size: 11px;
+    font-weight: 800;
+  }
+
+  .node strong {
+    font-size: 14px;
+  }
+
+  .node small {
+    color: #7f8d9d;
+    font-size: 11px;
+  }
+
+  .evidence-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 28px;
+  }
+
+  .evidence-grid > div {
+    border-top: 1px solid #354457;
+    padding-top: 18px;
+  }
+
+  .evidence-grid h3 {
+    margin: 10px 0 4px;
+  }
+
+  .evidence-grid p {
+    margin: 0;
+    color: #aeb9c6;
+  }
+
+  .signal-flow {
+    margin-top: 28px;
+    padding: 22px;
+    border: 1px solid #2b394a;
+    border-radius: 14px;
+    background: #0b1119;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .signal-flow div:not(.arrow) {
+    padding: 12px 16px;
+    border: 1px solid #354457;
+    border-radius: 9px;
+    background: #121c28;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .signal-flow span {
+    color: #7f8d9d;
+    font-size: 11px;
+  }
+
+  .signal-flow .arrow {
+    color: #7188a0;
+    font-size: 20px;
+  }
+
+  @media(max-width:800px) {
+
+    .technology-flow {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .technology-flow b {
+      display: none;
+    }
+
+    .node {
+      width: 100%;
+    }
+
+    .evidence-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .signal-flow {
+      align-items: stretch;
+      flex-direction: column;
+    }
+
+    .signal-flow .arrow {
+      text-align: center;
+      transform: rotate(90deg);
+    }
+
+  }
+
+</style>
+
+</BaseLayout>
