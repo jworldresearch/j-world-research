@@ -1,38 +1,179 @@
 ---
+import BaseLayout from "../../layouts/BaseLayout.astro";
 import ResearchReader from "../../components/ResearchReader.astro";
 ---
 
-<ResearchReader pageId="p2">
+<BaseLayout title="P2｜Evidence｜J 的世界 Research">
 
-<h2>先把「事實」與「推論」分開</h2>
+<ResearchReader
+  page={2}
+  section="EVIDENCE"
+  title="先把事實與推論分開"
+  prev="/research/p1"
+  next="/research/p3"
+  nextLabel="P3 · AI Platform Evolution"
+>
 
-<p>
-《J 的世界 Research》首先區分公開資訊與產業推論。
-</p>
+  <p>
+    一份真正可以長期追蹤的產業研究，
+    第一個基本原則不是「找到答案」，
+    而是先確認哪些內容已經有證據支持。
+  </p>
 
-<h3>FACT</h3>
+  <p>
+    因此，Research Vol.01 將所有觀察分成
+    <strong>Fact</strong> 與
+    <strong>Inference</strong>，
+    避免把市場期待直接寫成已經發生的事實。
+  </p>
 
-<p>
-已由官方、公司公開資訊或其他可靠資料支持的內容，
-列為 Fact。
-</p>
+  <div class="reader-highlight">
+    <strong>Facts First</strong>
+    <p>
+      公開資訊、公司揭露、官方技術資料與可交叉驗證的資訊，
+      優先於市場傳聞與主觀判斷。
+    </p>
+  </div>
 
-<h3>EVIDENCE</h3>
+  <h2>01｜FACT</h2>
 
-<p>
-技術文件、產品資訊、供應鏈關係與客戶驗證進度，
-透過交叉檢視建立證據鏈。
-</p>
+  <p>
+    Fact 指的是目前已有公開資訊可以支持的內容。
+    例如官方技術論壇、公司公告、產品資訊、
+    技術文件或已公開的供應鏈資料。
+  </p>
 
-<h3>INFERENCE</h3>
+  <div class="reader-grid">
 
-<p>
-尚未正式公告，但依據技術路徑與公開資訊建立的研究假設，
-明確標示為 Inference。
-</p>
+    <article class="reader-card">
+      <span class="tag">FACT</span>
+      <h3>官方技術資訊</h3>
+      <p>
+        例如技術論壇、產品 roadmap、
+        製程與封裝技術公開資料。
+      </p>
+    </article>
 
-<p>
-推論不是事實，也不應被視為已確認的商業結果。
-</p>
+    <article class="reader-card">
+      <span class="tag">FACT</span>
+      <h3>公司公開揭露</h3>
+      <p>
+        包括公司公告、法說會、
+        年報與公開技術資訊。
+      </p>
+    </article>
+
+    <article class="reader-card">
+      <span class="tag">FACT</span>
+      <h3>量產與驗證</h3>
+      <p>
+        有公開資訊支持的量產、
+        客戶驗證或供應鏈導入進度。
+      </p>
+    </article>
+
+    <article class="reader-card">
+      <span class="tag">FACT</span>
+      <h3>產業鏈關係</h3>
+      <p>
+        可以由公開資料確認的上下游、
+        技術與產品關係。
+      </p>
+    </article>
+
+  </div>
+
+  <h2>02｜INFERENCE</h2>
+
+  <p>
+    Inference 則是根據已知事實，
+    對下一個可能發生的產業變化建立研究假設。
+  </p>
+
+  <div class="reader-highlight">
+
+    <strong>J Insight · Inference</strong>
+
+    <p>
+      產業推論可以是重要的研究方向，
+      但它不等同於公司已經公告，
+      也不等同於技術已經量產。
+    </p>
+
+  </div>
+
+  <h2>03｜Evidence Level</h2>
+
+  <div class="reader-grid">
+
+    <article class="reader-card">
+      <span class="tag">LEVEL 01</span>
+      <h3>PRODUCTION</h3>
+      <p>
+        已有公開資訊支持產品或技術進入量產。
+      </p>
+    </article>
+
+    <article class="reader-card">
+      <span class="tag">LEVEL 02</span>
+      <h3>QUALIFICATION</h3>
+      <p>
+        已進入客戶驗證、導入或供應鏈認證。
+      </p>
+    </article>
+
+    <article class="reader-card">
+      <span class="tag">LEVEL 03</span>
+      <h3>DEVELOPMENT</h3>
+      <p>
+        技術或產品仍處於開發、測試或樣品階段。
+      </p>
+    </article>
+
+    <article class="reader-card">
+      <span class="tag">LEVEL 04</span>
+      <h3>INFERENCE</h3>
+      <p>
+        根據公開資訊建立的產業研究假設，
+        尚未被正式公告確認。
+      </p>
+    </article>
+
+  </div>
+
+  <h2>為什麼這個區分很重要？</h2>
+
+  <p>
+    AI 產業的技術演進速度非常快。
+    一項技術可能同時存在於研發、驗證、
+    小量導入與量產不同階段。
+  </p>
+
+  <p>
+    如果把「可能導入」直接寫成「已經量產」，
+    研究就會失去時間軸，
+    也無法在未來驗證原本的判斷是否正確。
+  </p>
+
+  <div class="reader-highlight">
+
+    <strong>Research Principle</strong>
+
+    <p>
+      不是所有看起來合理的事情都是真正發生的事情。
+      研究的價值，在於把兩者清楚分開。
+    </p>
+
+  </div>
+
+  <h2>下一步</h2>
+
+  <p>
+    P3 將把上述 Evidence Framework
+    放回 AI Platform 本身，
+    分析四個核心訊號如何共同推動下一代 AI 系統。
+  </p>
 
 </ResearchReader>
+
+</BaseLayout>
