@@ -1,35 +1,618 @@
 ---
-import ResearchReader from "../../components/ResearchReader.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
 
-<ResearchReader pageId="p8">
+<BaseLayout title="P8｜Reference & Methodology｜J 的世界 Research">
 
-<h2>研究方法</h2>
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="kicker">RESEARCH · VOL.01 · P8</div>
+    <h1>Reference &<br />Methodology</h1>
+    <p>
+      Research Vol.01 的最後一頁，
+      回到研究方法、證據分層與持續追蹤原則。
+    </p>
+  </div>
+</section>
 
-<h3>Facts First</h3>
 
-<p>
-公開資訊、公司揭露與官方技術資料優先。
-</p>
+<section class="section">
 
-<h3>Evidence-Based Research</h3>
+  <div class="section-head">
+    <div>
+      <div class="kicker">RESEARCH PHILOSOPHY</div>
+      <h2>Facts First · Evidence-Based Research</h2>
+    </div>
+  </div>
 
-<p>
-技術路徑、供應鏈、驗證與量產進度交叉檢視。
-</p>
+  <article class="card philosophy-card">
 
-<h3>J Insight</h3>
+    <h3>Facts First</h3>
 
-<p>
-尚未被公司正式公告、但值得追蹤的內容，
-明確標示為「產業推論（Inference）」。
-</p>
+    <p>
+      研究首先建立在可以被查證的公開資訊之上。
+      公司公告、官方技術資料、公開簡報與產業資料，
+      優先於市場傳聞或未經驗證的敘事。
+    </p>
 
-<h3>免責聲明</h3>
+    <h3>Evidence-Based Research</h3>
 
-<p>
-本網站資料僅供資訊分享及學習，
-不作為投資進出場之依據。
-</p>
+    <p>
+      單一資訊通常不足以形成完整結論。
+      因此研究會將技術路徑、供應鏈關係、
+      客戶驗證、產品導入與量產進度交叉檢視。
+    </p>
 
-</ResearchReader>
+    <h3>Inference</h3>
+
+    <p>
+      當公開資訊不足以直接證明某一結論，
+      可以建立研究假設，但必須明確標示為
+      <strong>產業推論（Inference）</strong>，
+      不與已確認事實混在一起。
+    </p>
+
+  </article>
+
+</section>
+
+
+<section class="feature">
+
+  <div class="section">
+
+    <div class="section-head">
+      <div>
+        <div class="kicker">EVIDENCE LEVEL</div>
+        <h2>研究證據分層</h2>
+      </div>
+      <p>Evidence Strength</p>
+    </div>
+
+    <div class="evidence-grid">
+
+      <article class="evidence-card">
+        <span>LEVEL 01</span>
+        <h3>PRODUCTION</h3>
+        <p>
+          已有公開資訊支持產品或技術進入量產。
+        </p>
+      </article>
+
+      <article class="evidence-card">
+        <span>LEVEL 02</span>
+        <h3>QUALIFICATION</h3>
+        <p>
+          已進入客戶驗證、導入或供應鏈認證。
+        </p>
+      </article>
+
+      <article class="evidence-card">
+        <span>LEVEL 03</span>
+        <h3>DEVELOPMENT</h3>
+        <p>
+          技術或產品仍處於開發、測試或樣品階段。
+        </p>
+      </article>
+
+      <article class="evidence-card">
+        <span>LEVEL 04</span>
+        <h3>INFERENCE</h3>
+        <p>
+          依據公開資料與技術路徑建立的合理研究假設。
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="section">
+
+  <div class="section-head">
+    <div>
+      <div class="kicker">RESEARCH METHOD</div>
+      <h2>一份研究如何建立？</h2>
+    </div>
+  </div>
+
+  <div class="method-flow">
+
+    <div>
+      <span>01</span>
+      <strong>事件</strong>
+      <small>Identify Event</small>
+    </div>
+
+    <b>→</b>
+
+    <div>
+      <span>02</span>
+      <strong>證據</strong>
+      <small>Collect Evidence</small>
+    </div>
+
+    <b>→</b>
+
+    <div>
+      <span>03</span>
+      <strong>技術</strong>
+      <small>Map Technology</small>
+    </div>
+
+    <b>→</b>
+
+    <div>
+      <span>04</span>
+      <strong>供應鏈</strong>
+      <small>Map Supply Chain</small>
+    </div>
+
+    <b>→</b>
+
+    <div>
+      <span>05</span>
+      <strong>驗證</strong>
+      <small>Verify</small>
+    </div>
+
+    <b>→</b>
+
+    <div>
+      <span>06</span>
+      <strong>追蹤</strong>
+      <small>Future Watch</small>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="feature">
+
+  <div class="section">
+
+    <div class="section-head">
+      <div>
+        <div class="kicker">SOURCE HIERARCHY</div>
+        <h2>資料來源優先順序</h2>
+      </div>
+    </div>
+
+    <div class="grid">
+
+      <article class="card">
+        <span class="tag">TIER 01</span>
+        <h3>官方資料</h3>
+        <p>
+          公司公告、法說會、官方技術文件、
+          官方簡報與公開聲明。
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="tag">TIER 02</span>
+        <h3>產業資料</h3>
+        <p>
+          產業研究、技術論壇、
+          專業媒體與公開市場資料。
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="tag">TIER 03</span>
+        <h3>交叉驗證</h3>
+        <p>
+          將不同來源互相比對，
+          避免單一來源造成錯誤判斷。
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="section">
+
+  <div class="section-head">
+    <div>
+      <div class="kicker">VOL.01 · REFERENCE</div>
+      <h2>Research Vol.01 主要研究主軸</h2>
+    </div>
+  </div>
+
+  <div class="reference-list">
+
+    <div>
+      <span>P1</span>
+      <strong>Story</strong>
+      <p>從 TSMC Technology Symposium 建立研究起點。</p>
+    </div>
+
+    <div>
+      <span>P2</span>
+      <strong>Evidence</strong>
+      <p>區分 Fact、Evidence 與 Inference。</p>
+    </div>
+
+    <div>
+      <span>P3</span>
+      <strong>AI Platform Evolution</strong>
+      <p>Compute、Packaging、Optical、Materials & Infrastructure。</p>
+    </div>
+
+    <div>
+      <span>P4</span>
+      <strong>Technology Path</strong>
+      <p>從晶片走向系統。</p>
+    </div>
+
+    <div>
+      <span>P5</span>
+      <strong>Glass Core</strong>
+      <p>Glass → TGV → Core → Advanced Packaging。</p>
+    </div>
+
+    <div>
+      <span>P6</span>
+      <strong>Investment Matrix</strong>
+      <p>技術節點轉換為產業觀察。</p>
+    </div>
+
+    <div>
+      <span>P7</span>
+      <strong>Future Watch</strong>
+      <p>驗證 → 導入 → 量產 → 擴散。</p>
+    </div>
+
+    <div>
+      <span>P8</span>
+      <strong>Methodology</strong>
+      <p>研究方法、證據分層與免責聲明。</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="feature">
+
+  <div class="section">
+
+    <div class="section-head">
+      <div>
+        <div class="kicker">CONNECTED LIBRARY</div>
+        <h2>Research Vol.01 完整閱讀</h2>
+      </div>
+    </div>
+
+    <div class="grid">
+
+      <article class="card">
+        <span class="tag">RESEARCH LIBRARY</span>
+        <h3>Vol.01 目錄</h3>
+        <p>
+          回到 Research Library，
+          從 P1–P8 選擇閱讀。
+        </p>
+        <a class="button-secondary" href="/research">
+          Research Library →
+        </a>
+      </article>
+
+      <article class="card">
+        <span class="tag">INDUSTRY MAPS</span>
+        <h3>產業地圖</h3>
+        <p>
+          將 Research Vol.01 的技術路徑轉換成產業鏈。
+        </p>
+        <a class="button-secondary" href="/maps">
+          Industry Maps →
+        </a>
+      </article>
+
+      <article class="card">
+        <span class="tag">POSTERS & PDF</span>
+        <h3>研究海報與 First Printing</h3>
+        <p>
+          以視覺化與出版級 PDF 閱讀 Research Vol.01。
+        </p>
+        <div class="link-row">
+          <a class="button-secondary" href="/posters">
+            Posters →
+          </a>
+          <a class="button-secondary" href="/downloads">
+            Downloads →
+          </a>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="section">
+
+  <div class="section-head">
+    <div>
+      <div class="kicker">PRIMARY REFERENCE</div>
+      <h2>Research Vol.01</h2>
+    </div>
+  </div>
+
+  <article class="card reference-card">
+
+    <span class="tag">MAIN EVENT</span>
+
+    <h3>TSMC 2026 Technology Symposium</h3>
+
+    <p>
+      Research Vol.01 以 2026 年台積電 Technology Symposium
+      作為研究起點，從公開資訊建立 AI Platform Evolution
+      的技術與產業研究框架。
+    </p>
+
+    <p class="muted">
+      後續版本將持續依據新的公開資料更新，
+      並保留版本與研究時間點。
+    </p>
+
+  </article>
+
+</section>
+
+
+<section class="feature">
+
+  <div class="section">
+
+    <div class="section-head">
+      <div>
+        <div class="kicker">DISCLAIMER</div>
+        <h2>免責聲明</h2>
+      </div>
+    </div>
+
+    <article class="card disclaimer">
+
+      <p>
+        本網站及 Research Vol.01 所提供之內容，
+        僅供資訊分享、研究與學習用途。
+      </p>
+
+      <p>
+        所有資料均不構成任何投資建議、
+        推薦、邀約或投資進出場依據。
+      </p>
+
+      <p>
+        使用者應自行判斷資料之完整性、正確性與適用性，
+        並依自身情況進行獨立研究與決策。
+      </p>
+
+      <p>
+        對於標示為「J Insight · Inference」之內容，
+        應視為研究假設，而非已確認事實。
+      </p>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<section class="cta">
+
+  <div class="cta-inner">
+
+    <div>
+      <div class="kicker">VOL.01 COMPLETE</div>
+      <h2>Research Vol.01 完成。</h2>
+      <p>
+        從事件、證據、技術、產業鏈，
+        到 Future Watch，形成第一個完整研究循環。
+      </p>
+    </div>
+
+    <a class="button" href="/research">
+      Back to Research Library →
+    </a>
+
+  </div>
+
+</section>
+
+
+<style>
+
+  .philosophy-card h3 {
+    font-size: 22px;
+    margin-top: 28px;
+  }
+
+  .philosophy-card h3:first-child {
+    margin-top: 0;
+  }
+
+  .evidence-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .evidence-card {
+    border: 1px solid #354457;
+    background: #0d151f;
+    border-radius: 14px;
+    padding: 22px;
+  }
+
+  .evidence-card span {
+    color: #7188a0;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .1em;
+  }
+
+  .evidence-card h3 {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+
+  .evidence-card p {
+    color: #8f9dac;
+    font-size: 13px;
+  }
+
+  .method-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .method-flow > div {
+    min-width: 125px;
+    padding: 17px;
+    border: 1px solid #354457;
+    border-radius: 12px;
+    background: #0d151f;
+  }
+
+  .method-flow span {
+    color: #7188a0;
+    font-size: 11px;
+    font-weight: 800;
+  }
+
+  .method-flow strong {
+    display: block;
+    margin-top: 6px;
+  }
+
+  .method-flow small {
+    color: #7f8d9d;
+    font-size: 11px;
+  }
+
+  .method-flow b {
+    color: #7188a0;
+  }
+
+  .reference-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .reference-list > div {
+    display: grid;
+    grid-template-columns: 45px 1fr;
+    column-gap: 12px;
+    padding: 17px;
+    border: 1px solid #2b394a;
+    border-radius: 11px;
+    background: #0d151f;
+  }
+
+  .reference-list span {
+    grid-row: span 2;
+    color: #7188a0;
+    font-size: 12px;
+    font-weight: 800;
+  }
+
+  .reference-list strong {
+    font-size: 14px;
+  }
+
+  .reference-list p {
+    color: #8f9dac;
+    font-size: 12px;
+    margin: 3px 0 0;
+  }
+
+  .reference-card {
+    max-width: 900px;
+  }
+
+  .muted {
+    color: #7f8d9d !important;
+    font-size: 12px;
+  }
+
+  .disclaimer {
+    border-color: #40536a;
+  }
+
+  .link-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .button-secondary {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 9px 14px;
+    border: 1px solid #40536a;
+    border-radius: 8px;
+    color: #c6d1dc;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .button-secondary:hover {
+    border-color: #7188a0;
+    color: #fff;
+  }
+
+  @media(max-width:800px) {
+
+    .evidence-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .method-flow {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .method-flow b {
+      display: none;
+    }
+
+    .method-flow > div {
+      width: 100%;
+    }
+
+    .reference-list {
+      grid-template-columns: 1fr;
+    }
+
+  }
+
+  @media(max-width:520px) {
+
+    .evidence-grid {
+      grid-template-columns: 1fr;
+    }
+
+  }
+
+</style>
+
+</BaseLayout>
