@@ -1,34 +1,530 @@
 ---
-import ResearchReader from "../../components/ResearchReader.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
 
-<ResearchReader pageId="p6">
+<BaseLayout title="P6｜Investment Matrix｜J 的世界 Research">
 
-<h2>技術節點，如何轉換成產業觀察？</h2>
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="kicker">RESEARCH · VOL.01 · P6</div>
+    <h1>從技術節點，<br />走向投資研究矩陣</h1>
+    <p>
+      不從個股開始，而是從 AI Platform 的技術節點，
+      觀察哪些產業環節正在形成新的需求、驗證與量產機會。
+    </p>
+  </div>
+</section>
 
-<h3>PROCESS</h3>
-<p>
-觀察先進製程、設備、材料與產能。
-</p>
 
-<h3>PACKAGING</h3>
-<p>
-觀察 CoWoS、SoIC、Chiplet 與異質整合。
-</p>
+<section class="section">
 
-<h3>OPTICAL</h3>
-<p>
-觀察 CPO、光引擎、光纖與高速互連。
-</p>
+  <div class="section-head">
+    <div>
+      <div class="kicker">INVESTMENT MATRIX</div>
+      <h2>技術如何轉換成產業觀察？</h2>
+    </div>
+    <p>Technology → Supply Chain → Evidence</p>
+  </div>
 
-<h3>MATERIALS & INFRASTRUCTURE</h3>
-<p>
-觀察材料、設備、電力與散熱等系統需求。
-</p>
+  <article class="card">
 
-<h3>SYSTEM</h3>
-<p>
-最後回到 AI Platform 的效能、功耗與成本。
-</p>
+    <p>
+      AI Platform 的升級不是單一產業事件。
+      當運算密度提高，先進製程、先進封裝、
+      光互連、材料、設備、散熱與電力會同時受到影響。
+    </p>
 
-</ResearchReader>
+    <p>
+      因此，本研究建立一套由「技術位置」出發的觀察矩陣，
+      再把企業放回正確的產業節點。
+    </p>
+
+  </article>
+
+</section>
+
+
+<section class="feature">
+
+  <div class="section">
+
+    <div class="section-head">
+      <div>
+        <div class="kicker">01 · PROCESS</div>
+        <h2>Advanced Process</h2>
+      </div>
+    </div>
+
+    <div class="grid">
+
+      <article class="map-card">
+        <span class="tag">TECHNOLOGY</span>
+        <h3>先進製程</h3>
+        <p>
+          觀察製程節點、電晶體架構、
+          能源效率與運算密度的持續提升。
+        </p>
+      </article>
+
+      <article class="map-card">
+        <span class="tag">EQUIPMENT</span>
+        <h3>設備</h3>
+        <p>
+          追蹤光刻、蝕刻、沉積、CMP、
+          清洗與量測等關鍵製程設備。
+        </p>
+      </article>
+
+      <article class="map-card">
+        <span class="tag">MATERIALS</span>
+        <h3>材料</h3>
+        <p>
+          觀察高階製程所需的矽晶圓、
+          光阻、特化、靶材與其他關鍵材料。
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="section">
+
+  <div class="section-head">
+    <div>
+      <div class="kicker">02 · PACKAGING</div>
+      <h2>Advanced Packaging</h2>
+    </div>
+  </div>
+
+  <div class="grid">
+
+    <article class="card">
+      <span class="tag">COWOS</span>
+      <h3>高密度封裝</h3>
+      <p>
+        AI GPU 與 HBM 的整合，
+        推動更高頻寬、更高密度的封裝架構。
+      </p>
+    </article>
+
+    <article class="card">
+      <span class="tag">3DFABRIC</span>
+      <h3>3D / 異質整合</h3>
+      <p>
+        SoIC、Chiplet 與其他異質整合技術，
+        將不同晶片與記憶體整合成更完整的平台。
+      </p>
+    </article>
+
+    <article class="card">
+      <span class="tag">SUBSTRATE</span>
+      <h3>基板與互連</h3>
+      <p>
+        高階封裝對基板、RDL、
+        高速訊號與尺寸穩定性的要求同步提高。
+      </p>
+    </article>
+
+  </div>
+
+</section>
+
+
+<section class="feature">
+
+  <div class="section">
+
+    <div class="section-head">
+      <div>
+        <div class="kicker">03 · OPTICAL</div>
+        <h2>Optical Interconnect</h2>
+      </div>
+    </div>
+
+    <article class="card">
+
+      <div class="matrix-flow">
+
+        <div>
+          <span>01</span>
+          <strong>Switch</strong>
+          <small>交換器</small>
+        </div>
+
+        <b>→</b>
+
+        <div>
+          <span>02</span>
+          <strong>Optical Engine</strong>
+          <small>光引擎</small>
+        </div>
+
+        <b>→</b>
+
+        <div>
+          <span>03</span>
+          <strong>CPO</strong>
+          <small>共同封裝光學</small>
+        </div>
+
+        <b>→</b>
+
+        <div>
+          <span>04</span>
+          <strong>Fiber</strong>
+          <small>光纖</small>
+        </div>
+
+        <b>→</b>
+
+        <div>
+          <span>05</span>
+          <strong>Data Center</strong>
+          <small>資料中心</small>
+        </div>
+
+      </div>
+
+      <p class="matrix-description">
+        當 AI 資料中心的資料傳輸需求持續提高，
+        光互連的重要性將不再只是通訊產業問題，
+        而會逐漸與 AI Compute、封裝與資料中心架構連結。
+      </p>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<section class="section">
+
+  <div class="section-head">
+    <div>
+      <div class="kicker">04 · INFRASTRUCTURE</div>
+      <h2>AI Infrastructure</h2>
+    </div>
+  </div>
+
+  <div class="grid">
+
+    <article class="card">
+      <span class="tag">POWER</span>
+      <h3>電力</h3>
+      <p>
+        AI Server 與資料中心的運算密度提高，
+        電力供應與能源效率成為平台擴張的重要條件。
+      </p>
+    </article>
+
+    <article class="card">
+      <span class="tag">THERMAL</span>
+      <h3>散熱</h3>
+      <p>
+        高功耗運算推動液冷、冷板、
+        散熱材料與整體熱管理架構升級。
+      </p>
+    </article>
+
+    <article class="card">
+      <span class="tag">SERVER</span>
+      <h3>AI Server</h3>
+      <p>
+        GPU、ASIC、HBM、網路與電力系統，
+        最終在 AI Server 與資料中心完成整合。
+      </p>
+    </article>
+
+  </div>
+
+</section>
+
+
+<section class="feature">
+
+  <div class="section">
+
+    <div class="section-head">
+      <div>
+        <div class="kicker">EVIDENCE MATRIX</div>
+        <h2>真正重要的是證據強度</h2>
+      </div>
+    </div>
+
+    <div class="evidence-grid">
+
+      <div class="evidence-level">
+        <span>LEVEL 01</span>
+        <strong>PRODUCTION</strong>
+        <p>已量產並有公開資訊支持。</p>
+      </div>
+
+      <div class="evidence-level">
+        <span>LEVEL 02</span>
+        <strong>QUALIFICATION</strong>
+        <p>已進入客戶驗證或導入。</p>
+      </div>
+
+      <div class="evidence-level">
+        <span>LEVEL 03</span>
+        <strong>DEVELOPMENT</strong>
+        <p>仍處於開發、測試或樣品階段。</p>
+      </div>
+
+      <div class="evidence-level">
+        <span>LEVEL 04</span>
+        <strong>INFERENCE</strong>
+        <p>依公開資訊建立的產業推論。</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="section">
+
+  <div class="section-head">
+    <div>
+      <div class="kicker">RESEARCH RULE</div>
+      <h2>三個問題，避免把題材當成基本面</h2>
+    </div>
+  </div>
+
+  <div class="grid">
+
+    <article class="card">
+      <span class="tag">QUESTION 01</span>
+      <h3>技術真的存在嗎？</h3>
+      <p>
+        是否已有產品、樣品、公開技術文件或客戶驗證證據？
+      </p>
+    </article>
+
+    <article class="card">
+      <span class="tag">QUESTION 02</span>
+      <h3>真的進入供應鏈嗎？</h3>
+      <p>
+        是否已從研發走向實際製程、設計導入或供應鏈認證？
+      </p>
+    </article>
+
+    <article class="card">
+      <span class="tag">QUESTION 03</span>
+      <h3>真的形成營收嗎？</h3>
+      <p>
+        最終必須觀察量產、產能與營收是否開始出現可驗證變化。
+      </p>
+    </article>
+
+  </div>
+
+</section>
+
+
+<section class="feature">
+
+  <div class="section">
+
+    <div class="section-head">
+      <div>
+        <div class="kicker">CONNECTED RESEARCH</div>
+        <h2>從 Investment Matrix 回到產業地圖</h2>
+      </div>
+    </div>
+
+    <div class="grid">
+
+      <article class="card">
+        <span class="tag">INDUSTRY MAPS</span>
+        <h3>AI 全產業鏈</h3>
+        <p>
+          查看 AI Chip → Packaging → Optical →
+          Server → Power → Cooling。
+        </p>
+        <a class="button-secondary" href="/maps">
+          Open Maps →
+        </a>
+      </article>
+
+      <article class="card">
+        <span class="tag">GLASS CORE</span>
+        <h3>回到 P5</h3>
+        <p>
+          了解 Glass Core 如何成為 AI 封裝技術路徑中的一個觀察節點。
+        </p>
+        <a class="button-secondary" href="/research/p5">
+          Previous · P5 →
+        </a>
+      </article>
+
+      <article class="card">
+        <span class="tag">NEXT</span>
+        <h3>Future Watch</h3>
+        <p>
+          下一頁將把研究框架轉換成可以持續追蹤的訊號。
+        </p>
+        <a class="button-secondary" href="/research/p7">
+          Next · P7 →
+        </a>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="cta">
+
+  <div class="cta-inner">
+
+    <div>
+      <div class="kicker">NEXT · P7</div>
+      <h2>從研究矩陣，走向 Future Watch。</h2>
+      <p>
+        下一頁開始追蹤真正需要持續驗證的產業訊號。
+      </p>
+    </div>
+
+    <a class="button" href="/research/p7">
+      Next · P7 →
+    </a>
+
+  </div>
+
+</section>
+
+
+<style>
+
+  .matrix-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .matrix-flow > div {
+    min-width: 130px;
+    padding: 16px;
+    border: 1px solid #354457;
+    border-radius: 12px;
+    background: #0d151f;
+  }
+
+  .matrix-flow span {
+    display: block;
+    color: #7188a0;
+    font-size: 11px;
+    font-weight: 800;
+  }
+
+  .matrix-flow strong {
+    display: block;
+    margin-top: 6px;
+    font-size: 14px;
+  }
+
+  .matrix-flow small {
+    color: #7f8d9d;
+    font-size: 11px;
+  }
+
+  .matrix-flow b {
+    color: #7188a0;
+    font-size: 20px;
+  }
+
+  .matrix-description {
+    margin-top: 28px;
+    color: #aeb9c6;
+  }
+
+  .evidence-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .evidence-level {
+    padding: 20px;
+    border: 1px solid #354457;
+    border-radius: 14px;
+    background: #0d151f;
+  }
+
+  .evidence-level span {
+    color: #7188a0;
+    font-size: 11px;
+    font-weight: 800;
+  }
+
+  .evidence-level strong {
+    display: block;
+    margin-top: 8px;
+    font-size: 15px;
+  }
+
+  .evidence-level p {
+    color: #8f9dac;
+    font-size: 13px;
+  }
+
+  .button-secondary {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 9px 14px;
+    border: 1px solid #40536a;
+    border-radius: 8px;
+    color: #c6d1dc;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .button-secondary:hover {
+    border-color: #7188a0;
+    color: #fff;
+  }
+
+  @media(max-width:800px) {
+
+    .matrix-flow {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .matrix-flow b {
+      display: none;
+    }
+
+    .matrix-flow > div {
+      width: 100%;
+    }
+
+    .evidence-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+  }
+
+  @media(max-width:520px) {
+
+    .evidence-grid {
+      grid-template-columns: 1fr;
+    }
+
+  }
+
+</style>
+
+</BaseLayout>
