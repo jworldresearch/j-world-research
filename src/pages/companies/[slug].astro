@@ -16,22 +16,49 @@ export const getStaticPaths = (() => {
 
 const { company } = Astro.props;
 
+const researchPages = company.researchRefs.map((ref, index) => ({
+  ref,
+  page: `P${index + 1}`
+}));
+
+const mapPages = company.mapRefs.map((ref) => ({
+  ref,
+  name: ref
+    .replace("/maps/", "")
+    .replaceAll("-", " ")
+}));
+
 const title = `${company.name}｜J 的世界 Research`;
-const description = `${company.name}｜J 的世界 Research Company Layer`;
+const description =
+  `${company.name}｜Company Layer · J 的世界 Research`;
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout
+  title={title}
+  description={description}
+>
+
   <main class="company-detail">
 
-    <a class="back" href="/companies/">
-      ← Company Database
+    <a
+      href="/companies/"
+      class="back"
+    >
+      ← COMPANY DATABASE
     </a>
 
+
+    <!-- =========================
+         HERO
+    ========================= -->
 
     <header class="hero">
 
       <div class="hero-meta">
-        <span class={`status status-${company.status.toLowerCase()}`}>
+
+        <span
+          class={`status status-${company.status.toLowerCase()}`}
+        >
           {company.status}
         </span>
 
@@ -44,9 +71,14 @@ const description = `${company.name}｜J 的世界 Research Company Layer`;
         <span class="category">
           {company.category}
         </span>
+
       </div>
 
-      <h1>{company.name}</h1>
+
+      <h1>
+        {company.name}
+      </h1>
+
 
       <p class="role">
         {company.role}
@@ -55,114 +87,275 @@ const description = `${company.name}｜J 的世界 Research Company Layer`;
     </header>
 
 
-    <section class="overview">
+    <!-- =========================
+         COMPANY INTELLIGENCE
+    ========================= -->
+
+    <section class="intelligence">
 
       <div class="main-column">
 
-        <div class="block">
-          <span class="label">RESEARCH POSITION</span>
-          <h2>Company Role</h2>
+        <section class="block">
+
+          <span class="label">
+            COMPANY INTELLIGENCE
+          </span>
+
+          <h2>
+            Research Position
+          </h2>
 
           <p>
             {company.description}
           </p>
-        </div>
+
+        </section>
 
 
-        <div class="block">
-          <span class="label">TECHNOLOGY</span>
-          <h2>Technology Layer</h2>
+        <section class="block">
+
+          <span class="label">
+            TECHNOLOGY LAYER
+          </span>
+
+          <h2>
+            Core Technology
+          </h2>
+
 
           <div class="technology-grid">
+
             {company.technology.map((technology) => (
               <div class="technology">
                 {technology}
               </div>
             ))}
+
           </div>
-        </div>
+
+        </section>
 
 
-        <div class="block">
-          <span class="label">EVIDENCE</span>
-          <h2>Evidence Status</h2>
+        <section class="block">
+
+          <span class="label">
+            EVIDENCE
+          </span>
+
+          <h2>
+            Evidence Status
+          </h2>
+
 
           <div class="evidence-box">
-            <strong>{company.evidence}</strong>
+
+            <div class="evidence-status">
+              {company.evidence}
+            </div>
 
             <p>
-              本頁資料採研究資料庫架構管理。
-              公開資訊、研究推論與市場觀察將分開標示，
-              不將推論視為已確認事實。
+              本資料庫將公開資訊與研究推論分開管理。
+              J Insight 用於標示基於公開證據形成的研究推論，
+              不代表已確認的商業合作、量產或驗證結果。
             </p>
+
           </div>
-        </div>
+
+        </section>
 
       </div>
 
 
+      <!-- =========================
+           CONNECTIONS
+      ========================= -->
+
       <aside class="side-column">
 
-        <div class="side-card">
-          <span class="label">RESEARCH</span>
+        <section class="side-card">
 
-          <h3>Related Research</h3>
+          <span class="label">
+            RESEARCH
+          </span>
+
+          <h3>
+            Related Research
+          </h3>
+
 
           <div class="research-list">
-            {company.researchRefs.map((ref, index) => (
-              <a href={ref}>
-                <span>P{index + 1}</span>
-                <span>Research</span>
-                <span>→</span>
+
+            {researchPages.map((item) => (
+              <a href={item.ref}>
+
+                <span class="page-id">
+                  {item.page}
+                </span>
+
+                <span>
+                  Research
+                </span>
+
+                <span>
+                  →
+                </span>
+
               </a>
             ))}
+
           </div>
-        </div>
+
+        </section>
 
 
-        <div class="side-card">
-          <span class="label">INDUSTRY MAPS</span>
+        <section class="side-card">
 
-          <h3>Connected Maps</h3>
+          <span class="label">
+            INDUSTRY MAPS
+          </span>
+
+          <h3>
+            Connected Maps
+          </h3>
+
 
           <div class="research-list">
-            {company.mapRefs.map((ref) => (
-              <a href={ref}>
-                <span>MAP</span>
-                <span>{ref.replace("/maps/", "").replaceAll("-", " ")}</span>
-                <span>→</span>
+
+            {mapPages.map((item) => (
+              <a href={item.ref}>
+
+                <span class="page-id">
+                  MAP
+                </span>
+
+                <span>
+                  {item.name}
+                </span>
+
+                <span>
+                  →
+                </span>
+
               </a>
             ))}
+
           </div>
-        </div>
+
+        </section>
 
       </aside>
 
     </section>
 
 
-    <section class="connections">
+    <!-- =========================
+         THREE-WAY CONNECTION
+    ========================= -->
 
-      <span class="label">RESEARCH CONNECTIONS</span>
+    <section class="three-way">
 
-      <h2>Company → Research → Industry</h2>
+      <span class="label">
+        THREE-WAY RESEARCH CONNECTION
+      </span>
+
+      <h2>
+        Research ↔ Company ↔ Industry
+      </h2>
 
       <p>
-        Company Layer 是 J 的世界 Research
-        從「文章型研究」進一步轉向「研究資料庫」的核心架構。
+        同一研究主題可由 Research 進入企業資料，
+        再由企業回到 Industry Map，
+        建立可循環追蹤的研究資料結構。
       </p>
+
 
       <div class="connection-grid">
 
-        <a href="/research/">
-          <strong>Research Library</strong>
-          <span>AI Platform Evolution</span>
+        <a
+          href="/research/"
+          class="connection"
+        >
+
+          <span class="number">
+            01
+          </span>
+
+          <strong>
+            Research
+          </strong>
+
+          <small>
+            P1–P8 Evidence
+          </small>
+
         </a>
 
-        <a href="/maps/">
-          <strong>Industry Maps</strong>
-          <span>Supply Chain Architecture</span>
+
+        <div class="connection connector">
+          →
+        </div>
+
+
+        <a
+          href="/companies/"
+          class="connection"
+        >
+
+          <span class="number">
+            02
+          </span>
+
+          <strong>
+            Company
+          </strong>
+
+          <small>
+            Company Intelligence
+          </small>
+
         </a>
+
+
+        <div class="connection connector">
+          →
+        </div>
+
+
+        <a
+          href="/maps/"
+          class="connection"
+        >
+
+          <span class="number">
+            03
+          </span>
+
+          <strong>
+            Industry Map
+          </strong>
+
+          <small>
+            Supply Chain
+          </small>
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         RESEARCH RESOURCES
+    ========================= -->
+
+    <section class="resources">
+
+      <span class="label">
+        RESEARCH RESOURCES
+      </span>
+
+      <div class="resource-grid">
 
         <a href="/posters/">
           <strong>Posters</strong>
@@ -174,48 +367,77 @@ const description = `${company.name}｜J 的世界 Research Company Layer`;
           <span>Research PDF</span>
         </a>
 
+        <a href="/research/">
+          <strong>Research Library</strong>
+          <span>AI Platform Evolution</span>
+        </a>
+
       </div>
 
     </section>
 
   </main>
+
 </BaseLayout>
 
 
 <style>
+
   .company-detail {
     max-width: 1100px;
+
     margin: 0 auto;
-    padding: 60px 24px 100px;
+
+    padding:
+      60px 24px 100px;
   }
+
 
   .back {
     display: inline-block;
-    margin-bottom: 50px;
-    color: #7f8b99;
-    font-size: .78rem;
+
+    margin-bottom: 48px;
+
+    color: #75818f;
+
+    font-size: .68rem;
+    font-weight: 700;
+
+    letter-spacing: .08em;
+
     text-decoration: none;
   }
 
   .back:hover {
-    color: #d9e0e7;
+    color: #e0e5ea;
   }
 
+
+  /* =========================
+     HERO
+  ========================= */
+
   .hero {
-    padding-bottom: 50px;
-    border-bottom: 1px solid rgba(255,255,255,.1);
+    padding-bottom: 52px;
+
+    border-bottom:
+      1px solid rgba(255,255,255,.1);
   }
 
   .hero-meta {
     display: flex;
+
     flex-wrap: wrap;
-    gap: 12px;
+
     align-items: center;
+
+    gap: 12px;
   }
 
   .status {
-    font-size: .7rem;
+    font-size: .68rem;
     font-weight: 800;
+
     letter-spacing: .1em;
   }
 
@@ -231,195 +453,424 @@ const description = `${company.name}｜J 的世界 Research Company Layer`;
     color: #9da8b4;
   }
 
-  .ticker,
-  .category {
-    color: #7e8997;
-    font-size: .72rem;
+  .status-ecosystem {
+    color: #b7c1cc;
   }
 
-  h1 {
-    margin: 24px 0 10px;
-    font-size: clamp(3rem, 8vw, 6.5rem);
-    line-height: .95;
-    letter-spacing: -.055em;
+  .ticker,
+  .category {
+    color: #778391;
+
+    font-size: .7rem;
+  }
+
+  .hero h1 {
+    margin:
+      24px 0 12px;
+
+    font-size:
+      clamp(3.2rem, 8vw, 6.5rem);
+
+    line-height: .94;
+
+    letter-spacing: -.06em;
   }
 
   .role {
-    max-width: 700px;
+    max-width: 720px;
+
     margin: 0;
+
     color: #aeb8c4;
-    font-size: 1.2rem;
-    line-height: 1.7;
+
+    font-size: 1.15rem;
+
+    line-height: 1.75;
   }
 
-  .overview {
+
+  /* =========================
+     INTELLIGENCE
+  ========================= */
+
+  .intelligence {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 320px;
+
+    grid-template-columns:
+      minmax(0, 1fr) 310px;
+
     gap: 60px;
-    padding: 60px 0;
+
+    padding:
+      60px 0;
   }
 
   .block {
-    margin-bottom: 60px;
+    margin-bottom: 58px;
   }
 
   .label {
-    color: #7f8b99;
-    font-size: .68rem;
+    color: #788595;
+
+    font-size: .66rem;
     font-weight: 800;
+
     letter-spacing: .16em;
   }
 
-  h2 {
-    margin: 10px 0 18px;
+  .block h2 {
+    margin:
+      10px 0 18px;
+
     font-size: 1.8rem;
-    letter-spacing: -.03em;
+
+    letter-spacing: -.035em;
   }
 
   .block > p {
     max-width: 700px;
-    color: #a6b0bc;
+
+    margin: 0;
+
+    color: #9ba6b2;
+
     line-height: 1.9;
   }
 
+
+  /* =========================
+     TECHNOLOGY
+  ========================= */
+
   .technology-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+
+    grid-template-columns:
+      1fr 1fr;
+
     gap: 10px;
   }
 
   .technology {
     padding: 18px;
-    border: 1px solid rgba(255,255,255,.1);
+
+    border:
+      1px solid rgba(255,255,255,.09);
+
     border-radius: 10px;
-    color: #c6ced7;
-    background: rgba(255,255,255,.025);
+
+    background:
+      rgba(255,255,255,.025);
+
+    color: #c5ced7;
+
+    font-size: .8rem;
   }
+
+
+  /* =========================
+     EVIDENCE
+  ========================= */
 
   .evidence-box {
     padding: 24px;
-    border-left: 2px solid rgba(255,255,255,.35);
-    background: rgba(255,255,255,.025);
+
+    border-left:
+      2px solid rgba(255,255,255,.3);
+
+    background:
+      rgba(255,255,255,.025);
   }
 
-  .evidence-box strong {
-    font-size: .75rem;
-    letter-spacing: .12em;
+  .evidence-status {
+    color: #d6dee6;
+
+    font-size: .7rem;
+    font-weight: 800;
+
+    letter-spacing: .14em;
   }
 
   .evidence-box p {
-    margin: 14px 0 0;
-    color: #8f9aa7;
-    line-height: 1.8;
-    font-size: .85rem;
+    margin:
+      14px 0 0;
+
+    color: #87929f;
+
+    font-size: .8rem;
+
+    line-height: 1.85;
   }
 
+
+  /* =========================
+     SIDE CARDS
+  ========================= */
+
   .side-card {
-    margin-bottom: 18px;
+    margin-bottom: 16px;
+
     padding: 22px;
-    border: 1px solid rgba(255,255,255,.1);
+
+    border:
+      1px solid rgba(255,255,255,.09);
+
     border-radius: 14px;
-    background: rgba(255,255,255,.025);
+
+    background:
+      rgba(255,255,255,.025);
   }
 
   .side-card h3 {
-    margin: 10px 0 18px;
+    margin:
+      10px 0 16px;
+
     font-size: 1rem;
   }
 
   .research-list {
     display: flex;
+
     flex-direction: column;
   }
 
   .research-list a {
     display: grid;
-    grid-template-columns: 38px 1fr 20px;
-    gap: 8px;
+
+    grid-template-columns:
+      38px 1fr 18px;
+
     align-items: center;
-    padding: 11px 0;
-    border-top: 1px solid rgba(255,255,255,.07);
-    color: #9da8b4;
+
+    gap: 7px;
+
+    padding:
+      11px 0;
+
+    border-top:
+      1px solid rgba(255,255,255,.06);
+
+    color: #919daa;
+
+    font-size: .7rem;
+
     text-decoration: none;
-    font-size: .72rem;
   }
 
   .research-list a:hover {
-    color: #e0e5ea;
+    color: #e2e7eb;
   }
 
-  .research-list a span:first-child {
-    color: #687482;
+  .page-id {
+    color: #626e7b;
   }
 
-  .connections {
-    padding-top: 50px;
-    border-top: 1px solid rgba(255,255,255,.1);
+
+  /* =========================
+     THREE WAY
+  ========================= */
+
+  .three-way {
+    padding:
+      55px 0;
+
+    border-top:
+      1px solid rgba(255,255,255,.1);
   }
 
-  .connections h2 {
-    margin-top: 10px;
+  .three-way h2 {
+    margin:
+      10px 0 14px;
+
+    font-size:
+      clamp(2rem, 5vw, 3.8rem);
+
+    letter-spacing: -.05em;
   }
 
-  .connections > p {
+  .three-way > p {
     max-width: 700px;
-    color: #8f9aa7;
-    line-height: 1.8;
+
+    margin: 0;
+
+    color: #8e99a6;
+
+    line-height: 1.85;
   }
 
   .connection-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    margin-top: 28px;
+
+    grid-template-columns:
+      1fr 40px 1fr 40px 1fr;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 30px;
   }
 
-  .connection-grid a {
+  .connection {
     display: flex;
+
     flex-direction: column;
+
     gap: 7px;
-    padding: 18px;
-    border: 1px solid rgba(255,255,255,.1);
+
+    min-height: 120px;
+
+    padding: 20px;
+
+    border:
+      1px solid rgba(255,255,255,.1);
+
     border-radius: 12px;
+
     color: inherit;
+
     text-decoration: none;
   }
 
-  .connection-grid a:hover {
-    border-color: rgba(255,255,255,.25);
+  .connection:hover {
+    border-color:
+      rgba(255,255,255,.25);
   }
 
-  .connection-grid strong {
-    font-size: .8rem;
+  .connection .number {
+    color: #626e7b;
+
+    font-size: .65rem;
   }
 
-  .connection-grid span {
-    color: #75818f;
+  .connection strong {
+    font-size: .95rem;
+  }
+
+  .connection small {
+    color: #788492;
+
     font-size: .68rem;
   }
 
+  .connector {
+    min-height: auto;
+
+    padding: 0;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+
+    color: #65717e;
+
+    font-size: .8rem;
+  }
+
+
+  /* =========================
+     RESOURCES
+  ========================= */
+
+  .resources {
+    padding:
+      50px 0;
+
+    border-top:
+      1px solid rgba(255,255,255,.1);
+  }
+
+  .resource-grid {
+    display: grid;
+
+    grid-template-columns:
+      repeat(3, 1fr);
+
+    gap: 10px;
+
+    margin-top: 20px;
+  }
+
+  .resource-grid a {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    padding: 18px;
+
+    border:
+      1px solid rgba(255,255,255,.09);
+
+    border-radius: 11px;
+
+    color: inherit;
+
+    text-decoration: none;
+  }
+
+  .resource-grid a:hover {
+    border-color:
+      rgba(255,255,255,.25);
+  }
+
+  .resource-grid strong {
+    font-size: .8rem;
+  }
+
+  .resource-grid span {
+    color: #707c89;
+
+    font-size: .68rem;
+  }
+
+
+  /* =========================
+     RESPONSIVE
+  ========================= */
+
   @media (max-width: 800px) {
-    .overview {
-      grid-template-columns: 1fr;
+
+    .intelligence {
+      grid-template-columns:
+        1fr;
     }
 
     .connection-grid {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns:
+        1fr;
     }
+
+    .connector {
+      display: none;
+    }
+
+    .resource-grid {
+      grid-template-columns:
+        1fr;
+    }
+
   }
+
 
   @media (max-width: 560px) {
+
     .company-detail {
-      padding: 40px 18px 70px;
+      padding:
+        40px 18px 70px;
     }
 
-    .technology-grid,
-    .connection-grid {
-      grid-template-columns: 1fr;
+    .technology-grid {
+      grid-template-columns:
+        1fr;
     }
 
-    h1 {
-      font-size: 3.4rem;
+    .hero h1 {
+      font-size: 3.5rem;
     }
+
   }
+
 </style>
