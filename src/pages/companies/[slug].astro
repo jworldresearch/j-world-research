@@ -1,0 +1,425 @@
+---
+import type { GetStaticPaths } from "astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { companies } from "../../data/companies";
+
+export const getStaticPaths = (() => {
+  return companies.map((company) => ({
+    params: {
+      slug: company.slug
+    },
+    props: {
+      company
+    }
+  }));
+}) satisfies GetStaticPaths;
+
+const { company } = Astro.props;
+
+const title = `${company.name}｜J 的世界 Research`;
+const description = `${company.name}｜J 的世界 Research Company Layer`;
+---
+
+<BaseLayout title={title} description={description}>
+  <main class="company-detail">
+
+    <a class="back" href="/companies/">
+      ← Company Database
+    </a>
+
+
+    <header class="hero">
+
+      <div class="hero-meta">
+        <span class={`status status-${company.status.toLowerCase()}`}>
+          {company.status}
+        </span>
+
+        {company.ticker && (
+          <span class="ticker">
+            {company.ticker}
+          </span>
+        )}
+
+        <span class="category">
+          {company.category}
+        </span>
+      </div>
+
+      <h1>{company.name}</h1>
+
+      <p class="role">
+        {company.role}
+      </p>
+
+    </header>
+
+
+    <section class="overview">
+
+      <div class="main-column">
+
+        <div class="block">
+          <span class="label">RESEARCH POSITION</span>
+          <h2>Company Role</h2>
+
+          <p>
+            {company.description}
+          </p>
+        </div>
+
+
+        <div class="block">
+          <span class="label">TECHNOLOGY</span>
+          <h2>Technology Layer</h2>
+
+          <div class="technology-grid">
+            {company.technology.map((technology) => (
+              <div class="technology">
+                {technology}
+              </div>
+            ))}
+          </div>
+        </div>
+
+
+        <div class="block">
+          <span class="label">EVIDENCE</span>
+          <h2>Evidence Status</h2>
+
+          <div class="evidence-box">
+            <strong>{company.evidence}</strong>
+
+            <p>
+              本頁資料採研究資料庫架構管理。
+              公開資訊、研究推論與市場觀察將分開標示，
+              不將推論視為已確認事實。
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+
+      <aside class="side-column">
+
+        <div class="side-card">
+          <span class="label">RESEARCH</span>
+
+          <h3>Related Research</h3>
+
+          <div class="research-list">
+            {company.researchRefs.map((ref, index) => (
+              <a href={ref}>
+                <span>P{index + 1}</span>
+                <span>Research</span>
+                <span>→</span>
+              </a>
+            ))}
+          </div>
+        </div>
+
+
+        <div class="side-card">
+          <span class="label">INDUSTRY MAPS</span>
+
+          <h3>Connected Maps</h3>
+
+          <div class="research-list">
+            {company.mapRefs.map((ref) => (
+              <a href={ref}>
+                <span>MAP</span>
+                <span>{ref.replace("/maps/", "").replaceAll("-", " ")}</span>
+                <span>→</span>
+              </a>
+            ))}
+          </div>
+        </div>
+
+      </aside>
+
+    </section>
+
+
+    <section class="connections">
+
+      <span class="label">RESEARCH CONNECTIONS</span>
+
+      <h2>Company → Research → Industry</h2>
+
+      <p>
+        Company Layer 是 J 的世界 Research
+        從「文章型研究」進一步轉向「研究資料庫」的核心架構。
+      </p>
+
+      <div class="connection-grid">
+
+        <a href="/research/">
+          <strong>Research Library</strong>
+          <span>AI Platform Evolution</span>
+        </a>
+
+        <a href="/maps/">
+          <strong>Industry Maps</strong>
+          <span>Supply Chain Architecture</span>
+        </a>
+
+        <a href="/posters/">
+          <strong>Posters</strong>
+          <span>Visual Research</span>
+        </a>
+
+        <a href="/downloads/">
+          <strong>First Printing</strong>
+          <span>Research PDF</span>
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+</BaseLayout>
+
+
+<style>
+  .company-detail {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 24px 100px;
+  }
+
+  .back {
+    display: inline-block;
+    margin-bottom: 50px;
+    color: #7f8b99;
+    font-size: .78rem;
+    text-decoration: none;
+  }
+
+  .back:hover {
+    color: #d9e0e7;
+  }
+
+  .hero {
+    padding-bottom: 50px;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+  }
+
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .status {
+    font-size: .7rem;
+    font-weight: 800;
+    letter-spacing: .1em;
+  }
+
+  .status-core {
+    color: #d8e4ef;
+  }
+
+  .status-watch {
+    color: #c3cbd4;
+  }
+
+  .status-research {
+    color: #9da8b4;
+  }
+
+  .ticker,
+  .category {
+    color: #7e8997;
+    font-size: .72rem;
+  }
+
+  h1 {
+    margin: 24px 0 10px;
+    font-size: clamp(3rem, 8vw, 6.5rem);
+    line-height: .95;
+    letter-spacing: -.055em;
+  }
+
+  .role {
+    max-width: 700px;
+    margin: 0;
+    color: #aeb8c4;
+    font-size: 1.2rem;
+    line-height: 1.7;
+  }
+
+  .overview {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    gap: 60px;
+    padding: 60px 0;
+  }
+
+  .block {
+    margin-bottom: 60px;
+  }
+
+  .label {
+    color: #7f8b99;
+    font-size: .68rem;
+    font-weight: 800;
+    letter-spacing: .16em;
+  }
+
+  h2 {
+    margin: 10px 0 18px;
+    font-size: 1.8rem;
+    letter-spacing: -.03em;
+  }
+
+  .block > p {
+    max-width: 700px;
+    color: #a6b0bc;
+    line-height: 1.9;
+  }
+
+  .technology-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .technology {
+    padding: 18px;
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 10px;
+    color: #c6ced7;
+    background: rgba(255,255,255,.025);
+  }
+
+  .evidence-box {
+    padding: 24px;
+    border-left: 2px solid rgba(255,255,255,.35);
+    background: rgba(255,255,255,.025);
+  }
+
+  .evidence-box strong {
+    font-size: .75rem;
+    letter-spacing: .12em;
+  }
+
+  .evidence-box p {
+    margin: 14px 0 0;
+    color: #8f9aa7;
+    line-height: 1.8;
+    font-size: .85rem;
+  }
+
+  .side-card {
+    margin-bottom: 18px;
+    padding: 22px;
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 14px;
+    background: rgba(255,255,255,.025);
+  }
+
+  .side-card h3 {
+    margin: 10px 0 18px;
+    font-size: 1rem;
+  }
+
+  .research-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .research-list a {
+    display: grid;
+    grid-template-columns: 38px 1fr 20px;
+    gap: 8px;
+    align-items: center;
+    padding: 11px 0;
+    border-top: 1px solid rgba(255,255,255,.07);
+    color: #9da8b4;
+    text-decoration: none;
+    font-size: .72rem;
+  }
+
+  .research-list a:hover {
+    color: #e0e5ea;
+  }
+
+  .research-list a span:first-child {
+    color: #687482;
+  }
+
+  .connections {
+    padding-top: 50px;
+    border-top: 1px solid rgba(255,255,255,.1);
+  }
+
+  .connections h2 {
+    margin-top: 10px;
+  }
+
+  .connections > p {
+    max-width: 700px;
+    color: #8f9aa7;
+    line-height: 1.8;
+  }
+
+  .connection-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 28px;
+  }
+
+  .connection-grid a {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 18px;
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 12px;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .connection-grid a:hover {
+    border-color: rgba(255,255,255,.25);
+  }
+
+  .connection-grid strong {
+    font-size: .8rem;
+  }
+
+  .connection-grid span {
+    color: #75818f;
+    font-size: .68rem;
+  }
+
+  @media (max-width: 800px) {
+    .overview {
+      grid-template-columns: 1fr;
+    }
+
+    .connection-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .company-detail {
+      padding: 40px 18px 70px;
+    }
+
+    .technology-grid,
+    .connection-grid {
+      grid-template-columns: 1fr;
+    }
+
+    h1 {
+      font-size: 3.4rem;
+    }
+  }
+</style>
