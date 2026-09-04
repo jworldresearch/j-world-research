@@ -1,480 +1,746 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title = "Research Library｜J 的世界 Research";
+const description =
+  "J 的世界 Research｜Research Library · Evidence-Based Research";
 ---
 
-<BaseLayout title="Research Library｜J 的世界 Research">
+<BaseLayout title={title} description={description}>
 
-<section class="page-hero">
-  <div class="page-hero-inner">
+  <main class="research-index">
 
-    <div class="kicker">RESEARCH · LIBRARY</div>
+    <section class="hero">
 
-    <h1>Research Library</h1>
+      <div class="eyebrow">
+        RESEARCH LIBRARY
+      </div>
 
-    <p>
-      以研究事件為起點，建立技術、供應鏈與證據之間的長期研究資料庫。
-      從單一 Research Edition，逐步延伸至產業地圖、研究海報與 First Printing。
-    </p>
-
-  </div>
-</section>
-
-
-<section class="section">
-
-  <div class="section-head">
-
-    <div>
-      <div class="kicker">CURRENT EDITION</div>
-      <h2>Research Vol.01</h2>
-    </div>
-
-    <p>AI Platform Evolution</p>
-
-  </div>
-
-
-  <article class="edition-card">
-
-    <div class="edition-main">
-
-      <span class="tag">VOL.01 · FIRST EDITION</span>
-
-      <h3>AI Platform Evolution</h3>
+      <h1>
+        AI Platform<br />
+        Evolution
+      </h1>
 
       <p class="lead">
-        從台積電 2026 China Technology Symposium 出發，
-        拆解 AI Platform 從先進製程、先進封裝、
-        光互連、材料、設備到 AI Infrastructure 的演進。
+        從事件、證據、技術、供應鏈、驗證到未來觀察，
+        建立可持續更新的研究架構。
       </p>
 
-      <div class="edition-meta">
+      <div class="hero-tags">
+        <span>FACTS FIRST</span>
+        <span>EVIDENCE-BASED RESEARCH</span>
+        <span>J INSIGHT</span>
+      </div>
 
-        <span>P1–P8</span>
-        <span>Facts First</span>
-        <span>Evidence-Based Research</span>
-        <span>2026</span>
+    </section>
+
+
+    <section class="research-architecture">
+
+      <div class="section-label">
+        RESEARCH ARCHITECTURE
+      </div>
+
+      <div class="architecture">
+
+        <a href="/research/p1/" class="node">
+          <strong>P1</strong>
+          <span>Story</span>
+          <small>EVENT</small>
+        </a>
+
+        <div class="arrow">→</div>
+
+        <a href="/research/p2/" class="node">
+          <strong>P2</strong>
+          <span>Evidence</span>
+          <small>EVIDENCE</small>
+        </a>
+
+        <div class="arrow">→</div>
+
+        <a href="/research/p3/" class="node">
+          <strong>P3</strong>
+          <span>AI Platform</span>
+          <small>EVOLUTION</small>
+        </a>
+
+        <div class="arrow">→</div>
+
+        <a href="/research/p4/" class="node">
+          <strong>P4</strong>
+          <span>Technology</span>
+          <small>TECHNOLOGY</small>
+        </a>
 
       </div>
 
-    </div>
+      <div class="architecture second-row">
+
+        <a href="/research/p5/" class="node">
+          <strong>P5</strong>
+          <span>Glass Core</span>
+          <small>SUPPLY CHAIN</small>
+        </a>
+
+        <div class="arrow">→</div>
+
+        <a href="/research/p6/" class="node">
+          <strong>P6</strong>
+          <span>Investment Matrix</span>
+          <small>VALIDATION</small>
+        </a>
+
+        <div class="arrow">→</div>
+
+        <a href="/research/p7/" class="node">
+          <strong>P7</strong>
+          <span>Future Watch</span>
+          <small>FUTURE</small>
+        </a>
+
+        <div class="arrow">→</div>
+
+        <a href="/research/p8/" class="node">
+          <strong>P8</strong>
+          <span>Methodology</span>
+          <small>REFERENCE</small>
+        </a>
+
+      </div>
+
+    </section>
 
 
-    <div class="edition-actions">
+    <!-- =========================
+         RESEARCH DATABASE
+    ========================= -->
 
-      <a class="button" href="/research/vol01">
-        Explore Vol.01 →
-      </a>
+    <section class="database">
 
-      <a class="button-secondary" href="/maps">
-        Industry Maps
-      </a>
+      <div class="section-label">
+        RESEARCH DATABASE
+      </div>
 
-      <a class="button-secondary" href="/posters">
-        Posters
-      </a>
+      <div class="database-grid">
 
-      <a
-        class="button-secondary"
-        href="/downloads/J的世界_Research_Vol01_First_Printing.pdf"
-        target="_blank"
-      >
-        First Printing PDF
-      </a>
+        <a href="/companies/" class="database-card">
 
-    </div>
+          <div class="card-number">
+            01
+          </div>
 
-  </article>
+          <div>
+            <h2>Companies</h2>
 
-</section>
+            <p>
+              從研究主題進一步拆解至企業、
+              技術角色與供應鏈位置。
+            </p>
+          </div>
+
+          <span class="card-link">
+            COMPANY DATABASE →
+          </span>
+
+        </a>
 
 
-<section class="feature">
+        <a href="/maps/" class="database-card">
 
-  <div class="section">
+          <div class="card-number">
+            02
+          </div>
 
-    <div class="section-head">
+          <div>
+            <h2>Industry Maps</h2>
+
+            <p>
+              將 AI、Glass Core、CPO
+              與高速互連產業鏈視覺化。
+            </p>
+          </div>
+
+          <span class="card-link">
+            INDUSTRY MAPS →
+          </span>
+
+        </a>
+
+
+        <a href="/posters/" class="database-card">
+
+          <div class="card-number">
+            03
+          </div>
+
+          <div>
+            <h2>Posters</h2>
+
+            <p>
+              將研究內容轉化為
+              可快速閱讀的視覺研究資料。
+            </p>
+          </div>
+
+          <span class="card-link">
+            VISUAL RESEARCH →
+          </span>
+
+        </a>
+
+
+        <a href="/downloads/" class="database-card">
+
+          <div class="card-number">
+            04
+          </div>
+
+          <div>
+            <h2>First Printing</h2>
+
+            <p>
+              Research Vol.01
+              出版級 PDF 研究版本。
+            </p>
+          </div>
+
+          <span class="card-link">
+            DOWNLOAD PDF →
+          </span>
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         RESEARCH FLOW
+    ========================= -->
+
+    <section class="research-flow">
+
+      <div class="section-label">
+        RESEARCH FLOW
+      </div>
+
+      <h2>
+        From Evidence<br />
+        to Intelligence
+      </h2>
+
+      <div class="flow">
+
+        <div>
+          <strong>EVENT</strong>
+          <span>事件</span>
+        </div>
+
+        <b>→</b>
+
+        <div>
+          <strong>EVIDENCE</strong>
+          <span>證據</span>
+        </div>
+
+        <b>→</b>
+
+        <div>
+          <strong>TECHNOLOGY</strong>
+          <span>技術</span>
+        </div>
+
+        <b>→</b>
+
+        <div>
+          <strong>COMPANY</strong>
+          <span>企業</span>
+        </div>
+
+        <b>→</b>
+
+        <div>
+          <strong>SUPPLY CHAIN</strong>
+          <span>供應鏈</span>
+        </div>
+
+        <b>→</b>
+
+        <div>
+          <strong>VALIDATION</strong>
+          <span>驗證</span>
+        </div>
+
+        <b>→</b>
+
+        <div>
+          <strong>FUTURE WATCH</strong>
+          <span>未來</span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="methodology">
 
       <div>
-        <div class="kicker">VOL.01 · CONTENT MAP</div>
-        <h2>研究架構</h2>
+
+        <span class="section-label">
+          RESEARCH PRINCIPLE
+        </span>
+
+        <h2>
+          Facts First.
+        </h2>
+
       </div>
 
-      <p>Story → Evidence → Technology → Future Watch</p>
-
-    </div>
-
-
-    <div class="grid">
-
-      <article class="card">
-
-        <span class="tag">P1 · STORY</span>
-
-        <h3>從一場技術論壇開始</h3>
-
-        <p>
-          建立研究事件背景，
-          理解為什麼這場技術論壇值得成為 AI Platform
-          研究的起點。
-        </p>
-
-        <span class="page-status">
-          Reading page coming next
-        </span>
-
-      </article>
-
-
-      <article class="card">
-
-        <span class="tag">P2 · EVIDENCE</span>
-
-        <h3>先把事實與推論分開</h3>
-
-        <p>
-          將公開資訊、官方資料與產業推論分層，
-          建立後續研究的 Evidence Framework。
-        </p>
-
-        <span class="page-status">
-          Reading page coming next
-        </span>
-
-      </article>
-
-
-      <article class="card">
-
-        <span class="tag">P3 · AI PLATFORM</span>
-
-        <h3>四個訊號</h3>
-
-        <p>
-          Compute Scaling、Advanced Packaging、
-          Optical Interconnect 與 Materials & Infrastructure。
-        </p>
-
-        <span class="page-status">
-          Reading page coming next
-        </span>
-
-      </article>
-
-
-      <article class="card">
-
-        <span class="tag">P4 · TECHNOLOGY</span>
-
-        <h3>從晶片走向系統</h3>
-
-        <p>
-          建立 AI Compute → Process → Packaging →
-          Optical → Thermal / Power → System 的技術路徑。
-        </p>
-
-        <span class="page-status">
-          Reading page coming next
-        </span>
-
-      </article>
-
-
-      <article class="card">
-
-        <span class="tag">P5 · GLASS CORE</span>
-
-        <h3>Glass Core：結果，而不是起點</h3>
-
-        <p>
-          從 Glass、TGV、Core Substrate 到 Advanced Packaging，
-          觀察 Glass Core 在 AI 平台中的位置。
-        </p>
-
-        <span class="page-status">
-          Reading page coming next
-        </span>
-
-      </article>
-
-
-      <article class="card">
-
-        <span class="tag">P6 · INVESTMENT MATRIX</span>
-
-        <h3>技術節點 × 產業觀察</h3>
-
-        <p>
-          將技術路徑轉換成 Process、Packaging、
-          Optical、Materials、Infrastructure 與 System。
-        </p>
-
-        <span class="page-status">
-          Reading page coming next
-        </span>
-
-      </article>
-
-
-      <article class="card">
-
-        <span class="tag">P7 · FUTURE WATCH</span>
-
-        <h3>下一個真正值得驗證的訊號</h3>
-
-        <p>
-          從驗證、導入、量產到擴散，
-          建立長期追蹤 AI 技術落地的觀察框架。
-        </p>
-
-        <span class="page-status">
-          Reading page coming next
-        </span>
-
-      </article>
-
-
-      <article class="card">
-
-        <span class="tag">P8 · METHODOLOGY</span>
-
-        <h3>Reference & Methodology</h3>
-
-        <p>
-          Facts First、Evidence-Based Research、
-          J Insight 與研究資料來源。
-        </p>
-
-        <span class="page-status">
-          Reading page coming next
-        </span>
-
-      </article>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<section class="section">
-
-  <div class="section-head">
-
-    <div>
-      <div class="kicker">RESEARCH ECOSYSTEM</div>
-      <h2>同一份研究，四種閱讀方式</h2>
-    </div>
-
-  </div>
-
-
-  <div class="grid">
-
-    <article class="card ecosystem-card">
-
-      <span class="tag">01 · RESEARCH</span>
-
-      <h3>完整研究</h3>
-
       <p>
-        以 P1–P8 的連續閱讀方式，
-        理解完整研究邏輯與技術路徑。
+        公開資訊、研究推論與市場觀察分開呈現。
+        J Insight 僅用於標示基於公開證據形成的研究推論，
+        不將推論視為已確認事實。
       </p>
 
-      <a class="button-secondary" href="/research/vol01">
-        Open Research →
-      </a>
+    </section>
 
-    </article>
+  </main>
 
-
-    <article class="card ecosystem-card">
-
-      <span class="tag">02 · INDUSTRY MAPS</span>
-
-      <h3>產業地圖</h3>
-
-      <p>
-        將研究中的技術節點轉換成
-        AI、Glass Core 與 CPO 產業鏈。
-      </p>
-
-      <a class="button-secondary" href="/maps">
-        Explore Maps →
-      </a>
-
-    </article>
-
-
-    <article class="card ecosystem-card">
-
-      <span class="tag">03 · POSTERS</span>
-
-      <h3>研究海報</h3>
-
-      <p>
-        將複雜研究濃縮成一頁式視覺化內容，
-        適合快速閱讀與分享。
-      </p>
-
-      <a class="button-secondary" href="/posters">
-        Explore Posters →
-      </a>
-
-    </article>
-
-
-    <article class="card ecosystem-card">
-
-      <span class="tag">04 · FIRST PRINTING</span>
-
-      <h3>印刷級 PDF</h3>
-
-      <p>
-        Research Vol.01 First Printing，
-        作為完整研究的正式出版版本。
-      </p>
-
-      <a
-        class="button-secondary"
-        href="/downloads/J的世界_Research_Vol01_First_Printing.pdf"
-        target="_blank"
-      >
-        Open PDF →
-      </a>
-
-    </article>
-
-  </div>
-
-</section>
-
-
-<section class="cta">
-
-  <div class="cta-inner">
-
-    <div>
-
-      <div class="kicker">NEXT · V1.2-04B</div>
-
-      <h2>從研究目錄，進入每一頁。</h2>
-
-      <p>
-        下一階段將把 P1–P8 建立成八個獨立閱讀頁，
-        讓 Research Vol.01 真正成為可長期閱讀與引用的研究內容。
-      </p>
-
-    </div>
-
-    <a class="button" href="/research/vol01">
-      Open Vol.01 →
-    </a>
-
-  </div>
-
-</section>
+</BaseLayout>
 
 
 <style>
 
-  .edition-card {
-    border: 1px solid #344457;
-    background:
-      linear-gradient(
-        135deg,
-        rgba(28, 42, 58, .96),
-        rgba(14, 21, 30, .98)
-      );
-    border-radius: 22px;
-    padding: 38px;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 44px;
-    align-items: center;
+  .research-index {
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    padding:
+      70px 24px 100px;
   }
 
-  .edition-main h3 {
-    font-size: 34px;
-    margin: 12px 0;
+
+  .hero {
+    padding:
+      45px 0 70px;
+
+    border-bottom:
+      1px solid rgba(255,255,255,.1);
+  }
+
+  .eyebrow,
+  .section-label {
+    color: #788595;
+
+    font-size: .68rem;
+    font-weight: 800;
+
+    letter-spacing: .16em;
+  }
+
+  .hero h1 {
+    margin:
+      20px 0;
+
+    font-size:
+      clamp(3.2rem, 8vw, 6.8rem);
+
+    line-height: .92;
+
+    letter-spacing: -.06em;
   }
 
   .lead {
-    color: #b7c3d0;
-    max-width: 760px;
-    font-size: 16px;
+    max-width: 700px;
+
+    color: #a6b0bc;
+
+    font-size: 1.1rem;
+
+    line-height: 1.85;
   }
 
-  .edition-meta {
+  .hero-tags {
     display: flex;
     flex-wrap: wrap;
+
     gap: 8px;
-    margin-top: 22px;
+
+    margin-top: 28px;
   }
 
-  .edition-meta span {
-    border: 1px solid #354457;
-    border-radius: 7px;
-    padding: 5px 9px;
-    color: #b9c6d4;
-    font-size: 12px;
+  .hero-tags span {
+    padding:
+      7px 10px;
+
+    border:
+      1px solid rgba(255,255,255,.1);
+
+    border-radius: 999px;
+
+    color: #aeb8c4;
+
+    font-size: .65rem;
   }
 
-  .edition-actions {
-    min-width: 190px;
+
+  /* =========================
+     ARCHITECTURE
+  ========================= */
+
+  .research-architecture {
+    padding:
+      55px 0;
+  }
+
+  .architecture {
+    display: grid;
+
+    grid-template-columns:
+      1fr 35px 1fr 35px 1fr 35px 1fr;
+
+    align-items: stretch;
+
+    gap: 8px;
+
+    margin-top: 20px;
+  }
+
+  .architecture.second-row {
+    margin-top: 8px;
+  }
+
+  .node {
+    min-height: 110px;
+
+    padding: 18px;
+
+    border:
+      1px solid rgba(255,255,255,.1);
+
+    border-radius: 12px;
+
+    background:
+      rgba(255,255,255,.025);
+
+    color: inherit;
+
+    text-decoration: none;
+  }
+
+  .node:hover {
+    border-color:
+      rgba(255,255,255,.25);
+  }
+
+  .node strong {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #dfe5eb;
+
+    font-size: .72rem;
+  }
+
+  .node span {
+    display: block;
+
+    color: #aeb8c4;
+
+    font-size: .82rem;
+  }
+
+  .node small {
+    display: block;
+
+    margin-top: 14px;
+
+    color: #687482;
+
+    font-size: .58rem;
+
+    letter-spacing: .1em;
+  }
+
+  .arrow {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #5d6875;
+
+    font-size: .8rem;
+  }
+
+
+  /* =========================
+     DATABASE
+  ========================= */
+
+  .database {
+    padding:
+      55px 0;
+
+    border-top:
+      1px solid rgba(255,255,255,.1);
+  }
+
+  .database-grid {
+    display: grid;
+
+    grid-template-columns:
+      1fr 1fr;
+
+    gap: 12px;
+
+    margin-top: 20px;
+  }
+
+  .database-card {
+    position: relative;
+
+    min-height: 220px;
+
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    justify-content: space-between;
+
+    padding: 28px;
+
+    border:
+      1px solid rgba(255,255,255,.1);
+
+    border-radius: 16px;
+
+    background:
+      rgba(255,255,255,.025);
+
+    color: inherit;
+
+    text-decoration: none;
+
+    transition:
+      transform .2s ease,
+      border-color .2s ease;
   }
 
-  .edition-actions .button,
-  .edition-actions .button-secondary {
-    text-align: center;
-    width: 100%;
+  .database-card:hover {
+    transform: translateY(-3px);
+
+    border-color:
+      rgba(255,255,255,.25);
   }
 
-  .page-status {
-    display: inline-block;
-    margin-top: 16px;
-    color: #718093;
-    font-size: 11px;
-    letter-spacing: .06em;
+  .card-number {
+    color: #65717f;
+
+    font-size: .7rem;
+    font-weight: 700;
+
+    letter-spacing: .1em;
   }
 
-  .ecosystem-card {
-    min-height: 100%;
+  .database-card h2 {
+    margin:
+      25px 0 8px;
+
+    font-size: 1.7rem;
+
+    letter-spacing: -.035em;
   }
 
-  .ecosystem-card .button-secondary {
-    display: inline-block;
-    margin-top: 14px;
+  .database-card p {
+    max-width: 440px;
+
+    margin: 0;
+
+    color: #8f9aa7;
+
+    line-height: 1.75;
+
+    font-size: .82rem;
   }
 
-  @media(max-width:800px) {
+  .card-link {
+    margin-top: 25px;
 
-    .edition-card {
-      grid-template-columns: 1fr;
-      padding: 26px;
-      gap: 26px;
+    color: #8d99a7;
+
+    font-size: .65rem;
+    font-weight: 700;
+
+    letter-spacing: .08em;
+  }
+
+
+  /* =========================
+     FLOW
+  ========================= */
+
+  .research-flow {
+    padding:
+      55px 0;
+
+    border-top:
+      1px solid rgba(255,255,255,.1);
+  }
+
+  .research-flow h2 {
+    margin:
+      12px 0 35px;
+
+    font-size:
+      clamp(2rem, 5vw, 4rem);
+
+    line-height: 1;
+
+    letter-spacing: -.05em;
+  }
+
+  .flow {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    overflow-x: auto;
+
+    padding-bottom: 8px;
+  }
+
+  .flow div {
+    min-width: 125px;
+
+    padding: 15px;
+
+    border:
+      1px solid rgba(255,255,255,.09);
+
+    border-radius: 10px;
+  }
+
+  .flow strong {
+    display: block;
+
+    color: #cfd7df;
+
+    font-size: .62rem;
+
+    letter-spacing: .08em;
+  }
+
+  .flow span {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #707c89;
+
+    font-size: .68rem;
+  }
+
+  .flow b {
+    color: #5c6875;
+
+    font-size: .75rem;
+  }
+
+
+  /* =========================
+     METHODOLOGY
+  ========================= */
+
+  .methodology {
+    display: grid;
+
+    grid-template-columns:
+      1fr 1fr;
+
+    gap: 60px;
+
+    padding:
+      55px 0;
+
+    border-top:
+      1px solid rgba(255,255,255,.1);
+  }
+
+  .methodology h2 {
+    margin-top: 12px;
+
+    font-size: 2.4rem;
+
+    letter-spacing: -.045em;
+  }
+
+  .methodology p {
+    margin: 0;
+
+    color: #8f9aa7;
+
+    line-height: 1.9;
+
+    font-size: .86rem;
+  }
+
+
+  /* =========================
+     RESPONSIVE
+  ========================= */
+
+  @media (max-width: 900px) {
+
+    .architecture {
+      grid-template-columns:
+        1fr 25px 1fr;
     }
 
-    .edition-main h3 {
-      font-size: 28px;
+    .architecture .node:nth-of-type(4) {
+      display: none;
     }
 
-    .edition-actions {
-      min-width: 0;
+  }
+
+
+  @media (max-width: 650px) {
+
+    .research-index {
+      padding:
+        40px 18px 70px;
     }
 
-    .edition-actions .button,
-    .edition-actions .button-secondary {
-      text-align: center;
+    .architecture {
+      grid-template-columns:
+        1fr;
+    }
+
+    .architecture .arrow {
+      display: none;
+    }
+
+    .architecture .node:nth-of-type(4) {
+      display: block;
+    }
+
+    .database-grid {
+      grid-template-columns:
+        1fr;
+    }
+
+    .methodology {
+      grid-template-columns:
+        1fr;
+
+      gap: 25px;
     }
 
   }
 
 </style>
-
-</BaseLayout>
