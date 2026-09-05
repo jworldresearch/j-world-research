@@ -1,582 +1,777 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { companies } from "../data/companies";
+
+const maps = [
+  {
+    id: "ai-ecosystem",
+    name: "AI Ecosystem",
+    title: "AI 半導體製造與先進封裝平台",
+    description:
+      "從 AI Compute、先進製程、先進封裝一路延伸至系統整合，觀察 AI 平台的核心技術鏈。",
+    layers: [
+      "AI Compute",
+      "Advanced Process",
+      "CoWoS",
+      "SoIC",
+      "Advanced Packaging"
+    ]
+  },
+  {
+    id: "glass-core-ecosystem",
+    name: "Glass Core Ecosystem",
+    title: "玻璃核心與下一代封裝材料",
+    description:
+      "追蹤玻璃材料、玻璃基板、光學與先進封裝之間的技術連結。",
+    layers: [
+      "Glass",
+      "Glass Substrate",
+      "Glass Processing",
+      "Advanced Packaging",
+      "Optical"
+    ]
+  },
+  {
+    id: "cpo-ecosystem",
+    name: "CPO Ecosystem",
+    title: "Co-Packaged Optics 與高速互連",
+    description:
+      "從 AI Networking、Switch ASIC、Optical DSP 到光纖與高速互連，建立 CPO 技術路徑。",
+    layers: [
+      "Switch ASIC",
+      "Networking",
+      "Optical DSP",
+      "Optical Fiber",
+      "High-Speed Connectivity"
+    ]
+  }
+];
+
+function getCompaniesForMap(mapName: string) {
+  return companies.filter((company) =>
+    company.maps.includes(mapName)
+  );
+}
 ---
 
-<BaseLayout title="Industry Maps｜J 的世界 Research">
+<BaseLayout
+  title="Industry Maps"
+  description="J 的世界 Research｜Industry Maps"
+>
 
-<section class="page-hero">
+  <main class="maps-page">
 
-  <div class="page-hero-inner">
+    <!-- HERO -->
 
-    <div class="kicker">INDUSTRY MAPS · V1.2</div>
+    <section class="hero">
 
-    <h1>產業地圖</h1>
+      <div class="hero-inner">
 
-    <p>
-      從技術節點出發，重新理解 AI 時代的產業鏈。
-      不只看公司，而是看技術如何一路落地。
-    </p>
+        <span class="eyebrow">
+          INDUSTRY RESEARCH
+        </span>
 
-  </div>
+        <h1>
+          Industry Maps
+        </h1>
 
-</section>
-
-
-<section class="section">
-
-  <div class="section-head">
-
-    <div>
-      <div class="kicker">RESEARCH NAVIGATION</div>
-      <h2>三張核心產業地圖</h2>
-    </div>
-
-    <p>Technology → Supply Chain → Evidence</p>
-
-  </div>
-
-
-  <div class="grid">
-
-
-    <!-- AI ECOSYSTEM -->
-
-    <article class="map-card">
-
-      <span class="tag">01 · AI ECOSYSTEM</span>
-
-      <h3>AI 全產業鏈</h3>
-
-      <p class="map-lead">
-        從 AI Compute 出發，沿著先進封裝、高速互連，
-        一路延伸至 AI Server、電力與散熱。
-      </p>
-
-
-      <div class="map-flow">
-
-        <span>AI Chip</span>
-        <b>→</b>
-        <span>HBM</span>
-        <b>→</b>
-        <span>Advanced Packaging</span>
-        <b>→</b>
-        <span>Optical</span>
-        <b>→</b>
-        <span>AI Server</span>
-        <b>→</b>
-        <span>Power</span>
-        <b>→</b>
-        <span>Cooling</span>
+        <p>
+          將 Research 的技術路徑，
+          延伸成可追蹤的產業地圖，
+          再連結至企業層級資料。
+        </p>
 
       </div>
 
+    </section>
 
-      <div class="map-note">
 
-        <strong>RESEARCH CONNECTION</strong>
+    <!-- MAPS -->
 
-        <div class="link-list">
+    <section class="maps-section">
 
-          <a href="/research/p1">
-            P1 · 從一場技術論壇開始 →
-          </a>
+      <div class="maps-inner">
 
-          <a href="/research/p3">
-            P3 · 四個訊號 × AI Platform →
-          </a>
+        <div class="section-header">
 
-          <a href="/research/p4">
-            P4 · 從晶片走向系統 →
-          </a>
+          <div>
+            <span class="label">
+              TECHNOLOGY → INDUSTRY → COMPANY
+            </span>
 
-          <a href="/research/p6">
-            P6 · Investment Matrix →
-          </a>
+            <h2>
+              Three Core Ecosystems
+            </h2>
+          </div>
 
-          <a href="/research/p7">
-            P7 · Future Watch →
-          </a>
+          <p>
+            每一張 Industry Map 都與 Companies Database
+            建立雙向關聯。
+          </p>
+
+        </div>
+
+
+        <div class="map-list">
+
+          {maps.map((map, index) => {
+
+            const mapCompanies =
+              getCompaniesForMap(map.name);
+
+            return (
+
+              <article
+                id={map.id}
+                class="map-card"
+              >
+
+                <div class="map-number">
+                  {String(index + 1).padStart(2, "0")}
+                </div>
+
+
+                <div class="map-main">
+
+                  <div class="map-heading">
+
+                    <span class="map-name">
+                      {map.name}
+                    </span>
+
+                    <h3>
+                      {map.title}
+                    </h3>
+
+                    <p>
+                      {map.description}
+                    </p>
+
+                  </div>
+
+
+                  <!-- TECHNOLOGY LAYERS -->
+
+                  <div class="layer-section">
+
+                    <span class="sub-label">
+                      TECHNOLOGY LAYERS
+                    </span>
+
+                    <div class="layer-row">
+
+                      {map.layers.map((layer) => (
+                        <span class="layer">
+                          {layer}
+                        </span>
+                      ))}
+
+                    </div>
+
+                  </div>
+
+
+                  <!-- COMPANIES -->
+
+                  <div class="company-section">
+
+                    <div class="company-section-header">
+
+                      <span class="sub-label">
+                        CONNECTED COMPANIES
+                      </span>
+
+                      <span class="company-count">
+                        {mapCompanies.length}
+                      </span>
+
+                    </div>
+
+
+                    <div class="company-grid">
+
+                      {mapCompanies.map((company) => (
+
+                        <a
+                          href={`/companies/${company.slug}/`}
+                          class="company-link"
+                        >
+
+                          <div>
+
+                            <strong>
+                              {company.name}
+                            </strong>
+
+                            <span>
+                              {company.category}
+                            </span>
+
+                          </div>
+
+                          <b>
+                            →
+                          </b>
+
+                        </a>
+
+                      ))}
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </article>
+
+            );
+
+          })}
 
         </div>
 
       </div>
 
-
-      <div class="map-actions">
-
-        <a
-          class="button-secondary"
-          href="/research/p3"
-        >
-          Read Research →
-        </a>
-
-        <a
-          class="button-secondary"
-          href="/posters"
-        >
-          View Posters →
-        </a>
-
-      </div>
-
-    </article>
+    </section>
 
 
-    <!-- GLASS CORE -->
+    <!-- RESEARCH CONNECTION -->
 
-    <article class="map-card">
+    <section class="connection-section">
 
-      <span class="tag">02 · GLASS CORE</span>
+      <div class="connection-inner">
 
-      <h3>Glass Core Ecosystem</h3>
+        <span class="label">
+          RESEARCH CONNECTION
+        </span>
 
-      <p class="map-lead">
-        從玻璃材料、TGV，到 Glass Core Substrate，
-        最終連結先進封裝與 AI Accelerator。
-      </p>
+        <h2>
+          Research → Map → Company
+        </h2>
 
-
-      <div class="map-flow">
-
-        <span>Glass</span>
-        <b>→</b>
-        <span>TGV</span>
-        <b>→</b>
-        <span>Metallization</span>
-        <b>→</b>
-        <span>Glass Core</span>
-        <b>→</b>
-        <span>Advanced Packaging</span>
-        <b>→</b>
-        <span>AI Accelerator</span>
-
-      </div>
+        <p>
+          Industry Maps 不只是靜態產業圖，
+          而是把研究內容與企業資料建立可追蹤的關係。
+        </p>
 
 
-      <div class="map-note">
+        <div class="flow">
 
-        <strong>RESEARCH CONNECTION</strong>
+          <span>
+            RESEARCH
+          </span>
 
-        <div class="link-list">
+          <b>→</b>
 
-          <a href="/research/p5">
-            P5 · Glass Core →
-          </a>
+          <span>
+            TECHNOLOGY
+          </span>
 
-          <a href="/research/p4">
-            P4 · Technology Path →
-          </a>
+          <b>→</b>
 
-          <a href="/research/p6">
-            P6 · Investment Matrix →
-          </a>
+          <span>
+            INDUSTRY MAP
+          </span>
+
+          <b>→</b>
+
+          <span>
+            COMPANY
+          </span>
+
+          <b>→</b>
+
+          <span>
+            FUTURE WATCH
+          </span>
 
         </div>
 
       </div>
 
+    </section>
 
-      <div class="map-actions">
 
-        <a
-          class="button-secondary"
-          href="/research/p5"
-        >
-          Read P5 Research →
+    <!-- NAV -->
+
+    <section class="bottom-nav">
+
+      <div class="bottom-nav-inner">
+
+        <a href="/research/">
+          ← Research Library
         </a>
 
-        <a
-          class="button-secondary"
-          href="/posters"
-        >
-          View Posters →
-        </a>
-
-      </div>
-
-    </article>
-
-
-    <!-- CPO -->
-
-    <article class="map-card">
-
-      <span class="tag">03 · CPO ECOSYSTEM</span>
-
-      <h3>CPO Ecosystem</h3>
-
-      <p class="map-lead">
-        AI 資料中心高速互連，正在從純電互連逐步走向
-        Optical + Packaging 的新架構。
-      </p>
-
-
-      <div class="map-flow">
-
-        <span>AI Compute</span>
-        <b>→</b>
-        <span>Switch</span>
-        <b>→</b>
-        <span>Optical Engine</span>
-        <b>→</b>
-        <span>CPO</span>
-        <b>→</b>
-        <span>Fiber</span>
-        <b>→</b>
-        <span>Data Center</span>
-
-      </div>
-
-
-      <div class="map-note">
-
-        <strong>RESEARCH CONNECTION</strong>
-
-        <div class="link-list">
-
-          <a href="/research/p3">
-            P3 · Optical Interconnect →
-          </a>
-
-          <a href="/research/p4">
-            P4 · Technology Path →
-          </a>
-
-          <a href="/research/p6">
-            P6 · Investment Matrix →
-          </a>
-
-          <a href="/research/p7">
-            P7 · Future Watch →
-          </a>
-
-        </div>
-
-      </div>
-
-
-      <div class="map-actions">
-
-        <a
-          class="button-secondary"
-          href="/research/p3"
-        >
-          Read Research →
-        </a>
-
-        <a
-          class="button-secondary"
-          href="/posters"
-        >
-          View Posters →
+        <a href="/companies/">
+          Companies Database →
         </a>
 
       </div>
 
-    </article>
+    </section>
 
-  </div>
+  </main>
 
-</section>
 
+  <style>
 
-<section class="feature">
+    .maps-page {
+      min-height: 100vh;
+    }
 
-  <div class="section">
+    .hero,
+    .maps-section,
+    .connection-section,
+    .bottom-nav {
+      border-bottom:
+        1px solid rgba(255,255,255,.08);
+    }
 
-    <div class="section-head">
+    .hero-inner,
+    .maps-inner,
+    .connection-inner,
+    .bottom-nav-inner {
+      width:
+        min(1120px, calc(100% - 48px));
 
-      <div>
-        <div class="kicker">HOW TO READ THE MAPS</div>
-        <h2>不要只看公司，要看技術位置</h2>
-      </div>
+      margin: 0 auto;
+    }
 
-      <p>Facts First · Evidence-Based Research</p>
+    .hero-inner {
+      padding:
+        82px 0 72px;
+    }
 
-    </div>
+    .eyebrow,
+    .label,
+    .sub-label {
+      color: #718091;
 
+      font-size: .61rem;
 
-    <div class="grid">
+      font-weight: 800;
 
-      <article class="card">
+      letter-spacing: .14em;
+    }
 
-        <span class="tag">01 · TECHNOLOGY</span>
+    .hero h1 {
+      margin:
+        15px 0 20px;
 
-        <h3>技術節點</h3>
+      color: #edf2f6;
 
-        <p>
-          先確認一項技術在整個產業鏈中的位置，
-          再判斷它解決的是什麼問題。
-        </p>
+      font-size:
+        clamp(3.2rem, 8vw, 6.5rem);
 
-      </article>
+      line-height: .9;
 
+      letter-spacing: -.065em;
+    }
 
-      <article class="card">
+    .hero p {
+      max-width: 650px;
 
-        <span class="tag">02 · SUPPLY CHAIN</span>
+      margin: 0;
 
-        <h3>供應鏈位置</h3>
+      color: #7d8996;
 
-        <p>
-          從上游材料、設備，到中游製程與零組件，
-          最後連結終端應用。
-        </p>
+      font-size: .78rem;
 
-      </article>
+      line-height: 1.9;
+    }
 
+    .maps-inner {
+      padding:
+        70px 0 80px;
+    }
 
-      <article class="card">
+    .section-header {
+      display: grid;
 
-        <span class="tag">03 · EVIDENCE</span>
+      grid-template-columns:
+        1fr 1fr;
 
-        <h3>證據強度</h3>
+      gap: 60px;
 
-        <p>
-          已量產、驗證中、開發中與產業推論，
-          必須清楚區分。
-        </p>
+      align-items: end;
 
-      </article>
+      margin-bottom: 34px;
+    }
 
-    </div>
+    .section-header h2 {
+      margin:
+        11px 0 0;
 
-  </div>
+      font-size:
+        clamp(2rem, 5vw, 3.8rem);
 
-</section>
+      line-height: .95;
 
+      letter-spacing: -.055em;
+    }
 
-<section class="section">
+    .section-header p {
+      max-width: 440px;
 
-  <div class="section-head">
+      margin: 0;
 
-    <div>
-      <div class="kicker">RESEARCH ECOSYSTEM</div>
-      <h2>從地圖回到完整研究</h2>
-    </div>
+      color: #778491;
 
-  </div>
+      font-size: .68rem;
 
+      line-height: 1.9;
+    }
 
-  <div class="ecosystem-links">
+    .map-list {
+      display: flex;
 
-    <a href="/research" class="ecosystem-link">
+      flex-direction: column;
 
-      <span class="tag">RESEARCH VOL.01</span>
+      gap: 12px;
+    }
 
-      <h3>AI Platform Evolution →</h3>
+    .map-card {
+      display: grid;
 
-      <p>
-        閱讀完整 P1–P8 Research。
-      </p>
+      grid-template-columns: 80px 1fr;
 
-    </a>
+      overflow: hidden;
 
+      border:
+        1px solid rgba(255,255,255,.09);
 
-    <a href="/posters" class="ecosystem-link">
+      border-radius: 13px;
 
-      <span class="tag">POSTERS</span>
+      background:
+        rgba(255,255,255,.025);
+    }
 
-      <h3>Research Posters →</h3>
+    .map-number {
+      padding: 25px;
 
-      <p>
-        以一頁式視覺化方式閱讀研究。
-      </p>
+      color: #46525e;
 
-    </a>
+      font-size: .65rem;
 
+      font-weight: 800;
 
-    <a
-      href="/downloads/J的世界_Research_Vol01_First_Printing.pdf"
-      target="_blank"
-      class="ecosystem-link"
-    >
+      border-right:
+        1px solid rgba(255,255,255,.07);
+    }
 
-      <span class="tag">FIRST PRINTING</span>
+    .map-main {
+      padding: 28px 30px 30px;
+    }
 
-      <h3>開啟印刷級 PDF →</h3>
+    .map-name {
+      color: #718091;
 
-      <p>
-        閱讀 Research Vol.01 完整出版版本。
-      </p>
+      font-size: .58rem;
 
-    </a>
+      font-weight: 800;
 
-  </div>
+      letter-spacing: .12em;
+    }
 
-</section>
+    .map-heading h3 {
+      margin:
+        10px 0 12px;
 
+      color: #dce3e9;
 
-<section class="cta">
+      font-size:
+        clamp(1.35rem, 3vw, 2rem);
 
-  <div class="cta-inner">
+      letter-spacing: -.035em;
+    }
 
-    <div>
+    .map-heading p {
+      max-width: 760px;
 
-      <div class="kicker">NEXT</div>
+      margin: 0;
 
-      <h2>從產業地圖，走向研究。</h2>
+      color: #778491;
 
-      <p>
-        每一張地圖，都應該能回到具體的研究證據。
-      </p>
+      font-size: .68rem;
 
-    </div>
-
-    <a
-      class="button"
-      href="/research"
-    >
-      Explore Research →
-    </a>
-
-  </div>
-
-</section>
-
-
-<style>
-
-  .map-card {
-    min-height: 100%;
-  }
-
-  .map-lead {
-    color: #b8c4d1;
-    margin-top: 14px;
-  }
-
-  .map-flow {
-    margin-top: 22px;
-    padding: 18px;
-    border: 1px solid #2b394a;
-    border-radius: 12px;
-    background: #0b1119;
-
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-
-    gap: 8px;
-
-    font-size: 13px;
-    color: #d9e2ec;
-  }
-
-  .map-flow span {
-    padding: 5px 8px;
-    border: 1px solid #354457;
-    border-radius: 6px;
-    background: #121c28;
-  }
-
-  .map-flow b {
-    color: #7188a0;
-    font-weight: 600;
-  }
-
-  .map-note {
-    margin-top: 22px;
-    padding-top: 18px;
-    border-top: 1px solid #2b394a;
-  }
-
-  .map-note strong {
-    font-size: 11px;
-    letter-spacing: .12em;
-    color: #8fa6bf;
-  }
-
-  .link-list {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-top: 14px;
-  }
-
-  .link-list a {
-    color: #b9c6d4;
-    font-size: 13px;
-  }
-
-  .link-list a:hover {
-    color: #fff;
-  }
-
-  .map-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 22px;
-  }
-
-  .button-secondary {
-    display: inline-block;
-    border: 1px solid #354457;
-    border-radius: 9px;
-    padding: 9px 13px;
-    font-size: 13px;
-    font-weight: 800;
-  }
-
-  .button-secondary:hover {
-    border-color: #647184;
-  }
-
-  .ecosystem-links {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-  }
-
-  .ecosystem-link {
-    border: 1px solid #2b394a;
-    background: rgba(18,27,38,.82);
-    border-radius: 16px;
-    padding: 24px;
-    transition: .2s ease;
-  }
-
-  .ecosystem-link:hover {
-    border-color: #647184;
-    transform: translateY(-2px);
-  }
-
-  .ecosystem-link h3 {
-    margin: 12px 0 8px;
-    font-size: 20px;
-  }
-
-  .ecosystem-link p {
-    color: #9eabb9;
-  }
-
-  @media(max-width:800px) {
-
-    .map-flow {
       line-height: 1.8;
     }
 
-    .map-flow b {
-      display: none;
+    .layer-section {
+      margin-top: 28px;
+
+      padding-top: 23px;
+
+      border-top:
+        1px solid rgba(255,255,255,.07);
     }
 
-    .ecosystem-links {
-      grid-template-columns: 1fr;
+    .layer-row {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 6px;
+
+      margin-top: 12px;
     }
 
-    .map-actions {
-      flex-direction: column;
+    .layer {
+      padding:
+        7px 9px;
+
+      border-radius: 5px;
+
+      background:
+        rgba(255,255,255,.055);
+
+      color: #7f8b98;
+
+      font-size: .51rem;
     }
 
-    .map-actions a {
-      text-align: center;
+    .company-section {
+      margin-top: 27px;
+
+      padding-top: 23px;
+
+      border-top:
+        1px solid rgba(255,255,255,.07);
     }
 
-  }
+    .company-section-header {
+      display: flex;
 
-</style>
+      justify-content: space-between;
+
+      align-items: center;
+    }
+
+    .company-count {
+      color: #56636f;
+
+      font-size: .55rem;
+    }
+
+    .company-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 8px;
+
+      margin-top: 13px;
+    }
+
+    .company-link {
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      min-height: 70px;
+
+      padding: 13px;
+
+      border:
+        1px solid rgba(255,255,255,.07);
+
+      border-radius: 8px;
+
+      background:
+        rgba(255,255,255,.018);
+
+      color: inherit;
+
+      text-decoration: none;
+
+      transition:
+        border-color .2s ease,
+        background .2s ease;
+    }
+
+    .company-link:hover {
+      border-color:
+        rgba(255,255,255,.2);
+
+      background:
+        rgba(255,255,255,.035);
+    }
+
+    .company-link strong {
+      display: block;
+
+      color: #aeb8c2;
+
+      font-size: .7rem;
+    }
+
+    .company-link span {
+      display: block;
+
+      margin-top: 4px;
+
+      color: #667380;
+
+      font-size: .5rem;
+    }
+
+    .company-link b {
+      color: #667380;
+
+      font-size: .7rem;
+    }
+
+    .connection-inner {
+      padding:
+        60px 0 65px;
+    }
+
+    .connection-inner h2 {
+      margin:
+        10px 0 13px;
+
+      font-size:
+        clamp(2rem, 5vw, 3.7rem);
+
+      line-height: .95;
+
+      letter-spacing: -.055em;
+    }
+
+    .connection-inner > p {
+      max-width: 650px;
+
+      margin: 0;
+
+      color: #778491;
+
+      font-size: .68rem;
+
+      line-height: 1.9;
+    }
+
+    .flow {
+      display: flex;
+
+      align-items: center;
+
+      flex-wrap: wrap;
+
+      gap: 10px;
+
+      margin-top: 30px;
+    }
+
+    .flow span {
+      color: #707d89;
+
+      font-size: .53rem;
+
+      font-weight: 800;
+
+      letter-spacing: .08em;
+    }
+
+    .flow b {
+      color: #4f5b67;
+
+      font-size: .6rem;
+    }
+
+    .bottom-nav-inner {
+      padding:
+        25px 0;
+
+      display: flex;
+
+      justify-content: space-between;
+    }
+
+    .bottom-nav a {
+      color: #7e8b98;
+
+      font-size: .61rem;
+
+      text-decoration: none;
+    }
+
+    .bottom-nav a:hover {
+      color: #c0cad3;
+    }
+
+
+    @media (max-width: 850px) {
+
+      .section-header {
+        grid-template-columns:
+          1fr;
+
+        gap: 22px;
+      }
+
+      .company-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+    }
+
+
+    @media (max-width: 620px) {
+
+      .hero-inner,
+      .maps-inner,
+      .connection-inner,
+      .bottom-nav-inner {
+        width:
+          min(100% - 32px, 1120px);
+      }
+
+      .hero-inner {
+        padding:
+          60px 0 55px;
+      }
+
+      .maps-inner {
+        padding:
+          55px 0 60px;
+      }
+
+      .map-card {
+        grid-template-columns:
+          1fr;
+      }
+
+      .map-number {
+        border-right: none;
+
+        border-bottom:
+          1px solid rgba(255,255,255,.07);
+      }
+
+      .map-main {
+        padding:
+          23px;
+      }
+
+      .company-grid {
+        grid-template-columns:
+          1fr;
+      }
+
+      .bottom-nav-inner {
+        flex-direction:
+          column;
+
+        gap: 13px;
+      }
+
+    }
+
+  </style>
 
 </BaseLayout>
