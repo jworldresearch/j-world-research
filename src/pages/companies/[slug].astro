@@ -1,9 +1,17 @@
 ---
-import type { GetStaticPaths } from "astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { companies } from "../../data/companies";
+import {
+  companies,
+  getCompany
+} from "../../data/companies";
 
-export const getStaticPaths = (() => {
+const mapLinks: Record<string, string> = {
+  "AI Ecosystem": "/maps/#ai-ecosystem",
+  "Glass Core Ecosystem": "/maps/#glass-core-ecosystem",
+  "CPO Ecosystem": "/maps/#cpo-ecosystem"
+};
+
+export function getStaticPaths() {
   return companies.map((company) => ({
     params: {
       slug: company.slug
@@ -12,364 +20,282 @@ export const getStaticPaths = (() => {
       company
     }
   }));
-}) satisfies GetStaticPaths;
+}
 
-const { company } = Astro.props;
+const companyFromProps = Astro.props.company;
 
-const researchPages = company.researchRefs.map((ref, index) => ({
-  ref,
-  page: `P${index + 1}`
-}));
+const slug = Astro.params.slug || "";
 
-const mapPages = company.mapRefs.map((ref) => ({
-  ref,
-  name: ref
-    .replace("/maps/", "")
-    .replaceAll("-", " ")
-}));
+const company =
+  companyFromProps || getCompany(slug);
 
-const title = `${company.name}｜J 的世界 Research`;
-const description =
-  `${company.name}｜Company Layer · J 的世界 Research`;
+if (!company) {
+  throw new Error(`Company not found: ${slug}`);
+}
 ---
 
 <BaseLayout
-  title={title}
-  description={description}
+  title={`${company.name}｜Companies`}
+  description={company.description}
 >
 
-  <main class="company-detail">
+  <main class="company-page">
 
-    <a
-      href="/companies/"
-      class="back"
-    >
-      ← COMPANY DATABASE
-    </a>
+    <!-- HERO -->
 
+    <section class="company-hero">
 
-    <!-- =========================
-         HERO
-    ========================= -->
+      <div class="hero-inner">
 
-    <header class="hero">
+        <div class="hero-top">
 
-      <div class="hero-meta">
-
-        <span
-          class={`status status-${company.status.toLowerCase()}`}
-        >
-          {company.status}
-        </span>
-
-        {company.ticker && (
-          <span class="ticker">
-            {company.ticker}
+          <span class={`status ${company.status.toLowerCase()}`}>
+            {company.status}
           </span>
-        )}
+
+          {company.ticker && (
+            <span class="ticker">
+              {company.ticker}
+            </span>
+          )}
+
+        </div>
 
         <span class="category">
           {company.category}
         </span>
 
+        <h1>
+          {company.name}
+        </h1>
+
+        <h2>
+          {company.title}
+        </h2>
+
+        <p>
+          {company.description}
+        </p>
+
       </div>
 
-
-      <h1>
-        {company.name}
-      </h1>
+    </section>
 
 
-      <p class="role">
-        {company.role}
-      </p>
+    <!-- POSITION -->
 
-    </header>
+    <section class="section">
 
+      <div class="section-inner">
 
-    <!-- =========================
-         COMPANY INTELLIGENCE
-    ========================= -->
+        <span class="label">
+          RESEARCH POSITION
+        </span>
 
-    <section class="intelligence">
+        <div class="role-box">
 
-      <div class="main-column">
-
-        <section class="block">
-
-          <span class="label">
-            COMPANY INTELLIGENCE
+          <span>
+            SUPPLY CHAIN ROLE
           </span>
 
-          <h2>
-            Research Position
-          </h2>
+          <strong>
+            {company.role}
+          </strong>
 
-          <p>
-            {company.description}
-          </p>
+        </div>
 
-        </section>
+      </div>
 
-
-        <section class="block">
-
-          <span class="label">
-            TECHNOLOGY LAYER
-          </span>
-
-          <h2>
-            Core Technology
-          </h2>
+    </section>
 
 
-          <div class="technology-grid">
+    <!-- TECHNOLOGY -->
 
-            {company.technology.map((technology) => (
-              <div class="technology">
+    <section class="section">
+
+      <div class="section-inner">
+
+        <span class="label">
+          TECHNOLOGY
+        </span>
+
+        <h2>
+          Technology Layer
+        </h2>
+
+        <div class="technology-grid">
+
+          {company.technologies.map((technology, index) => (
+
+            <div class="technology-card">
+
+              <span>
+                {String(index + 1).padStart(2, "0")}
+              </span>
+
+              <strong>
                 {technology}
-              </div>
-            ))}
+              </strong>
 
-          </div>
-
-        </section>
-
-
-        <section class="block">
-
-          <span class="label">
-            EVIDENCE
-          </span>
-
-          <h2>
-            Evidence Status
-          </h2>
-
-
-          <div class="evidence-box">
-
-            <div class="evidence-status">
-              {company.evidence}
             </div>
 
-            <p>
-              本資料庫將公開資訊與研究推論分開管理。
-              J Insight 用於標示基於公開證據形成的研究推論，
-              不代表已確認的商業合作、量產或驗證結果。
-            </p>
+          ))}
 
-          </div>
-
-        </section>
-
-      </div>
-
-
-      <!-- =========================
-           CONNECTIONS
-      ========================= -->
-
-      <aside class="side-column">
-
-        <section class="side-card">
-
-          <span class="label">
-            RESEARCH
-          </span>
-
-          <h3>
-            Related Research
-          </h3>
-
-
-          <div class="research-list">
-
-            {researchPages.map((item) => (
-              <a href={item.ref}>
-
-                <span class="page-id">
-                  {item.page}
-                </span>
-
-                <span>
-                  Research
-                </span>
-
-                <span>
-                  →
-                </span>
-
-              </a>
-            ))}
-
-          </div>
-
-        </section>
-
-
-        <section class="side-card">
-
-          <span class="label">
-            INDUSTRY MAPS
-          </span>
-
-          <h3>
-            Connected Maps
-          </h3>
-
-
-          <div class="research-list">
-
-            {mapPages.map((item) => (
-              <a href={item.ref}>
-
-                <span class="page-id">
-                  MAP
-                </span>
-
-                <span>
-                  {item.name}
-                </span>
-
-                <span>
-                  →
-                </span>
-
-              </a>
-            ))}
-
-          </div>
-
-        </section>
-
-      </aside>
-
-    </section>
-
-
-    <!-- =========================
-         THREE-WAY CONNECTION
-    ========================= -->
-
-    <section class="three-way">
-
-      <span class="label">
-        THREE-WAY RESEARCH CONNECTION
-      </span>
-
-      <h2>
-        Research ↔ Company ↔ Industry
-      </h2>
-
-      <p>
-        同一研究主題可由 Research 進入企業資料，
-        再由企業回到 Industry Map，
-        建立可循環追蹤的研究資料結構。
-      </p>
-
-
-      <div class="connection-grid">
-
-        <a
-          href="/research/"
-          class="connection"
-        >
-
-          <span class="number">
-            01
-          </span>
-
-          <strong>
-            Research
-          </strong>
-
-          <small>
-            P1–P8 Evidence
-          </small>
-
-        </a>
-
-
-        <div class="connection connector">
-          →
         </div>
-
-
-        <a
-          href="/companies/"
-          class="connection"
-        >
-
-          <span class="number">
-            02
-          </span>
-
-          <strong>
-            Company
-          </strong>
-
-          <small>
-            Company Intelligence
-          </small>
-
-        </a>
-
-
-        <div class="connection connector">
-          →
-        </div>
-
-
-        <a
-          href="/maps/"
-          class="connection"
-        >
-
-          <span class="number">
-            03
-          </span>
-
-          <strong>
-            Industry Map
-          </strong>
-
-          <small>
-            Supply Chain
-          </small>
-
-        </a>
 
       </div>
 
     </section>
 
 
-    <!-- =========================
-         RESEARCH RESOURCES
-    ========================= -->
+    <!-- RESEARCH -->
 
-    <section class="resources">
+    <section class="section">
 
-      <span class="label">
-        RESEARCH RESOURCES
-      </span>
+      <div class="section-inner">
 
-      <div class="resource-grid">
+        <span class="label">
+          RESEARCH CONNECTION
+        </span>
 
-        <a href="/posters/">
-          <strong>Posters</strong>
-          <span>Visual Research</span>
+        <h2>
+          Research References
+        </h2>
+
+        <p class="section-description">
+          從企業資料回到 Vol.01 Research。
+        </p>
+
+        <div class="reference-grid">
+
+          {company.research.map((researchPage) => (
+
+            <a
+              href={`/research/${researchPage.toLowerCase()}/`}
+              class="reference-card"
+            >
+
+              <span>
+                RESEARCH
+              </span>
+
+              <strong>
+                {researchPage}
+              </strong>
+
+              <small>
+                View Research →
+              </small>
+
+            </a>
+
+          ))}
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- INDUSTRY MAP -->
+
+    <section class="section">
+
+      <div class="section-inner">
+
+        <span class="label">
+          INDUSTRY MAP CONNECTION
+        </span>
+
+        <h2>
+          Industry Maps
+        </h2>
+
+        <p class="section-description">
+          此企業在產業地圖中的位置。
+        </p>
+
+        <div class="reference-grid">
+
+          {company.maps.map((map) => (
+
+            <a
+              href={mapLinks[map] || "/maps/"}
+              class="reference-card"
+            >
+
+              <span>
+                INDUSTRY MAP
+              </span>
+
+              <strong>
+                {map}
+              </strong>
+
+              <small>
+                Open Map →
+              </small>
+
+            </a>
+
+          ))}
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- EVIDENCE -->
+
+    <section class="section evidence-section">
+
+      <div class="section-inner">
+
+        <span class="label">
+          EVIDENCE STATUS
+        </span>
+
+        <h2>
+          Evidence
+        </h2>
+
+        <div class="evidence-box">
+
+          <span>
+            SOURCE BASIS
+          </span>
+
+          <strong>
+            {company.evidence}
+          </strong>
+
+          <p>
+            本頁內容以公開資訊為基礎，
+            不將尚未公開確認的市場推論視為既定事實。
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- NAV -->
+
+    <section class="navigation">
+
+      <div class="navigation-inner">
+
+        <a href="/companies/">
+          ← Companies Database
         </a>
 
-        <a href="/downloads/">
-          <strong>First Printing</strong>
-          <span>Research PDF</span>
-        </a>
-
-        <a href="/research/">
-          <strong>Research Library</strong>
-          <span>AI Platform Evolution</span>
+        <a href="/maps/">
+          Industry Maps →
         </a>
 
       </div>
@@ -378,499 +304,391 @@ const description =
 
   </main>
 
-</BaseLayout>
 
+  <style>
 
-<style>
-
-  .company-detail {
-    max-width: 1100px;
-
-    margin: 0 auto;
-
-    padding:
-      60px 24px 100px;
-  }
-
-
-  .back {
-    display: inline-block;
-
-    margin-bottom: 48px;
-
-    color: #75818f;
-
-    font-size: .68rem;
-    font-weight: 700;
-
-    letter-spacing: .08em;
-
-    text-decoration: none;
-  }
-
-  .back:hover {
-    color: #e0e5ea;
-  }
-
-
-  /* =========================
-     HERO
-  ========================= */
-
-  .hero {
-    padding-bottom: 52px;
-
-    border-bottom:
-      1px solid rgba(255,255,255,.1);
-  }
-
-  .hero-meta {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    align-items: center;
-
-    gap: 12px;
-  }
-
-  .status {
-    font-size: .68rem;
-    font-weight: 800;
-
-    letter-spacing: .1em;
-  }
-
-  .status-core {
-    color: #d8e4ef;
-  }
-
-  .status-watch {
-    color: #c3cbd4;
-  }
-
-  .status-research {
-    color: #9da8b4;
-  }
-
-  .status-ecosystem {
-    color: #b7c1cc;
-  }
-
-  .ticker,
-  .category {
-    color: #778391;
-
-    font-size: .7rem;
-  }
-
-  .hero h1 {
-    margin:
-      24px 0 12px;
-
-    font-size:
-      clamp(3.2rem, 8vw, 6.5rem);
-
-    line-height: .94;
-
-    letter-spacing: -.06em;
-  }
-
-  .role {
-    max-width: 720px;
-
-    margin: 0;
-
-    color: #aeb8c4;
-
-    font-size: 1.15rem;
-
-    line-height: 1.75;
-  }
-
-
-  /* =========================
-     INTELLIGENCE
-  ========================= */
-
-  .intelligence {
-    display: grid;
-
-    grid-template-columns:
-      minmax(0, 1fr) 310px;
-
-    gap: 60px;
-
-    padding:
-      60px 0;
-  }
-
-  .block {
-    margin-bottom: 58px;
-  }
-
-  .label {
-    color: #788595;
-
-    font-size: .66rem;
-    font-weight: 800;
-
-    letter-spacing: .16em;
-  }
-
-  .block h2 {
-    margin:
-      10px 0 18px;
-
-    font-size: 1.8rem;
-
-    letter-spacing: -.035em;
-  }
-
-  .block > p {
-    max-width: 700px;
-
-    margin: 0;
-
-    color: #9ba6b2;
-
-    line-height: 1.9;
-  }
-
-
-  /* =========================
-     TECHNOLOGY
-  ========================= */
-
-  .technology-grid {
-    display: grid;
-
-    grid-template-columns:
-      1fr 1fr;
-
-    gap: 10px;
-  }
-
-  .technology {
-    padding: 18px;
-
-    border:
-      1px solid rgba(255,255,255,.09);
-
-    border-radius: 10px;
-
-    background:
-      rgba(255,255,255,.025);
-
-    color: #c5ced7;
-
-    font-size: .8rem;
-  }
-
-
-  /* =========================
-     EVIDENCE
-  ========================= */
-
-  .evidence-box {
-    padding: 24px;
-
-    border-left:
-      2px solid rgba(255,255,255,.3);
-
-    background:
-      rgba(255,255,255,.025);
-  }
-
-  .evidence-status {
-    color: #d6dee6;
-
-    font-size: .7rem;
-    font-weight: 800;
-
-    letter-spacing: .14em;
-  }
-
-  .evidence-box p {
-    margin:
-      14px 0 0;
-
-    color: #87929f;
-
-    font-size: .8rem;
-
-    line-height: 1.85;
-  }
-
-
-  /* =========================
-     SIDE CARDS
-  ========================= */
-
-  .side-card {
-    margin-bottom: 16px;
-
-    padding: 22px;
-
-    border:
-      1px solid rgba(255,255,255,.09);
-
-    border-radius: 14px;
-
-    background:
-      rgba(255,255,255,.025);
-  }
-
-  .side-card h3 {
-    margin:
-      10px 0 16px;
-
-    font-size: 1rem;
-  }
-
-  .research-list {
-    display: flex;
-
-    flex-direction: column;
-  }
-
-  .research-list a {
-    display: grid;
-
-    grid-template-columns:
-      38px 1fr 18px;
-
-    align-items: center;
-
-    gap: 7px;
-
-    padding:
-      11px 0;
-
-    border-top:
-      1px solid rgba(255,255,255,.06);
-
-    color: #919daa;
-
-    font-size: .7rem;
-
-    text-decoration: none;
-  }
-
-  .research-list a:hover {
-    color: #e2e7eb;
-  }
-
-  .page-id {
-    color: #626e7b;
-  }
-
-
-  /* =========================
-     THREE WAY
-  ========================= */
-
-  .three-way {
-    padding:
-      55px 0;
-
-    border-top:
-      1px solid rgba(255,255,255,.1);
-  }
-
-  .three-way h2 {
-    margin:
-      10px 0 14px;
-
-    font-size:
-      clamp(2rem, 5vw, 3.8rem);
-
-    letter-spacing: -.05em;
-  }
-
-  .three-way > p {
-    max-width: 700px;
-
-    margin: 0;
-
-    color: #8e99a6;
-
-    line-height: 1.85;
-  }
-
-  .connection-grid {
-    display: grid;
-
-    grid-template-columns:
-      1fr 40px 1fr 40px 1fr;
-
-    align-items: center;
-
-    gap: 8px;
-
-    margin-top: 30px;
-  }
-
-  .connection {
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 7px;
-
-    min-height: 120px;
-
-    padding: 20px;
-
-    border:
-      1px solid rgba(255,255,255,.1);
-
-    border-radius: 12px;
-
-    color: inherit;
-
-    text-decoration: none;
-  }
-
-  .connection:hover {
-    border-color:
-      rgba(255,255,255,.25);
-  }
-
-  .connection .number {
-    color: #626e7b;
-
-    font-size: .65rem;
-  }
-
-  .connection strong {
-    font-size: .95rem;
-  }
-
-  .connection small {
-    color: #788492;
-
-    font-size: .68rem;
-  }
-
-  .connector {
-    min-height: auto;
-
-    padding: 0;
-
-    align-items: center;
-    justify-content: center;
-
-    border: 0;
-
-    color: #65717e;
-
-    font-size: .8rem;
-  }
-
-
-  /* =========================
-     RESOURCES
-  ========================= */
-
-  .resources {
-    padding:
-      50px 0;
-
-    border-top:
-      1px solid rgba(255,255,255,.1);
-  }
-
-  .resource-grid {
-    display: grid;
-
-    grid-template-columns:
-      repeat(3, 1fr);
-
-    gap: 10px;
-
-    margin-top: 20px;
-  }
-
-  .resource-grid a {
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 6px;
-
-    padding: 18px;
-
-    border:
-      1px solid rgba(255,255,255,.09);
-
-    border-radius: 11px;
-
-    color: inherit;
-
-    text-decoration: none;
-  }
-
-  .resource-grid a:hover {
-    border-color:
-      rgba(255,255,255,.25);
-  }
-
-  .resource-grid strong {
-    font-size: .8rem;
-  }
-
-  .resource-grid span {
-    color: #707c89;
-
-    font-size: .68rem;
-  }
-
-
-  /* =========================
-     RESPONSIVE
-  ========================= */
-
-  @media (max-width: 800px) {
-
-    .intelligence {
-      grid-template-columns:
-        1fr;
+    .company-page {
+      min-height: 100vh;
     }
 
-    .connection-grid {
-      grid-template-columns:
-        1fr;
+    .company-hero,
+    .section,
+    .navigation {
+      border-bottom:
+        1px solid rgba(255,255,255,.08);
     }
 
-    .connector {
-      display: none;
+    .hero-inner,
+    .section-inner,
+    .navigation-inner {
+      width:
+        min(1000px, calc(100% - 48px));
+
+      margin: 0 auto;
     }
 
-    .resource-grid {
-      grid-template-columns:
-        1fr;
-    }
-
-  }
-
-
-  @media (max-width: 560px) {
-
-    .company-detail {
+    .hero-inner {
       padding:
-        40px 18px 70px;
+        80px 0 75px;
+    }
+
+    .hero-top {
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+    }
+
+    .status {
+      font-size: .55rem;
+
+      font-weight: 850;
+
+      letter-spacing: .13em;
+    }
+
+    .status.core {
+      color: #c2ccd5;
+    }
+
+    .status.watch {
+      color: #8997a5;
+    }
+
+    .status.research {
+      color: #6f7d8a;
+    }
+
+    .ticker {
+      color: #5e6b77;
+
+      font-size: .6rem;
+
+      font-weight: 700;
+    }
+
+    .category {
+      display: block;
+
+      margin-top: 28px;
+
+      color: #718091;
+
+      font-size: .63rem;
+    }
+
+    .hero-inner h1 {
+      margin:
+        12px 0 10px;
+
+      font-size:
+        clamp(3rem, 8vw, 6.5rem);
+
+      line-height: .9;
+
+      letter-spacing: -.065em;
+    }
+
+    .hero-inner h2 {
+      margin:
+        0 0 22px;
+
+      color: #aab5bf;
+
+      font-size:
+        clamp(1rem, 2vw, 1.35rem);
+
+      font-weight: 600;
+    }
+
+    .hero-inner p {
+      max-width: 720px;
+
+      margin: 0;
+
+      color: #7c8996;
+
+      font-size: .78rem;
+
+      line-height: 1.9;
+    }
+
+    .section-inner {
+      padding:
+        62px 0;
+    }
+
+    .label {
+      color: #718091;
+
+      font-size: .61rem;
+
+      font-weight: 800;
+
+      letter-spacing: .14em;
+    }
+
+    .section h2 {
+      margin:
+        10px 0 26px;
+
+      font-size:
+        clamp(2rem, 5vw, 3.6rem);
+
+      line-height: .95;
+
+      letter-spacing: -.05em;
+    }
+
+    .role-box {
+      padding:
+        25px;
+
+      border:
+        1px solid rgba(255,255,255,.09);
+
+      border-radius: 11px;
+
+      background:
+        rgba(255,255,255,.025);
+    }
+
+    .role-box span {
+      display: block;
+
+      color: #65727f;
+
+      font-size: .55rem;
+
+      font-weight: 800;
+
+      letter-spacing: .1em;
+    }
+
+    .role-box strong {
+      display: block;
+
+      margin-top: 9px;
+
+      color: #b8c2cb;
+
+      font-size: .9rem;
     }
 
     .technology-grid {
+      display: grid;
+
       grid-template-columns:
-        1fr;
+        repeat(2, 1fr);
+
+      gap: 10px;
     }
 
-    .hero h1 {
-      font-size: 3.5rem;
+    .technology-card {
+      min-height: 105px;
+
+      padding: 20px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: space-between;
+
+      border:
+        1px solid rgba(255,255,255,.08);
+
+      border-radius: 10px;
+
+      background:
+        rgba(255,255,255,.025);
     }
 
-  }
+    .technology-card span {
+      color: #596673;
 
-</style>
+      font-size: .55rem;
+    }
+
+    .technology-card strong {
+      color: #aeb8c2;
+
+      font-size: .76rem;
+    }
+
+    .section-description {
+      margin:
+        -10px 0 25px;
+
+      color: #788592;
+
+      font-size: .68rem;
+    }
+
+    .reference-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 10px;
+    }
+
+    .reference-card {
+      min-height: 125px;
+
+      padding: 19px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: space-between;
+
+      border:
+        1px solid rgba(255,255,255,.08);
+
+      border-radius: 10px;
+
+      background:
+        rgba(255,255,255,.025);
+
+      color: inherit;
+
+      text-decoration: none;
+
+      transition:
+        border-color .2s ease,
+        transform .2s ease;
+    }
+
+    .reference-card:hover {
+      border-color:
+        rgba(255,255,255,.22);
+
+      transform:
+        translateY(-2px);
+    }
+
+    .reference-card span {
+      color: #626f7c;
+
+      font-size: .53rem;
+
+      font-weight: 800;
+
+      letter-spacing: .1em;
+    }
+
+    .reference-card strong {
+      color: #b4bec7;
+
+      font-size: .82rem;
+    }
+
+    .reference-card small {
+      color: #687582;
+
+      font-size: .55rem;
+    }
+
+    .evidence-section {
+      background:
+        rgba(255,255,255,.012);
+    }
+
+    .evidence-box {
+      padding:
+        27px;
+
+      border:
+        1px solid rgba(255,255,255,.09);
+
+      border-radius: 11px;
+    }
+
+    .evidence-box span {
+      display: block;
+
+      color: #65727f;
+
+      font-size: .55rem;
+
+      font-weight: 800;
+
+      letter-spacing: .1em;
+    }
+
+    .evidence-box strong {
+      display: block;
+
+      margin-top: 10px;
+
+      color: #b5c0ca;
+
+      font-size: .75rem;
+
+      line-height: 1.7;
+    }
+
+    .evidence-box p {
+      margin:
+        18px 0 0;
+
+      color: #697683;
+
+      font-size: .63rem;
+
+      line-height: 1.8;
+    }
+
+    .navigation-inner {
+      padding:
+        25px 0;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 20px;
+    }
+
+    .navigation a {
+      color: #7e8b98;
+
+      font-size: .62rem;
+
+      text-decoration: none;
+    }
+
+    .navigation a:hover {
+      color: #c1cad2;
+    }
+
+
+    @media (max-width: 700px) {
+
+      .hero-inner,
+      .section-inner,
+      .navigation-inner {
+        width:
+          min(100% - 32px, 1000px);
+      }
+
+      .technology-grid,
+      .reference-grid {
+        grid-template-columns:
+          1fr;
+      }
+
+      .navigation-inner {
+        flex-direction:
+          column;
+      }
+
+    }
+
+  </style>
+
+</BaseLayout>
