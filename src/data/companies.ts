@@ -1,252 +1,272 @@
-export type CompanyStatus =
-  | "CORE"
-  | "WATCH"
-  | "RESEARCH"
-  | "ECOSYSTEM";
-
-export type Company = {
+export interface Company {
   slug: string;
   name: string;
   ticker?: string;
+  status: "CORE" | "WATCH" | "RESEARCH";
   category: string;
-  status: CompanyStatus;
-  role: string;
-  technology: string[];
-  researchRefs: string[];
-  mapRefs: string[];
-  evidence: string;
+  title: string;
   description: string;
-};
+  technologies: string[];
+  research: string[];
+  maps: string[];
+  evidence: string;
+  role: string;
+}
 
 export const companies: Company[] = [
   {
     slug: "tsmc",
     name: "台積電",
     ticker: "2330",
-    category: "Foundry / Advanced Packaging",
     status: "CORE",
-    role: "AI 半導體製造與先進封裝平台",
-    technology: [
-      "先進製程",
+    category: "Foundry / Advanced Packaging",
+    title: "先進製程與先進封裝平台",
+    description:
+      "全球晶圓代工與先進製程的重要平台企業，也是 AI 半導體供應鏈研究的核心觀察對象。",
+    technologies: [
+      "Advanced Process",
+      "2nm",
       "CoWoS",
       "SoIC",
-      "先進封裝",
-      "3D IC"
+      "Advanced Packaging"
     ],
-    researchRefs: [
-      "/research/p1",
-      "/research/p2",
-      "/research/p3",
-      "/research/p4",
-      "/research/p5",
-      "/research/p6",
-      "/research/p7",
-      "/research/p8"
+    research: [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P6",
+      "P7"
     ],
-    mapRefs: [
-      "/maps/ai-ecosystem",
-      "/maps/glass-core",
-      "/maps/cpo"
+    maps: [
+      "AI Ecosystem",
+      "CPO Ecosystem"
     ],
-    evidence: "PUBLIC",
-    description:
-      "台灣先進半導體製造與先進封裝核心企業，也是本研究 AI Platform Evolution 架構的重要觀察節點。"
+    evidence:
+      "公開公司資訊、技術論壇資料與產業公開資料",
+    role:
+      "AI Compute → Advanced Process → Advanced Packaging"
   },
 
   {
     slug: "nvidia",
     name: "NVIDIA",
     ticker: "NVDA",
-    category: "AI Compute",
     status: "CORE",
-    role: "AI 加速運算與平台架構",
-    technology: [
+    category: "AI Computing",
+    title: "AI 加速運算平台",
+    description:
+      "AI 加速運算與資料中心平台的重要企業，是 AI Platform Evolution 的核心觀察對象。",
+    technologies: [
       "GPU",
       "AI Accelerator",
       "Networking",
-      "Advanced Packaging",
-      "AI Platform"
+      "Advanced Packaging"
     ],
-    researchRefs: [
-      "/research/p1",
-      "/research/p3",
-      "/research/p4",
-      "/research/p6",
-      "/research/p7"
+    research: [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P6",
+      "P7"
     ],
-    mapRefs: [
-      "/maps/ai-ecosystem",
-      "/maps/cpo"
+    maps: [
+      "AI Ecosystem",
+      "CPO Ecosystem"
     ],
-    evidence: "PUBLIC",
-    description:
-      "AI 運算平台的重要核心企業。本研究將其視為 AI Compute 與平台演進的主要觀察對象。"
+    evidence:
+      "公開產品資訊、公司資料與產業公開資訊",
+    role:
+      "AI Compute → Networking → Advanced Packaging"
   },
 
   {
     slug: "broadcom",
     name: "Broadcom",
     ticker: "AVGO",
-    category: "Networking / Custom Silicon",
     status: "CORE",
-    role: "AI Networking 與客製化運算晶片",
-    technology: [
+    category: "Networking / Custom Silicon",
+    title: "AI Networking 與客製化運算晶片",
+    description:
+      "資料中心網路、交換器與客製化 ASIC 生態系的重要企業。",
+    technologies: [
       "Switch ASIC",
       "Networking",
       "Custom Silicon",
-      "Optical Connectivity",
-      "AI Infrastructure"
+      "Optical Connectivity"
     ],
-    researchRefs: [
-      "/research/p3",
-      "/research/p4",
-      "/research/p6",
-      "/research/p7"
+    research: [
+      "P3",
+      "P4",
+      "P6",
+      "P7"
     ],
-    mapRefs: [
-      "/maps/ai-ecosystem",
-      "/maps/cpo"
+    maps: [
+      "AI Ecosystem",
+      "CPO Ecosystem"
     ],
-    evidence: "PUBLIC",
-    description:
-      "AI 資料中心高速互連與網路基礎建設的重要觀察企業。"
+    evidence:
+      "公開產品資料與產業公開資訊",
+    role:
+      "AI Networking → Switch ASIC → Optical Connectivity"
   },
 
   {
     slug: "corning",
     name: "Corning",
-    category: "Glass / Optical",
     status: "WATCH",
-    role: "高階玻璃與光纖技術",
-    technology: [
+    category: "Glass / Optical",
+    title: "高階玻璃與光纖技術",
+    description:
+      "玻璃材料、光纖與高速光通訊相關技術的重要觀察企業。",
+    technologies: [
       "Optical Fiber",
       "Glass Technology",
       "High-Speed Connectivity",
       "Specialty Glass"
     ],
-    researchRefs: [
-      "/research/p5",
-      "/research/p7",
-      "/research/p8"
+    research: [
+      "P4",
+      "P5",
+      "P7"
     ],
-    mapRefs: [
-      "/maps/glass-core",
-      "/maps/cpo"
+    maps: [
+      "Glass Core Ecosystem",
+      "CPO Ecosystem"
     ],
-    evidence: "PUBLIC",
-    description:
-      "玻璃材料與光纖技術的重要全球企業，本研究將其列入 Glass Core 與高速光互連觀察範圍。"
+    evidence:
+      "公開產品資訊與公司公開資料",
+    role:
+      "Glass → Optical Fiber → High-Speed Connectivity"
   },
 
   {
     slug: "intel",
     name: "Intel",
-    category: "Advanced Packaging / Glass Substrate",
     status: "WATCH",
-    role: "先進封裝與玻璃基板技術觀察",
-    technology: [
+    category: "Advanced Packaging / Glass Substrate",
+    title: "先進封裝與玻璃基板技術觀察",
+    description:
+      "先進封裝與玻璃基板技術發展的重要觀察企業。",
+    technologies: [
       "Advanced Packaging",
       "Glass Substrate",
       "2.5D / 3D Packaging",
       "Chiplet"
     ],
-    researchRefs: [
-      "/research/p4",
-      "/research/p5",
-      "/research/p7",
-      "/research/p8"
+    research: [
+      "P4",
+      "P5",
+      "P7"
     ],
-    mapRefs: [
-      "/maps/glass-core",
-      "/maps/ai-ecosystem"
+    maps: [
+      "Glass Core Ecosystem",
+      "AI Ecosystem"
     ],
-    evidence: "PUBLIC",
-    description:
-      "先進封裝與玻璃基板技術的重要觀察對象，適合放入 Glass Core Technology Watch。"
+    evidence:
+      "公開技術資料與公司公開資訊",
+    role:
+      "Advanced Packaging → Glass Substrate → Chiplet"
   },
 
   {
     slug: "marvell",
     name: "Marvell Technology",
     ticker: "MRVL",
-    category: "Networking / Optical",
     status: "WATCH",
-    role: "資料中心互連與客製化晶片",
-    technology: [
+    category: "Networking / Optical",
+    title: "資料中心互連與客製化運算晶片",
+    description:
+      "資料中心互連、網路與客製化運算晶片相關技術的重要觀察企業。",
+    technologies: [
       "Custom ASIC",
       "Networking",
       "Optical DSP",
       "Data Center Connectivity"
     ],
-    researchRefs: [
-      "/research/p3",
-      "/research/p4",
-      "/research/p7"
+    research: [
+      "P3",
+      "P4",
+      "P6",
+      "P7"
     ],
-    mapRefs: [
-      "/maps/ai-ecosystem",
-      "/maps/cpo"
+    maps: [
+      "AI Ecosystem",
+      "CPO Ecosystem"
     ],
-    evidence: "PUBLIC",
-    description:
-      "資料中心網路、客製化晶片與高速互連領域的重要觀察企業。"
+    evidence:
+      "公開產品資料與公司公開資訊",
+    role:
+      "Custom Silicon → Networking → Optical Connectivity"
   },
 
   {
     slug: "ase",
     name: "日月光投控",
     ticker: "3711",
-    category: "OSAT / Advanced Packaging",
     status: "CORE",
-    role: "半導體封裝與測試",
-    technology: [
+    category: "OSAT / Advanced Packaging",
+    title: "半導體封裝與測試",
+    description:
+      "全球重要半導體封裝與測試服務企業，也是先進封裝供應鏈的重要觀察對象。",
+    technologies: [
       "OSAT",
       "Advanced Packaging",
       "Chiplet",
-      "System-in-Package",
-      "Testing"
+      "System-in-Package"
     ],
-    researchRefs: [
-      "/research/p4",
-      "/research/p5",
-      "/research/p6",
-      "/research/p7"
+    research: [
+      "P4",
+      "P6",
+      "P7"
     ],
-    mapRefs: [
-      "/maps/ai-ecosystem",
-      "/maps/glass-core"
+    maps: [
+      "AI Ecosystem"
     ],
-    evidence: "PUBLIC",
-    description:
-      "全球半導體封裝測試產業的重要企業，也是 AI 封裝供應鏈的重要觀察節點。"
+    evidence:
+      "公開公司資料與產業公開資訊",
+    role:
+      "Advanced Packaging → OSAT → System Integration"
   },
 
   {
     slug: "innolux",
     name: "群創",
     ticker: "3481",
-    category: "Glass / Display / Advanced Materials",
     status: "RESEARCH",
-    role: "玻璃與面板製造能力延伸觀察",
-    technology: [
+    category: "Glass / Display / Advanced Materials",
+    title: "玻璃與面板製造能力延伸觀察",
+    description:
+      "大型玻璃基板處理與顯示製造能力的台灣企業，作為 Glass Ecosystem 延伸研究對象。",
+    technologies: [
       "Glass Processing",
       "Display",
       "Advanced Materials",
       "Large-Area Glass"
     ],
-    researchRefs: [
-      "/research/p5",
-      "/research/p7"
+    research: [
+      "P5",
+      "P7"
     ],
-    mapRefs: [
-      "/maps/glass-core"
+    maps: [
+      "Glass Core Ecosystem"
     ],
-    evidence: "PUBLIC",
-    description:
-      "具備大型玻璃基板與面板製造能力，本研究將其列入玻璃材料與製程能力延伸觀察名單。"
+    evidence:
+      "公司公開資料與產業公開資訊",
+    role:
+      "Large-Area Glass → Processing → Advanced Materials"
   }
 ];
 
-export function getCompany(slug: string): Company | undefined {
+export function getCompany(slug: string) {
   return companies.find((company) => company.slug === slug);
+}
+
+export function getCompaniesByStatus(
+  status: Company["status"]
+) {
+  return companies.filter(
+    (company) => company.status === status
+  );
 }
