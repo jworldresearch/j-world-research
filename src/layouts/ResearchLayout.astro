@@ -145,6 +145,101 @@ const nextPage = currentIndex >= 0 && currentIndex < researchPages.length - 1
     .footer-inner strong { font-size: .72rem; } .footer-inner span { color: #626e7b; font-size: .58rem; }
     .footer-links { display: flex; gap: 18px; } .footer-links a { color: #687481; font-size: .62rem; text-decoration: none; }
 
+    /* =========================
+       V1.2-09 · CENTERED RESEARCH SYSTEM
+       P1-P8 content uses one consistent centered alignment.
+    ========================= */
+    .research-content,
+    .research-content * {
+      text-align: center;
+    }
+
+    .research-content .page-hero-inner,
+    .research-content .section,
+    .research-content .cta,
+    .research-content .cta-inner {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .research-content .page-hero-inner {
+      max-width: 900px;
+    }
+
+    .research-content .page-hero h1,
+    .research-content .page-hero p {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .research-content .page-hero p {
+      max-width: 760px;
+    }
+
+    .research-content .section-head {
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .research-content .section-head > p {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .research-content .grid {
+      justify-items: stretch;
+    }
+
+    .research-content .card,
+    .research-content .map-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .research-content .card p,
+    .research-content .map-card p {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .research-content .technology-flow,
+    .research-content .glass-flow,
+    .research-content .evidence-chain,
+    .research-content .signal-flow,
+    .research-content .scale-flow,
+    .research-content .timeline {
+      justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .research-content .technology-flow .node,
+    .research-content .glass-flow .glass-node,
+    .research-content .timeline > div {
+      text-align: center;
+    }
+
+    .research-content .cta-inner {
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .research-content .cta-inner > div {
+      width: 100%;
+    }
+
+    .research-content .button,
+    .research-content .button-secondary {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     @media (max-width: 900px) {
       .page-navigation-inner { grid-template-columns: repeat(4, 1fr); }
       .connection-grid { grid-template-columns: 1fr 1fr; }
