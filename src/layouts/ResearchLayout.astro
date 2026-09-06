@@ -351,3 +351,168 @@ const nextPage = currentIndex >= 0 && currentIndex < researchPages.length - 1
   </footer>
 </body>
 </html>
+
+<style is:global>
+  /* V1.2-10 · FINAL CENTER LOCK
+     This block is intentionally placed LAST so page-level styles and
+     responsive rules cannot move P1-P8 content back to left alignment. */
+  .research-content,
+  .research-content * {
+    text-align: center !important;
+  }
+
+  .research-content {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .research-content .page-hero,
+  .research-content .page-hero-inner,
+  .research-content .section,
+  .research-content .feature,
+  .research-content .cta,
+  .research-content .cta-inner,
+  .research-content .card,
+  .research-content .map-card {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .research-content .page-hero-inner,
+  .research-content .section,
+  .research-content .cta {
+    width: 100% !important;
+  }
+
+  .research-content .page-hero-inner {
+    max-width: 900px !important;
+  }
+
+  .research-content .page-hero h1,
+  .research-content .page-hero p,
+  .research-content .section-head,
+  .research-content .section-head > div,
+  .research-content .section-head > p,
+  .research-content .card,
+  .research-content .map-card,
+  .research-content .card h3,
+  .research-content .map-card h3,
+  .research-content .card p,
+  .research-content .map-card p,
+  .research-content li,
+  .research-content ul,
+  .research-content ol,
+  .research-content blockquote,
+  .research-content table,
+  .research-content th,
+  .research-content td {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .research-content .section-head {
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 8px !important;
+  }
+
+  .research-content .section-head > div {
+    width: 100% !important;
+  }
+
+  .research-content .section-head > p {
+    width: 100% !important;
+    max-width: 760px !important;
+  }
+
+  .research-content .page-hero p {
+    max-width: 760px !important;
+  }
+
+  .research-content .grid {
+    justify-items: center !important;
+    align-items: stretch !important;
+  }
+
+  .research-content .card,
+  .research-content .map-card {
+    align-items: center !important;
+    justify-content: flex-start !important;
+  }
+
+  .research-content .card > *,
+  .research-content .map-card > * {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .research-content .technology-flow,
+  .research-content .glass-flow,
+  .research-content .evidence-chain,
+  .research-content .signal-flow,
+  .research-content .matrix-flow,
+  .research-content .scale-flow,
+  .research-content .timeline,
+  .research-content .evidence-grid,
+  .research-content .watch-grid {
+    justify-content: center !important;
+    justify-items: center !important;
+    align-items: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .research-content .technology-flow > *,
+  .research-content .glass-flow > *,
+  .research-content .evidence-chain > *,
+  .research-content .signal-flow > *,
+  .research-content .matrix-flow > *,
+  .research-content .scale-flow > *,
+  .research-content .timeline > *,
+  .research-content .evidence-grid > *,
+  .research-content .watch-grid > * {
+    text-align: center !important;
+  }
+
+  .research-content .cta-inner {
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+  .research-content .cta-inner > div {
+    width: 100% !important;
+  }
+
+  .research-content .button,
+  .research-content .button-secondary {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+
+  @media (max-width: 700px) {
+    .research-content,
+    .research-content * {
+      text-align: center !important;
+    }
+
+    .research-content .section-head {
+      align-items: center !important;
+      flex-direction: column !important;
+    }
+
+    .research-content .section-head > p {
+      text-align: center !important;
+    }
+
+    .research-content .cta-inner {
+      align-items: center !important;
+      flex-direction: column !important;
+    }
+  }
+</style>
