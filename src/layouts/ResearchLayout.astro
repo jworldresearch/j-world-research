@@ -61,15 +61,6 @@ const nextPage = currentIndex >= 0 && currentIndex < researchPages.length - 1
     .main-nav a { color: #8995a3; font-size: .72rem; font-weight: 650; text-decoration: none; }
     .main-nav a:hover { color: #e7ecf0; }
 
-    .research-hero { border-bottom: 1px solid rgba(255,255,255,.08); }
-    .hero-inner { max-width: 1180px; margin: 0 auto; padding: 60px 24px 48px; }
-    .eyebrow, .label { color: #75818f; font-size: .66rem; font-weight: 800; letter-spacing: .16em; }
-    .hero-inner h1 { margin: 14px 0 30px; font-size: clamp(2.7rem, 7vw, 5.8rem); line-height: .96; letter-spacing: -.055em; }
-    .hero-meta { display: flex; flex-wrap: wrap; gap: 10px; }
-    .hero-meta > div { min-width: 170px; padding: 12px 15px; border: 1px solid rgba(255,255,255,.08); border-radius: 9px; background: rgba(255,255,255,.02); }
-    .hero-meta span { display: block; margin-bottom: 4px; color: #65717e; font-size: .55rem; font-weight: 800; letter-spacing: .1em; }
-    .hero-meta strong { color: #bac4ce; font-size: .72rem; font-weight: 600; }
-
     .page-navigation { border-bottom: 1px solid rgba(255,255,255,.07); }
     .page-navigation-inner { max-width: 1180px; margin: 0 auto; padding: 10px 24px; display: grid; grid-template-columns: repeat(8, 1fr); gap: 5px; }
     .page-link { min-height: 66px; padding: 9px 10px; border-radius: 7px; color: #697582; text-decoration: none; }
@@ -243,12 +234,10 @@ const nextPage = currentIndex >= 0 && currentIndex < researchPages.length - 1
     @media (max-width: 900px) {
       .page-navigation-inner { grid-template-columns: repeat(4, 1fr); }
       .connection-grid { grid-template-columns: 1fr 1fr; }
-      .research-content .feature { margin-left: -24px; margin-right: -24px; padding-left: 24px; padding-right: 24px; }
       .research-content .grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 700px) {
       .main-nav { display: none; }
-      .hero-inner { padding: 45px 18px 35px; }
       .page-navigation-inner { grid-template-columns: repeat(2, 1fr); padding: 8px 18px; }
       .research-content { padding: 42px 18px 55px; }
       .research-content .feature { margin-left: -18px; margin-right: -18px; padding-left: 18px; padding-right: 18px; }
@@ -281,18 +270,6 @@ const nextPage = currentIndex >= 0 && currentIndex < researchPages.length - 1
       </nav>
     </div>
   </header>
-
-  <section class="research-hero">
-    <div class="hero-inner">
-      <div class="eyebrow">RESEARCH · VOL.01</div>
-      <h1>{title}</h1>
-      <div class="hero-meta">
-        {signal && <div><span>SIGNAL</span><strong>{signal}</strong></div>}
-        {evidence && <div><span>EVIDENCE</span><strong>{evidence}</strong></div>}
-        {focus && <div><span>FOCUS</span><strong>{focus}</strong></div>}
-      </div>
-    </div>
-  </section>
 
   <section class="page-navigation">
     <div class="page-navigation-inner">
@@ -517,6 +494,31 @@ const nextPage = currentIndex >= 0 && currentIndex < researchPages.length - 1
     margin-left: auto !important;
     margin-right: auto !important;
     text-align: center !important;
+  }
+
+  /* V1.2-12 · HEADING WRAP FIX
+     Keep section headings comfortably readable at desktop widths without
+     the counter-intuitive "wrap on large / fit on small" behavior. */
+  .research-content h1 {
+    font-size: clamp(2rem, 4vw, 3.4rem) !important;
+    line-height: 1.08 !important;
+    max-width: 100% !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+  }
+
+  .research-content h2 {
+    font-size: clamp(1.35rem, 1.8vw, 1.8rem) !important;
+    line-height: 1.25 !important;
+    max-width: 100% !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    text-wrap: balance;
+  }
+
+  .research-content .section-head > div {
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
   @media (max-width: 700px) {
