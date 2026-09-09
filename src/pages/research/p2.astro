@@ -1,69 +1,18 @@
 ---
 import ResearchLayout from "../../layouts/ResearchLayout.astro";
 ---
-
-<ResearchLayout
-  title="先把「事實」與「推論」分開"
-  page="P2"
-  signal="Evidence"
-  evidence="Fact / Inference"
-  focus="Fact → Evidence → Inference"
->
-  <section class="page-hero">
-    <div class="page-hero-inner">
-      <div class="kicker">RESEARCH · VOL.01 · P2</div>
-      <h1>先把「事實」與「推論」分開</h1>
-      <p>Research Vol.01 的第一個原則：先建立可驗證的事實，再標示研究推論。</p>
-    </div>
-  </section>
-<section class="visual-lead visual-p2" aria-label="P2 visual summary">
-  <div class="visual-number">02</div>
-  <div class="evidence-stack">
-    <div class="evidence-box fact"><span>01</span><strong>FACT</strong><small>可以查證</small></div>
-    <div class="evidence-arrow">↓</div>
-    <div class="evidence-box evidence"><span>02</span><strong>EVIDENCE</strong><small>找到來源</small></div>
-    <div class="evidence-arrow">↓</div>
-    <div class="evidence-box inference"><span>03</span><strong>INFERENCE</strong><small>明確標示推論</small></div>
+<ResearchLayout title="Evidence｜J 的世界 Research" page="P2">
+<div class="editorial-page">
+  <div class="page-kicker">RESEARCH · VOL.01 · P2</div>
+  <div class="page-meta"><span>SIGNAL <b>Evidence</b></span><span>EVIDENCE <b>FACTS FIRST</b></span><span>FOCUS <b>AI PLATFORM EVOLUTION</b></span></div>
+  <h1 class="page-title">先把「事實」與「推論」分開</h1>
+  <p class="page-subtitle">FACTS FIRST · EVIDENCE BEFORE CONCLUSION</p>
+  <div class="editorial-rule"></div>
+  <div class="lead-grid">
+    <div class="lead-visual"><div class="visual-label">EVIDENCE FRAMEWORK</div><div class="visual-big">FACT<br><em>→</em><br>INFERENCE</div><div class="visual-lines"></div></div>
+    <aside class="lead-note"><span class="tag">EVIDENCE</span><h2>研究的第一步，是把證據的層級說清楚。</h2><p>公開資訊、公司揭露與官方技術資料優先；當證據不足時，推論必須被明確標示，而不是偽裝成事實。</p></aside>
   </div>
-  <div class="visual-caption"><span>RESEARCH RULE</span><strong>先把「知道」和「猜測」分開。</strong></div>
-</section>
-
-
-  <section class="section">
-    <div class="section-head">
-      <div>
-        <div class="kicker">FACT</div>
-        <h2>先進製程持續演進</h2>
-      </div>
-    </div>
-    <article class="card">
-      <p>台積電官方 2026 Technology Symposium 涵蓋 3nm、2nm、A16、A14 及後續技術。</p>
-    </article>
-  </section>
-
-  <section class="feature">
-    <div class="section">
-      <div class="section-head">
-        <div>
-          <div class="kicker">FACT</div>
-          <h2>3DFabric 持續擴展</h2>
-        </div>
-      </div>
-      <article class="card">
-        <p>官方議程涵蓋 SoIC、InFO、CoWoS 與 SoW 等先進封裝技術。</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-head">
-      <div>
-        <div class="kicker">INFERENCE</div>
-        <h2>AI 平台瓶頸正在系統化</h2>
-      </div>
-    </div>
-    <article class="card">
-      <p>當製程與封裝同步演進，互連、材料、散熱與電力的重要性也必須放進同一研究框架。</p>
-    </article>
-  </section>
+  <section class="section"><div class="section-head"><div><div class="eyebrow">FACT</div><h2>先進製程持續演進</h2></div></div><div class="editorial-card"><div class="num">FACT</div><h3>3nm · 2nm · A16 · A14</h3><p>台積電官方 2026 Technology Symposium 涵蓋 3nm、2nm、A16、A14 及後續技術。</p></div></section><section class="section"><div class="section-head"><div><div class="eyebrow">FACT</div><h2>3DFabric 持續擴展</h2></div></div><div class="editorial-card"><div class="num">FACT</div><h3>SoIC · InFO · CoWoS · SoW</h3><p>官方議程涵蓋多項先進封裝技術。</p></div></section><section class="section"><div class="section-head"><div><div class="eyebrow">INFERENCE</div><h2>AI 平台瓶頸正在系統化</h2></div></div><div class="editorial-card gold"><div class="num">INFERENCE</div><h3>瓶頸不再只有晶片</h3><p>當製程與封裝同步演進，互連、材料、散熱與電力的重要性也必須放進同一研究框架。</p></div></section>
+  
+</div>
 </ResearchLayout>
