@@ -2,14 +2,15 @@
 interface Props { title?: string; page: string; section: string; }
 const { title = "J 的世界 Research", page, section } = Astro.props;
 const pages = [
-  { id:"P1", label:"Story", href:"/research/p1" },
-  { id:"P2", label:"Evidence", href:"/research/p2" },
-  { id:"P3", label:"AI Platform", href:"/research/p3" },
-  { id:"P4", label:"Technology", href:"/research/p4" },
-  { id:"P5", label:"Glass Core", href:"/research/p5" },
-  { id:"P6", label:"Investment Matrix", href:"/research/p6" },
-  { id:"P7", label:"Future Watch", href:"/research/p7" },
-  { id:"P8", label:"Methodology", href:"/research/p8" },
+  { id:"P1", label:"Cover", href:"/research/p1" },
+  { id:"P2", label:"Editor's Note", href:"/research/p2" },
+  { id:"P3", label:"Four Signals", href:"/research/p3" },
+  { id:"P4", label:"AI Platform", href:"/research/p4" },
+  { id:"P5", label:"Bottleneck", href:"/research/p5" },
+  { id:"P6", label:"Glass Core", href:"/research/p6" },
+  { id:"P7", label:"Investment Matrix", href:"/research/p7" },
+  { id:"P8", label:"Future Watch", href:"/research/p8" },
+  { id:"P9", label:"Methodology", href:"/research/p9" },
 ];
 const index = pages.findIndex((p) => p.id === page);
 const prev = index > 0 ? pages[index - 1] : null;
