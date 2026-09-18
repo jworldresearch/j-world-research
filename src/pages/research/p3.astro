@@ -2,17 +2,72 @@
 import ResearchLayout from "../../layouts/ResearchLayout.astro";
 ---
 <ResearchLayout title="P3｜Four Signals｜J 的世界 Research" page="P3" section="FOUR SIGNALS">
-<div class="poster">
- <div class="poster-inner">
-  <div class="poster-top"><div class="poster-kicker">P2 · FOUR SIGNALS</div><div class="poster-title">四個訊號</div><div class="poster-sub">下一代 AI Platform，不是一項技術的故事</div><p class="poster-copy">從台積電技術論壇所呈現的技術路線，可以把觀察焦點整理成四個互相連動的訊號。它們共同構成平台演進的骨架。</p></div>
-  <div class="poster-grid">
-   <article class="poster-tile dark"><div class="num">01</div><h3>COMPUTE SCALING</h3><p>製程節點持續演進，運算密度與能源效率同步被要求提升。</p></article>
-   <article class="poster-tile"><div class="num">02</div><h3>ADVANCED PACKAGING</h3><p>CoWoS、SoIC、3DFabric 等技術，把更多運算與記憶體整合到系統裡。</p></article>
-   <article class="poster-tile"><div class="num">03</div><h3>OPTICAL INTERCONNECT</h3><p>當資料傳輸量持續增加，光互連成為系統架構的重要一環。</p></article>
-   <article class="poster-tile"><div class="num">04</div><h3>MATERIALS & INFRASTRUCTURE</h3><p>材料、供電、散熱與製造能力，逐漸從配角變成平台的一部分。</p></article>
+<div class="signals-page">
+  <header class="signals-head">
+    <div>
+      <div class="signals-kicker">STORY · FOUR SIGNALS</div>
+      <h1>四個關鍵訊號，開啟下一代 AI Platform 的序幕</h1>
+      <p>論壇中，台積電釋出四大關鍵訊號，從需求、製程、封裝到產能，勾勒出下一階段平台演化的完整輪廓。</p>
+    </div>
+    <div class="signal-mark" aria-hidden="true"><span>04</span><small>SIGNALS</small></div>
+  </header>
+
+  <div class="signals-intro">
+    <span>我們先不急著下結論。</span>
+    <strong>先把這四個訊號，一個一個聊清楚。</strong>
   </div>
-  <div class="poster-footer"><strong>THE FOUR SIGNALS</strong><span>Compute → Package → Connect → Enable</span><span>P2</span></div>
- </div>
+
+  <section class="signal-cards">
+    <article class="signal-card blue">
+      <div class="signal-number">01</div>
+      <div class="signal-icon">↗</div>
+      <div class="signal-tag">需求訊號</div>
+      <h2>AI / HPC 需求持續爆發</h2>
+      <p>大型模型與高效能運算推動晶片需求大幅成長，算力競賽進入新階段。</p>
+      <div class="bottom-line"><span>我們在看什麼？</span><b>需求是不是正在變成長期的結構性力量？</b></div>
+    </article>
+
+    <article class="signal-card green">
+      <div class="signal-number">02</div>
+      <div class="signal-icon">▣</div>
+      <div class="signal-tag">製程訊號</div>
+      <h2>2 奈米家族持續推進</h2>
+      <p>N2、N2P、N2X 等節點陸續導入，效能與能效再升級。</p>
+      <div class="bottom-line"><span>我們在看什麼？</span><b>新節點如何接住持續增加的算力需求？</b></div>
+    </article>
+
+    <article class="signal-card orange">
+      <div class="signal-number">03</div>
+      <div class="signal-icon">▤</div>
+      <div class="signal-tag">封裝訊號</div>
+      <h2>先進封裝平台持續演化</h2>
+      <p>CoWoS、SoIC、SoW 等技術擴展，打造更高整合、更多元的平台架構。</p>
+      <div class="bottom-line"><span>我們在看什麼？</span><b>封裝，為什麼越來越像整個 AI 系統的一部分？</b></div>
+    </article>
+
+    <article class="signal-card purple">
+      <div class="signal-number">04</div>
+      <div class="signal-icon">◎</div>
+      <div class="signal-tag">產能訊號</div>
+      <h2>全球產能同步擴張</h2>
+      <p>台灣、美國、日本、歐洲多地擴廠，強化供應韌性與全球布局。</p>
+      <div class="bottom-line"><span>我們在看什麼？</span><b>當需求往全球走，產業的版圖會怎麼跟著改變？</b></div>
+    </article>
+  </section>
+
+  <footer class="signals-bottom">
+    <div><small>J 的觀察</small><strong>四個訊號不是四件分開的事。</strong></div>
+    <p>需求往上 → 製程往前 → 封裝往系統走 → 產能跟著全球化。<br/>接下來，我們就沿著這條線，繼續往下聊。</p>
+  </footer>
 </div>
-<div class="note"><strong>J 的觀察</strong>真正值得追蹤的，不是單一技術「有沒有出現」，而是四個訊號是否開始同時進入驗證、導入、量產與擴散。</div>
+
+<style>
+.signals-page{border:1px solid #d2d8de;background:#fbfaf7;padding:36px 40px 30px;position:relative;overflow:hidden}.signals-page:after{content:"J 的世界 Research";position:absolute;right:-20px;bottom:70px;transform:rotate(-30deg);font-family:Georgia,serif;font-size:5rem;font-weight:700;color:#071a33;opacity:.025;pointer-events:none}
+.signals-head{display:grid;grid-template-columns:1fr 150px;gap:30px;align-items:center;border-bottom:1px solid #cfd5dc;padding-bottom:25px}.signals-kicker{font-size:10px;letter-spacing:.18em;color:#b98932;font-weight:800}.signals-head h1{margin:10px 0 0;color:#071a33;font-family:Georgia,"Times New Roman",serif;font-size:clamp(2rem,4vw,3.3rem);line-height:1.16;letter-spacing:-.025em}.signals-head p{margin:13px 0 0;max-width:820px;color:#425265;font-size:1rem;line-height:1.8}.signal-mark{width:118px;height:118px;border:1px solid #b98932;border-radius:50%;display:grid;place-content:center;text-align:center;justify-self:end;box-shadow:0 0 0 12px rgba(185,137,50,.045),0 0 0 30px rgba(7,26,51,.025)}.signal-mark span{font-family:Georgia,serif;color:#071a33;font-size:2.2rem;font-weight:700;line-height:1}.signal-mark small{margin-top:6px;color:#b98932;letter-spacing:.16em;font-size:8px;font-weight:800}
+.signals-intro{display:flex;align-items:baseline;gap:12px;padding:22px 0 17px}.signals-intro span{color:#697788;font-size:.92rem}.signals-intro strong{color:#071a33;font-size:1.08rem}
+.signal-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}.signal-card{background:#fff;border:1px solid #ccd4dc;padding:21px 22px 19px;position:relative;min-height:280px}.signal-card:before{content:"";position:absolute;left:0;top:0;width:5px;height:100%;background:#8ba3bc}.signal-card.green:before{background:#7d9d83}.signal-card.orange:before{background:#c49a5a}.signal-card.purple:before{background:#8e83a6}.signal-number{position:absolute;right:18px;top:13px;font-size:2rem;line-height:1;font-weight:800;color:#d8dde2}.signal-icon{width:43px;height:43px;border-radius:50%;display:grid;place-items:center;background:#0b1d35;color:#fff;font-size:20px;margin-bottom:13px}.green .signal-icon{background:#597d63}.orange .signal-icon{background:#a47738}.purple .signal-icon{background:#75698e}.signal-tag{font-size:9px;letter-spacing:.14em;font-weight:800;color:#b98932;margin-bottom:5px}.signal-card h2{margin:0 40px 8px 0;color:#071a33;font-size:1.18rem;line-height:1.4}.signal-card p{margin:0;color:#536273;font-size:.92rem;line-height:1.72;max-width:570px}.bottom-line{margin-top:18px;padding-top:12px;border-top:1px dashed #cdd4db}.bottom-line span{display:block;color:#9a6b25;font-size:9px;letter-spacing:.12em;font-weight:800;margin-bottom:4px}.bottom-line b{display:block;color:#26374a;font-size:.82rem;line-height:1.55}
+.signals-bottom{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;margin-top:22px;padding-top:18px;border-top:1px solid #cfd5dc;align-items:start}.signals-bottom small{display:block;color:#b98932;font-size:9px;letter-spacing:.14em;font-weight:800}.signals-bottom strong{display:block;color:#071a33;font-size:1.05rem;margin-top:4px}.signals-bottom p{margin:0;color:#5a6878;font-size:.88rem;line-height:1.75}
+@media(max-width:760px){.signals-page{padding:27px 23px}.signals-head{grid-template-columns:1fr}.signal-mark{justify-self:start;width:92px;height:92px}.signal-cards,.signals-bottom{grid-template-columns:1fr}}
+@media(max-width:560px){.signals-page{padding:22px 18px}.signals-head h1{font-size:2.1rem}.signals-intro{display:block}.signals-intro strong{display:block;margin-top:4px}.signal-card{padding:19px 18px;min-height:0}}
+</style>
 </ResearchLayout>
