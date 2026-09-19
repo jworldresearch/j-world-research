@@ -1,29 +1,36 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = 'P1｜Cover｜J 的世界 Research';
 ---
-
-<BaseLayout title="P1｜Editorial｜J 的世界 Research">
-  <main class="poster-page">
-    <img class="poster" src="/research-assets/P1-editorial-vertical.png" alt="J 的世界 Research P1 Editorial" />
-    <nav class="page-nav" aria-label="Research navigation">
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+</head>
+<body>
+  <main class="page">
+    <img class="poster" src="/research-assets/P1-editorial-vertical.png" alt="J 的世界 Research Vol.01 P1 Cover" />
+    <nav class="page-nav" aria-label="Page navigation">
       <a class="muted" href="/">← Home</a>
-      <a href="/research/p2">P2 →</a>
+      <a href="/research/p2">P2 · Editor's Note →</a>
     </nav>
   </main>
-</BaseLayout>
+</body>
+</html>
 
 <style is:global>
-  html, body { background:#fbfbfa !important; }
-  .poster-page {
-    width:100vw !important;
-    max-width:none !important;
-    margin-left:calc(50% - 50vw) !important;
-    margin-right:calc(50% - 50vw) !important;
-    padding:0 !important;
-    background:#fbfbfa;
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #fbfbfa; }
+  body { overflow-x: hidden; }
+  .page { width: 100%; margin: 0; padding: 0; }
+  .poster { display: block; width: 100vw; max-width: none; height: auto; margin: 0; }
+  .page-nav {
+    width: 100vw; display:flex; justify-content:space-between; gap:20px;
+    padding:20px 5vw 28px; background:#fbfbfa; border-top:1px solid #dddcd8;
+    font-family:Arial,"Noto Sans TC",sans-serif;
   }
-  .poster { display:block; width:100% !important; max-width:none !important; height:auto; margin:0 !important; }
-  .page-nav { display:flex; justify-content:space-between; padding:18px 3vw 26px; background:#fbfbfa; border-top:1px solid #e3e3e0; }
   .page-nav a { color:#10233f; text-decoration:none; font-weight:700; }
-  .page-nav .muted { color:#6d7278; }
+  .page-nav .muted { color:#777; }
+  @media(max-width:600px){ .page-nav{flex-direction:column;align-items:center;text-align:center;} }
 </style>
