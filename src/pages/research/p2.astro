@@ -2,93 +2,89 @@
 import ResearchLayout from "../../layouts/ResearchLayout.astro";
 ---
 <ResearchLayout title="P2｜Editor's Note｜J 的世界 Research" page="P2" section="EDITOR'S NOTE">
-<div class="editorial-page">
-  <div class="topline">
-    <span>J 的世界 Research</span>
-    <span>Vol.1｜創刊號</span>
-  </div>
+  <article class="poster-page" aria-label="J 的世界 Research P2｜Editor's Note">
+    <div class="poster-wrap">
+      <img
+        src="/research-assets/P2-editorial-poster.png"
+        alt="J 的世界 Research｜EDITORIAL｜為什麼想聊台積電 6/25 技術論壇？"
+        class="poster"
+      />
 
-  <div class="hero-grid">
-    <section class="hero-copy">
-      <div class="display-word">EDITORIAL</div>
-      <p class="gold-title">為什麼我們研究這件事？</p>
-      <h1>為什麼想聊台積電<br/>6/25 技術論壇？</h1>
-      <p class="hero-sub">因為那天，看到的不只是技術，而是一個正在演化的未來。</p>
+      <!-- 保留網站導覽：左上角品牌可回首頁 -->
+      <a class="brand-link" href="/" aria-label="回到 J 的世界 Research 首頁"></a>
 
-      <div class="conversation">
-        <p>我一直覺得，投資最怕的不是看錯方向，而是看錯時間。</p>
-        <p>科技產業的週期很長，市場的波動卻很短。</p>
-        <p>如果我們只能追逐消息，那永遠只能被市場牽著走；但如果我們能理解技術的進化、產業的結構，就能在週期轉折前，看到下一個十年的輪廓。</p>
-      </div>
-
-      <div class="reason-line">這就是《J 的世界 Research》存在的理由。</div>
-    </section>
-
-    <div class="hero-visual" aria-label="AI platform network visual">
-      <div class="globe"><span>AI</span><b>PLATFORM</b></div>
-      <i class="arc a1"></i><i class="arc a2"></i><i class="arc a3"></i>
-      <i class="node n1"></i><i class="node n2"></i><i class="node n3"></i><i class="node n4"></i>
-      <div class="visual-label">TECHNOLOGY<br/><b>×</b><br/>INDUSTRY</div>
+      <!-- 網站頁碼以 P2 為準；海報原稿左下角 P1 在網頁版覆蓋為 P2 -->
+      <div class="page-number" aria-label="Page 2">P2</div>
     </div>
-  </div>
-
-  <div class="lower-grid">
-    <section class="left-lower">
-      <div class="facts-quote">
-        <span>“</span>
-        <div>
-          <strong>Facts First.</strong>
-          <strong>Evidence Before Conclusion.</strong>
-          <p>我們不追消息，<br/>我們解讀趨勢。</p>
-        </div>
-      </div>
-
-      <div class="forum-lead">
-        <span class="eyebrow">從這場論壇開始聊</span>
-        <p>2026 年 6 月 25 日，台積電在上海舉辦技術論壇。</p>
-        <p>真正讓我們停下來看的，不只是某一項新技術，而是製程、封裝、需求與產能，開始被放在同一張圖裡。</p>
-        <div class="four-signal-line">
-          <b>這場論壇，提出了四個關鍵訊號：</b>
-          <span>AI / HPC 需求</span><em>｜</em><span>2 奈米家族</span><em>｜</em><span>先進封裝技術</span><em>｜</em><span>全球產能擴張</span>
-        </div>
-      </div>
-    </section>
-
-    <aside class="editor-note">
-      <div class="note-head"><span>Editor's Note</span><small>WHY WE START HERE</small></div>
-      <div class="note-body">
-        <p>在這個充滿訊息的時代，<br/><strong>真正稀缺的，不是資訊，<br/>而是能夠理解資訊的能力。</strong></p>
-        <hr/>
-        <p>我們希望，<br/>這本刊物能成為一個起點：</p>
-        <p class="together">一起學習、一起思考、<br/>一起看見更大的世界。</p>
-        <div class="signature">— J 的世界研究團隊</div>
-      </div>
-      <div class="next-tease">
-        <small>接下來</small>
-        <strong>我們就從這四個訊號開始聊。</strong>
-        <span>→</span>
-      </div>
-    </aside>
-  </div>
-
-  <div class="bottom-banner">
-    <div>
-      <b>這不是一本講題材的刊物。</b>
-      <span>而是一本試圖理解產業、技術與投資之間關係的研究誌。</span>
-    </div>
-    <div class="banner-right">
-      <b>我們不預測未來，</b>
-      <span>我們試圖理解未來的形成過程。</span>
-    </div>
-  </div>
-
-  <div class="highlight">
-    <span>“</span>
-    <div><small>HIGHLIGHT QUOTE</small><strong>不是追逐消息，<br/>而是理解變化。</strong></div>
-  </div>
-</div>
+  </article>
+</ResearchLayout>
 
 <style>
-.editorial-page{border:1px solid #d1d6dc;background:#fbfaf7;padding:30px 38px 0;position:relative;overflow:hidden;color:#26384c}.topline{display:flex;justify-content:space-between;border-bottom:1px solid #ccd3da;padding-bottom:10px;color:#697786;font-size:10px;letter-spacing:.12em;font-weight:700}.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:34px;padding:27px 0 25px;border-bottom:1px solid #d5d9dd}.display-word{font-family:Georgia,"Times New Roman",serif;font-size:clamp(4rem,7vw,6.7rem);line-height:.78;letter-spacing:-.06em;color:#0b1d35;font-weight:700}.gold-title{margin:20px 0 8px;color:#b98932;font-weight:800;font-size:1rem}.hero-copy h1{margin:0;font-family:Georgia,"Times New Roman",serif;font-size:clamp(2rem,3.5vw,3.25rem);line-height:1.18;letter-spacing:-.035em;color:#0b1d35}.hero-sub{margin:13px 0 0;max-width:650px;color:#9a6b25;font-size:1.08rem;line-height:1.65;font-weight:700}.conversation{margin-top:22px;max-width:690px}.conversation p{margin:0 0 10px;font-size:1rem;line-height:1.85;color:#3f5061}.reason-line{margin-top:17px;padding-left:13px;border-left:3px solid #b98932;color:#0b1d35;font-weight:800;font-size:1.05rem}.hero-visual{min-height:350px;position:relative;display:grid;place-items:center;background:radial-gradient(circle at 50% 50%,rgba(17,50,85,.12),transparent 55%)}.globe{width:205px;height:205px;border-radius:50%;border:1px solid #b98932;display:grid;place-content:center;text-align:center;background:radial-gradient(circle at 35% 30%,#fff,#edf1f4 65%,#dbe2e8);box-shadow:0 0 0 16px rgba(185,137,50,.05),0 0 0 50px rgba(11,29,53,.035);z-index:2;color:#0b1d35}.globe span{font-family:Georgia,serif;font-size:3rem;font-weight:700;line-height:1}.globe b{font-size:.68rem;letter-spacing:.2em;margin-top:6px}.arc{position:absolute;border:1px solid rgba(11,29,53,.18);border-radius:50%}.a1{width:340px;height:145px;transform:rotate(28deg)}.a2{width:300px;height:235px;transform:rotate(-24deg);border-color:rgba(185,137,50,.38)}.a3{width:240px;height:310px;transform:rotate(58deg);border-color:rgba(11,29,53,.1)}.node{position:absolute;width:8px;height:8px;background:#b98932;border-radius:50%;z-index:3}.n1{top:18%;right:16%}.n2{bottom:16%;left:10%}.n3{top:47%;right:3%}.n4{bottom:27%;right:24%}.visual-label{position:absolute;bottom:5px;right:0;text-align:right;font-size:8px;letter-spacing:.2em;color:#87929d;line-height:1.6}.visual-label b{color:#b98932}.lower-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:32px;padding:24px 0 20px}.facts-quote{display:flex;gap:9px;align-items:flex-start;margin-bottom:22px}.facts-quote>span{font-family:Georgia,serif;color:#b98932;font-size:4.6rem;line-height:.7}.facts-quote strong{display:block;color:#0b1d35;font-size:1.05rem;line-height:1.55}.facts-quote p{margin:6px 0 0;color:#536274;font-size:.93rem;line-height:1.65}.eyebrow{display:block;color:#b98932;font-size:10px;letter-spacing:.14em;font-weight:800;margin-bottom:9px}.forum-lead p{margin:0 0 9px;font-size:.96rem;line-height:1.8;color:#445466}.four-signal-line{margin-top:16px;padding:13px 0;border-top:1px solid #cfd5db;border-bottom:1px solid #cfd5db;line-height:1.8}.four-signal-line b{display:block;color:#0b1d35;font-size:.98rem;margin-bottom:4px}.four-signal-line span{font-size:.84rem;font-weight:700;color:#445466}.four-signal-line em{font-style:normal;color:#b98932;padding:0 3px}.editor-note{border-left:1px solid #d1d6dc;padding-left:28px}.note-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;background:#0b1d35;color:#fff;padding:10px 13px}.note-head span{font-family:Georgia,serif;font-size:1.1rem}.note-head small{font-size:8px;letter-spacing:.15em;color:#d9c18e}.note-body{background:#f0eee8;padding:19px 20px 16px}.note-body p{margin:0;color:#4a5868;font-size:.92rem;line-height:1.75}.note-body strong{color:#0b1d35}.note-body hr{border:0;border-top:1px solid #d0cec7;margin:14px 0}.together{font-weight:800;color:#0b1d35!important}.signature{margin-top:13px;color:#7b8792;font-family:Georgia,serif;font-style:italic;font-size:.9rem}.next-tease{margin-top:12px;padding:14px 15px;background:#fff;border:1px solid #d5d9dd;position:relative}.next-tease small{display:block;color:#b98932;letter-spacing:.14em;font-size:8px;font-weight:800}.next-tease strong{display:block;color:#0b1d35;font-size:.93rem;line-height:1.5;margin-top:3px;padding-right:30px}.next-tease span{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:1.5rem;color:#b98932}.bottom-banner{display:grid;grid-template-columns:1.2fr .8fr;background:#0b1d35;color:#fff;margin:0 -38px;padding:18px 38px;gap:25px}.bottom-banner b{display:block;font-size:.95rem;margin-bottom:3px}.bottom-banner span{display:block;color:#cbd3db;font-size:.8rem;line-height:1.6}.banner-right{border-left:1px solid rgba(255,255,255,.18);padding-left:25px}.banner-right b{color:#e2c98f}.highlight{position:absolute;right:24px;bottom:8px;display:flex;gap:5px;align-items:flex-start;transform:translateY(50%);opacity:.9}.highlight>span{font-family:Georgia,serif;font-size:3.3rem;color:#b98932;line-height:.7}.highlight small{font-size:7px;letter-spacing:.16em;color:#b98932}.highlight strong{display:block;color:#fff;font-size:.8rem;line-height:1.4}@media(max-width:850px){.hero-grid,.lower-grid{grid-template-columns:1fr}.hero-visual{min-height:280px}.editor-note{border-left:0;border-top:1px solid #d1d6dc;padding:24px 0 0}.bottom-banner{margin:0 -38px}.highlight{display:none}}@media(max-width:560px){.editorial-page{padding:22px 18px 0}.topline{font-size:9px}.display-word{font-size:3.8rem}.hero-copy h1{font-size:2rem}.hero-sub{font-size:.98rem}.globe{width:165px;height:165px}.arc.a1{width:270px}.arc.a2{width:250px}.arc.a3{width:210px}.bottom-banner{margin:0 -18px;padding:17px 18px;grid-template-columns:1fr}.banner-right{border-left:0;border-top:1px solid rgba(255,255,255,.18);padding:12px 0 0}}
+  .poster-page {
+    width: 100%;
+    margin: 0;
+  }
+
+  .poster-wrap {
+    position: relative;
+    width: 100%;
+    line-height: 0;
+    background: #fff;
+    overflow: hidden;
+  }
+
+  .poster {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    image-rendering: auto;
+  }
+
+  /* 左上角「J 的世界 Research」保持為真正可點擊的網站連結 */
+  .brand-link {
+    position: absolute;
+    left: 2.7%;
+    top: 1.25%;
+    width: 14.5%;
+    height: 3.3%;
+    display: block;
+    z-index: 5;
+  }
+
+  /* 僅修正網頁頁碼，不改動海報本身 */
+  .page-number {
+    position: absolute;
+    left: 2.05%;
+    bottom: 2.65%;
+    width: 2.65%;
+    aspect-ratio: 1.42 / 1;
+    min-width: 28px;
+    min-height: 20px;
+    display: grid;
+    place-items: center;
+    background: #0b2747;
+    color: #fff;
+    font: 700 clamp(9px, 0.95vw, 18px)/1 Arial, Helvetica, sans-serif;
+    letter-spacing: .02em;
+    z-index: 6;
+  }
+
+  @media (max-width: 700px) {
+    .brand-link {
+      left: 2.5%;
+      top: 1.1%;
+      width: 18%;
+      height: 4%;
+    }
+
+    .page-number {
+      left: 2%;
+      bottom: 2.35%;
+      width: 4.4%;
+      min-width: 24px;
+      min-height: 18px;
+      font-size: 9px;
+    }
+  }
 </style>
-</ResearchLayout>
