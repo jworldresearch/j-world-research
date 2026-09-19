@@ -1,0 +1,47 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="P1｜Editorial｜J 的世界 Research">
+  <main class="poster-page">
+    <img class="poster" src="/research-assets/P1-editorial-vertical.png" alt="J 的世界 Research P1 Editorial" />
+
+    <nav class="page-nav" aria-label="Research navigation">
+      <a class="muted" href="/">← Home</a>
+      <a href="/research/p2">P2 →</a>
+    </nav>
+  </main>
+</BaseLayout>
+
+<style is:global>
+  html, body { background: #ffffff !important; }
+  .poster-page {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+  }
+  .poster {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+  .page-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 4vw 30px;
+    background: #ffffff;
+    border-top: 1px solid #e5e5e2;
+  }
+  .page-nav a {
+    color: #10233f;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: .02em;
+  }
+  .page-nav a:hover { opacity: .65; }
+  .page-nav .muted { color: #6d7278; }
+</style>
