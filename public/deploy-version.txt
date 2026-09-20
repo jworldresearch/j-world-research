@@ -1,0 +1,2 @@
+J-world-research deploy proof
+Version: 2026-09-21-v4
