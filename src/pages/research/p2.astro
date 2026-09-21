@@ -9,7 +9,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
       <a href="/research/p3/">P3 →</a>
     </div>
     <div class="poster-frame">
-      <img class="poster" src="/research-assets/P2-editorial-poster.png" alt="J 的世界 Research Vol.01 P2 Editor's Note" />
+      <img class="poster" src="/research-assets/P2-editorial-poster.png?v=20260922" fetchpriority="high" decoding="async" alt="J 的世界 Research Vol.01 P2 Editor's Note" />
     </div>
     <nav class="page-nav" aria-label="Research page navigation">
       <a href="/research/p1/">← P1</a>
@@ -24,7 +24,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 .research-page-head{max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:18px;background:#fbfbfa;color:#5d6875;font-size:.7rem;font-weight:700;letter-spacing:.08em}
 .research-page-head a{color:#30435a;text-decoration:none}
 .poster-frame{width:100%;display:flex;justify-content:center;background:#fbfbfa}
-.poster{display:block;width:100%;max-width:1536px;height:auto;margin:0}
+.poster{display:block;width:100%;max-width:1536px;height:auto;margin:0;image-rendering:auto}
 .page-nav{display:grid;grid-template-columns:1fr 1fr 1fr;max-width:1536px;margin:0 auto;background:#fbfbfa;border-top:1px solid #d7dbe0}
 .page-nav a{min-height:76px;padding:18px 24px;display:flex;align-items:center;text-decoration:none;color:#10233f;font-weight:700;font-size:.78rem;letter-spacing:.04em;border-right:1px solid #d7dbe0}
 .page-nav a:nth-child(2){justify-content:center}
