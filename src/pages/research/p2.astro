@@ -1,10 +1,40 @@
 ---
-const title = 'P2｜Editor\'s Note｜J 的世界 Research';
-const version = '2026-09-21-v4';
+import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
-<!doctype html>
-<html lang="zh-Hant">
-<head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>{title}</title></head>
-<body><main class="page"><img class="poster" src={`/research-assets/P2-editorial-v3.png?v=${version}`} alt="J 的世界 Research Vol.01 P2 Editor's Note" /><nav class="page-nav"><a href="/">← P1 · Cover</a><a href="/research">Vol.01 · Research Library</a><a href="/research/p3">P3 · Four Signals →</a></nav></main></body>
-</html>
-<style is:global>*{box-sizing:border-box}html,body{margin:0;padding:0;background:#fbfbfa}body{overflow-x:hidden}.page{width:100%;margin:0}.poster{display:block;width:100vw;max-width:none;height:auto}.page-nav{width:100vw;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:20px 5vw 28px;background:#fbfbfa;border-top:1px solid #dddcd8;font-family:Arial,"Noto Sans TC",sans-serif}.page-nav a{color:#10233f;text-decoration:none;font-weight:700}@media(max-width:600px){.page-nav{flex-direction:column;text-align:center}}</style>
+<BaseLayout title="P2｜Editor's Note｜J 的世界 Research">
+  <main class="research-page">
+    <div class="research-page-head">
+      <a href="/research/p1/">← P1</a>
+      <span>VOL.01 · P2 · EDITOR'S NOTE</span>
+      <a href="/research/p3/">P3 →</a>
+    </div>
+    <div class="poster-frame">
+      <img class="poster" src="/research-assets/P2-editorial-v3.png" alt="J 的世界 Research Vol.01 P2 Editor's Note" />
+    </div>
+    <nav class="page-nav" aria-label="Research page navigation">
+      <a href="/research/p1/">← P1</a>
+      <a href="/research/">VOL.01 · Research Library</a>
+      <a href="/research/p3/">NEXT → P3</a>
+    </nav>
+  </main>
+</BaseLayout>
+
+<style is="global">
+.research-page{width:100%;background:#fbfbfa;padding-bottom:0}
+.research-page-head{max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:18px;background:#fbfbfa;color:#5d6875;font-size:.7rem;font-weight:700;letter-spacing:.08em}
+.research-page-head a{color:#30435a;text-decoration:none}
+.poster-frame{width:100%;display:flex;justify-content:center;background:#fbfbfa}
+.poster{display:block;width:100%;max-width:1536px;height:auto;margin:0}
+.page-nav{display:grid;grid-template-columns:1fr 1fr 1fr;max-width:1536px;margin:0 auto;background:#fbfbfa;border-top:1px solid #d7dbe0}
+.page-nav a{min-height:76px;padding:18px 24px;display:flex;align-items:center;text-decoration:none;color:#10233f;font-weight:700;font-size:.78rem;letter-spacing:.04em;border-right:1px solid #d7dbe0}
+.page-nav a:nth-child(2){justify-content:center}
+.page-nav a:last-child{justify-content:flex-end;border-right:0}
+@media(max-width:700px){
+  .research-page-head{padding:12px 16px;font-size:.62rem}
+  .research-page-head span{display:none}
+  .page-nav{grid-template-columns:1fr 1fr}
+  .page-nav a{min-height:62px;padding:14px 16px}
+  .page-nav a:nth-child(2){display:none}
+  .page-nav a:last-child{grid-column:2}
+}
+</style>
