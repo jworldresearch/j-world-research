@@ -1,62 +1,41 @@
 ---
-import ResearchLayout from "../../layouts/ResearchLayout.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
-<ResearchLayout title="P3｜Four Signals｜J 的世界 Research" page="P3" section="FOUR SIGNALS">
-<div class="signals-page">
-  <header class="head">
-    <div>
-      <div class="kicker">STORY</div>
-      <h1>好，那我們就從這四個訊號開始聊。</h1>
-      <p class="lead">上一頁我們說到，6 月 25 日那場論壇，讓我們看到的不是四則分開的消息，而是幾個變化正在同時發生。</p>
-      <p class="lead second">所以這一頁，我們先不急著下結論。先把它們一個一個拆開來看看。</p>
+<BaseLayout title="P3｜AI Platform Evolution｜J 的世界 Research">
+  <main class="research-page">
+    <div class="research-page-head">
+      <a href="/research/p2/">← P2</a>
+      <span>VOL.01 · P3 · AI PLATFORM EVOLUTION</span>
+      <a href="/research/p4/">P4 →</a>
     </div>
-    <div class="story-mark"><b>04</b><span>KEY<br/>SIGNALS</span></div>
-  </header>
+    <div class="poster-frame">
+      <img class="poster" src="/research-assets/P3-AI-Platform-Evolution-vertical-2160x3840.jpg?v=20260905" fetchpriority="high" decoding="async" alt="J 的世界 Research Vol.01 P3 AI Platform Evolution" />
+    </div>
+    <nav class="page-nav" aria-label="Research page navigation">
+      <a href="/research/p2/">← P2</a>
+      <a href="/research/">VOL.01 · Research Library</a>
+      <a href="/research/p4/">NEXT → P4</a>
+    </nav>
+  </main>
+</BaseLayout>
 
-  <div class="bridge">
-    <div class="bridge-title">四個關鍵訊號</div>
-    <div class="bridge-text">從需求、製程、封裝到產能，台積電這次論壇，勾勒出下一階段平台演化的輪廓。</div>
-  </div>
-
-  <section class="cards">
-    <article class="card blue">
-      <div class="num">01</div><div class="icon">↗</div><span class="tag">需求訊號</span>
-      <h2>AI / HPC 需求持續爆發</h2>
-      <p>大型模型與高效能運算推動晶片需求大幅成長，算力競賽進入新階段。</p>
-      <div class="talk"><b>我們先聊這件事</b><span>需求變大，最先被推著往前走的，會是哪裡？</span></div>
-    </article>
-    <article class="card green">
-      <div class="num">02</div><div class="icon">▣</div><span class="tag">製程訊號</span>
-      <h2>2 奈米家族持續推進</h2>
-      <p>N2、N2P、N2X 等節點陸續導入，效能與能效再升級。</p>
-      <div class="talk"><b>我們先聊這件事</b><span>當算力需求一直增加，製程要怎麼接住？</span></div>
-    </article>
-    <article class="card orange">
-      <div class="num">03</div><div class="icon">▤</div><span class="tag">封裝訊號</span>
-      <h2>先進封裝平台持續演化</h2>
-      <p>CoWoS、SoIC、SoW 等技術擴展，打造更高整合、更多元的平台架構。</p>
-      <div class="talk"><b>我們先聊這件事</b><span>當晶片越做越快，封裝為什麼也開始變成關鍵？</span></div>
-    </article>
-    <article class="card purple">
-      <div class="num">04</div><div class="icon">◎</div><span class="tag">產能訊號</span>
-      <h2>全球產能同步擴張</h2>
-      <p>台灣、美國、日本、歐洲多地擴廠，強化供應韌性與全球布局。</p>
-      <div class="talk"><b>我們先聊這件事</b><span>需求往全球走，產業版圖也會跟著改變嗎？</span></div>
-    </article>
-  </section>
-
-  <div class="quote-strip">
-    <span>“</span>
-    <p>這四個訊號，並不是孤立的消息，<br/><strong>而是共同指向同一個方向：下一代 AI Platform 的形成。</strong></p>
-  </div>
-
-  <footer class="continuity">
-    <div><small>聊到這裡</small><b>四個訊號放在一起，才開始有意思。</b></div>
-    <p>需求正在變 → 技術正在推進 → 平台正在升級 → 全球同步擴張。<br/>接下來，我們就沿著這條線，繼續往下聊。</p>
-  </footer>
-</div>
-
-<style>
-.signals-page{border:1px solid #d2d8de;background:#fbfaf7;padding:31px 38px 0;position:relative;overflow:hidden;color:#27394d}.signals-page:after{content:"J 的世界 Research";position:absolute;right:-28px;bottom:75px;transform:rotate(-30deg);font-family:Georgia,serif;font-size:5.5rem;font-weight:700;color:#071a33;opacity:.025;pointer-events:none}.head{display:grid;grid-template-columns:1fr 145px;gap:28px;align-items:center;border-bottom:1px solid #cfd5dc;padding-bottom:24px}.kicker{font-size:10px;letter-spacing:.2em;color:#b98932;font-weight:800}.head h1{margin:9px 0 10px;color:#071a33;font-family:Georgia,"Times New Roman",serif;font-size:clamp(2rem,3.7vw,3.25rem);line-height:1.18;letter-spacing:-.035em}.lead{margin:0;max-width:830px;color:#405164;font-size:1rem;line-height:1.8}.lead.second{margin-top:4px;color:#687585}.story-mark{width:116px;height:116px;border:1px solid #b98932;border-radius:50%;display:grid;place-content:center;text-align:center;justify-self:end;box-shadow:0 0 0 12px rgba(185,137,50,.045),0 0 0 30px rgba(7,26,51,.025)}.story-mark b{font-family:Georgia,serif;color:#071a33;font-size:2.2rem;line-height:1}.story-mark span{margin-top:5px;color:#b98932;letter-spacing:.13em;font-size:8px;font-weight:800;line-height:1.45}.bridge{display:grid;grid-template-columns:190px 1fr;gap:22px;align-items:center;padding:20px 0 17px}.bridge-title{font-family:Georgia,serif;color:#071a33;font-size:1.35rem;font-weight:700}.bridge-text{border-left:2px solid #b98932;padding-left:14px;color:#5a6878;font-size:.9rem;line-height:1.7}.cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}.card{background:#fff;border:1px solid #ccd4dc;padding:20px 22px 18px;position:relative;min-height:255px}.card:before{content:"";position:absolute;left:0;top:0;width:5px;height:100%;background:#8ba3bc}.card.green:before{background:#7d9d83}.card.orange:before{background:#c49a5a}.card.purple:before{background:#8e83a6}.num{position:absolute;right:17px;top:12px;font-size:1.9rem;line-height:1;color:#d6dce1;font-weight:800}.icon{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#0b1d35;color:#fff;font-size:19px;margin-bottom:12px}.green .icon{background:#597d63}.orange .icon{background:#a47738}.purple .icon{background:#75698e}.tag{display:block;color:#b98932;font-size:9px;letter-spacing:.14em;font-weight:800;margin-bottom:5px}.card h2{margin:0 40px 8px 0;color:#071a33;font-size:1.18rem;line-height:1.4}.card>p{margin:0;color:#536273;font-size:.9rem;line-height:1.72}.talk{margin-top:16px;padding-top:11px;border-top:1px dashed #ccd4db}.talk b{display:block;color:#9a6b25;font-size:9px;letter-spacing:.12em;margin-bottom:4px}.talk span{display:block;color:#26384b;font-size:.83rem;line-height:1.55}.quote-strip{display:flex;gap:10px;align-items:flex-start;margin-top:20px;padding:14px 18px;background:#eef0ef;border-left:4px solid #b98932}.quote-strip>span{font-family:Georgia,serif;color:#b98932;font-size:4rem;line-height:.65}.quote-strip p{margin:0;color:#435365;font-size:.95rem;line-height:1.7}.quote-strip strong{color:#071a33}.continuity{display:grid;grid-template-columns:.9fr 1.1fr;gap:25px;margin:0 -38px;padding:17px 38px 20px;border-top:1px solid #cfd5dc;background:#fff}.continuity small{display:block;color:#b98932;font-size:9px;letter-spacing:.14em;font-weight:800}.continuity b{display:block;color:#071a33;font-size:1rem;margin-top:4px}.continuity p{margin:0;color:#5b6878;font-size:.86rem;line-height:1.7}@media(max-width:760px){.signals-page{padding:26px 22px 0}.head{grid-template-columns:1fr}.story-mark{justify-self:start;width:92px;height:92px}.bridge{grid-template-columns:1fr;gap:8px}.cards{grid-template-columns:1fr}.continuity{grid-template-columns:1fr;margin:0 -22px;padding:16px 22px}}@media(max-width:560px){.signals-page{padding:22px 18px 0}.head h1{font-size:2.05rem}.lead{font-size:.94rem}.card{min-height:0;padding:19px 18px}.continuity{margin:0 -18px;padding:16px 18px}}
+<style is="global">
+.research-page{width:100%;background:#fbfbfa;padding-bottom:0}
+.research-page-head{max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:18px;background:#fbfbfa;color:#5d6875;font-size:.7rem;font-weight:700;letter-spacing:.08em}
+.research-page-head a{color:#30435a;text-decoration:none}
+.poster-frame{width:100%;display:flex;justify-content:center;background:#fbfbfa}
+.poster{display:block;width:min(100%,800px);height:auto;margin:0;image-rendering:auto}
+.page-nav{display:grid;grid-template-columns:1fr 1fr 1fr;max-width:800px;margin:0 auto;background:#fbfbfa;border-top:1px solid #d7dbe0}
+.page-nav a{min-height:76px;padding:18px 24px;display:flex;align-items:center;text-decoration:none;color:#10233f;font-weight:700;font-size:.78rem;letter-spacing:.04em;border-right:1px solid #d7dbe0}
+.page-nav a:nth-child(2){justify-content:center}
+.page-nav a:last-child{justify-content:flex-end;border-right:0}
+@media(max-width:768px){
+  .research-page-head{padding:12px 16px;font-size:.62rem}
+  .research-page-head span{display:none}
+  .poster{width:calc(100% - 24px)}
+  .page-nav{grid-template-columns:1fr 1fr;max-width:none}
+  .page-nav a{min-height:62px;padding:14px 16px}
+  .page-nav a:nth-child(2){display:none}
+  .page-nav a:last-child{grid-column:2}
+}
 </style>
-</ResearchLayout>
