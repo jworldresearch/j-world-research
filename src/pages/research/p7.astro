@@ -1,16 +1,41 @@
 ---
-import ResearchLayout from "../../layouts/ResearchLayout.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
-<ResearchLayout title="P7｜Investment Matrix｜J 的世界 Research" page="P7" section="INVESTMENT MATRIX">
-<div class="poster">
- <div class="poster-inner">
-  <div class="poster-top"><div class="poster-kicker">P6 · INVESTMENT MATRIX</div><div class="poster-title">技術節點，<br/>如何轉成產業觀察？</div><div class="poster-sub">不要直接跳到股票，先把技術鏈拆開。</div></div>
-  <div class="matrix-poster">
-   <div class="left"><div class="lane"><b>01 · PROCESS</b><span>先進製程、設備、材料、設計服務</span></div><div class="lane"><b>02 · PACKAGING</b><span>CoWoS、SoIC、基板、封裝設備</span></div><div class="lane"><b>03 · OPTICAL</b><span>光互連、CPO、光電整合</span></div><div class="lane"><b>04 · MATERIALS</b><span>Glass Core、TGV、化學與檢測</span></div><div class="lane"><b>05 · INFRASTRUCTURE</b><span>電力、散熱、機房與系統</span></div></div>
-   <div class="poster-panel"><div class="poster-kicker">OBSERVATION MATRIX</div><div class="matrix-grid" style="margin-top:14px"><div class="matrix-cell"><strong>技術</strong><small>真的解決了什麼問題？</small></div><div class="matrix-cell"><strong>驗證</strong><small>誰在測？進到哪一階段？</small></div><div class="matrix-cell"><strong>導入</strong><small>是否進入設計與製程？</small></div><div class="matrix-cell"><strong>量產</strong><small>良率與產能是否成立？</small></div><div class="matrix-cell"><strong>客戶</strong><small>是否形成實際需求？</small></div><div class="matrix-cell"><strong>擴散</strong><small>是否由單一客戶走向產業？</small></div></div></div>
-  </div>
-  <div class="poster-footer"><strong>INVESTMENT MATRIX</strong><span>Technology → Validation → Adoption → Production → Diffusion</span><span>P6</span></div>
- </div>
-</div>
-<div class="note"><strong>閱讀方式</strong>矩陣不是推薦名單，而是一張「從技術進展往下追產業」的地圖。公司是否受惠，仍要回到實際產品、驗證與基本面。</div>
-</ResearchLayout>
+<BaseLayout title="P7｜Future Watch｜J 的世界 Research">
+  <main class="research-page">
+    <div class="research-page-head">
+      <a href="/research/p6/">← P6</a>
+      <span>VOL.01 · P7 · FUTURE WATCH</span>
+      <a href="/research/p8/">P8 →</a>
+    </div>
+    <div class="poster-frame">
+      <img class="poster" src="/research-assets/P7-Future-Watch-Horizontal.png?v=20260929" fetchpriority="high" decoding="async" alt="J 的世界 Research Vol.01 P7 Future Watch" />
+    </div>
+    <nav class="page-nav" aria-label="Research page navigation">
+      <a href="/research/p6/">← P6</a>
+      <a href="/research/">VOL.01 · Research Library</a>
+      <a href="/research/p8/">NEXT → P8</a>
+    </nav>
+  </main>
+</BaseLayout>
+
+<style is="global">
+.research-page{width:100%;background:#fbfbfa;padding-bottom:0}
+.research-page-head{max-width:1400px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:18px;background:#fbfbfa;color:#5d6875;font-size:.7rem;font-weight:700;letter-spacing:.08em}
+.research-page-head a{color:#30435a;text-decoration:none}
+.poster-frame{width:100%;display:flex;justify-content:center;background:#fbfbfa}
+.poster{display:block;width:min(100%,1400px);height:auto;margin:0;image-rendering:auto}
+.page-nav{display:grid;grid-template-columns:1fr 1fr 1fr;max-width:1400px;margin:0 auto;background:#fbfbfa;border-top:1px solid #d7dbe0}
+.page-nav a{min-height:76px;padding:18px 24px;display:flex;align-items:center;text-decoration:none;color:#10233f;font-weight:700;font-size:.78rem;letter-spacing:.04em;border-right:1px solid #d7dbe0}
+.page-nav a:nth-child(2){justify-content:center}
+.page-nav a:last-child{justify-content:flex-end;border-right:0}
+@media(max-width:768px){
+  .research-page-head{padding:12px 16px;font-size:.62rem}
+  .research-page-head span{display:none}
+  .poster{width:calc(100% - 24px)}
+  .page-nav{grid-template-columns:1fr 1fr;max-width:none}
+  .page-nav a{min-height:62px;padding:14px 16px}
+  .page-nav a:nth-child(2){display:none}
+  .page-nav a:last-child{grid-column:2}
+}
+</style>
